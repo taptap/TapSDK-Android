@@ -57,9 +57,13 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation(name: 'TapBootStrap_2.0.0', ext: 'aar')  // 必选: x.x.x 代表所下载的 SDK的版本号
-    implementation(name: 'TapDB_3.0.2', ext: 'aar')
-    implementation(name: 'TapCommon_2.0.0', ext: 'aar')
-    implementation(name: 'TapMoment_2.0.0', ext: 'aar')
-    implementation(name: 'TapLogin_2.5.4', ext: 'aar')
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+    implementation(name: 'TapBootStrap_2.1.2', ext: 'aar')  // 必选: x.x.x 代表所下载的 SDK的版本号
+    implementation(name: 'TapDB_2.1.2', ext: 'aar')
+    implementation(name: 'TapCommon_2.1.2', ext: 'aar')
+    implementation(name: 'TapMoment_2.1.2', ext: 'aar')
+    implementation(name: 'TapLogin_2.1.2', ext: 'aar')
+    implementation(name: 'TapFriend_2.1.2', ext: 'aar')
+    implementation(name: 'TapFriendUI_2.1.2', ext: 'aar')
+    implementation(name: 'TapLicense_2.1.2', ext: 'aar')
 }

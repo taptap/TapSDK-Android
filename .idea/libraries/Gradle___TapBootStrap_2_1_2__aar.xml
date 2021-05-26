@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :TapBootStrap_2.1.2:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d26d056b446a34e25ee47708d696f6da/jetified-TapBootStrap_2.1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d26d056b446a34e25ee47708d696f6da/jetified-TapBootStrap_2.1.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d26d056b446a34e25ee47708d696f6da/jetified-TapBootStrap_2.1.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

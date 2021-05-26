@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TapSDK_Android_Demo</string>
+    <string name="default_app_font_path"/>
 </resources>

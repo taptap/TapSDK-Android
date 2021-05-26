@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: :TapCommon_2.1.2:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d8ee31c56471fc5b1dc165dd05b6f2e/jetified-TapCommon_2.1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d8ee31c56471fc5b1dc165dd05b6f2e/jetified-TapCommon_2.1.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d8ee31c56471fc5b1dc165dd05b6f2e/jetified-TapCommon_2.1.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d8ee31c56471fc5b1dc165dd05b6f2e/jetified-TapCommon_2.1.2/jars/libs/tds-protobuf-lite-3.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d8ee31c56471fc5b1dc165dd05b6f2e/jetified-TapCommon_2.1.2/jars/libs/tds-lz4-java-1.7.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
