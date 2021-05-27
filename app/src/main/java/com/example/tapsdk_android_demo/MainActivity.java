@@ -278,6 +278,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onSuccess(TapUser tapUser) {
                 Toast.makeText(MainActivity.this, "用户信息为：" + tapUser.toJSON(), Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "用户信息为: " + tapUser.toJSON());
+                // userid 字段 在使用好友功能时会作为参数传递
+                Log.d(TAG, "userID: " + tapUser.userId);
             }
 
             @Override
@@ -358,7 +361,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapAddFriend() {
-        TapFriends.addFriend("userID", new com.tapsdk.friends.Callback<Boolean>() {
+    //     7daf77b3b1d548fea656b74548d68f0c
+        TapFriends.addFriend("890bc17122e04292a13130e900f3aa94", new com.tapsdk.friends.Callback<Boolean>() {
             @Override
             public void onSuccess(Boolean aBoolean) {
                 Toast.makeText(MainActivity.this, "添加好友成功", Toast.LENGTH_SHORT).show();
@@ -372,7 +376,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapDeleteFriend() {
-        TapFriends.deleteFriend("userID", new com.tapsdk.friends.Callback<Boolean>() {
+        TapFriends.deleteFriend("890bc17122e04292a13130e900f3aa94", new com.tapsdk.friends.Callback<Boolean>() {
             @Override
             public void onSuccess(Boolean aBoolean) {
                 Toast.makeText(MainActivity.this, "删除好友成功", Toast.LENGTH_SHORT).show();
@@ -387,7 +391,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapBlockFriend() {
-        TapFriends.blockUser("userID", new com.tapsdk.friends.Callback<Boolean>() {
+        TapFriends.blockUser("890bc17122e04292a13130e900f3aa94", new com.tapsdk.friends.Callback<Boolean>() {
             @Override
             public void onSuccess(Boolean aBoolean) {
                 Toast.makeText(MainActivity.this, "拉黑好友成功", Toast.LENGTH_SHORT).show();
@@ -401,7 +405,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapUnblockFriend() {
-        TapFriends.unblockUser("userID", new com.tapsdk.friends.Callback<Boolean>() {
+        TapFriends.unblockUser("890bc17122e04292a13130e900f3aa94", new com.tapsdk.friends.Callback<Boolean>() {
             @Override
             public void onSuccess(Boolean aBoolean) {
                 Toast.makeText(MainActivity.this, "取消拉黑好友成功", Toast.LENGTH_SHORT).show();
@@ -426,6 +430,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onFail(TapFriendError tapFriendError) {
                 Toast.makeText(MainActivity.this, "获取关注好友列表失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "获取关注好友列表失败: " + tapFriendError.toJSON());
             }
         });
     }
@@ -442,6 +447,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onFail(TapFriendError tapFriendError) {
                 Toast.makeText(MainActivity.this, "获取粉丝列表失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "获取粉丝列表失败: " + tapFriendError.toJSON());
             }
         });
     }
@@ -458,6 +464,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onFail(TapFriendError tapFriendError) {
                 Toast.makeText(MainActivity.this, "获取黑明白列表失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "获取黑明白列表失败: " + tapFriendError.toJSON());
             }
         });
     }
@@ -472,6 +479,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onFail(TapFriendError tapFriendError) {
                 Toast.makeText(MainActivity.this, "分享好友邀请失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "分享好友邀请失败: " + tapFriendError.toJSON());
             }
         });
     }
@@ -486,12 +494,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onFail(TapFriendError tapFriendError) {
                 Toast.makeText(MainActivity.this, "获取好友邀请失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "获取好友邀请失败: " + tapFriendError.toJSON());
             }
         });
     }
 
     private void taptapSearchUser() {
-        TapFriends.searchUser("userID", new com.tapsdk.friends.Callback<TapUserRelationship>() {
+        TapFriends.searchUser("890bc17122e04292a13130e900f3aa94", new com.tapsdk.friends.Callback<TapUserRelationship>() {
             @Override
             public void onSuccess(TapUserRelationship tapUserRelationship) {
                 Toast.makeText(MainActivity.this, "搜索用户成功", Toast.LENGTH_SHORT).show();
@@ -501,6 +510,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onFail(TapFriendError tapFriendError) {
                 Toast.makeText(MainActivity.this, "搜索用户失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "搜索用户失败: " + tapFriendError.toJSON());
             }
         });
     }
