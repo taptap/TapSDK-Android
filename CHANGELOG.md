@@ -1,5 +1,13 @@
 Changelog
-# v2.1.2 2020/05/17
+# v2.1.3 2021/05/28
+## Feature
+* 新增繁体中文、日文、韩文、泰语、印度尼西亚语5种新的翻译，并可通过 `TapBootstrap setPreferredLanguage:` 设定
+
+## Bugfix
+* TapMoment 在部分带刘海设备上判断失败导致UI可能被遮挡的问题
+
+
+# v2.1.2 2021/05/17
 ## TapBootstrap
 ### Breaking changes
 * 删除 `openUserCenter` 接口
@@ -106,7 +114,7 @@ Changelog
 * 支持性升级
 
 
-# v2.1.1 2020/05/10
+# v2.1.1 2021/05/10
 
 ## TapBootstrap
 ### Feature
@@ -170,4 +178,4 @@ Changelog
 * 新增唤起 TapTap 客户端更新页面接口
 * 新增唤起 TapTap 客户端评论页面接口
 
-## v2.0.0 2020/04/08
+## v2.0.0 2021/04/08
