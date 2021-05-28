@@ -1,0 +1,39 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>onLayoutChildren</title>
+</head><body><link href="../../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script><script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../../scripts/main.js" async></script>
+  
+    <div id="container">
+      <div id="leftColumn"><a href="../../../../index.html">
+            <div id="logo"></div>
+          </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <script type="text/javascript" src="../../../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
+
+        <div class="main-content" id="content" pageids="lib-common::tds.androidx.recyclerview.widget/LinearLayoutManager/onLayoutChildren/#tds.androidx.recyclerview.widget.RecyclerView.Recycler#tds.androidx.recyclerview.widget.RecyclerView.State/PointingToDeclaration//-1618030366">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../../index.html">lib-common</a>/<a href="../index.html">tds.androidx.recyclerview.widget</a>/<a href="index.html">LinearLayoutManager</a>/<a href="on-layout-children.html">onLayoutChildren</a></div>
+            <div class="pull-right d-flex">
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span>on</span><wbr><span>Layout</span><wbr><span>Children</span></h1>
+          </div>
+<div class="divergent-group" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div class="symbol monospace">open fun <a href="on-layout-children.html">onLayoutChildren</a>(recycler: <a href="../-recycler-view/-recycler/index.html">RecyclerView.Recycler</a>, state: <a href="../-recycler-view/-state/index.html">RecyclerView.State</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">Lay out all relevant child views from the given adapter.The LayoutManager is in charge of the behavior of item animations. By default,RecyclerView has a non-null #getItemAnimator() ItemAnimator, and simpleitem animations are enabled. This means that add/remove operations on theadapter will result in animations to add new or appearing items, removed ordisappearing items, and moved items. If a LayoutManager returns false from #supportsPredictiveItemAnimations(), which is the default, and runs anormal layout operation during #onLayoutChildren(Recycler, State), theRecyclerView will have enough information to run those animations in a simpleway. For example, the default ItemAnimator, , willsimply fade views in and out, whether they are actually added/removed or whetherthey are moved on or off the screen due to other add/remove operations.</p><p class="paragraph">A LayoutManager wanting a better item animation experience, where items can beanimated onto and off of the screen according to where the items exist when theyare not on screen, then the LayoutManager should return true from #supportsPredictiveItemAnimations() and add additional logic to #onLayoutChildren(Recycler, State). Supporting predictive animationsmeans that #onLayoutChildren(Recycler, State) will be called twice;once as a "pre" layout step to determine where items would have been prior toa real layout, and again to do the "real" layout. In the pre-layout phase,items will remember their pre-layout positions to allow them to be laid outappropriately. Also, LayoutParams#isItemRemoved() removed items willbe returned from the scrap to help determine correct placement of other items.These removed items should not be added to the child list, but should be usedto help calculate correct positioning of other views, including views thatwere not previously onscreen (referred to as APPEARING views), but whosepre-layout offscreen position can be determined given the extrainformation about the pre-layout removed views.</p><p class="paragraph">The second layout pass is the real layout in which only non-removed viewswill be used. The only additional requirement during this pass is, if #supportsPredictiveItemAnimations() returns true, to note whichviews exist in the child list prior to layout and which are not there afterlayout (referred to as DISAPPEARING views), and to position/layout those viewsappropriately, without regard to the actual bounds of the RecyclerView. This allowsthe animation system to know the location to which to animate these disappearingviews.</p><p class="paragraph">The default LayoutManager implementations for RecyclerView handle all of theserequirements for animations already. Clients of RecyclerView can either use oneof these layout managers directly or look at their implementations ofonLayoutChildren() to see how they account for the APPEARING andDISAPPEARING views.</p></div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+
+
+</body></html>

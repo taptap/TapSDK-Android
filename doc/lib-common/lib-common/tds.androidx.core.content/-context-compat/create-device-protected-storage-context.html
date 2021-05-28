@@ -1,0 +1,39 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>createDeviceProtectedStorageContext</title>
+</head><body><link href="../../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script><script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../../scripts/main.js" async></script>
+  
+    <div id="container">
+      <div id="leftColumn"><a href="../../../../index.html">
+            <div id="logo"></div>
+          </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <script type="text/javascript" src="../../../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
+
+        <div class="main-content" id="content" pageids="lib-common::tds.androidx.core.content/ContextCompat/createDeviceProtectedStorageContext/#android.content.Context/PointingToDeclaration//-1618030366">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../../index.html">lib-common</a>/<a href="../index.html">tds.androidx.core.content</a>/<a href="index.html">ContextCompat</a>/<a href="create-device-protected-storage-context.html">createDeviceProtectedStorageContext</a></div>
+            <div class="pull-right d-flex">
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span>create</span><wbr><span>Device</span><wbr><span>Protected</span><wbr><span>Storage</span><wbr><span>Context</span></h1>
+          </div>
+<div class="divergent-group" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block">@<a href="../../tds.androidx.annotation/-nullable/index.html">Nullable</a>()</div></div>open fun <a href="create-device-protected-storage-context.html">createDeviceProtectedStorageContext</a>(<span>@<a href="../../tds.androidx.annotation/-non-null/index.html">NonNull</a>()&nbsp;</span>context: <a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a>): <a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">Return a new Context object for the current Context but whose storageAPIs are backed by device-protected storage.</p><p class="paragraph">On devices with direct boot, data stored in this location is encryptedwith a key tied to the physical device, and it can be accessedimmediately after the device has booted successfully, bothbefore and after the user has authenticated with theircredentials (such as a lock pattern or PIN).</p><p class="paragraph">Because device-protected data is available without user authentication,you should carefully limit the data you store using this Context. Forexample, storing sensitive authentication tokens or passwords in thedevice-protected area is strongly discouraged.</p><p class="paragraph">If the underlying device does not have the ability to storedevice-protected and credential-protected data using different keys, thenboth storage areas will become available at the same time. They remain astwo distinct storage locations on disk, and only the window ofavailability changes.</p><p class="paragraph">Each call to this method returns a new instance of a Context object;Context objects are not shared, however common state (ClassLoader, otherResources for the same configuration) may be so the Context itself can befairly lightweight.</p><p class="paragraph">Prior to API 24 this method returns <code>{@code null}</code>, since device-protected storage is not available.</p><h2 class="">See also</h2><div data-togglable="See also"><div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="main-subrow keyValue WithExtraAttributes RowTitle"><div class=""><span class="inline-flex"><a href="is-device-protected-storage.html">tds.androidx.core.content.ContextCompat</a></span><span class="inline-flex"><div data-togglable="See also"><p class="paragraph">ContextCompat#isDeviceProtectedStorage(Context)</p></div></span></div><div></div></div></div></div></div></div></div></div></div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+
+
+</body></html>

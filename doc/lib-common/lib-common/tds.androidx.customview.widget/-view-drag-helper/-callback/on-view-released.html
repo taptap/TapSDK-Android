@@ -1,0 +1,39 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>onViewReleased</title>
+</head><body><link href="../../../../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../";</script><script type="text/javascript" src="../../../../../scripts/sourceset_dependencies.js" async></script><link href="../../../../../styles/style.css" rel="Stylesheet"><link href="../../../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../../../scripts/main.js" async></script>
+  
+    <div id="container">
+      <div id="leftColumn"><a href="../../../../../index.html">
+            <div id="logo"></div>
+          </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <script type="text/javascript" src="../../../../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
+
+        <div class="main-content" id="content" pageids="lib-common::tds.androidx.customview.widget/ViewDragHelper.Callback/onViewReleased/#android.view.View#float#float/PointingToDeclaration//-1618030366">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../../../index.html">lib-common</a>/<a href="../../index.html">tds.androidx.customview.widget</a>/<a href="../index.html">ViewDragHelper</a>/<a href="index.html">Callback</a>/<a href="on-view-released.html">onViewReleased</a></div>
+            <div class="pull-right d-flex">
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span>on</span><wbr><span>View</span><wbr><span>Released</span></h1>
+          </div>
+<div class="divergent-group" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div class="symbol monospace">open fun <a href="on-view-released.html">onViewReleased</a>(<span>@<a href="../../../tds.androidx.annotation/-non-null/index.html">NonNull</a>()&nbsp;</span>releasedChild: <a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a>, xvel: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a>, yvel: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">Called when the child view is no longer being actively dragged.The fling velocity is also supplied, if relevant. The velocity values maybe clamped to system minimums or maximums.</p><p class="paragraph">Calling code may decide to fling or otherwise release the view to let itsettle into place. It should do so using <a href="../settle-captured-view-at.html">settleCapturedViewAt</a> or <a href="../fling-captured-view.html">flingCapturedView</a>. If the Callback invokesone of these methods, the ViewDragHelper will enter <a href="../-s-t-a-t-e_-s-e-t-t-l-i-n-g.html">STATE_SETTLING</a> and the view capture will not fully end until it comes to a complete stop.If neither of these methods is invoked before <code>onViewReleased</code> returns,the view will stop in place and the ViewDragHelper will return to <a href="../-s-t-a-t-e_-i-d-l-e.html">STATE_IDLE</a>.</p><h2 class="">Parameters</h2><div data-togglable="Parameters"><div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">releasedChild</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The captured child view now being released</p></div></div></div></div></div><div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">xvel</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">X velocity of the pointer as it left the screen in pixels per second.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">yvel</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Y velocity of the pointer as it left the screen in pixels per second.</p></div></div></div></div></div></div></div></div></div></div></div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+
+
+</body></html>

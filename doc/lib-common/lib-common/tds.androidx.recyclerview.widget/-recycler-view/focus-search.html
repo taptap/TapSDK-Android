@@ -1,0 +1,39 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>focusSearch</title>
+</head><body><link href="../../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script><script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../../scripts/main.js" async></script>
+  
+    <div id="container">
+      <div id="leftColumn"><a href="../../../../index.html">
+            <div id="logo"></div>
+          </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <script type="text/javascript" src="../../../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
+
+        <div class="main-content" id="content" pageids="lib-common::tds.androidx.recyclerview.widget/RecyclerView/focusSearch/#android.view.View#int/PointingToDeclaration//-1618030366">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../../index.html">lib-common</a>/<a href="../index.html">tds.androidx.recyclerview.widget</a>/<a href="index.html">RecyclerView</a>/<a href="focus-search.html">focusSearch</a></div>
+            <div class="pull-right d-flex">
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span>focus</span><wbr><span>Search</span></h1>
+          </div>
+<div class="divergent-group" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div class="symbol monospace">open fun <a href="focus-search.html">focusSearch</a>(focused: <a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a>, direction: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">Since RecyclerView is a collection ViewGroup that includes virtual children (items that arein the Adapter but not visible in the UI), it employs a more involved focus search strategythat differs from other ViewGroups.</p><p class="paragraph">It first does a focus search within the RecyclerView. If this search finds a View that is inthe focus direction with respect to the currently focused View, RecyclerView returns thatchild as the next focus target. When it cannot find such child, it calls <a href="-layout-manager/on-focus-search-failed.html">onFocusSearchFailed</a> to layout more Viewsin the focus search direction. If LayoutManager adds a View that matches thefocus search criteria, it will be returned as the focus search result. Otherwise,RecyclerView will call parent to handle the focus search like a regular ViewGroup.</p><p class="paragraph">When the direction is <a href="https://developer.android.com/reference/kotlin/android/view/View.html#focus_forward">FOCUS_FORWARD</a> or <a href="https://developer.android.com/reference/kotlin/android/view/View.html#focus_backward">FOCUS_BACKWARD</a>, a View thatis not in the focus direction is still valid focus target which may not be the desiredbehavior if the Adapter has more children in the focus direction. To handle this case,RecyclerView converts the focus direction to an absolute direction and makes a preliminaryfocus search in that direction. If there are no Views to gain focus, it will call <a href="-layout-manager/on-focus-search-failed.html">onFocusSearchFailed</a> before running afocus search with the original (relative) direction. This allows RecyclerView to providebetter candidates to the focus search while still allowing the view system to take focus fromthe RecyclerView and give it to a more suitable child if such child exists.</p><h4 class="">Return</h4><p class="paragraph">A new View that can be the next focus after the focused View</p><h2 class="">Parameters</h2><div data-togglable="Parameters"><div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">focused</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The view that currently has focus</p></div></div></div></div></div><div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">direction</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">One of <a href="https://developer.android.com/reference/kotlin/android/view/View.html#focus_up">FOCUS_UP</a>, <a href="https://developer.android.com/reference/kotlin/android/view/View.html#focus_down">FOCUS_DOWN</a>,<a href="https://developer.android.com/reference/kotlin/android/view/View.html#focus_left">FOCUS_LEFT</a>, <a href="https://developer.android.com/reference/kotlin/android/view/View.html#focus_right">FOCUS_RIGHT</a>,<a href="https://developer.android.com/reference/kotlin/android/view/View.html#focus_forward">FOCUS_FORWARD</a>,<a href="https://developer.android.com/reference/kotlin/android/view/View.html#focus_backward">FOCUS_BACKWARD</a> or 0 for not applicable.</p></div></div></div></div></div></div></div></div></div></div></div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+
+
+</body></html>

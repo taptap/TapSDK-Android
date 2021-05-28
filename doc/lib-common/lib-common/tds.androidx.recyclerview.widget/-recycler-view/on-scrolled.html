@@ -1,0 +1,39 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>onScrolled</title>
+</head><body><link href="../../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script><script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../../scripts/main.js" async></script>
+  
+    <div id="container">
+      <div id="leftColumn"><a href="../../../../index.html">
+            <div id="logo"></div>
+          </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <script type="text/javascript" src="../../../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
+
+        <div class="main-content" id="content" pageids="lib-common::tds.androidx.recyclerview.widget/RecyclerView/onScrolled/#int#int/PointingToDeclaration//-1618030366">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../../index.html">lib-common</a>/<a href="../index.html">tds.androidx.recyclerview.widget</a>/<a href="index.html">RecyclerView</a>/<a href="on-scrolled.html">onScrolled</a></div>
+            <div class="pull-right d-flex">
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span>on</span><wbr><span>Scrolled</span></h1>
+          </div>
+<div class="divergent-group" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div class="symbol monospace">open fun <a href="on-scrolled.html">onScrolled</a>(<span>@<a href="../../tds.androidx.annotation/-px/index.html">Px</a>()&nbsp;</span>dx: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, <span>@<a href="../../tds.androidx.annotation/-px/index.html">Px</a>()&nbsp;</span>dy: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">Called when the scroll position of this RecyclerView changes. Subclasses should usethis method to respond to scrolling within the adapter's data set instead of an explicitlistener.</p><p class="paragraph">This method will always be invoked before listeners. If a subclass needs to performany additional upkeep or bookkeeping after scrolling but before listeners run,this is a good place to do so.</p><p class="paragraph">This differs from <a href="https://developer.android.com/reference/kotlin/android/view/View.html#onscrollchanged">onScrollChanged</a> in that it receivesthe distance scrolled in either direction within the adapter's data set instead of absolutescroll coordinates. Since RecyclerView cannot compute the absolute scroll position fromany arbitrary point in the data set, <code>onScrollChanged</code> will always receivethe current <a href="../../com.tds.common.widgets.image/-round-net-image-view/index.html#%5Bandroid.view%2FView%2FgetScrollX%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1618030366">getScrollX</a> and <a href="../../com.tds.common.widgets.image/-round-net-image-view/index.html#%5Bandroid.view%2FView%2FgetScrollY%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1618030366">getScrollY</a> values whichdo not correspond to the data set scroll position. However, some subclasses may chooseto use these fields as special offsets.</p><h2 class="">Parameters</h2><div data-togglable="Parameters"><div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">dx</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">horizontal distance scrolled in pixels</p></div></div></div></div></div><div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">dy</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">vertical distance scrolled in pixels</p></div></div></div></div></div></div></div></div></div></div></div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+
+
+</body></html>

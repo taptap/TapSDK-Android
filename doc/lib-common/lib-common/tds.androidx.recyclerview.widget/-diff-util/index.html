@@ -1,0 +1,121 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>DiffUtil</title>
+</head><body><link href="../../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script><script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../../scripts/main.js" async></script>
+  
+    <div id="container">
+      <div id="leftColumn"><a href="../../../../index.html">
+            <div id="logo"></div>
+          </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <script type="text/javascript" src="../../../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
+
+        <div class="main-content" id="content" pageids="lib-common::tds.androidx.recyclerview.widget/DiffUtil///PointingToDeclaration//-1618030366">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../../index.html">lib-common</a>/<a href="../index.html">tds.androidx.recyclerview.widget</a>/<a href="index.html">DiffUtil</a></div>
+            <div class="pull-right d-flex">
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span>Diff</span><wbr><span>Util</span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div class="symbol monospace">open class <a href="index.html">DiffUtil</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">DiffUtil is a utility class that calculates the difference between two lists and outputs a list of update operations that converts the first list into the second one. </p><p class="paragraph">It can be used to calculate updates for a RecyclerView Adapter. See <a href="../-list-adapter/index.html">ListAdapter</a> and <a href="../-async-list-differ/index.html">AsyncListDiffer</a> which can simplify the use of DiffUtil on a background thread. </p><p class="paragraph">DiffUtil uses Eugene W. Myers's difference algorithm to calculate the minimal number of updates to convert one list into another. Myers's algorithm does not handle items that are moved so DiffUtil runs a second pass on the result to detect items that were moved. </p><p class="paragraph">Note that DiffUtil, <a href="../-list-adapter/index.html">ListAdapter</a>, and <a href="../-async-list-differ/index.html">AsyncListDiffer</a> require the list to not mutate while in use. This generally means that both the lists themselves and their elements (or at least, the properties of elements used in diffing) should not be modified directly. Instead, new lists should be provided any time content changes. It's common for lists passed to DiffUtil to share elements that have not mutated, so it is not strictly required to reload all data to use DiffUtil. </p><p class="paragraph">If the lists are large, this operation may take significant time so you are advised to run this on a background thread, get the <a href="-diff-result/index.html">DiffResult</a> then apply it on the RecyclerView on the main thread. </p><p class="paragraph">This algorithm is optimized for space and uses O(N) space to find the minimal number of addition and removal operations between the two lists. It has O(N + D^2) expected time performance where D is the length of the edit script. </p><p class="paragraph">If move detection is enabled, it takes an additional O(MN) time where M is the total number of added items and N is the total number of removed items. If your lists are already sorted by the same constraint (e.g. a created timestamp for a list of posts), you can disable move detection to improve performance. </p><p class="paragraph">The actual runtime of the algorithm significantly depends on the number of changes in the list and the cost of your comparison methods. Below are some average run times for reference: (The test list is composed of random UUID Strings and the tests are run on Nexus 5X with M) </p><ul><li>100 items and 10 modifications: avg: 0.39 ms, median: 0.35 ms </li><li>100 items and 100 modifications: 3.82 ms, median: 3.75 ms </li><li>100 items and 100 modifications without moves: 2.09 ms, median: 2.06 ms </li><li>1000 items and 50 modifications: avg: 4.67 ms, median: 4.59 ms </li><li>1000 items and 50 modifications without moves: avg: 3.59 ms, median: 3.50 ms </li><li>1000 items and 200 modifications: 27.07 ms, median: 26.92 ms </li><li>1000 items and 200 modifications without moves: 13.54 ms, median: 13.36 ms </li></ul><p class="paragraph">Due to implementation constraints, the max size of the list can be 2^26.</p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="See also">See also</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">See also</h2>
+              <div data-togglable="See also">
+                <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="main-subrow keyValue WithExtraAttributes RowTitle"><div class=""><span class="inline-flex"><a href="../-list-adapter/index.html">tds.androidx.recyclerview.widget.ListAdapter</a></span><span class="inline-flex"><div data-togglable="See also"></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="main-subrow keyValue WithExtraAttributes RowTitle"><div class=""><span class="inline-flex"><a href="../-async-list-differ/index.html">tds.androidx.recyclerview.widget.AsyncListDiffer</a></span><span class="inline-flex"><div data-togglable="See also"></div></span></div><div></div></div></div></div></div></div></div>
+              </div>
+              <h2 class="">Types</h2>
+              <div class="table" data-togglable="Types"><a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil.Callback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" anchor-label="Callback" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil.Callback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a>
+                <div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-callback/index.html">Callback</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Btds.androidx.recyclerview.widget%2FDiffUtil.Callback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div class="symbol monospace">abstract class <a href="-callback/index.html">Callback</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil.Callback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" anchor-label="Callback" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil.Callback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a><div class="brief "><a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil.Callback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" anchor-label="Callback" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil.Callback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a>A Callback class used by DiffUtil while calculating the diff between two lists.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil.DiffResult%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" anchor-label="DiffResult" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil.DiffResult%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a>
+                <div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-diff-result/index.html">DiffResult</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Btds.androidx.recyclerview.widget%2FDiffUtil.DiffResult%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div class="symbol monospace">open class <a href="-diff-result/index.html">DiffResult</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil.DiffResult%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" anchor-label="DiffResult" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil.DiffResult%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a><div class="brief "><a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil.DiffResult%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" anchor-label="DiffResult" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil.DiffResult%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a>This class holds the information about the result of a <a href="calculate-diff.html">calculateDiff</a> call.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil.ItemCallback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" anchor-label="ItemCallback" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil.ItemCallback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a>
+                <div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-item-callback/index.html">ItemCallback</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Btds.androidx.recyclerview.widget%2FDiffUtil.ItemCallback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div class="symbol monospace">abstract class <a href="-item-callback/index.html">ItemCallback</a>&lt;<a href="-item-callback/index.html">T</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil.ItemCallback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" anchor-label="ItemCallback" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil.ItemCallback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a><div class="brief "><a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil.ItemCallback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" anchor-label="ItemCallback" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil.ItemCallback%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a>Callback for calculating the diff between two non-null items in a list.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%2FPointingToDeclaration%2F%2C+tds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%23boolean%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1618030366" anchor-label="calculateDiff" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%2FPointingToDeclaration%2F%2C+tds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%23boolean%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a>
+                <div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="calculate-diff.html">calculateDiff</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Btds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%2FPointingToDeclaration%2F%2C+tds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%23boolean%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1618030366"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block">@<a href="../../tds.androidx.annotation/-non-null/index.html">NonNull</a>()</div></div>open fun <a href="calculate-diff.html">calculateDiff</a>(<span>@<a href="../../tds.androidx.annotation/-non-null/index.html">NonNull</a>()&nbsp;</span>cb: <a href="-callback/index.html">DiffUtil.Callback</a>): <a href="-diff-result/index.html">DiffUtil.DiffResult</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1618030366" anchor-label="calculateDiff" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a><div class="brief "><a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1618030366" anchor-label="calculateDiff" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a>Calculates the list of update operations that can covert one list into the other one.</div></div>
+<div class="divergent-group" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block">@<a href="../../tds.androidx.annotation/-non-null/index.html">NonNull</a>()</div></div>open fun <a href="calculate-diff.html">calculateDiff</a>(<span>@<a href="../../tds.androidx.annotation/-non-null/index.html">NonNull</a>()&nbsp;</span>cb: <a href="-callback/index.html">DiffUtil.Callback</a>, detectMoves: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>): <a href="-diff-result/index.html">DiffUtil.DiffResult</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%23boolean%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1618030366" anchor-label="calculateDiff" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%23boolean%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a><div class="brief "><a data-name="%5Btds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%23boolean%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1618030366" anchor-label="calculateDiff" id="%5Btds.androidx.recyclerview.widget%2FDiffUtil%2FcalculateDiff%2F%23tds.androidx.recyclerview.widget.DiffUtil.Callback%23boolean%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1618030366" data-filterable-set=":lib-common:dokkaHtmlPartial/release"></a>Calculates the list of update operations that can covert one list into the other one.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+
+
+</body></html>

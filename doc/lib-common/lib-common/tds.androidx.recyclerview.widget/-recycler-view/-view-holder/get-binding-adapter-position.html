@@ -1,0 +1,39 @@
+<html><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>getBindingAdapterPosition</title>
+</head><body><link href="../../../../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../";</script><script type="text/javascript" src="../../../../../scripts/sourceset_dependencies.js" async></script><link href="../../../../../styles/style.css" rel="Stylesheet"><link href="../../../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../../../scripts/main.js" async></script>
+  
+    <div id="container">
+      <div id="leftColumn"><a href="../../../../../index.html">
+            <div id="logo"></div>
+          </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <script type="text/javascript" src="../../../../../scripts/main.js"></script><div id="leftToggler"><span class="icon-toggler"></span></div>
+
+        <div class="main-content" id="content" pageids="lib-common::tds.androidx.recyclerview.widget/RecyclerView.ViewHolder/getBindingAdapterPosition/#/PointingToDeclaration//-1618030366">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../../../index.html">lib-common</a>/<a href="../../index.html">tds.androidx.recyclerview.widget</a>/<a href="../index.html">RecyclerView</a>/<a href="index.html">ViewHolder</a>/<a href="get-binding-adapter-position.html">getBindingAdapterPosition</a></div>
+            <div class="pull-right d-flex">
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span>get</span><wbr><span>Binding</span><wbr><span>Adapter</span><wbr><span>Position</span></h1>
+          </div>
+<div class="divergent-group" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div class="symbol monospace">fun <a href="get-binding-adapter-position.html">getBindingAdapterPosition</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">Returns the Adapter position of the item represented by this ViewHolder with respect tothe <a href="../-adapter/index.html">Adapter</a> that bound it.</p><p class="paragraph">Note that this might be different than the <a href="get-layout-position.html">getLayoutPosition</a> if there arepending adapter updates but a new layout pass has not happened yet.</p><p class="paragraph">RecyclerView does not handle any adapter updates until the next layout traversal. Thismay create temporary inconsistencies between what user sees on the screen and whatadapter contents have. This inconsistency is not important since it will be less than16ms but it might be a problem if you want to use ViewHolder position to access theadapter. Sometimes, you may need to get the exact adapter position to dosome actions in response to user events. In that case, you should use this method whichwill calculate the Adapter position of the ViewHolder.</p><p class="paragraph">Note that if you've called <a href="../-adapter/notify-data-set-changed.html">notifyDataSetChanged</a>, until thenext layout pass, the return value of this method will be <a href="../-n-o_-p-o-s-i-t-i-o-n.html">NO_POSITION</a>.</p><p class="paragraph">If the <a href="../-adapter/index.html">Adapter</a> that bound this <a href="index.html">ViewHolder</a> is inside another <a href="../-adapter/index.html">Adapter</a> (e.g. <a href="../../-concat-adapter/index.html">ConcatAdapter</a>), this position might be different than <a href="get-absolute-adapter-position.html">getAbsoluteAdapterPosition</a>. If you would like to know the position that <a href="../index.html">RecyclerView</a> considers (e.g. for saved state), you should use <a href="get-absolute-adapter-position.html">getAbsoluteAdapterPosition</a>.</p><h4 class="">Return</h4><p class="paragraph">The adapter position of the item if it still exists in the adapter. <a href="../-n-o_-p-o-s-i-t-i-o-n.html">NO_POSITION</a> if item has been removed from the adapter, <a href="../-adapter/notify-data-set-changed.html">notifyDataSetChanged</a> has been called after the lastlayout pass or the ViewHolder has already been recycled.</p><h2 class="">See also</h2><div data-togglable="See also"><div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-depenent-content" data-active="" data-togglable=":lib-common:dokkaHtmlPartial/release"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="main-subrow keyValue WithExtraAttributes RowTitle"><div class=""><span class="inline-flex"><a href="get-absolute-adapter-position.html">#getAbsoluteAdapterPosition()</a></span><span class="inline-flex"><div data-togglable="See also"><p class="paragraph">#getAbsoluteAdapterPosition()</p></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":lib-common:dokkaHtmlPartial/release" data-filterable-set=":lib-common:dokkaHtmlPartial/release"><div class="main-subrow keyValue WithExtraAttributes RowTitle"><div class=""><span class="inline-flex"><a href="get-layout-position.html">#getLayoutPosition()</a></span><span class="inline-flex"><div data-togglable="See also"><p class="paragraph">#getLayoutPosition()</p></div></span></div><div></div></div></div></div></div></div></div></div></div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+
+
+</body></html>
