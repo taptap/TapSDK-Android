@@ -4,51 +4,211 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_tap_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="登 陆" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="登陆相关："
+            android:textColor="@color/gray"/>
 
-    <Button
-        android:id="@+id/btn_openmoment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100px"
-        android:text="打开动态" />
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignContent="stretch"
+            app:alignItems="stretch"
+            app:flexWrap="wrap">
 
-    <Button
-        android:id="@+id/btn_closemoment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100px"
-        android:text="获取新通知数" />
+            <Button
+                android:id="@+id/btn_tap_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登 陆" />
 
-    <Button
-        android:id="@+id/bit_push_dongtai"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100px"
-        android:text="设置用户名称" />
+            <Button
+                android:id="@+id/btn_tap_loginstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="登录状态" />
 
-    <TextView
-        android:id="@+id/tx_mobile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100px"
-        android:text="" />
+            <Button
+                android:id="@+id/btn_tap_gouhuo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="篝火测试" />
 
-    <TextView
-        android:id="@+id/tx_network"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100px"
-        android:text="" />
+            <Button
+                android:id="@+id/btn_tap_userinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户信息" />
+
+            <Button
+                android:id="@+id/btn_tap_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="登 出" />
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="内嵌动态相关："
+            android:textColor="@color/gray"/>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignContent="stretch"
+            app:alignItems="stretch"
+            app:flexWrap="wrap">
+
+            <Button
+                android:id="@+id/btn_tap_fetch_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取新消息" />
+
+            <Button
+                android:id="@+id/btn_tap_open_moment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="打开动态" />
+
+            <Button
+                android:id="@+id/btn_tap_directly_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="场景化入口" />
+
+            <Button
+                android:id="@+id/btn_tap_close_moment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关闭动态" />
+
+            <Button
+                android:id="@+id/btn_tap_one_key_publish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="发布动态" />
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="好友相关："
+            android:textColor="@color/gray"/>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignContent="stretch"
+            app:alignItems="stretch"
+            app:flexWrap="wrap">
+
+            <Button
+                android:id="@+id/btn_tap_add_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加好友" />
+
+            <Button
+                android:id="@+id/btn_tap_delete_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="删除好友" />
+
+            <Button
+                android:id="@+id/btn_tap_block_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="拉黑好友" />
+
+            <Button
+                android:id="@+id/btn_tap_unblock_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消拉黑" />
+
+            <Button
+                android:id="@+id/btn_tap_get_following_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="获取关注列表" />
+
+            <Button
+                android:id="@+id/btn_tap_get_follower_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="获取粉丝列表" />
+
+            <Button
+                android:id="@+id/btn_tap_get_block_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="获取黑名单" />
+
+            <Button
+                android:id="@+id/btn_tap_send_invitation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="分享好友邀请" />
+
+            <Button
+                android:id="@+id/btn_tap_get_invitation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="获取好友邀请" />
+
+            <Button
+                android:id="@+id/btn_tap_search_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="搜索用户" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+
+
+
+        <TextView
+            android:id="@+id/tx_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100px"
+            android:text="" />
+
+    </LinearLayout>
 
 
 </LinearLayout>

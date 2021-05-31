@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :TapLicense_2.1.2:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aac189f9a0a99a7431b5ed6821ed2cb2/jetified-TapLicense_2.1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aac189f9a0a99a7431b5ed6821ed2cb2/jetified-TapLicense_2.1.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aac189f9a0a99a7431b5ed6821ed2cb2/jetified-TapLicense_2.1.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
