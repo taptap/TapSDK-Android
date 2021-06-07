@@ -137,8 +137,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TapConfig tapConfig = new TapConfig.Builder()
                 .withAppContext(getApplicationContext())
                 .withRegionType(TapRegionType.CN) // TapRegionType.CN: 国内  TapRegionType.IO: 国外
-                .withClientId("FwFdCIr6u71WQDQwQN")
-                .withClientSecret("ajDdGCaPI1gwvIq6jp9EbVd48jjwNPGL")
+//                .withClientId("FwFdCIr6u71WQDQwQN")
+                .withClientId("0RiAlMny7jiz086FaU")
+//                .withClientSecret("ajDdGCaPI1gwvIq6jp9EbVd48jjwNPGL")
+                .withClientSecret("8V8wemqkpkxmAN7qKhvlh6v0pXc8JJzEZe3JFUnU")
                 .withTapDBConfig(tapDBConfig)
                 .build();
         TapBootstrap.init(MainActivity.this, tapConfig);
@@ -369,7 +371,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void taptapAddFriend() {
     //     7daf77b3b1d548fea656b74548d68f0c
-        TapFriends.addFriend("890bc17122e04292a13130e900f3aa94", new com.tapsdk.friends.Callback<Boolean>() {
+        TapFriends.addFriend("fc252cbd9ed84e0e8584a78e696f0e0c", new com.tapsdk.friends.Callback<Boolean>() {
             @Override
             public void onSuccess(Boolean aBoolean) {
                 Toast.makeText(MainActivity.this, "添加好友成功", Toast.LENGTH_SHORT).show();
@@ -383,7 +385,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapDeleteFriend() {
-        TapFriends.deleteFriend("890bc17122e04292a13130e900f3aa94", new com.tapsdk.friends.Callback<Boolean>() {
+        TapFriends.deleteFriend("fc252cbd9ed84e0e8584a78e696f0e0c", new com.tapsdk.friends.Callback<Boolean>() {
             @Override
             public void onSuccess(Boolean aBoolean) {
                 Toast.makeText(MainActivity.this, "删除好友成功", Toast.LENGTH_SHORT).show();
@@ -398,7 +400,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapBlockFriend() {
-        TapFriends.blockUser("890bc17122e04292a13130e900f3aa94", new com.tapsdk.friends.Callback<Boolean>() {
+        TapFriends.blockUser("fc252cbd9ed84e0e8584a78e696f0e0c", new com.tapsdk.friends.Callback<Boolean>() {
             @Override
             public void onSuccess(Boolean aBoolean) {
                 Toast.makeText(MainActivity.this, "拉黑好友成功", Toast.LENGTH_SHORT).show();
@@ -412,7 +414,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapUnblockFriend() {
-        TapFriends.unblockUser("890bc17122e04292a13130e900f3aa94", new com.tapsdk.friends.Callback<Boolean>() {
+        TapFriends.unblockUser("fc252cbd9ed84e0e8584a78e696f0e0c", new com.tapsdk.friends.Callback<Boolean>() {
             @Override
             public void onSuccess(Boolean aBoolean) {
                 Toast.makeText(MainActivity.this, "取消拉黑好友成功", Toast.LENGTH_SHORT).show();
@@ -432,6 +434,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 for (TapUserRelationship u : list) {
                     System.out.println(u);
                 }
+                Log.d(TAG, "获取关注好友列表成功: " + list.toString());
+                Toast.makeText(MainActivity.this, "获取关注好友列表成功： " + list.toString(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -449,6 +453,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 for (TapUserRelationship f : list) {
                     System.out.println(f);
                 }
+                Log.d(TAG, "获取粉丝列表成功: " + list.toString());
+                Toast.makeText(MainActivity.this, "获取粉丝列表成功: " + list.toString(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -466,12 +472,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 for (TapUserRelationship b : list) {
                     System.out.println(b);
                 }
+                Toast.makeText(MainActivity.this, "获取黑名单列表成功： " + list.toString(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFail(TapFriendError tapFriendError) {
-                Toast.makeText(MainActivity.this, "获取黑明白列表失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
-                Log.d(TAG, "获取黑明白列表失败: " + tapFriendError.toJSON());
+                Toast.makeText(MainActivity.this, "获取黑名单列表失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "获取黑名单列表失败: " + tapFriendError.toJSON());
             }
         });
     }
@@ -507,7 +514,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapSearchUser() {
-        TapFriends.searchUser("890bc17122e04292a13130e900f3aa94", new com.tapsdk.friends.Callback<TapUserRelationship>() {
+        TapFriends.searchUser("fc252cbd9ed84e0e8584a78e696f0e0c", new com.tapsdk.friends.Callback<TapUserRelationship>() {
             @Override
             public void onSuccess(TapUserRelationship tapUserRelationship) {
                 Toast.makeText(MainActivity.this, "搜索用户成功", Toast.LENGTH_SHORT).show();
