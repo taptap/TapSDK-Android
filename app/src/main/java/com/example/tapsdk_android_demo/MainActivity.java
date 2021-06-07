@@ -22,6 +22,7 @@ import com.tapsdk.moment.TapMoment;
 
 import com.tds.common.entities.AccessToken;
 import com.tds.common.entities.TapConfig;
+import com.tds.common.entities.TapDBConfig;
 import com.tds.common.models.ComponentMessageCallback;
 import com.tds.common.models.TapRegionType;
 import com.tapsdk.bootstrap.account.LoginType;
@@ -124,15 +125,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     /*
-     * TapSDK 初始化，动态初始化
+     * TapSDK 初始化，TapDB初始化，内嵌动态初始化
      * */
     public void initSDK() {
+        // TapDB 初始化
+        TapDBConfig tapDBConfig = new TapDBConfig();
+        tapDBConfig.setEnable(true);
+        tapDBConfig.setChannel("gameChannel");
+        tapDBConfig.setGameVersion("gameVersion");
         // TapSDK 初始化
         TapConfig tapConfig = new TapConfig.Builder()
                 .withAppContext(getApplicationContext())
                 .withRegionType(TapRegionType.CN) // TapRegionType.CN: 国内  TapRegionType.IO: 国外
                 .withClientId("FwFdCIr6u71WQDQwQN")
                 .withClientSecret("ajDdGCaPI1gwvIq6jp9EbVd48jjwNPGL")
+                .withTapDBConfig(tapDBConfig)
                 .build();
         TapBootstrap.init(MainActivity.this, tapConfig);
 
