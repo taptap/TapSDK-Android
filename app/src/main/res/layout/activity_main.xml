@@ -117,7 +117,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="好友相关："
+            android:text="好友相关：（暂未开放权限, 好友功能异常请忽略）"
             android:textColor="@color/gray"/>
 
         <com.google.android.flexbox.FlexboxLayout
