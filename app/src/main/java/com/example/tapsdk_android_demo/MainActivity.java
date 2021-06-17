@@ -14,6 +14,7 @@ import com.tapsdk.bootstrap.account.TapLoginResultListener;
 
 import com.tapsdk.bootstrap.account.entities.TapUser;
 import com.tapsdk.bootstrap.exceptions.TapError;
+import com.tapsdk.friends.Callback0;
 import com.tapsdk.friends.ListCallback;
 import com.tapsdk.friends.TapFriends;
 import com.tapsdk.friends.entities.TapUserRelationship;
@@ -55,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btTapSendInvitation;
     private Button btTapGetInvitation;
     private Button btTapSearchUser;
+    private Button btTapRichToken;
+    private Button btTapRichVar;
+    private Button btTapRichClear;
 
     private Map<String, String> extras;
     private static final String TAG = "LeeJiEun ===> ";
@@ -95,6 +99,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTapSendInvitation = findViewById(R.id.btn_tap_send_invitation);
         btTapGetInvitation = findViewById(R.id.btn_tap_get_invitation);
         btTapSearchUser = findViewById(R.id.btn_tap_search_user);
+        btTapRichToken = findViewById(R.id.btn_tap_rich_token);
+        btTapRichVar = findViewById(R.id.btn_tap_rich_var);
+        btTapRichClear = findViewById(R.id.btn_tap_rich_clear);
 
 
         // 注册监听器
@@ -120,6 +127,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTapSendInvitation.setOnClickListener(this);
         btTapGetInvitation.setOnClickListener(this);
         btTapSearchUser.setOnClickListener(this);
+        btTapRichToken.setOnClickListener(this);
+        btTapRichVar.setOnClickListener(this);
+        btTapRichClear.setOnClickListener(this);
 
 
     }
@@ -274,7 +284,63 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_tap_search_user:
                 // 搜索用户
                 taptapSearchUser();
+            case R.id.btn_tap_rich_token:
+                // 富信息令牌
+                taptapRichVar();
+            case R.id.btn_tap_rich_var:
+                // 富信息变量
+                taptapRichToken();
+            case R.id.btn_tap_rich_clear:
+                // 清除富信息
+                taptapRichClear();
+
         }
+    }
+
+    private void taptapRichClear() {
+        // 清除富信息
+        TapFriends.clearRichPresence("display", new Callback0() {
+            @Override
+            public void handlerResult(TapFriendError tapFriendError) {
+                if (null == tapFriendError){
+                    // 清除成功
+                }else {
+                    Log.d(TAG, tapFriendError.detailMessage);
+                    Log.d(TAG, String.valueOf(tapFriendError.code));
+                }
+            }
+        });
+    }
+
+    private void taptapRichVar() {
+        // 富信息 令牌 参考文档中的服务端设置，这里的key值"display"文档中是"token"令牌形式， 所以value值需要以#开头
+        TapFriends.setRichPresence("display", "#playing", new Callback0() {
+            @Override
+            public void handlerResult(TapFriendError tapFriendError) {
+                if (null == tapFriendError){
+                    // 设置成功
+                }else {
+                    Log.d(TAG, tapFriendError.detailMessage);
+                    Log.d(TAG, String.valueOf(tapFriendError.code));
+                }
+            }
+        });
+    }
+
+    private void taptapRichToken() {
+        // 富信息 变量 这里的key值"score"文档中是"variable"形式， 所以value值不需要以#开头
+        TapFriends.setRichPresence("score", "100", new Callback0() {
+            @Override
+            public void handlerResult(TapFriendError tapFriendError) {
+                if (null == tapFriendError){
+                    // 设置成功
+                }else {
+                    Log.d(TAG, tapFriendError.detailMessage);
+                    Log.d(TAG, String.valueOf(tapFriendError.code));
+                }
+            }
+        });
+
     }
 
 
@@ -360,7 +426,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapOpenMoment() {
-        TapMoment.open(TapMoment.ORIENTATION_PORTRAIT);
+        TapMoment.open(TapMoment.ORIENTATION_LANDSCAPE);
     }
 
     // 获取用户新通知数量

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :TapLogin_2.1.4:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b82330b5a84e5432ae0164dc764c445f/jetified-TapLogin_2.1.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b82330b5a84e5432ae0164dc764c445f/jetified-TapLogin_2.1.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b82330b5a84e5432ae0164dc764c445f/jetified-TapLogin_2.1.4/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -195,6 +195,28 @@
                 android:layout_marginLeft="10dp"
                 android:text="搜索用户" />
 
+            <Button
+                android:id="@+id/btn_tap_rich_token"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="富信息令牌" />
+
+            <Button
+                android:id="@+id/btn_tap_rich_var"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="富信息变量" />
+
+            <Button
+                android:id="@+id/btn_tap_rich_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="清除富信息" />
+
+
         </com.google.android.flexbox.FlexboxLayout>
 
 

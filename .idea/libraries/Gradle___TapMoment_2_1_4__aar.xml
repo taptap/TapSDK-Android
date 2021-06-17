@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :TapMoment_2.1.4:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2531fbbe8b08f7d7b8e659d10e706006/jetified-TapMoment_2.1.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2531fbbe8b08f7d7b8e659d10e706006/jetified-TapMoment_2.1.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2531fbbe8b08f7d7b8e659d10e706006/jetified-TapMoment_2.1.4/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

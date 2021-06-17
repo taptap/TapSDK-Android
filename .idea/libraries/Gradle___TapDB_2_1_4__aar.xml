@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :TapDB_2.1.4:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7bb68b13c0f1ca11d24bffb7091ea5c1/jetified-TapDB_2.1.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7bb68b13c0f1ca11d24bffb7091ea5c1/jetified-TapDB_2.1.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7bb68b13c0f1ca11d24bffb7091ea5c1/jetified-TapDB_2.1.4/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
