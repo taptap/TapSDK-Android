@@ -24,8 +24,12 @@ local.properties
 
 # Gradle files
 .gradle
+<<<<<<< HEAD
 .gradle/
 
+=======
+build
+>>>>>>> f2d8fe9 (update gitignore)
 
 # Local configuration file (sdk path, etc)
 local.properties
