@@ -23,6 +23,7 @@ local.properties
 .idea
 
 # Gradle files
+.gradle
 .gradle/
 build/
 
