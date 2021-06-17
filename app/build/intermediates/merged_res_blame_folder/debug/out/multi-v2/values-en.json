@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/showwang/AndroidStudioProjects/TapSDK_Android_Demo/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en/values-en.xml",
+            "map": [
+                {
+                    "source": "/Users/showwang/.gradle/caches/transforms-2/files-2.1/904cc7184fdb04ee8f8c6225d0b020f3/jetified-TapLicense_2.1.4/res/values-en/values-en.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,117,177,266,419,524,616,690",
+                        "endColumns": "61,59,88,152,104,91,73,65",
+                        "endOffsets": "112,172,261,414,519,611,685,751"
+                    }
+                }
+            ]
+        }
+    ]
+}
