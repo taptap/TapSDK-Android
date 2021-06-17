@@ -15,7 +15,7 @@ gen/
 # Local configuration file (sdk path, etc)
 local.properties
 
-# OSX files
+# System OSX files
 .DS_Store
 
 # Android Studio
@@ -23,8 +23,8 @@ local.properties
 .idea
 
 # Gradle files
-.gradle
-build
+.gradle/
+build/
 
 # Local configuration file (sdk path, etc)
 local.properties
