@@ -21,6 +21,8 @@ import com.tapsdk.friends.entities.TapUserRelationship;
 import com.tapsdk.friends.exceptions.TapFriendError;
 import com.tapsdk.moment.TapMoment;
 
+import com.taptap.pay.sdk.library.TapLicenseCallback;
+import com.taptap.pay.sdk.library.TapLicenseHelper;
 import com.tds.common.entities.AccessToken;
 import com.tds.common.entities.TapConfig;
 import com.tds.common.entities.TapDBConfig;
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btTapRichToken;
     private Button btTapRichVar;
     private Button btTapRichClear;
+    private Button btTapLicense;
 
     private Map<String, String> extras;
     private static final String TAG = "LeeJiEun ===> ";
@@ -82,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTapGouhuo = findViewById(R.id.btn_tap_gouhuo);
         btTapUserInfo = findViewById(R.id.btn_tap_userinfo);
         btTapLogout = findViewById(R.id.btn_tap_logout);
+        btTapLicense = findViewById(R.id.btn_tap_license);
         // 内嵌动态相关
         btTapFetchNotification = findViewById(R.id.btn_tap_fetch_notification);
         btTapOpenMoment = findViewById(R.id.btn_tap_open_moment);
@@ -110,6 +114,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTapGouhuo.setOnClickListener(this);
         btTapUserInfo.setOnClickListener(this);
         btTapLogout.setOnClickListener(this);
+        btTapLicense.setOnClickListener(this);
         // 内嵌动态相关
         btTapFetchNotification.setOnClickListener(this);
         btTapOpenMoment.setOnClickListener(this);
@@ -147,10 +152,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TapConfig tapConfig = new TapConfig.Builder()
                 .withAppContext(getApplicationContext())
                 .withRegionType(TapRegionType.CN) // TapRegionType.CN: 国内  TapRegionType.IO: 国外
-//                .withClientId("FwFdCIr6u71WQDQwQN")
-                .withClientId("0RiAlMny7jiz086FaU")
-//                .withClientSecret("ajDdGCaPI1gwvIq6jp9EbVd48jjwNPGL")
-                .withClientSecret("8V8wemqkpkxmAN7qKhvlh6v0pXc8JJzEZe3JFUnU")
+                .withClientId("FwFdCIr6u71WQDQwQN")
+//                .withClientId("0RiAlMny7jiz086FaU")
+//                .withClientId("IKtnjfNWxSdj5GkZJy")
+                .withClientSecret("ajDdGCaPI1gwvIq6jp9EbVd48jjwNPGL")
+//                .withClientSecret("8V8wemqkpkxmAN7qKhvlh6v0pXc8JJzEZe3JFUnU")
+//                .withClientSecret("5pqSh3xTdmxyGNIG1E5OJf2OZrAonOM1Tx3IYxBu")
                 .withTapDBConfig(tapDBConfig)
                 .build();
         TapBootstrap.init(MainActivity.this, tapConfig);
@@ -225,6 +232,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // 登出功能
                 taptapLogout();
                 break;
+            case R.id.btn_tap_license:
+                // 付费验证
+                taptapLicense();
+                break;
             case R.id.btn_tap_fetch_notification:
                 // 获取新消息
                 taptapFetchNotification();
@@ -295,6 +306,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 taptapRichClear();
 
         }
+    }
+
+    private void taptapLicense() {
+        //默认情况下 SDK 会弹出不可由玩家手动取消的弹窗来避免未授权玩家进入游戏，如果需要回调来触发流程，请添加如下代码
+        TapLicenseHelper.setLicenseCallback(new TapLicenseCallback() {
+            @Override
+            public void onLicenseSuccess() {
+                Log.d(TAG, "用户已经付费购买");
+            }
+        });
+        TapLicenseHelper.check(this);
     }
 
     private void taptapRichClear() {
