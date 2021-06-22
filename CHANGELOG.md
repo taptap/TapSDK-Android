@@ -1,4 +1,45 @@
-Changelog
+# TapSDK v2.1.5 2020/06/22
+## TapDB
+### New features
+- 游戏共享taptap客户端的TapTapDeviceId(打通TapTap客户端和游戏数据)
+* 新增关闭游戏获取taptap客户端TapTapDeviceId接口
+``` java
+    // 需要在TapDB初始化之前调用才能生效
+    TapDB.closeFetchTapTapDeviceId();
+``` 
+* 游戏配置
+``` java
+<manifest>
+    <!-- targetSdkVersion >=30 的时候需要配置-->
+    <queries>
+        <package android:name="taptap客户端包名" />
+    </queries>
+</manifest>
+``` 
+<font color=RED>非常重要  （前提:targetSdkVersion >=30 的时候)</font>
+如果Unity版本早于 Unity 2019.3 补丁 需要手动更新gradle 配置
+
+转到Preferences > External Tools > Android > Gradle ，并将自定义Gradle设置为 Gradle 5.6.4或更高版本。有关下载，请参阅Gradle 构建工具。
+
+google官方参考：https://developers.google.com/ar/develop/unity/android-11-build
+
+
+### Optimization and fixed bugs
+- 内部优化
+
+## TapMoment
+### New features
+- 动态场景化回调
+
+## Other
+- 云玩内唤起主站客户端登录
+
+# v2.1.4 2021/06/12
+## TapFriend
+### New features
+- 新增设置富信息和查询富信息接口
+- TapUserRelationShip 新增 online & time & TapRichPresence 参数
+
 # v2.1.3 2021/05/28
 ## Feature
 * 新增繁体中文、日文、韩文、泰语、印度尼西亚语5种新的翻译，并可通过 `TapBootstrap setPreferredLanguage:` 设定
