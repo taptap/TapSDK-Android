@@ -14,6 +14,7 @@ import com.tapsdk.bootstrap.account.TapLoginResultListener;
 
 import com.tapsdk.bootstrap.account.entities.TapUser;
 import com.tapsdk.bootstrap.exceptions.TapError;
+import com.tapsdk.friends.Callback0;
 import com.tapsdk.friends.ListCallback;
 import com.tapsdk.friends.TapFriends;
 import com.tapsdk.friends.entities.TapUserRelationship;
@@ -57,6 +58,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btTapSendInvitation;
     private Button btTapGetInvitation;
     private Button btTapSearchUser;
+    private Button btTapRichToken;
+    private Button btTapRichVar;
+    private Button btTapRichClear;
+    private Button btTapLicense;
 
     private Map<String, String> extras;
     private static final String TAG = "LeeJiEun ===> ";
@@ -80,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTapGouhuo = findViewById(R.id.btn_tap_gouhuo);
         btTapUserInfo = findViewById(R.id.btn_tap_userinfo);
         btTapLogout = findViewById(R.id.btn_tap_logout);
+        btTapLicense = findViewById(R.id.btn_tap_license);
         // 内嵌动态相关
         btTapFetchNotification = findViewById(R.id.btn_tap_fetch_notification);
         btTapOpenMoment = findViewById(R.id.btn_tap_open_moment);
@@ -97,6 +103,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTapSendInvitation = findViewById(R.id.btn_tap_send_invitation);
         btTapGetInvitation = findViewById(R.id.btn_tap_get_invitation);
         btTapSearchUser = findViewById(R.id.btn_tap_search_user);
+        btTapRichToken = findViewById(R.id.btn_tap_rich_token);
+        btTapRichVar = findViewById(R.id.btn_tap_rich_var);
+        btTapRichClear = findViewById(R.id.btn_tap_rich_clear);
 
 
         // 注册监听器
@@ -105,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTapGouhuo.setOnClickListener(this);
         btTapUserInfo.setOnClickListener(this);
         btTapLogout.setOnClickListener(this);
-
+        btTapLicense.setOnClickListener(this);
         // 内嵌动态相关
         btTapFetchNotification.setOnClickListener(this);
         btTapOpenMoment.setOnClickListener(this);
@@ -123,6 +132,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTapSendInvitation.setOnClickListener(this);
         btTapGetInvitation.setOnClickListener(this);
         btTapSearchUser.setOnClickListener(this);
+        btTapRichToken.setOnClickListener(this);
+        btTapRichVar.setOnClickListener(this);
+        btTapRichClear.setOnClickListener(this);
 
 
     }
@@ -140,10 +152,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TapConfig tapConfig = new TapConfig.Builder()
                 .withAppContext(getApplicationContext())
                 .withRegionType(TapRegionType.CN) // TapRegionType.CN: 国内  TapRegionType.IO: 国外
-//                .withClientId("FwFdCIr6u71WQDQwQN")
-                .withClientId("IKtnjfNWxSdj5GkZJy")
-//                .withClientSecret("ajDdGCaPI1gwvIq6jp9EbVd48jjwNPGL")
-                .withClientSecret("5pqSh3xTdmxyGNIG1E5OJf2OZrAonOM1Tx3IYxBu")
+                .withClientId("FwFdCIr6u71WQDQwQN")
+//                .withClientId("0RiAlMny7jiz086FaU")
+//                .withClientId("IKtnjfNWxSdj5GkZJy")
+                .withClientSecret("ajDdGCaPI1gwvIq6jp9EbVd48jjwNPGL")
+//                .withClientSecret("8V8wemqkpkxmAN7qKhvlh6v0pXc8JJzEZe3JFUnU")
+//                .withClientSecret("5pqSh3xTdmxyGNIG1E5OJf2OZrAonOM1Tx3IYxBu")
                 .withTapDBConfig(tapDBConfig)
                 .build();
         TapBootstrap.init(MainActivity.this, tapConfig);
@@ -218,6 +232,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // 登出功能
                 taptapLogout();
                 break;
+            case R.id.btn_tap_license:
+                // 付费验证
+                taptapLicense();
+                break;
             case R.id.btn_tap_fetch_notification:
                 // 获取新消息
                 taptapFetchNotification();
@@ -277,15 +295,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_tap_search_user:
                 // 搜索用户
                 taptapSearchUser();
+            case R.id.btn_tap_rich_token:
+                // 富信息令牌
+                taptapRichVar();
+            case R.id.btn_tap_rich_var:
+                // 富信息变量
+                taptapRichToken();
+            case R.id.btn_tap_rich_clear:
+                // 清除富信息
+                taptapRichClear();
+
         }
     }
 
-
-    private void taptapLogout() {
-        TapBootstrap.logout();
-    }
-
-    public void taptapLicense(View view) {
+    private void taptapLicense() {
         //默认情况下 SDK 会弹出不可由玩家手动取消的弹窗来避免未授权玩家进入游戏，如果需要回调来触发流程，请添加如下代码
         TapLicenseHelper.setLicenseCallback(new TapLicenseCallback() {
             @Override
@@ -293,8 +316,59 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d(TAG, "用户已经付费购买");
             }
         });
-
         TapLicenseHelper.check(this);
+    }
+
+    private void taptapRichClear() {
+        // 清除富信息
+
+        TapFriends.clearRichPresence("display", new Callback0() {
+            @Override
+            public void handlerResult(TapFriendError tapFriendError) {
+                if (null == tapFriendError){
+                    // 清除成功
+                }else {
+                    Log.d(TAG, tapFriendError.detailMessage);
+                    Log.d(TAG, String.valueOf(tapFriendError.code));
+                }
+            }
+        });
+    }
+
+    private void taptapRichVar() {
+        // 富信息 令牌 参考文档中的服务端设置，这里的key值"display"文档中是"token"令牌形式， 所以value值需要以#开头
+        TapFriends.setRichPresence("display", "#playing", new Callback0() {
+            @Override
+            public void handlerResult(TapFriendError tapFriendError) {
+                if (null == tapFriendError){
+                    // 设置成功
+                }else {
+                    Log.d(TAG, tapFriendError.detailMessage);
+                    Log.d(TAG, String.valueOf(tapFriendError.code));
+                }
+            }
+        });
+    }
+
+    private void taptapRichToken() {
+        // 富信息 变量 这里的key值"score"文档中是"variable"形式， 所以value值不需要以#开头
+        TapFriends.setRichPresence("score", "100", new Callback0() {
+            @Override
+            public void handlerResult(TapFriendError tapFriendError) {
+                if (null == tapFriendError){
+                    // 设置成功
+                }else {
+                    Log.d(TAG, tapFriendError.detailMessage);
+                    Log.d(TAG, String.valueOf(tapFriendError.code));
+                }
+            }
+        });
+
+    }
+
+
+    private void taptapLogout() {
+        TapBootstrap.logout();
     }
 
     private void taptapGetUserInfo() {
@@ -375,7 +449,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapOpenMoment() {
-        TapMoment.open(TapMoment.ORIENTATION_PORTRAIT);
+        TapMoment.open(TapMoment.ORIENTATION_LANDSCAPE);
     }
 
     // 获取用户新通知数量
@@ -385,7 +459,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapAddFriend() {
-    //     7daf77b3b1d548fea656b74548d68f0c
+        //     7daf77b3b1d548fea656b74548d68f0c
         TapFriends.addFriend("fc252cbd9ed84e0e8584a78e696f0e0c", new com.tapsdk.friends.Callback<Boolean>() {
             @Override
             public void onSuccess(Boolean aBoolean) {
