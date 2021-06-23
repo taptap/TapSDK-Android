@@ -96,13 +96,13 @@
     <orderEntry type="library" name="Gradle: androidx.print:print:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.annotation:annotation-experimental:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.flexbox:flexbox:3.0.0@aar" level="project" />
-    <orderEntry type="library" name="Gradle: :TapBootStrap_2.1.3:@aar" level="project" />
-    <orderEntry type="library" name="Gradle: :TapDB_2.1.3:@aar" level="project" />
-    <orderEntry type="library" name="Gradle: :TapCommon_2.1.3:@aar" level="project" />
-    <orderEntry type="library" name="Gradle: :TapMoment_2.1.3:@aar" level="project" />
-    <orderEntry type="library" name="Gradle: :TapLogin_2.1.3:@aar" level="project" />
-    <orderEntry type="library" name="Gradle: :TapFriend_2.1.3:@aar" level="project" />
-    <orderEntry type="library" name="Gradle: :TapFriendUI_2.1.3:@aar" level="project" />
-    <orderEntry type="library" name="Gradle: :TapLicense_2.1.3:@aar" level="project" />
+    <orderEntry type="library" name="Gradle: :TapBootStrap_2.1.4:@aar" level="project" />
+    <orderEntry type="library" name="Gradle: :TapDB_2.1.4:@aar" level="project" />
+    <orderEntry type="library" name="Gradle: :TapCommon_2.1.4:@aar" level="project" />
+    <orderEntry type="library" name="Gradle: :TapMoment_2.1.4:@aar" level="project" />
+    <orderEntry type="library" name="Gradle: :TapLogin_2.1.4:@aar" level="project" />
+    <orderEntry type="library" name="Gradle: :TapFriend_2.1.4:@aar" level="project" />
+    <orderEntry type="library" name="Gradle: :TapFriendUI_2.1.4:@aar" level="project" />
+    <orderEntry type="library" name="Gradle: :TapLicense_2.1.4:@aar" level="project" />
   </component>
 </module>
