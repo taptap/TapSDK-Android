@@ -152,12 +152,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TapConfig tapConfig = new TapConfig.Builder()
                 .withAppContext(getApplicationContext())
                 .withRegionType(TapRegionType.CN) // TapRegionType.CN: 国内  TapRegionType.IO: 国外
-                .withClientId("FwFdCIr6u71WQDQwQN")
-//                .withClientId("0RiAlMny7jiz086FaU")
-//                .withClientId("IKtnjfNWxSdj5GkZJy")
-                .withClientSecret("ajDdGCaPI1gwvIq6jp9EbVd48jjwNPGL")
-//                .withClientSecret("8V8wemqkpkxmAN7qKhvlh6v0pXc8JJzEZe3JFUnU")
-//                .withClientSecret("5pqSh3xTdmxyGNIG1E5OJf2OZrAonOM1Tx3IYxBu")
+                .withClientId("Client ID From Tap Developer Center")
+                .withClientSecret("Client Token From Tap Developer Center")
                 .withTapDBConfig(tapDBConfig)
                 .build();
         TapBootstrap.init(MainActivity.this, tapConfig);
@@ -241,19 +237,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 taptapFetchNotification();
                 break;
             case R.id.btn_tap_open_moment:
-                // 获取新消息
+                // 打开动态
                 taptapOpenMoment();
                 break;
             case R.id.btn_tap_directly_open:
-                // 获取新消息
+                // 场景化入口
                 taptapDirectlyOpen();
                 break;
             case R.id.btn_tap_close_moment:
-                // 获取新消息
+                // 关闭内嵌动态
                 taptapCloseMoment();
                 break;
             case R.id.btn_tap_one_key_publish:
-                // 获取新消息
+                // 一键发布内容到内嵌动态
                 taptapOneKeyPublish();
                 break;
             case R.id.btn_tap_add_friend:
@@ -295,15 +291,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_tap_search_user:
                 // 搜索用户
                 taptapSearchUser();
+                break;
             case R.id.btn_tap_rich_token:
                 // 富信息令牌
                 taptapRichVar();
+                break;
             case R.id.btn_tap_rich_var:
                 // 富信息变量
                 taptapRichToken();
+                break;
             case R.id.btn_tap_rich_clear:
                 // 清除富信息
                 taptapRichClear();
+                break;
 
         }
     }
@@ -321,7 +321,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void taptapRichClear() {
         // 清除富信息
-
         TapFriends.clearRichPresence("display", new Callback0() {
             @Override
             public void handlerResult(TapFriendError tapFriendError) {
@@ -449,7 +448,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapOpenMoment() {
-        TapMoment.open(TapMoment.ORIENTATION_LANDSCAPE);
+        TapMoment.open(TapMoment.ORIENTATION_PORTRAIT);
     }
 
     // 获取用户新通知数量
