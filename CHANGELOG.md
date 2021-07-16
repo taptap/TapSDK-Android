@@ -1,15 +1,29 @@
 # Changelog
-## TapSDK v2.1.7 2020/07/14
+## TapSDK v3.0.0 2021/07/16
+Tips: 当前版本不支持 v2.x 升级
+### TapBootstrap
+#### Breaking changes
+- 账号系统升级为TDSUser
+- 登录相关接口修改
+- 获取篝火资格接口移动至 TapLogin 模块
+- 删除设置语言接口
+### TapLogin
+#### Breaking changes
+- 开放所有接口，支持获取 TapTap 账号的 openID 和 unionID
+### TapMoment
+#### Optimization and fixed bugs
+
+## TapSDK v2.1.7 2021/07/14
 ### TapDB
 #### Optimization and fixed bugs
 - TapDB 充值接口新增支持传入自定义字段的函数
 
-## TapSDK v2.1.6 2020/07/01
+## TapSDK v2.1.6 2021/07/01
 ### TapBootstrap
 #### Optimization and fixed bugs
 - 内部优化
 
-# TapSDK v2.1.5 2020/06/22
+# TapSDK v2.1.5 2021/06/22
 ## TapDB
 ### New features
 - 游戏共享taptap客户端的TapTapDeviceId(打通TapTap客户端和游戏数据)
