@@ -1,4 +1,4 @@
-## TapSDK - 2.1.6 For Android Demo；
+## TapSDK - 3.0.0 For Android Demo；
 
 ## 运行示例程序
 
