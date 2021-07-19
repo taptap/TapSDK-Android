@@ -10,30 +10,18 @@ import android.widget.Toast;
 
 import com.tapsdk.bootstrap.Callback;
 import com.tapsdk.bootstrap.TapBootstrap;
-import com.tapsdk.bootstrap.account.TapLoginResultListener;
-
-import com.tapsdk.bootstrap.account.entities.TapUser;
+import com.tapsdk.bootstrap.account.TDSUser;
 import com.tapsdk.bootstrap.exceptions.TapError;
-import com.tapsdk.friends.Callback0;
-import com.tapsdk.friends.ListCallback;
-import com.tapsdk.friends.TapFriends;
-import com.tapsdk.friends.entities.TapUserRelationship;
-import com.tapsdk.friends.exceptions.TapFriendError;
 import com.tapsdk.moment.TapMoment;
-
 import com.taptap.pay.sdk.library.TapLicenseCallback;
 import com.taptap.pay.sdk.library.TapLicenseHelper;
-import com.tds.common.entities.AccessToken;
+import com.taptap.sdk.TapLoginHelper;
+import com.taptap.sdk.net.Api;
 import com.tds.common.entities.TapConfig;
 import com.tds.common.entities.TapDBConfig;
-import com.tds.common.models.ComponentMessageCallback;
 import com.tds.common.models.TapRegionType;
-import com.tapsdk.bootstrap.account.LoginType;
-import com.tds.common.utils.TapGameUtil;
-import com.tds.tapdb.sdk.TapDB;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
@@ -41,29 +29,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btTapLogin;
     private Button btTapLoginStatus;
     private Button btTapGouhuo;
-    private Button btTapUserInfo;
     private Button btTapLogout;
     private Button btTapFetchNotification;
     private Button btTapOpenMoment;
     private Button btTapDirectlyOpen;
     private Button btTapCloseMoment;
     private Button btTapOneKeyPublish;
-    private Button btTapAddFriend;
-    private Button btTapDeleteFriend;
-    private Button btTapBlockFriend;
-    private Button btTapUnBlockFriend;
-    private Button btTapGetFollowingList;
-    private Button btTapGetFollowerList;
-    private Button btTapGetBlockList;
-    private Button btTapSendInvitation;
-    private Button btTapGetInvitation;
-    private Button btTapSearchUser;
-    private Button btTapRichToken;
-    private Button btTapRichVar;
-    private Button btTapRichClear;
     private Button btTapLicense;
 
-    private Map<String, String> extras;
     private static final String TAG = "LeeJiEun ===> ";
 
     @Override
@@ -83,7 +56,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTapLogin = findViewById(R.id.btn_tap_login);
         btTapLoginStatus = findViewById(R.id.btn_tap_loginstatus);
         btTapGouhuo = findViewById(R.id.btn_tap_gouhuo);
-        btTapUserInfo = findViewById(R.id.btn_tap_userinfo);
         btTapLogout = findViewById(R.id.btn_tap_logout);
         btTapLicense = findViewById(R.id.btn_tap_license);
         // 内嵌动态相关
@@ -92,27 +64,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTapDirectlyOpen = findViewById(R.id.btn_tap_directly_open);
         btTapCloseMoment = findViewById(R.id.btn_tap_close_moment);
         btTapOneKeyPublish = findViewById(R.id.btn_tap_one_key_publish);
-        // 好友相关
-        btTapAddFriend = findViewById(R.id.btn_tap_add_friend);
-        btTapDeleteFriend = findViewById(R.id.btn_tap_delete_friend);
-        btTapBlockFriend = findViewById(R.id.btn_tap_block_friend);
-        btTapUnBlockFriend = findViewById(R.id.btn_tap_unblock_friend);
-        btTapGetFollowingList = findViewById(R.id.btn_tap_get_following_list);
-        btTapGetFollowerList = findViewById(R.id.btn_tap_get_follower_list);
-        btTapGetBlockList = findViewById(R.id.btn_tap_get_block_list);
-        btTapSendInvitation = findViewById(R.id.btn_tap_send_invitation);
-        btTapGetInvitation = findViewById(R.id.btn_tap_get_invitation);
-        btTapSearchUser = findViewById(R.id.btn_tap_search_user);
-        btTapRichToken = findViewById(R.id.btn_tap_rich_token);
-        btTapRichVar = findViewById(R.id.btn_tap_rich_var);
-        btTapRichClear = findViewById(R.id.btn_tap_rich_clear);
-
 
         // 注册监听器
         btTapLogin.setOnClickListener(this);
         btTapLoginStatus.setOnClickListener(this);
         btTapGouhuo.setOnClickListener(this);
-        btTapUserInfo.setOnClickListener(this);
         btTapLogout.setOnClickListener(this);
         btTapLicense.setOnClickListener(this);
         // 内嵌动态相关
@@ -121,21 +77,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTapDirectlyOpen.setOnClickListener(this);
         btTapCloseMoment.setOnClickListener(this);
         btTapOneKeyPublish.setOnClickListener(this);
-        // 好友相关
-        btTapAddFriend.setOnClickListener(this);
-        btTapDeleteFriend.setOnClickListener(this);
-        btTapBlockFriend.setOnClickListener(this);
-        btTapUnBlockFriend.setOnClickListener(this);
-        btTapGetFollowingList.setOnClickListener(this);
-        btTapGetFollowerList.setOnClickListener(this);
-        btTapGetBlockList.setOnClickListener(this);
-        btTapSendInvitation.setOnClickListener(this);
-        btTapGetInvitation.setOnClickListener(this);
-        btTapSearchUser.setOnClickListener(this);
-        btTapRichToken.setOnClickListener(this);
-        btTapRichVar.setOnClickListener(this);
-        btTapRichClear.setOnClickListener(this);
-
 
     }
 
@@ -152,37 +93,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TapConfig tapConfig = new TapConfig.Builder()
                 .withAppContext(getApplicationContext())
                 .withRegionType(TapRegionType.CN) // TapRegionType.CN: 国内  TapRegionType.IO: 国外
-                .withClientId("Client ID From Tap Developer Center")
-                .withClientSecret("Client Token From Tap Developer Center")
+                .withClientId("Client ID from DC")
+                .withClientToken("Client Token from DC")
+                .withServerUrl("https://0rialmny.cloud.tds1.tapapis.cn")
                 .withTapDBConfig(tapDBConfig)
                 .build();
         TapBootstrap.init(MainActivity.this, tapConfig);
-
-        // 动态 初始化
-//        TapMoment.init(MainActivity.this, "FwFdCIr6u71WQDQwQN", true);
-
-        // 初始化TapDB
-//        TapDB.init(getApplicationContext(), "FwFdCIr6u71WQDQwQN", "taptap", true);
-
-        // 注册登陆回调监听
-        TapBootstrap.registerLoginResultListener(new TapLoginResultListener() {
-            @Override
-            public void loginSuccess(com.tds.common.entities.AccessToken accessToken) {
-                Log.d(TAG, "onLoginSuccess: " + accessToken.toJSON());
-
-            }
-
-            @Override
-            public void loginFail(TapError tapError) {
-                Log.d(TAG, "onLoginError: " + tapError.detailMessage);
-                Log.d(TAG, "onLoginError: " + tapError.toJSON());
-            }
-
-            @Override
-            public void loginCancel() {
-                Log.d(TAG, "onLoginCancel");
-            }
-        });
 
         // 注册动态回调监听
         TapMoment.setCallback(new TapMoment.TapMomentCallback() {
@@ -195,13 +111,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        // 注册好友回调监听
-        TapFriends.registerMessageCallback(new ComponentMessageCallback() {
-            @Override
-            public void onMessage(int code, Map<String, String> map) {
-
-            }
-        });
 
     }
 
@@ -219,10 +128,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_tap_gouhuo:
                 //篝火测试资格
                 taptapGouHuo();
-                break;
-            case R.id.btn_tap_userinfo:
-                // 获取用户信息
-                taptapGetUserInfo();
                 break;
             case R.id.btn_tap_logout:
                 // 登出功能
@@ -252,58 +157,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // 一键发布内容到内嵌动态
                 taptapOneKeyPublish();
                 break;
-            case R.id.btn_tap_add_friend:
-                // 添加好友
-                taptapAddFriend();
-                break;
-            case R.id.btn_tap_delete_friend:
-                // 删除好友
-                taptapDeleteFriend();
-                break;
-            case R.id.btn_tap_block_friend:
-                // 拉黑好友
-                taptapBlockFriend();
-                break;
-            case R.id.btn_tap_unblock_friend:
-                // 取消拉黑好友
-                taptapUnblockFriend();
-                break;
-            case R.id.btn_tap_get_following_list:
-                // 获取关注好友列表
-                taptapGetFollowingList();
-                break;
-            case R.id.btn_tap_get_follower_list:
-                // 获取粉丝列表
-                taptapGetFollowerList();
-                break;
-            case R.id.btn_tap_get_block_list:
-                // 获取黑名单列表
-                taptapGetBlockList();
-                break;
-            case R.id.btn_tap_send_invitation:
-                // 分享好友邀请
-                taptapSendInvitation();
-                break;
-            case R.id.btn_tap_get_invitation:
-                // 获取好友邀请
-                taptapGetInvitation();
-                break;
-            case R.id.btn_tap_search_user:
-                // 搜索用户
-                taptapSearchUser();
-                break;
-            case R.id.btn_tap_rich_token:
-                // 富信息令牌
-                taptapRichVar();
-                break;
-            case R.id.btn_tap_rich_var:
-                // 富信息变量
-                taptapRichToken();
-                break;
-            case R.id.btn_tap_rich_clear:
-                // 清除富信息
-                taptapRichClear();
-                break;
 
         }
     }
@@ -319,76 +172,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TapLicenseHelper.check(this);
     }
 
-    private void taptapRichClear() {
-        // 清除富信息
-        TapFriends.clearRichPresence("display", new Callback0() {
-            @Override
-            public void handlerResult(TapFriendError tapFriendError) {
-                if (null == tapFriendError){
-                    // 清除成功
-                }else {
-                    Log.d(TAG, tapFriendError.detailMessage);
-                    Log.d(TAG, String.valueOf(tapFriendError.code));
-                }
-            }
-        });
-    }
-
-    private void taptapRichVar() {
-        // 富信息 令牌 参考文档中的服务端设置，这里的key值"display"文档中是"token"令牌形式， 所以value值需要以#开头
-        TapFriends.setRichPresence("display", "#playing", new Callback0() {
-            @Override
-            public void handlerResult(TapFriendError tapFriendError) {
-                if (null == tapFriendError){
-                    // 设置成功
-                }else {
-                    Log.d(TAG, tapFriendError.detailMessage);
-                    Log.d(TAG, String.valueOf(tapFriendError.code));
-                }
-            }
-        });
-    }
-
-    private void taptapRichToken() {
-        // 富信息 变量 这里的key值"score"文档中是"variable"形式， 所以value值不需要以#开头
-        TapFriends.setRichPresence("score", "100", new Callback0() {
-            @Override
-            public void handlerResult(TapFriendError tapFriendError) {
-                if (null == tapFriendError){
-                    // 设置成功
-                }else {
-                    Log.d(TAG, tapFriendError.detailMessage);
-                    Log.d(TAG, String.valueOf(tapFriendError.code));
-                }
-            }
-        });
-
-    }
-
-
     private void taptapLogout() {
-        TapBootstrap.logout();
-    }
-
-    private void taptapGetUserInfo() {
-        TapBootstrap.getUser(new Callback<TapUser>() {
-            @Override
-            public void onSuccess(TapUser tapUser) {
-                Toast.makeText(MainActivity.this, "用户信息为：" + tapUser.toJSON(), Toast.LENGTH_SHORT).show();
-                Log.d(TAG, "用户信息为: " + tapUser.toJSON());
-                // userid 字段 在使用好友功能时会作为参数传递
-                Log.d(TAG, "userID: " + tapUser.userId);
-            }
-
-            @Override
-            public void onFail(TapError tapError) {
-                Toast.makeText(MainActivity.this, "获取用户信息失败：" + tapError.detailMessage, Toast.LENGTH_SHORT).show();
-            }
-        });
+        TDSUser.logOut();
     }
 
     private void taptapGouHuo() {
-        TapBootstrap.getTestQualification(new Callback<Boolean>() {
+        TapLoginHelper.getTestQualification(new Api.ApiCallback<Boolean>() {
             @Override
             public void onSuccess(Boolean aBoolean) {
                 // 该玩家已拥有测试资格
@@ -396,7 +185,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             @Override
-            public void onFail(TapError tapError) {
+            public void onError(Throwable throwable) {
                 // 该玩家不具备测试资格， 游戏层面进行拦截
                 Toast.makeText(MainActivity.this, "该玩家不具备篝火测试资格", Toast.LENGTH_SHORT).show();
             }
@@ -405,20 +194,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void taptapLoginStatus() {
         // 未登录用户会返回 null
-        if (TapBootstrap.getCurrentToken() == null) {
+        TDSUser currentUser = TDSUser.currentUser();
+        // 未登录用户会返回 null
+        if (currentUser == null) {
             // 用户未登录过
-            Toast.makeText(MainActivity.this, "用户未登陆，请执行登陆功能", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "没有登陆，请执行登陆操作", Toast.LENGTH_SHORT).show();
         } else {
             // 用户已经登录过
-            Toast.makeText(MainActivity.this, "已经登陆，继续执行自己业务逻辑", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "已经登陆，执行程序业务逻辑", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void taptapLogin() {
+        TDSUser currentUser = TDSUser.currentUser();
         // 未登录用户会返回 null
-        if (TapBootstrap.getCurrentToken() == null) {
+        if (currentUser == null) {
             // 用户未登录过
-            TapBootstrap.login(MainActivity.this, LoginType.TAPTAP, "public_profile");
+            TDSUser.loginWithTapTap(MainActivity.this, new Callback<TDSUser>() {
+                @Override
+                public void onSuccess(TDSUser resultUser) {
+                    // 开发者可以调用 resultUser 的方法获取更多属性。
+                    String userID = resultUser.getObjectId();
+                    String userName = resultUser.getUsername();
+                    String avatar = (String) resultUser.get("avatar");
+                    String openID = (String) resultUser.get("openid");
+                    String unionID = (String) resultUser.get("unionid");
+                    Log.d(TAG, "userID: " + userID);
+                    Log.d(TAG, "userName: " +userName);
+                    Log.d(TAG, "avatar: "+ avatar);
+                    Log.d(TAG, "openID: "+ openID);
+                    Log.d(TAG, "unionID: "+ unionID);
+                    Toast.makeText(MainActivity.this, "succeed to login with Taptap.", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onFail(TapError error) {
+                    Toast.makeText(MainActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.d(TAG, error.detailMessage);
+                }
+            }, TapLoginHelper.SCOPE_PUBLIC_PROFILE);
         } else {
             // 用户已经登录过
             Toast.makeText(MainActivity.this, "已经登陆，执行程序业务逻辑", Toast.LENGTH_SHORT).show();
@@ -455,166 +269,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void taptapFetchNotification() {
         // 获取到到数据在内嵌动态到回调方法中给出
         TapMoment.fetchNotification();
-    }
-
-    private void taptapAddFriend() {
-        //     7daf77b3b1d548fea656b74548d68f0c
-        TapFriends.addFriend("fc252cbd9ed84e0e8584a78e696f0e0c", new com.tapsdk.friends.Callback<Boolean>() {
-            @Override
-            public void onSuccess(Boolean aBoolean) {
-                Toast.makeText(MainActivity.this, "添加好友成功", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFail(TapFriendError tapFriendError) {
-                Toast.makeText(MainActivity.this, "添加好友失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    private void taptapDeleteFriend() {
-        TapFriends.deleteFriend("fc252cbd9ed84e0e8584a78e696f0e0c", new com.tapsdk.friends.Callback<Boolean>() {
-            @Override
-            public void onSuccess(Boolean aBoolean) {
-                Toast.makeText(MainActivity.this, "删除好友成功", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFail(TapFriendError tapFriendError) {
-                Toast.makeText(MainActivity.this, "删除好友失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
-
-    private void taptapBlockFriend() {
-        TapFriends.blockUser("fc252cbd9ed84e0e8584a78e696f0e0c", new com.tapsdk.friends.Callback<Boolean>() {
-            @Override
-            public void onSuccess(Boolean aBoolean) {
-                Toast.makeText(MainActivity.this, "拉黑好友成功", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFail(TapFriendError tapFriendError) {
-                Toast.makeText(MainActivity.this, "拉黑好友失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    private void taptapUnblockFriend() {
-        TapFriends.unblockUser("fc252cbd9ed84e0e8584a78e696f0e0c", new com.tapsdk.friends.Callback<Boolean>() {
-            @Override
-            public void onSuccess(Boolean aBoolean) {
-                Toast.makeText(MainActivity.this, "取消拉黑好友成功", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFail(TapFriendError tapFriendError) {
-                Toast.makeText(MainActivity.this, "取消拉黑好友失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    private void taptapGetFollowingList() {
-        TapFriends.getFollowingList(0, true, 100, new ListCallback<TapUserRelationship>() {
-            @Override
-            public void onSuccess(List<TapUserRelationship> list) {
-                for (TapUserRelationship u : list) {
-                    System.out.println(u);
-                }
-                Log.d(TAG, "获取关注好友列表成功: " + list.toString());
-                Toast.makeText(MainActivity.this, "获取关注好友列表成功： " + list.toString(), Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFail(TapFriendError tapFriendError) {
-                Toast.makeText(MainActivity.this, "获取关注好友列表失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
-                Log.d(TAG, "获取关注好友列表失败: " + tapFriendError.toJSON());
-            }
-        });
-    }
-
-    private void taptapGetFollowerList() {
-        TapFriends.getFollowerList(0, 100, new ListCallback<TapUserRelationship>() {
-            @Override
-            public void onSuccess(List<TapUserRelationship> list) {
-                for (TapUserRelationship f : list) {
-                    System.out.println(f);
-                }
-                Log.d(TAG, "获取粉丝列表成功: " + list.toString());
-                Toast.makeText(MainActivity.this, "获取粉丝列表成功: " + list.toString(), Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFail(TapFriendError tapFriendError) {
-                Toast.makeText(MainActivity.this, "获取粉丝列表失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
-                Log.d(TAG, "获取粉丝列表失败: " + tapFriendError.toJSON());
-            }
-        });
-    }
-
-    private void taptapGetBlockList() {
-        TapFriends.getBlockList(0, 100, new ListCallback<TapUserRelationship>() {
-            @Override
-            public void onSuccess(List<TapUserRelationship> list) {
-                for (TapUserRelationship b : list) {
-                    System.out.println(b);
-                }
-                Toast.makeText(MainActivity.this, "获取黑名单列表成功： " + list.toString(), Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFail(TapFriendError tapFriendError) {
-                Toast.makeText(MainActivity.this, "获取黑名单列表失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
-                Log.d(TAG, "获取黑名单列表失败: " + tapFriendError.toJSON());
-            }
-        });
-    }
-
-    private void taptapSendInvitation() {
-        TapFriends.sendFriendInvitation(MainActivity.this, new com.tapsdk.friends.Callback<Boolean>() {
-            @Override
-            public void onSuccess(Boolean aBoolean) {
-                Toast.makeText(MainActivity.this, "分享好友邀请成功", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFail(TapFriendError tapFriendError) {
-                Toast.makeText(MainActivity.this, "分享好友邀请失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
-                Log.d(TAG, "分享好友邀请失败: " + tapFriendError.toJSON());
-            }
-        });
-    }
-
-    private void taptapGetInvitation() {
-        TapFriends.generateFriendInvitation(new com.tapsdk.friends.Callback<String>() {
-            @Override
-            public void onSuccess(String s) {
-                Toast.makeText(MainActivity.this, "获取好友邀请成功", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFail(TapFriendError tapFriendError) {
-                Toast.makeText(MainActivity.this, "获取好友邀请失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
-                Log.d(TAG, "获取好友邀请失败: " + tapFriendError.toJSON());
-            }
-        });
-    }
-
-    private void taptapSearchUser() {
-        TapFriends.searchUser("fc252cbd9ed84e0e8584a78e696f0e0c", new com.tapsdk.friends.Callback<TapUserRelationship>() {
-            @Override
-            public void onSuccess(TapUserRelationship tapUserRelationship) {
-                Toast.makeText(MainActivity.this, "搜索用户成功", Toast.LENGTH_SHORT).show();
-                tapUserRelationship.toJSON();
-            }
-
-            @Override
-            public void onFail(TapFriendError tapFriendError) {
-                Toast.makeText(MainActivity.this, "搜索用户失败： " + tapFriendError.detailMessage, Toast.LENGTH_SHORT).show();
-                Log.d(TAG, "搜索用户失败: " + tapFriendError.toJSON());
-            }
-        });
     }
 
 }
