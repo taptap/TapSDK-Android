@@ -37,7 +37,7 @@ Tips: 当前版本不支持 v2.x 升级
 <manifest>
     <!-- targetSdkVersion >=30 的时候需要配置-->
     <queries>
-        <package android:name="taptap客户端包名" />
+        <package android:name="com.taptap" />
     </queries>
 </manifest>
 ``` 
