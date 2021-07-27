@@ -243,5 +243,3 @@ google官方参考：https://developers.google.com/ar/develop/unity/android-11-b
 * 新增检查 TapTap 客户端是否安装接口
 * 新增唤起 TapTap 客户端更新页面接口
 * 新增唤起 TapTap 客户端评论页面接口
-
-## v2.0.0 2021/04/08

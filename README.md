@@ -1,4 +1,4 @@
-## TapSDK - 2.1.6 For Android Demo；
+## TapSDK - 3.0.0 For Android Demo；
 
 ## 运行示例程序
 
@@ -9,3 +9,4 @@
 2、配置自己的签名信息，签名打包测试；
 
 3、可以下载项目中的 apk-release.apk 先体验；
+ 

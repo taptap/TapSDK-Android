@@ -1,6 +1,7 @@
 # Built application files
 *.apk
 *.ap_
+!app-release.apk
 
 #macos systerm
 .DS_Store
