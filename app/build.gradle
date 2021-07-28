@@ -14,6 +14,23 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'wxlogin'
+            keyPassword '111111'
+            storeFile file('../sign_password_111111.keystore')
+            storePassword '111111'
+        }
+        debug {
+            keyAlias 'wxlogin'
+            keyPassword '111111'
+            storeFile file('../sign_password_111111.keystore')
+            storePassword '111111'
+        }
     }
 
     buildTypes {
@@ -42,11 +59,14 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.google.android.flexbox:flexbox:3.0.0'
-    implementation name: 'TapBootStrap_3.0.0', ext: 'aar'  // 必选: x.x.x 代表所下载的 SDK的版本号
-    implementation(name: 'TapCommon_3.0.0', ext: 'aar')
-    implementation(name: 'TapMoment_3.0.0', ext: 'aar')
-    implementation(name: 'TapLogin_3.0.0', ext: 'aar')
-    implementation(name: 'TapLicense_3.0.0', ext: 'aar')
-    implementation 'cn.leancloud:storage-android:8.0.3'
+    implementation name: 'TapBootStrap_3.1.0', ext: 'aar'  // 必选: x.x.x 代表所下载的 SDK的版本号
+    implementation(name: 'TapCommon_3.1.0', ext: 'aar')
+    implementation(name: 'TapMoment_3.1.0', ext: 'aar')
+    implementation(name: 'TapLogin_3.1.0', ext: 'aar')
+    implementation(name: 'TapLicense_3.1.0', ext: 'aar')
+    implementation(name: 'TapAchievement_3.1.0', ext: 'aar')
+    implementation(name: 'TapDB_3.1.0', ext: 'aar')
+    implementation 'cn.leancloud:realtime-android:8.0.4'
+    implementation 'cn.leancloud:storage-android:8.0.4'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 }
