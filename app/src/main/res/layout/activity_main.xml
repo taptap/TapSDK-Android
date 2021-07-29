@@ -187,6 +187,81 @@
         </com.google.android.flexbox.FlexboxLayout>
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="「成就系统」 相关："
+            android:textColor="@color/gray"/>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignContent="stretch"
+            app:alignItems="stretch"
+            app:flexWrap="wrap">
+
+
+        <Button
+            android:id="@+id/btn_tap_achieve_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="注册监听回调" />
+
+        <Button
+            android:id="@+id/btn_tap_achieve_init"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="初始化成就数据" />
+
+
+        <Button
+            android:id="@+id/btn_tap_achieve_fetch_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="获取全部数据" />
+
+        <Button
+            android:id="@+id/btn_tap_achieve_fetch_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="获取当前数据" />
+
+        <Button
+            android:id="@+id/btn_tap_achieve_reach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="达成某项成就" />
+
+        <Button
+            android:id="@+id/btn_tap_achieve_grow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="成就增长步数" />
+
+        <Button
+            android:id="@+id/btn_tap_achieve_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="设置冒泡开关" />
+
+            <Button
+            android:id="@+id/btn_tap_achieve_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="打开成就展示页" />
+
+
+
+        </com.google.android.flexbox.FlexboxLayout>
 
         <TextView
             android:id="@+id/tx_network"

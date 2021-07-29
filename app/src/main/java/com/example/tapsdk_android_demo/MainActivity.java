@@ -17,6 +17,11 @@ import com.taptap.pay.sdk.library.TapLicenseCallback;
 import com.taptap.pay.sdk.library.TapLicenseHelper;
 import com.taptap.sdk.TapLoginHelper;
 import com.taptap.sdk.net.Api;
+import com.tds.achievement.AchievementCallback;
+import com.tds.achievement.AchievementException;
+import com.tds.achievement.GetAchievementListCallBack;
+import com.tds.achievement.TapAchievement;
+import com.tds.achievement.TapAchievementBean;
 import com.tds.common.entities.TapConfig;
 import com.tds.common.entities.TapDBConfig;
 import com.tds.common.models.TapRegionType;
@@ -60,6 +65,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btTapGetFriendsList;
     private Button btTapDeleteFriend;
     private Button btTapQueryFriend;
+
+    private Button btShowAchievement;
+    private Button btRegisterAchievement;
+    private Button btInitAchievement;
+    private Button btFetchAllAchievement;
+    private Button btFetchUserAchievement;
+    private Button btFGrowAchievement;
+    private Button btFReachAchievement;
+    private Button btSwitchToastAchievement;
 
     public static final String LeeJiDongID = "61012c565d0493087d3bf63a";
     public static final String LeeJiEunID = "60f2df4fd1773b17a7c43e4f";
@@ -105,6 +119,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTapGetFriendsList = findViewById(R.id.btn_tap_getfriends_list);
         btTapDeleteFriend = findViewById(R.id.btn_tap_delete_friend);
         btTapQueryFriend = findViewById(R.id.btn_tap_query_friend);
+        // 成就相关
+        btRegisterAchievement = findViewById(R.id.btn_tap_achieve_register);
+        btInitAchievement = findViewById(R.id.btn_tap_achieve_init);
+        btFetchAllAchievement = findViewById(R.id.btn_tap_achieve_fetch_all);
+        btFetchUserAchievement = findViewById(R.id.btn_tap_achieve_fetch_user);
+        btFReachAchievement = findViewById(R.id.btn_tap_achieve_reach);
+        btFGrowAchievement = findViewById(R.id.btn_tap_achieve_grow);
+        btSwitchToastAchievement = findViewById(R.id.btn_tap_achieve_toast);
+        btShowAchievement = findViewById(R.id.btn_tap_achieve_open);
 
         // 注册监听器
         btTapLogin.setOnClickListener(this);
@@ -129,6 +152,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTapGetFriendsList.setOnClickListener(this);
         btTapDeleteFriend.setOnClickListener(this);
         btTapQueryFriend.setOnClickListener(this);
+
+        // 成就相关
+        btRegisterAchievement.setOnClickListener(this);
+        btInitAchievement.setOnClickListener(this);
+        btFetchAllAchievement.setOnClickListener(this);
+        btFetchUserAchievement.setOnClickListener(this);
+        btFReachAchievement.setOnClickListener(this);
+        btFGrowAchievement.setOnClickListener(this);
+        btSwitchToastAchievement.setOnClickListener(this);
+        btShowAchievement.setOnClickListener(this);
 
     }
 
@@ -245,7 +278,173 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // 查询好友关系
                 taptapQueryFriend();
                 break;
+            case R.id.btn_tap_achieve_register:
+                // 注册监听回调
+                taptapRegisterAchieve();
+                break;
+            case R.id.btn_tap_achieve_init:
+                // 初始化数据
+                taptapInitAchieve();
+                break;
+            case R.id.btn_tap_achieve_fetch_all:
+                // 获取全部成就数据
+                taptapFetchAllAchieveData();
+                break;
+            case R.id.btn_tap_achieve_fetch_user:
+                // 获取当前用户数据
+                taptapFetchUserAchieveData();
+                break;
+            case R.id.btn_tap_achieve_reach:
+                // 达成某个成就
+                taptapReachAchieve();
+                break;
+            case R.id.btn_tap_achieve_grow:
+                // 成就增长步数
+                taptapGrowAchieve();
+                break;
+            case R.id.btn_tap_achieve_toast:
+                // 设置冒泡开关
+                taptapSetShowToast();
+                break;
+            case R.id.btn_tap_achieve_open:
+                // 打开成就展示页
+                taptapShowAchieve();
+                break;
         }
+    }
+
+    boolean flagShow = false;
+    private void taptapSetShowToast() {
+        flagShow = !flagShow;
+        if(flagShow){
+            Toast.makeText(this, "冒泡开关关闭", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "冒泡开关开启", Toast.LENGTH_SHORT).show();
+        }
+        TapAchievement.setShowToast(flagShow);
+    }
+
+    private void taptapGrowAchieve() {
+        // 成就增长步数提供两种方式调用，
+        // growSteps 中传递当前增量达成的步数（例如：多走了5步，则传递5即可），
+        // makeSteps 中传递当前成就已达成的步数
+        // displayID 是在开发者中心中添加成就时自行设定的 成就ID
+//        TapAchievement.growSteps("displayID", 5);
+        TapAchievement.makeSteps("displayID", 100);
+    }
+
+    private void taptapReachAchieve() {
+        // displayID 是在开发者中心中添加成就时自行设定的 成就ID
+        TapAchievement.reach("displayID");
+    }
+
+    private void taptapFetchUserAchieveData() {
+        // 本地数据
+        List<TapAchievementBean> userList = TapAchievement.getLocalUserAchievementList();
+        if(null != userList && !userList.isEmpty()){
+            for (TapAchievementBean tab : userList){
+                Log.d(TAG, tab.toString());
+            }
+        }
+
+        // 服务端数据
+        TapAchievement.fetchUserAchievementList(new GetAchievementListCallBack() {
+            @Override
+            public void onGetAchievementList(List<TapAchievementBean> achievementList, AchievementException exception) {
+                if (exception != null) {
+                    switch (exception.errorCode) {
+                        case AchievementException.SDK_NOT_INIT:
+                            // SDK 还未初始化数据
+                            Log.d(TAG, "SDK 还未初始化数据");
+                            break;
+                        default:
+                            // 数据获取失败
+                            Log.d(TAG, "数据获取失败");
+                    }
+                } else {
+                    // 成功获取数据
+                    Log.d(TAG, "成功获取数据");
+                    if(!achievementList.isEmpty()){
+                        for(TapAchievementBean tab: achievementList){
+                            Log.d(TAG, tab.toString());
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    private void taptapFetchAllAchieveData() {
+        // 本地数据
+        List<TapAchievementBean> allList = TapAchievement.getLocalAllAchievementList();
+        if(allList == null && !allList.isEmpty()){
+            for(TapAchievementBean tab : allList){
+                Log.d(TAG, tab.toString());
+            }
+        }
+
+        // 服务端数据
+        TapAchievement.fetchAllAchievementList(new GetAchievementListCallBack() {
+            @Override
+            public void onGetAchievementList(List<TapAchievementBean> achievementList, AchievementException exception) {
+                if (exception != null) {
+                    switch (exception.errorCode) {
+                        case AchievementException.SDK_NOT_INIT:
+                            // SDK 还未初始化数据
+                            Log.d(TAG, "SDK 还未初始化数据");
+                            break;
+                        default:
+                            // 数据获取失败
+                            Log.d(TAG, "数据获取失败");
+                    }
+                } else {
+                    // 成功获取数据
+                    Log.d(TAG, "成功获取数据");
+                    if(!achievementList.isEmpty()){
+                        for(TapAchievementBean tab: achievementList){
+                            Log.d(TAG, tab.toString());
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    private void taptapInitAchieve() {
+        TapAchievement.initData();
+    }
+
+    private void taptapRegisterAchieve() {
+        TapAchievement.registerCallback(new AchievementCallback() {
+            @Override
+            public void onAchievementSDKInitSuccess() {
+                // 数据加载成功
+                Log.d(TAG, "数据加载成功！");
+            }
+
+            @Override
+            public void onAchievementSDKInitFail(AchievementException exception) {
+                // 数据加载失败，请重试
+                Log.d(TAG, "数据加载失败： " + exception.toString());
+            }
+
+            @Override
+            public void onAchievementStatusUpdate(TapAchievementBean item, AchievementException exception) {
+                if (exception != null) {
+                    // 成就更新失败
+                    Log.d(TAG, "成就更新失败: " + exception.toString());
+                    return;
+                }
+                if (item != null) {
+                    // item 更新成功
+                    Log.d(TAG, "成就更新成功");
+                }
+            }
+        });
+    }
+
+    private void taptapShowAchieve() {
+        TapAchievement.showAchievementPage();
     }
 
     private void taptapQueryFriend() {
