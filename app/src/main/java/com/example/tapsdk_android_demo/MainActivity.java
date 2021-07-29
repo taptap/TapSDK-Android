@@ -39,6 +39,7 @@ import cn.leancloud.LCFriendshipRequest;
 import cn.leancloud.LCObject;
 import cn.leancloud.LCQuery;
 import cn.leancloud.callback.LCCallback;
+import cn.leancloud.json.JSON;
 import cn.leancloud.types.LCNull;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
@@ -786,6 +787,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Log.d(TAG, "avatar: "+ avatar);
                     Log.d(TAG, "openID: "+ openID);
                     Log.d(TAG, "unionID: "+ unionID);
+                    Map<String,Object> authData = (Map<String,Object>)resultUser.get("authData");
+                    Map<String,Object> taptapAuthData = (Map<String, Object>) authData.get("taptap");
+                    Log.d(TAG,"authData:"+ JSON.toJSONString(authData));
+                    Map<String, Object> authDataResult = (Map<String, Object>) ((Map<String, Object>) resultUser.get("authData")).get("taptap");
+                    Log.d(TAG, "unionid:"+taptapAuthData.get("unionid").toString());
+                    Log.d(TAG, "openid:"+taptapAuthData.get("openid").toString());
                     Toast.makeText(MainActivity.this, "succeed to login with Taptap.", Toast.LENGTH_SHORT).show();
                 }
 
