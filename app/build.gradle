@@ -18,21 +18,6 @@ android {
         multiDexEnabled true
     }
 
-    signingConfigs {
-        release {
-            keyAlias 'wxlogin'
-            keyPassword '111111'
-            storeFile file('../sign_password_111111.keystore')
-            storePassword '111111'
-        }
-        debug {
-            keyAlias 'wxlogin'
-            keyPassword '111111'
-            storeFile file('../sign_password_111111.keystore')
-            storePassword '111111'
-        }
-    }
-
     buildTypes {
         release {
             minifyEnabled false

@@ -179,9 +179,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TapConfig tapConfig = new TapConfig.Builder()
                 .withAppContext(getApplicationContext())
                 .withRegionType(TapRegionType.CN) // TapRegionType.CN: 国内  TapRegionType.IO: 国外
-                .withClientId("0RiAlMny7jiz086FaU")
-                .withClientToken("8V8wemqkpkxmAN7qKhvlh6v0pXc8JJzEZe3JFUnU")
-                .withServerUrl("https://0rialmny.cloud.tds1.tapapis.cn")
+                .withClientId("Your Client ID Form TapDC")
+                .withClientToken("Your Client Token Form TapDC")
+                .withServerUrl("Your Server Url Form TapDC")
                 .withTapDBConfig(tapDBConfig)
                 .build();
         TapBootstrap.init(MainActivity.this, tapConfig);
@@ -449,11 +449,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapQueryFriend() {
-        // TODO 好友关系是单向的吗？A申请添加B为好友，B同意了，那么对A来说，B是A的好友，而A不一定是B的好友；
         TDSUser currentUser = TDSUser.currentUser();
         LCQuery<LCFriendship> query = currentUser.friendshipQuery();
         try {
-             // TODO 第二步更改：测试需要更改这里的 OcjectID
             query.whereEqualTo(LCFriendship.ATTR_FOLLOWEE, TDSUser.createWithoutData(TDSUser.class, LeeJiEunID));
         } catch (LCException e) {
             e.printStackTrace();
@@ -593,8 +591,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapAcceptFriendshipRequest() {
-        // TODO 执行好友申请同意、拒绝、删除后，然后删除了好友，那么再次执行申请好友的处理接口还依旧有效。是否预期之内？
-        // TODO 同意好友申请，然后删除了该好友，好友列表为0，再次点击同意申请，好友列表信息又有了之前被删除的用户信息。
         TDSUser currentUser = TDSUser.currentUser();
         LCFriendshipRequest queriedRequests = null;
         // leeJiEun 同意了来自 leeJiDong 的好友请求
