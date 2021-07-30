@@ -32,33 +32,35 @@
                 android:id="@+id/btn_tap_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:text="登 陆" />
 
             <Button
                 android:id="@+id/btn_tap_loginstatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="登录状态" />
 
             <Button
                 android:id="@+id/btn_tap_gouhuo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="篝火测试" />
 
             <Button
                 android:id="@+id/btn_tap_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:text="登 出" />
 
             <Button
                 android:id="@+id/btn_tap_license"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="付费检查" />
         </com.google.android.flexbox.FlexboxLayout>
 
@@ -81,33 +83,35 @@
                 android:id="@+id/btn_tap_fetch_notification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:text="获取新消息" />
 
             <Button
                 android:id="@+id/btn_tap_open_moment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="打开动态" />
 
             <Button
                 android:id="@+id/btn_tap_directly_open"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="场景化入口" />
 
             <Button
                 android:id="@+id/btn_tap_close_moment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:text="关闭动态" />
 
             <Button
                 android:id="@+id/btn_tap_one_key_publish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="发布动态" />
         </com.google.android.flexbox.FlexboxLayout>
 
@@ -136,52 +140,56 @@
                 android:id="@+id/btn_tap_add_friend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:text="申请好友" />
 
             <Button
                 android:id="@+id/btn_tap_getfriend_request_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:text="获取好友申请列表" />
 
             <Button
                 android:id="@+id/btn_tap_decline_friendship_request"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="处理好友申请：拒绝" />
 
             <Button
                 android:id="@+id/btn_tap_accept_friendship_request"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:text="处理好友申请：同意" />
 
             <Button
                 android:id="@+id/btn_tap_delete_friendship_request"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="处理好友申请：删除" />
 
             <Button
                 android:id="@+id/btn_tap_getfriends_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:text="获取好友列表" />
 
             <Button
                 android:id="@+id/btn_tap_delete_friend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="删除好友" />
 
             <Button
                 android:id="@+id/btn_tap_query_friend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:text="查询好友关系" />
 
         </com.google.android.flexbox.FlexboxLayout>
