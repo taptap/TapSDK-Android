@@ -15,6 +15,8 @@ import com.tapsdk.bootstrap.exceptions.TapError;
 import com.tapsdk.moment.TapMoment;
 import com.taptap.pay.sdk.library.TapLicenseCallback;
 import com.taptap.pay.sdk.library.TapLicenseHelper;
+import com.taptap.sdk.LoginSdkConfig;
+import com.taptap.sdk.RegionType;
 import com.taptap.sdk.TapLoginHelper;
 import com.taptap.sdk.net.Api;
 import com.tds.achievement.AchievementCallback;
@@ -179,9 +181,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TapConfig tapConfig = new TapConfig.Builder()
                 .withAppContext(getApplicationContext())
                 .withRegionType(TapRegionType.CN) // TapRegionType.CN: 国内  TapRegionType.IO: 国外
-                .withClientId("Your Client ID Form TapDC")
-                .withClientToken("Your Client Token Form TapDC")
-                .withServerUrl("Your Server Url Form TapDC")
+                .withClientId("0RiAlMny7jiz086FaU")
+                .withClientToken("8V8wemqkpkxmAN7qKhvlh6v0pXc8JJzEZe3JFUnU")
+                .withServerUrl("https://0rialmny.cloud.tds1.tapapis.cn")
                 .withTapDBConfig(tapDBConfig)
                 .build();
         TapBootstrap.init(MainActivity.this, tapConfig);
@@ -330,7 +332,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // growSteps 中传递当前增量达成的步数（例如：多走了5步，则传递5即可），
         // makeSteps 中传递当前成就已达成的步数
         // displayID 是在开发者中心中添加成就时自行设定的 成就ID
-//        TapAchievement.growSteps("displayID", 5);
+        // TapAchievement.growSteps("displayID", 5);
         TapAchievement.makeSteps("displayID", 100);
     }
 
@@ -738,14 +740,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TapLoginHelper.getTestQualification(new Api.ApiCallback<Boolean>() {
             @Override
             public void onSuccess(Boolean aBoolean) {
-                // 该玩家已拥有测试资格
-                Toast.makeText(MainActivity.this, "该玩家已具有篝火测试资格", Toast.LENGTH_SHORT).show();
+                if(aBoolean){
+                    // 该玩家已拥有测试资格
+                    Toast.makeText(MainActivity.this, "该玩家已具有篝火测试资格", Toast.LENGTH_SHORT).show();
+                }else {
+                    // 该玩家不具备测试资格， 游戏层面进行拦截
+                    Toast.makeText(MainActivity.this, "该玩家不具备篝火测试资格", Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
             public void onError(Throwable throwable) {
-                // 该玩家不具备测试资格， 游戏层面进行拦截
-                Toast.makeText(MainActivity.this, "该玩家不具备篝火测试资格", Toast.LENGTH_SHORT).show();
+                // 服务端检查出错或者网络异常
+                Toast.makeText(MainActivity.this, "服务端检查出错或者网络异常", Toast.LENGTH_SHORT).show();
             }
         });
     }
