@@ -1,0 +1,7 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.taptap.pay.sdk.library/DLCManager.InventoryCallback///PointingToDeclaration/com/taptap/pay/sdk/library/DLCManager.InventoryCallback.html
+com.taptap.pay.sdk.library
+com.taptap.pay.sdk.library.exceptions
+com.taptap.pay.sdk.library.wrapper
+

@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>Package tds.androidx.annotation </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../search.js"></script>
+    <script async type="text/javascript" src="../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li class="navBarCell1Rev">Package</li>
+    
+    <li>Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+<main role="main">
+    <div class="header">
+        <h1 title="Package" class="title">Package tds.androidx.annotation </h1>
+    </div>
+        <div class="header">
+            <div class="subtitle">
+                <div class="block"></div>
+            </div>
+            <p>See: <a href="#overview_description">Description</a></p>
+        </div>
+    <div class="contentContainer">
+        
+            <ul class="blockList">
+                
+                <li class="blockList">
+                    
+                    
+                    
+                    
+                    
+    <div class="typeSummary">
+
+<table>
+<caption><span>Annotation Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Annotation</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=NonNull.html>NonNull</a></th><td class="colLast">Denotes that a parameter, field or method return value can never be null.</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=UiThread.html>UiThread</a></th><td class="colLast">Denotes that the annotated method or constructor should only be called on the UI thread.</td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=IdRes.html>IdRes</a></th><td class="colLast">Denotes that an integer parameter, field or method return value is expected to be an id resource reference (e.g.</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=FloatRange.html>FloatRange</a></th><td class="colLast">Denotes that the annotated element should be a float or double in the given range Example: <pre><code><code> @FloatRange(from=0.0,to=1.0) public float getAlpha() { ... } </code></code></pre></td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=RequiresApi.html>RequiresApi</a></th><td class="colLast">Denotes that the annotated element should only be called on the given API level or higher.</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=AttrRes.html>AttrRes</a></th><td class="colLast">Denotes that an integer parameter, field or method return value is expected to be an attribute reference (e.g.</td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=VisibleForTesting.html>VisibleForTesting</a></th><td class="colLast">Denotes that the class, method or field has its visibility relaxed, so that it is more widely visible than otherwise necessary to make code testable.</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=IntDef.html>IntDef</a></th><td class="colLast">Denotes that the annotated element of integer type, represents a logical type and that its value should be one of the explicitly named constants.</td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=Px.html>Px</a></th><td class="colLast">Denotes that an integer parameter, field or method return value is expected to represent a pixel dimension.</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=DrawableRes.html>DrawableRes</a></th><td class="colLast">Denotes that an integer parameter, field or method return value is expected to be a drawable resource reference (e.g.</td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=IntRange.html>IntRange</a></th><td class="colLast">Denotes that the annotated element should be an int or long in the given range Example: <pre><code><code> @IntRange(from=0,to=255) public int getAlpha() { ... } </code></code></pre></td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=ColorInt.html>ColorInt</a></th><td class="colLast">Denotes that the annotated element represents a packed color int, <code>{@code AARRGGBB}</code>.</td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=Dimension.html>Dimension</a></th><td class="colLast">Denotes that an integer parameter, field or method return value is expected to represent a dimension.</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=WorkerThread.html>WorkerThread</a></th><td class="colLast">Denotes that the annotated method should only be called on a worker thread.</td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=RestrictTo.html>RestrictTo</a></th><td class="colLast">Denotes that the annotated element should only be accessed from within a specific scope (as defined by <a href=RestrictTo.Scope.html>Scope</a>).</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=CallSuper.html>CallSuper</a></th><td class="colLast">Denotes that any overriding methods should invoke this method as well.</td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=StringRes.html>StringRes</a></th><td class="colLast">Denotes that an integer parameter, field or method return value is expected to be a String resource reference (e.g.</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=ColorRes.html>ColorRes</a></th><td class="colLast">Denotes that an integer parameter, field or method return value is expected to be a color resource reference (e.g.</td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=StringDef.html>StringDef</a></th><td class="colLast"></td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=Nullable.html>Nullable</a></th><td class="colLast">Denotes that a parameter, field or method return value can be null.</td></tr>
+</tbody>
+</table>
+
+    </div>
+
+                </li>
+                
+                <li class="blockList">
+                    
+                    
+                    
+                    
+                    
+    <div class="typeSummary">
+
+<table>
+<caption><span>Enum Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Enum</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=RestrictTo.Scope.html>Scope</a></th><td class="colLast"></td></tr>
+</tbody>
+</table>
+
+    </div>
+
+                </li>
+                
+            </ul>
+        
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li class="navBarCell1Rev">Package</li>
+    
+    <li>Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

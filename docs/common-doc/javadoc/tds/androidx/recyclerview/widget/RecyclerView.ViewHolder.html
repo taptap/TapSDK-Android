@@ -1,0 +1,608 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>ViewHolder unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class RecyclerView.ViewHolder" class="title">Class RecyclerView.ViewHolder</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public abstract class <span class="typeNameLabel"><a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a></span>
+
+                    </pre>
+                    <div class="block"><p>A ViewHolder describes an item view and metadata about its place within the RecyclerView.</p><p><a href=RecyclerView.Adapter.html>Adapter</a> implementations should subclass ViewHolder and add fields for cachingpotentially expensive <a href=https://developer.android.com/reference/kotlin/android/view/View.html#findviewbyid>findViewById</a> results.</p><p>While <a href=RecyclerView.LayoutParams.html>LayoutParams</a> belong to the <a href=RecyclerView.LayoutManager.html>LayoutManager</a>, <a href=RecyclerView.ViewHolder.html>ViewHolders</a> belong to the adapter. Adapters should feel free to usetheir own custom ViewHolder implementations to store data that makes binding view contentseasier. Implementations should assume that individual item views will hold strong referencesto <code>ViewHolder</code> objects and that <code>RecyclerView</code> instances may holdstrong references to extra off-screen item views for caching purposes</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ViewHolder.html#itemView>itemView</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#RecyclerView.ViewHolder(View)">RecyclerView.ViewHolder</a></span>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> itemView)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>final int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ViewHolder.html#getPosition()>getPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>final int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ViewHolder.html#getLayoutPosition()>getLayoutPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the position of the ViewHolder in terms of the latest layout pass.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>final int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ViewHolder.html#getAdapterPosition()>getAdapterPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>final int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ViewHolder.html#getBindingAdapterPosition()>getBindingAdapterPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the Adapter position of the item represented by this ViewHolder with respect tothe <a href=RecyclerView.Adapter.html>Adapter</a> that bound it.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>final int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ViewHolder.html#getAbsoluteAdapterPosition()>getAbsoluteAdapterPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the Adapter position of the item represented by this ViewHolder with respect tothe <a href=RecyclerView.html>RecyclerView</a>'s <a href=RecyclerView.Adapter.html>Adapter</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>final <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ViewHolder.html#getBindingAdapter()>getBindingAdapter</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the <a href=RecyclerView.Adapter.html>Adapter</a> that last bound this <a href=RecyclerView.ViewHolder.html>ViewHolder</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>final int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ViewHolder.html#getOldPosition()>getOldPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast">When LayoutManager supports animations, RecyclerView tracks 3 positions for ViewHoldersto perform animations.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>final long</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ViewHolder.html#getItemId()>getItemId</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns The itemId represented by this ViewHolder.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>final int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ViewHolder.html#getItemViewType()>getItemViewType</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ViewHolder.html#toString()>toString</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>final void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ViewHolder.html#setIsRecyclable(boolean)>setIsRecyclable</a>(boolean recyclable) </code>
+                                            </th>
+                                            <td class="colLast">Informs the recycler whether this item can be recycled.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>final boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ViewHolder.html#isRecyclable()>isRecyclable</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="RecyclerView.ViewHolder(View)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>RecyclerView.ViewHolder</h4>
+                                        <pre>RecyclerView.ViewHolder(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> itemView)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="getPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getPosition</h4>
+                                        <pre class="methodSignature">@<a href=https://developer.android.com/reference/kotlin/java/lang/Deprecated.html>Deprecated</a>() final int <a href=RecyclerView.ViewHolder.html#getPosition()>getPosition</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getLayoutPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getLayoutPosition</h4>
+                                        <pre class="methodSignature"> final int <a href=RecyclerView.ViewHolder.html#getLayoutPosition()>getLayoutPosition</a>()</pre>
+                                        <div class="block"><p>Returns the position of the ViewHolder in terms of the latest layout pass.</p><p>This position is mostly used by RecyclerView components to be consistent whileRecyclerView lazily processes adapter updates.</p><p>For performance and animation reasons, RecyclerView batches all adapter updates until thenext layout pass. This may cause mismatches between the Adapter position of the item andthe position it had in the latest layout calculations.</p><p>LayoutManagers should always call this method while doing calculations based on itempositions. All methods in <a href=RecyclerView.LayoutManager.html>LayoutManager</a>, <a href=RecyclerView.State.html>State</a>, <a href=RecyclerView.Recycler.html>Recycler</a> that receive a position expect it to be the layout positionof the item.</p><p>If LayoutManager needs to call an external method that requires the adapter position ofthe item, it can use <a href=RecyclerView.ViewHolder.html#getAbsoluteAdapterPosition()>getAbsoluteAdapterPosition</a> or <a href=RecyclerView.Recycler.html#convertPreLayoutPositionToPostLayout(int)>convertPreLayoutPositionToPostLayout</a>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getAdapterPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getAdapterPosition</h4>
+                                        <pre class="methodSignature">@<a href=https://developer.android.com/reference/kotlin/java/lang/Deprecated.html>Deprecated</a>() final int <a href=RecyclerView.ViewHolder.html#getAdapterPosition()>getAdapterPosition</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getBindingAdapterPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getBindingAdapterPosition</h4>
+                                        <pre class="methodSignature"> final int <a href=RecyclerView.ViewHolder.html#getBindingAdapterPosition()>getBindingAdapterPosition</a>()</pre>
+                                        <div class="block"><p>Returns the Adapter position of the item represented by this ViewHolder with respect tothe <a href=RecyclerView.Adapter.html>Adapter</a> that bound it.</p><p>Note that this might be different than the <a href=RecyclerView.ViewHolder.html#getLayoutPosition()>getLayoutPosition</a> if there arepending adapter updates but a new layout pass has not happened yet.</p><p>RecyclerView does not handle any adapter updates until the next layout traversal. Thismay create temporary inconsistencies between what user sees on the screen and whatadapter contents have. This inconsistency is not important since it will be less than16ms but it might be a problem if you want to use ViewHolder position to access theadapter. Sometimes, you may need to get the exact adapter position to dosome actions in response to user events. In that case, you should use this method whichwill calculate the Adapter position of the ViewHolder.</p><p>Note that if you've called <a href=RecyclerView.Adapter.html#notifyDataSetChanged()>notifyDataSetChanged</a>, until thenext layout pass, the return value of this method will be <a href=RecyclerView.html#NO_POSITION>NO_POSITION</a>.</p><p>If the <a href=RecyclerView.Adapter.html>Adapter</a> that bound this <a href=RecyclerView.ViewHolder.html>ViewHolder</a> is inside another <a href=RecyclerView.Adapter.html>Adapter</a> (e.g. <a href=ConcatAdapter.html>ConcatAdapter</a>), this position might be different than <a href=RecyclerView.ViewHolder.html#getAbsoluteAdapterPosition()>getAbsoluteAdapterPosition</a>. If you would like to know the position that <a href=RecyclerView.html>RecyclerView</a> considers (e.g. for saved state), you should use <a href=RecyclerView.ViewHolder.html#getAbsoluteAdapterPosition()>getAbsoluteAdapterPosition</a>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getAbsoluteAdapterPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getAbsoluteAdapterPosition</h4>
+                                        <pre class="methodSignature"> final int <a href=RecyclerView.ViewHolder.html#getAbsoluteAdapterPosition()>getAbsoluteAdapterPosition</a>()</pre>
+                                        <div class="block"><p>Returns the Adapter position of the item represented by this ViewHolder with respect tothe <a href=RecyclerView.html>RecyclerView</a>'s <a href=RecyclerView.Adapter.html>Adapter</a>. If the <a href=RecyclerView.Adapter.html>Adapter</a> that bound this <a href=RecyclerView.ViewHolder.html>ViewHolder</a> is inside another adapter (e.g. <a href=ConcatAdapter.html>ConcatAdapter</a>), thisposition might be different and will includethe offsets caused by other adapters in the <a href=ConcatAdapter.html>ConcatAdapter</a>.</p><p>Note that this might be different than the <a href=RecyclerView.ViewHolder.html#getLayoutPosition()>getLayoutPosition</a> if there arepending adapter updates but a new layout pass has not happened yet.</p><p>RecyclerView does not handle any adapter updates until the next layout traversal. Thismay create temporary inconsistencies between what user sees on the screen and whatadapter contents have. This inconsistency is not important since it will be less than16ms but it might be a problem if you want to use ViewHolder position to access theadapter. Sometimes, you may need to get the exact adapter position to dosome actions in response to user events. In that case, you should use this method whichwill calculate the Adapter position of the ViewHolder.</p><p>Note that if you've called <a href=RecyclerView.Adapter.html#notifyDataSetChanged()>notifyDataSetChanged</a>, until thenext layout pass, the return value of this method will be <a href=RecyclerView.html#NO_POSITION>NO_POSITION</a>.</p><p>Note that if you are querying the position as <a href=RecyclerView.html>RecyclerView</a> sees, you should use <a href=RecyclerView.ViewHolder.html#getAbsoluteAdapterPosition()>getAbsoluteAdapterPosition</a> (e.g. you want to use it to save scrollstate). If you are querying the position to access the <a href=RecyclerView.Adapter.html>Adapter</a> contents,you should use <a href=RecyclerView.ViewHolder.html#getBindingAdapterPosition()>getBindingAdapterPosition</a>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getBindingAdapter()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getBindingAdapter</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/Nullable.html>Nullable</a>() final <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt; <a href=RecyclerView.ViewHolder.html#getBindingAdapter()>getBindingAdapter</a>()</pre>
+                                        <div class="block"><p>Returns the <a href=RecyclerView.Adapter.html>Adapter</a> that last bound this <a href=RecyclerView.ViewHolder.html>ViewHolder</a>.Might return <code>{@code null}</code> if this <a href=RecyclerView.ViewHolder.html>ViewHolder</a> is not bound to any adapter.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOldPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOldPosition</h4>
+                                        <pre class="methodSignature"> final int <a href=RecyclerView.ViewHolder.html#getOldPosition()>getOldPosition</a>()</pre>
+                                        <div class="block"><p>When LayoutManager supports animations, RecyclerView tracks 3 positions for ViewHoldersto perform animations.</p><p>If a ViewHolder was laid out in the previous onLayout call, old position will keep itsadapter index in the previous layout.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getItemId()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getItemId</h4>
+                                        <pre class="methodSignature"> final long <a href=RecyclerView.ViewHolder.html#getItemId()>getItemId</a>()</pre>
+                                        <div class="block"><p>Returns The itemId represented by this ViewHolder.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getItemViewType()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getItemViewType</h4>
+                                        <pre class="methodSignature"> final int <a href=RecyclerView.ViewHolder.html#getItemViewType()>getItemViewType</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="toString()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>toString</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=RecyclerView.ViewHolder.html#toString()>toString</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setIsRecyclable(boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setIsRecyclable</h4>
+                                        <pre class="methodSignature"> final void <a href=RecyclerView.ViewHolder.html#setIsRecyclable(boolean)>setIsRecyclable</a>(boolean recyclable)</pre>
+                                        <div class="block"><p>Informs the recycler whether this item can be recycled. Views which are notrecyclable will not be reused for other items until setIsRecyclable() islater set to true. Calls to setIsRecyclable() should always be paired (onecall to setIsRecyclabe(false) should always be matched with a later call tosetIsRecyclable(true)). Pairs of calls may be nested, as the state is internallyreference-counted.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>recyclable</code> - Whether this item is available to be recycled.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isRecyclable()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isRecyclable</h4>
+                                        <pre class="methodSignature"> final boolean <a href=RecyclerView.ViewHolder.html#isRecyclable()>isRecyclable</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

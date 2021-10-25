@@ -1,0 +1,21 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.tapsdk.friends.constants/Constants.COMMON_ERROR_CODE///PointingToDeclaration/com/tapsdk/friends/constants/Constants.COMMON_ERROR_CODE.html
+$dokka.location:com.tapsdk.friends.constants/Constants.Event///PointingToDeclaration/com/tapsdk/friends/constants/Constants.Event.html
+$dokka.location:com.tapsdk.friends.constants/Constants.FriendChangeEvent///PointingToDeclaration/com/tapsdk/friends/constants/Constants.FriendChangeEvent.html
+$dokka.location:com.tapsdk.friends.constants/Constants.FriendRequestAction///PointingToDeclaration/com/tapsdk/friends/constants/Constants.FriendRequestAction.html
+$dokka.location:com.tapsdk.friends.constants/Constants.HttpHeadName///PointingToDeclaration/com/tapsdk/friends/constants/Constants.HttpHeadName.html
+$dokka.location:com.tapsdk.friends.constants/Constants.NetLimit///PointingToDeclaration/com/tapsdk/friends/constants/Constants.NetLimit.html
+$dokka.location:com.tapsdk.friends.constants/Constants.SDK_INFO///PointingToDeclaration/com/tapsdk/friends/constants/Constants.SDK_INFO.html
+$dokka.location:com.tapsdk.friends.constants/Constants.ShareType///PointingToDeclaration/com/tapsdk/friends/constants/Constants.ShareType.html
+$dokka.location:com.tapsdk.friends.net/JsonWithHeadRequest.ErrorListener///PointingToDeclaration/com/tapsdk/friends/net/JsonWithHeadRequest.ErrorListener.html
+$dokka.location:com.tapsdk.friends.net/JsonWithHeadRequest.Listener///PointingToDeclaration/com/tapsdk/friends/net/JsonWithHeadRequest.Listener.html
+com.tapsdk.friends
+com.tapsdk.friends.constants
+com.tapsdk.friends.dao
+com.tapsdk.friends.entities
+com.tapsdk.friends.exceptions
+com.tapsdk.friends.net
+com.tapsdk.friends.service
+com.tapsdk.friends.utils
+

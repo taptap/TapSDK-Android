@@ -1,0 +1,1708 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>LinearLayoutManager unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class LinearLayoutManager" class="title">Class LinearLayoutManager</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                            <code>tds.androidx.recyclerview.widget.ItemTouchHelper.ViewDropHandler</code>
+                            
+                            ,
+                            
+                            
+                            <code>tds.androidx.recyclerview.widget.RecyclerView.SmoothScroller.ScrollVectorProvider</code>
+                            
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=LinearLayoutManager.html>LinearLayoutManager</a></span>
+extends <a href=RecyclerView.LayoutManager.html>RecyclerView.LayoutManager</a> implements <a href=ItemTouchHelper.ViewDropHandler.html>ItemTouchHelper.ViewDropHandler</a>, <a href=RecyclerView.SmoothScroller.ScrollVectorProvider.html>RecyclerView.SmoothScroller.ScrollVectorProvider</a>
+                    </pre>
+                    <div class="block"><p>A <a href=RecyclerView.LayoutManager.html>RecyclerView.LayoutManager</a> implementation which provides similar functionality to <a href=https://developer.android.com/reference/kotlin/android/widget/ListView.html>android.widget.ListView</a>.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="LinearLayoutManager.SavedState.html">LinearLayoutManager.SavedState</a></span></code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#HORIZONTAL>HORIZONTAL</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#VERTICAL>VERTICAL</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#INVALID_OFFSET>INVALID_OFFSET</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#LinearLayoutManager(Context)">LinearLayoutManager</a></span>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context)</code></th>
+                                                <td class="colLast">Creates a vertical LinearLayoutManager</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#LinearLayoutManager(Context,int,boolean)">LinearLayoutManager</a></span>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, int orientation, boolean reverseLayout)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#LinearLayoutManager(Context,AttributeSet,int,int)">LinearLayoutManager</a></span>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs, int defStyleAttr, int defStyleRes)</code></th>
+                                                <td class="colLast">Constructor used when layout manager is set in XML by RecyclerView attribute"layoutManager".</td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#isAutoMeasureEnabled()>isAutoMeasureEnabled</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns whether the measuring pass of layout should use the AutoMeasure mechanism of <a href=RecyclerView.html>RecyclerView</a> or if it should be done by the LayoutManager's implementation of <a href=RecyclerView.LayoutManager.html#onMeasure(RecyclerView.Recycler,RecyclerView.State,int,int)>onMeasure</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code><a href=RecyclerView.LayoutParams.html>RecyclerView.LayoutParams</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#generateDefaultLayoutParams()>generateDefaultLayoutParams</a>() </code>
+                                            </th>
+                                            <td class="colLast">Create a default <code>LayoutParams</code> object for a child of the RecyclerView.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#getRecycleChildrenOnDetach()>getRecycleChildrenOnDetach</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns whether LayoutManager will recycle its children when it is detached fromRecyclerView.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#setRecycleChildrenOnDetach(boolean)>setRecycleChildrenOnDetach</a>(boolean recycleChildrenOnDetach) </code>
+                                            </th>
+                                            <td class="colLast">Set whether LayoutManager will recycle its children when it is detached fromRecyclerView.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#onDetachedFromWindow(RecyclerView,RecyclerView.Recycler)>onDetachedFromWindow</a>(<a href=RecyclerView.html>RecyclerView</a> view, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler) </code>
+                                            </th>
+                                            <td class="colLast">Called when this LayoutManager is detached from its parent RecyclerView or whenits parent RecyclerView is detached from its window.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#onInitializeAccessibilityEvent(AccessibilityEvent)>onInitializeAccessibilityEvent</a>(<a href=https://developer.android.com/reference/kotlin/android/view/accessibility/AccessibilityEvent.html>AccessibilityEvent</a> event) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/android/os/Parcelable.html>Parcelable</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#onSaveInstanceState()>onSaveInstanceState</a>() </code>
+                                            </th>
+                                            <td class="colLast">Called when the LayoutManager should save its state.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#onRestoreInstanceState(Parcelable)>onRestoreInstanceState</a>(<a href=https://developer.android.com/reference/kotlin/android/os/Parcelable.html>Parcelable</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Called when the RecyclerView is ready to restore the state based on a previousRecyclerView.Notice that this might happen after an actual layout, based on how Adapter prefers torestore State.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#canScrollHorizontally()>canScrollHorizontally</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#canScrollVertically()>canScrollVertically</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#setStackFromEnd(boolean)>setStackFromEnd</a>(boolean stackFromEnd) </code>
+                                            </th>
+                                            <td class="colLast">Compatibility support for <a href=https://developer.android.com/reference/kotlin/android/widget/AbsListView.html#setstackfrombottom>setStackFromBottom</a></td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#getStackFromEnd()>getStackFromEnd</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#getOrientation()>getOrientation</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current orientation of the layout.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#setOrientation(int)>setOrientation</a>(int orientation) </code>
+                                            </th>
+                                            <td class="colLast">Sets the orientation of the layout.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#getReverseLayout()>getReverseLayout</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns if views are laid out from the opposite direction of the layout.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#setReverseLayout(boolean)>setReverseLayout</a>(boolean reverseLayout) </code>
+                                            </th>
+                                            <td class="colLast">Used to reverse item traversal and layout order.This behaves similar to the layout change for RTL views.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#findViewByPosition(int)>findViewByPosition</a>(int position) </code>
+                                            </th>
+                                            <td class="colLast">Finds the view which represents the given adapter position.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#smoothScrollToPosition(RecyclerView,RecyclerView.State,int)>smoothScrollToPosition</a>(<a href=RecyclerView.html>RecyclerView</a> recyclerView, <a href=RecyclerView.State.html>RecyclerView.State</a> state, int position) </code>
+                                            </th>
+                                            <td class="colLast">Smooth scroll to the specified adapter position.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/android/graphics/PointF.html>PointF</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#computeScrollVectorForPosition(int)>computeScrollVectorForPosition</a>(int targetPosition) </code>
+                                            </th>
+                                            <td class="colLast">Should calculate the vector that points to the direction where the target positioncan be found.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a>(<a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Lay out all relevant child views from the given adapter.The LayoutManager is in charge of the behavior of item animations.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#onLayoutCompleted(RecyclerView.State)>onLayoutCompleted</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Called after a full layout calculation is finished.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#scrollToPosition(int)>scrollToPosition</a>(int position) </code>
+                                            </th>
+                                            <td class="colLast">Scroll the RecyclerView to make the position visible.</td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#scrollToPositionWithOffset(int,int)>scrollToPositionWithOffset</a>(int position, int offset) </code>
+                                            </th>
+                                            <td class="colLast">Scroll to the specified adapter position with the given offset from resolved layoutstart.</td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#scrollHorizontallyBy(int,RecyclerView.Recycler,RecyclerView.State)>scrollHorizontallyBy</a>(int dx, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Scroll horizontally by dx pixels in screen coordinates and return the distance traveled.The default implementation does nothing and returns 0.</td>
+                                        </tr>
+                                        
+                                        <tr id="i24" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#scrollVerticallyBy(int,RecyclerView.Recycler,RecyclerView.State)>scrollVerticallyBy</a>(int dy, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Scroll vertically by dy pixels in screen coordinates and return the distance traveled.The default implementation does nothing and returns 0.</td>
+                                        </tr>
+                                        
+                                        <tr id="i25" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#computeHorizontalScrollOffset(RecyclerView.State)>computeHorizontalScrollOffset</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Override this method if you want to support scroll bars.</td>
+                                        </tr>
+                                        
+                                        <tr id="i26" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#computeVerticalScrollOffset(RecyclerView.State)>computeVerticalScrollOffset</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Override this method if you want to support scroll bars.</td>
+                                        </tr>
+                                        
+                                        <tr id="i27" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#computeHorizontalScrollExtent(RecyclerView.State)>computeHorizontalScrollExtent</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Override this method if you want to support scroll bars.</td>
+                                        </tr>
+                                        
+                                        <tr id="i28" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#computeVerticalScrollExtent(RecyclerView.State)>computeVerticalScrollExtent</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Override this method if you want to support scroll bars.</td>
+                                        </tr>
+                                        
+                                        <tr id="i29" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#computeHorizontalScrollRange(RecyclerView.State)>computeHorizontalScrollRange</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Override this method if you want to support scroll bars.</td>
+                                        </tr>
+                                        
+                                        <tr id="i30" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#computeVerticalScrollRange(RecyclerView.State)>computeVerticalScrollRange</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Override this method if you want to support scroll bars.</td>
+                                        </tr>
+                                        
+                                        <tr id="i31" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#setSmoothScrollbarEnabled(boolean)>setSmoothScrollbarEnabled</a>(boolean enabled) </code>
+                                            </th>
+                                            <td class="colLast">When smooth scrollbar is enabled, the position and size of the scrollbar thumb is computedbased on the number of visible pixels in the visible items.</td>
+                                        </tr>
+                                        
+                                        <tr id="i32" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#isSmoothScrollbarEnabled()>isSmoothScrollbarEnabled</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current state of the smooth scrollbar feature.</td>
+                                        </tr>
+                                        
+                                        <tr id="i33" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#collectInitialPrefetchPositions(int,RecyclerView.LayoutManager.LayoutPrefetchRegistry)>collectInitialPrefetchPositions</a>(int adapterItemCount, <a href=RecyclerView.LayoutManager.LayoutPrefetchRegistry.html>RecyclerView.LayoutManager.LayoutPrefetchRegistry</a> layoutPrefetchRegistry) </code>
+                                            </th>
+                                            <td class="colLast">Gather all positions from the LayoutManager to be prefetched in preperation for itsRecyclerView to come on screen, due to the movement of another, containing RecyclerView.</td>
+                                        </tr>
+                                        
+                                        <tr id="i34" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#setInitialPrefetchItemCount(int)>setInitialPrefetchItemCount</a>(int itemCount) </code>
+                                            </th>
+                                            <td class="colLast">Sets the number of items to prefetch in <a href=LinearLayoutManager.html#collectInitialPrefetchPositions(int,RecyclerView.LayoutManager.LayoutPrefetchRegistry)>collectInitialPrefetchPositions</a>, which defineshow many inner items should be prefetched when this LayoutManager's RecyclerViewis nested inside another RecyclerView.</td>
+                                        </tr>
+                                        
+                                        <tr id="i35" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#getInitialPrefetchItemCount()>getInitialPrefetchItemCount</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the number of items to prefetch in <a href=LinearLayoutManager.html#collectInitialPrefetchPositions(int,RecyclerView.LayoutManager.LayoutPrefetchRegistry)>collectInitialPrefetchPositions</a>, which defineshow many inner items should be prefetched when this LayoutManager's RecyclerViewis nested inside another RecyclerView.</td>
+                                        </tr>
+                                        
+                                        <tr id="i36" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#collectAdjacentPrefetchPositions(int,int,RecyclerView.State,RecyclerView.LayoutManager.LayoutPrefetchRegistry)>collectAdjacentPrefetchPositions</a>(int dx, int dy, <a href=RecyclerView.State.html>RecyclerView.State</a> state, <a href=RecyclerView.LayoutManager.LayoutPrefetchRegistry.html>RecyclerView.LayoutManager.LayoutPrefetchRegistry</a> layoutPrefetchRegistry) </code>
+                                            </th>
+                                            <td class="colLast">Gather all positions from the LayoutManager to be prefetched, given specified momentum.</td>
+                                        </tr>
+                                        
+                                        <tr id="i37" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#assertNotInLayoutOrScroll(String)>assertNotInLayoutOrScroll</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Checks if RecyclerView is in the middle of a layout or scroll and throws an <a href=https://developer.android.com/reference/kotlin/java/lang/IllegalStateException.html>IllegalStateException</a> if it is.</td>
+                                        </tr>
+                                        
+                                        <tr id="i38" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#findFirstVisibleItemPosition()>findFirstVisibleItemPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the adapter position of the first visible view.</td>
+                                        </tr>
+                                        
+                                        <tr id="i39" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#findFirstCompletelyVisibleItemPosition()>findFirstCompletelyVisibleItemPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the adapter position of the first fully visible view.</td>
+                                        </tr>
+                                        
+                                        <tr id="i40" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#findLastVisibleItemPosition()>findLastVisibleItemPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the adapter position of the last visible view.</td>
+                                        </tr>
+                                        
+                                        <tr id="i41" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#findLastCompletelyVisibleItemPosition()>findLastCompletelyVisibleItemPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the adapter position of the last fully visible view.</td>
+                                        </tr>
+                                        
+                                        <tr id="i42" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#onFocusSearchFailed(View,int,RecyclerView.Recycler,RecyclerView.State)>onFocusSearchFailed</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> focused, int focusDirection, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Called when searching for a focusable view in the given direction has failedfor the current content of the RecyclerView.</td>
+                                        </tr>
+                                        
+                                        <tr id="i43" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#supportsPredictiveItemAnimations()>supportsPredictiveItemAnimations</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns whether this LayoutManager supports "predictive item animations".</td>
+                                        </tr>
+                                        
+                                        <tr id="i44" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LinearLayoutManager.html#prepareForDrop(View,View,int,int)>prepareForDrop</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int x, int y) </code>
+                                            </th>
+                                            <td class="colLast">Called by the after a View is dropped over another View.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.tds.androidx.recyclerview.widget.RecyclerView.LayoutManager">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;tds.androidx.recyclerview.widget.RecyclerView.LayoutManager</h3>
+                                            <code>addDisappearingView, addDisappearingView, addView, addView, assertInLayoutOrScroll, attachView, attachView, attachView, calculateItemDecorationsForChild, checkLayoutParams, chooseSize, collectAdjacentPrefetchPositions, collectInitialPrefetchPositions, computeHorizontalScrollExtent, computeHorizontalScrollOffset, computeHorizontalScrollRange, computeVerticalScrollExtent, computeVerticalScrollOffset, computeVerticalScrollRange, detachAndScrapAttachedViews, detachAndScrapView, detachAndScrapViewAt, detachView, detachViewAt, endAnimation, findContainingItemView, generateLayoutParams, generateLayoutParams, getBaseline, getBottomDecorationHeight, getChildAt, getChildCount, getChildMeasureSpec, getChildMeasureSpec, getClipToPadding, getColumnCountForAccessibility, getDecoratedBottom, getDecoratedBoundsWithMargins, getDecoratedLeft, getDecoratedMeasuredHeight, getDecoratedMeasuredWidth, getDecoratedRight, getDecoratedTop, getFocusedChild, getHeight, getHeightMode, getItemCount, getItemViewType, getLayoutDirection, getLeftDecorationWidth, getMinimumHeight, getMinimumWidth, getPaddingBottom, getPaddingEnd, getPaddingLeft, getPaddingRight, getPaddingStart, getPaddingTop, getPosition, getProperties, getRightDecorationWidth, getRowCountForAccessibility, getTopDecorationHeight, getTransformedBoundingBox, getWidth, getWidthMode, hasFocus, ignoreView, isAttachedToWindow, isFocused, isItemPrefetchEnabled, isLayoutHierarchical, isMeasurementCacheEnabled, isSmoothScrolling, isViewPartiallyVisible, layoutDecorated, layoutDecoratedWithMargins, measureChild, measureChildWithMargins, moveView, offsetChildrenHorizontal, offsetChildrenVertical, onAdapterChanged, onAddFocusables, onAttachedToWindow, onDetachedFromWindow, onDetachedFromWindow, onFocusSearchFailed, onInitializeAccessibilityEvent, onInitializeAccessibilityEvent, onInterceptFocusSearch, onItemsAdded, onItemsChanged, onItemsMoved, onItemsRemoved, onItemsUpdated, onItemsUpdated, onLayoutChildren, onLayoutCompleted, onMeasure, onRequestChildFocus, onRequestChildFocus, onScrollStateChanged, postOnAnimation, removeAllViews, removeAndRecycleAllViews, removeAndRecycleView, removeAndRecycleViewAt, removeCallbacks, removeDetachedView, removeView, removeViewAt, requestChildRectangleOnScreen, requestChildRectangleOnScreen, requestLayout, requestSimpleAnimationsInNextLayout, scrollHorizontallyBy, scrollVerticallyBy, setAutoMeasureEnabled, setItemPrefetchEnabled, setMeasuredDimension, setMeasuredDimension, setMeasurementCacheEnabled, smoothScrollToPosition, startSmoothScroll, stopIgnoringView</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="LinearLayoutManager(Context)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>LinearLayoutManager</h4>
+                                        <pre>LinearLayoutManager(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context)</pre>
+                                        <div class="block">Creates a vertical LinearLayoutManager</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>context</code> - Current context, will be used to access resources.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="LinearLayoutManager(Context,int,boolean)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>LinearLayoutManager</h4>
+                                        <pre>LinearLayoutManager(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, int orientation, boolean reverseLayout)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>context</code> - Current context, will be used to access resources.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>orientation</code> - Layout orientation.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>reverseLayout</code> - When set to true, layouts from end to start.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="LinearLayoutManager(Context,AttributeSet,int,int)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>LinearLayoutManager</h4>
+                                        <pre>LinearLayoutManager(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs, int defStyleAttr, int defStyleRes)</pre>
+                                        <div class="block">Constructor used when layout manager is set in XML by RecyclerView attribute"layoutManager".</div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="isAutoMeasureEnabled()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isAutoMeasureEnabled</h4>
+                                        <pre class="methodSignature"> boolean <a href=LinearLayoutManager.html#isAutoMeasureEnabled()>isAutoMeasureEnabled</a>()</pre>
+                                        <div class="block"><p>Returns whether the measuring pass of layout should use the AutoMeasure mechanism of <a href=RecyclerView.html>RecyclerView</a> or if it should be done by the LayoutManager's implementation of <a href=RecyclerView.LayoutManager.html#onMeasure(RecyclerView.Recycler,RecyclerView.State,int,int)>onMeasure</a>.</p><p>This method returns false by default (it actually returns the value passed to thedeprecated <a href=RecyclerView.LayoutManager.html#setAutoMeasureEnabled(boolean)>setAutoMeasureEnabled</a>) and should be overridden to returntrue if a LayoutManager wants to be auto measured by the RecyclerView.</p><p>If this method is overridden to return true, <a href=RecyclerView.LayoutManager.html#onMeasure(RecyclerView.Recycler,RecyclerView.State,int,int)>onMeasure</a> should not be overridden.</p><p>AutoMeasure is a RecyclerView mechanism that handles the measuring pass of layout in asimple and contract satisfying way, including the wrapping of children laid out byLayoutManager. Simply put, it handles wrapping children by calling <a href=RecyclerView.LayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a> during a call to onMeasure, and then calculating desired dimensions basedon children's dimensions and positions. It does this while supporting all existinganimation capabilities of the RecyclerView.</p><p>More specifically:</p><ul><li>When onMeasure is called, if the provided measurespecs both have a mode of <a href=https://developer.android.com/reference/kotlin/android/view/View.MeasureSpec.html#exactly>EXACTLY</a>, RecyclerView will set itsmeasured dimensions accordingly and return, allowing layout to continue as normal(Actually, RecyclerView will call <a href=RecyclerView.LayoutManager.html#onMeasure(RecyclerView.Recycler,RecyclerView.State,int,int)>onMeasure</a> for backwards compatibilityreasons but it should not be overridden if AutoMeasure is being used).</li><li>If one of the layout specs is not <code>{@code EXACT}</code>, the RecyclerView will start thelayout process. It will first process all pending Adapter updates andthen decide whether to run a predictive layout. If it decides to do so, it will firstcall <a href=RecyclerView.LayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a> with <a href=RecyclerView.State.html#isPreLayout()>isPreLayout</a> set to <code>{@code true}</code>. At this stage, <a href=RecyclerView.LayoutManager.html#getWidth()>getWidth</a> and <a href=RecyclerView.LayoutManager.html#getHeight()>getHeight</a> will stillreturn the width and height of the RecyclerView as of the last layout calculation.<p>After handling the predictive case, RecyclerView will call <a href=RecyclerView.LayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a> with <a href=RecyclerView.State.html#isMeasuring()>isMeasuring</a> set to <code>{@code true}</code> and <a href=RecyclerView.State.html#isPreLayout()>isPreLayout</a> set to <code>{@code false}</code>. The LayoutManager canaccess the measurement specs via <a href=RecyclerView.LayoutManager.html#getHeight()>getHeight</a>, <a href=RecyclerView.LayoutManager.html#getHeightMode()>getHeightMode</a>, <a href=RecyclerView.LayoutManager.html#getWidth()>getWidth</a> and <a href=RecyclerView.LayoutManager.html#getWidthMode()>getWidthMode</a>.</p></li><li>After the layout calculation, RecyclerView sets the measured width &amp; height bycalculating the bounding box for the children (+ RecyclerView's padding). TheLayoutManagers can override <a href=RecyclerView.LayoutManager.html#setMeasuredDimension(Rect,int,int)>setMeasuredDimension</a> to choosedifferent values. For instance, GridLayoutManager overrides this value to handle the casewhere if it is vertical and has 3 columns but only 2 items, it should still measure itswidth to fit 3 items, not 2.</li><li>Any following calls to onMeasure will run <a href=RecyclerView.LayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a> with <a href=RecyclerView.State.html#isMeasuring()>isMeasuring</a> set to <code>{@code true}</code> and <a href=RecyclerView.State.html#isPreLayout()>isPreLayout</a> set to <code>{@code false}</code>. RecyclerView willtake care of which views are actually added / removed / moved / changed for animations sothat the LayoutManager should not worry about them and handle each <a href=RecyclerView.LayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a> call as if it is the last one.</li><li>When measure is complete and RecyclerView's onLayout method is called, RecyclerView checkswhether it already did layout calculations during the measure pass and if so, it re-usesthat information. It may still decide to call <a href=RecyclerView.LayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a> if the last measure spec was different from the final dimensions or adapter contentshave changed between the measure call and the layout call.</li><li>Finally, animations are calculated and run as usual.</li></ul></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="generateDefaultLayoutParams()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>generateDefaultLayoutParams</h4>
+                                        <pre class="methodSignature"> <a href=RecyclerView.LayoutParams.html>RecyclerView.LayoutParams</a> <a href=LinearLayoutManager.html#generateDefaultLayoutParams()>generateDefaultLayoutParams</a>()</pre>
+                                        <div class="block"><p>Create a default <code>LayoutParams</code> object for a child of the RecyclerView.</p><p>LayoutManagers will often want to use a custom <code>LayoutParams</code> typeto store extra information specific to the layout. Client code should subclass for this purpose.</p><p>Important: if you use your own custom <code>LayoutParams</code> typeyou must also override #checkLayoutParams(LayoutParams), #generateLayoutParams(ViewGroup.LayoutParams) and #generateLayoutParams(Context, AttributeSet).</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getRecycleChildrenOnDetach()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getRecycleChildrenOnDetach</h4>
+                                        <pre class="methodSignature"> boolean <a href=LinearLayoutManager.html#getRecycleChildrenOnDetach()>getRecycleChildrenOnDetach</a>()</pre>
+                                        <div class="block"><p>Returns whether LayoutManager will recycle its children when it is detached fromRecyclerView.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setRecycleChildrenOnDetach(boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setRecycleChildrenOnDetach</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#setRecycleChildrenOnDetach(boolean)>setRecycleChildrenOnDetach</a>(boolean recycleChildrenOnDetach)</pre>
+                                        <div class="block"><p>Set whether LayoutManager will recycle its children when it is detached fromRecyclerView.</p><p>If you are using a <a href=RecyclerView.RecycledViewPool.html>RecyclerView.RecycledViewPool</a>, it might be a good idea to setthis flag to <code>true</code> so that views will be available to other RecyclerViewsimmediately.</p><p>Note that, setting this flag will result in a performance drop if RecyclerViewis restored.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>recycleChildrenOnDetach</code> - Whether children should be recycled in detach or not.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onDetachedFromWindow(RecyclerView,RecyclerView.Recycler)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onDetachedFromWindow</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#onDetachedFromWindow(RecyclerView,RecyclerView.Recycler)>onDetachedFromWindow</a>(<a href=RecyclerView.html>RecyclerView</a> view, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler)</pre>
+                                        <div class="block"><p>Called when this LayoutManager is detached from its parent RecyclerView or whenits parent RecyclerView is detached from its window.</p><p>LayoutManager should clear all of its View references as another LayoutManager might beassigned to the RecyclerView.</p><p>If the RecyclerView is re-attached with the same LayoutManager and Adapter, it may notcall <a href=RecyclerView.LayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a> if nothing has changed and a layout wasnot requested on the RecyclerView while it was detached.</p><p>If your LayoutManager has View references that it cleans in on-detach, it should alsocall <a href=RecyclerView.html#requestLayout()>requestLayout</a> to ensure that it is re-laid out whenRecyclerView is re-attached.</p><p>Subclass implementations should always call through to the superclass implementation.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>view</code> - The RecyclerView this LayoutManager is bound to</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>recycler</code> - The recycler to use if you prefer to recycle your children instead ofkeeping them around.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onInitializeAccessibilityEvent(AccessibilityEvent)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onInitializeAccessibilityEvent</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#onInitializeAccessibilityEvent(AccessibilityEvent)>onInitializeAccessibilityEvent</a>(<a href=https://developer.android.com/reference/kotlin/android/view/accessibility/AccessibilityEvent.html>AccessibilityEvent</a> event)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onSaveInstanceState()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onSaveInstanceState</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/android/os/Parcelable.html>Parcelable</a> <a href=LinearLayoutManager.html#onSaveInstanceState()>onSaveInstanceState</a>()</pre>
+                                        <div class="block"><p>Called when the LayoutManager should save its state. This is a good time to save yourscroll position, configuration and anything else that may be required to restore the samelayout state if the LayoutManager is recreated.</p><p>RecyclerView does NOT verify if the LayoutManager has changed between state save andrestore. This will let you share information between your LayoutManagers but it is alsoyour responsibility to make sure they use the same parcelable class.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onRestoreInstanceState(Parcelable)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onRestoreInstanceState</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#onRestoreInstanceState(Parcelable)>onRestoreInstanceState</a>(<a href=https://developer.android.com/reference/kotlin/android/os/Parcelable.html>Parcelable</a> state)</pre>
+                                        <div class="block"><p>Called when the RecyclerView is ready to restore the state based on a previousRecyclerView.Notice that this might happen after an actual layout, based on how Adapter prefers torestore State. See <a href=RecyclerView.Adapter.html#getStateRestorationPolicy()>getStateRestorationPolicy</a> for more information.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - The parcelable that was returned by the previous LayoutManager's<a href=RecyclerView.LayoutManager.html#onSaveInstanceState()>onSaveInstanceState</a> method.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="canScrollHorizontally()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>canScrollHorizontally</h4>
+                                        <pre class="methodSignature"> boolean <a href=LinearLayoutManager.html#canScrollHorizontally()>canScrollHorizontally</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="canScrollVertically()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>canScrollVertically</h4>
+                                        <pre class="methodSignature"> boolean <a href=LinearLayoutManager.html#canScrollVertically()>canScrollVertically</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setStackFromEnd(boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setStackFromEnd</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#setStackFromEnd(boolean)>setStackFromEnd</a>(boolean stackFromEnd)</pre>
+                                        <div class="block"><p>Compatibility support for <a href=https://developer.android.com/reference/kotlin/android/widget/AbsListView.html#setstackfrombottom>setStackFromBottom</a></p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getStackFromEnd()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getStackFromEnd</h4>
+                                        <pre class="methodSignature"> boolean <a href=LinearLayoutManager.html#getStackFromEnd()>getStackFromEnd</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOrientation()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOrientation</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#getOrientation()>getOrientation</a>()</pre>
+                                        <div class="block"><p>Returns the current orientation of the layout.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOrientation(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOrientation</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#setOrientation(int)>setOrientation</a>(int orientation)</pre>
+                                        <div class="block"><p>Sets the orientation of the layout. <a href=LinearLayoutManager.html>LinearLayoutManager</a> will do its best to keep scroll position.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>orientation</code> - <a href=LinearLayoutManager.html#HORIZONTAL>HORIZONTAL</a> or <a href=LinearLayoutManager.html#VERTICAL>VERTICAL</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getReverseLayout()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getReverseLayout</h4>
+                                        <pre class="methodSignature"> boolean <a href=LinearLayoutManager.html#getReverseLayout()>getReverseLayout</a>()</pre>
+                                        <div class="block"><p>Returns if views are laid out from the opposite direction of the layout.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setReverseLayout(boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setReverseLayout</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#setReverseLayout(boolean)>setReverseLayout</a>(boolean reverseLayout)</pre>
+                                        <div class="block"><p>Used to reverse item traversal and layout order.This behaves similar to the layout change for RTL views. When set to true, first item islaid out at the end of the UI, second item is laid out before it etc.For horizontal layouts, it depends on the layout direction.When set to true, If <a href=RecyclerView.html>RecyclerView</a> is LTR, than it willlayout from RTL, if <a href=RecyclerView.html>RecyclerView</a>} is RTL, it will layoutfrom LTR.If you are looking for the exact same behavior of <a href=https://developer.android.com/reference/kotlin/android/widget/AbsListView.html#setstackfrombottom>setStackFromBottom</a>, use <a href=LinearLayoutManager.html#setStackFromEnd(boolean)>setStackFromEnd</a></p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findViewByPosition(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findViewByPosition</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> <a href=LinearLayoutManager.html#findViewByPosition(int)>findViewByPosition</a>(int position)</pre>
+                                        <div class="block"><p>Finds the view which represents the given adapter position.</p><p>This method traverses each child since it has no information about child order.Override this method to improve performance if your LayoutManager keeps data aboutchild views.</p><p>If a view is ignored via #ignoreView(View), it is also ignored by this method.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="smoothScrollToPosition(RecyclerView,RecyclerView.State,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>smoothScrollToPosition</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#smoothScrollToPosition(RecyclerView,RecyclerView.State,int)>smoothScrollToPosition</a>(<a href=RecyclerView.html>RecyclerView</a> recyclerView, <a href=RecyclerView.State.html>RecyclerView.State</a> state, int position)</pre>
+                                        <div class="block"><p>Smooth scroll to the specified adapter position.</p><p>To support smooth scrolling, override this method, create your <a href=RecyclerView.SmoothScroller.html>SmoothScroller</a> instance and call <a href=RecyclerView.LayoutManager.html#startSmoothScroll(RecyclerView.SmoothScroller)>startSmoothScroll</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>recyclerView</code> - The RecyclerView to which this layout manager is attached</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>state</code> - Current State of RecyclerView</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>position</code> - Scroll to this adapter position.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="computeScrollVectorForPosition(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>computeScrollVectorForPosition</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/android/graphics/PointF.html>PointF</a> <a href=LinearLayoutManager.html#computeScrollVectorForPosition(int)>computeScrollVectorForPosition</a>(int targetPosition)</pre>
+                                        <div class="block"><p>Should calculate the vector that points to the direction where the target positioncan be found.</p><p>This method is used by the <a href=LinearSmoothScroller.html>LinearSmoothScroller</a> to initiate a scroll towardsthe target position.</p><p>The magnitude of the vector is not important. It is always normalized before beingused by the <a href=LinearSmoothScroller.html>LinearSmoothScroller</a>.</p><p>LayoutManager should not check whether the position exists in the adapter or not.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>targetPosition</code> - the target position to which the returned vector should point</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onLayoutChildren</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a>(<a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Lay out all relevant child views from the given adapter.The LayoutManager is in charge of the behavior of item animations. By default,RecyclerView has a non-null #getItemAnimator() ItemAnimator, and simpleitem animations are enabled. This means that add/remove operations on theadapter will result in animations to add new or appearing items, removed ordisappearing items, and moved items. If a LayoutManager returns false from #supportsPredictiveItemAnimations(), which is the default, and runs anormal layout operation during #onLayoutChildren(Recycler, State), theRecyclerView will have enough information to run those animations in a simpleway. For example, the default ItemAnimator, , willsimply fade views in and out, whether they are actually added/removed or whetherthey are moved on or off the screen due to other add/remove operations.</p><p>A LayoutManager wanting a better item animation experience, where items can beanimated onto and off of the screen according to where the items exist when theyare not on screen, then the LayoutManager should return true from #supportsPredictiveItemAnimations() and add additional logic to #onLayoutChildren(Recycler, State). Supporting predictive animationsmeans that #onLayoutChildren(Recycler, State) will be called twice;once as a "pre" layout step to determine where items would have been prior toa real layout, and again to do the "real" layout. In the pre-layout phase,items will remember their pre-layout positions to allow them to be laid outappropriately. Also, LayoutParams#isItemRemoved() removed items willbe returned from the scrap to help determine correct placement of other items.These removed items should not be added to the child list, but should be usedto help calculate correct positioning of other views, including views thatwere not previously onscreen (referred to as APPEARING views), but whosepre-layout offscreen position can be determined given the extrainformation about the pre-layout removed views.</p><p>The second layout pass is the real layout in which only non-removed viewswill be used. The only additional requirement during this pass is, if #supportsPredictiveItemAnimations() returns true, to note whichviews exist in the child list prior to layout and which are not there afterlayout (referred to as DISAPPEARING views), and to position/layout those viewsappropriately, without regard to the actual bounds of the RecyclerView. This allowsthe animation system to know the location to which to animate these disappearingviews.</p><p>The default LayoutManager implementations for RecyclerView handle all of theserequirements for animations already. Clients of RecyclerView can either use oneof these layout managers directly or look at their implementations ofonLayoutChildren() to see how they account for the APPEARING andDISAPPEARING views.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onLayoutCompleted(RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onLayoutCompleted</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#onLayoutCompleted(RecyclerView.State)>onLayoutCompleted</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Called after a full layout calculation is finished. The layout calculation may includemultiple <a href=RecyclerView.LayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a> calls due to animations orlayout measurement but it will include only one <a href=RecyclerView.LayoutManager.html#onLayoutCompleted(RecyclerView.State)>onLayoutCompleted</a> call.This method will be called at the end of <a href=https://developer.android.com/reference/kotlin/android/view/View.html#layout>layout</a> call.</p><p>This is a good place for the LayoutManager to do some cleanup like pending scrollposition, saved state etc.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - Transient state of RecyclerView</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="scrollToPosition(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>scrollToPosition</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#scrollToPosition(int)>scrollToPosition</a>(int position)</pre>
+                                        <div class="block"><p>Scroll the RecyclerView to make the position visible.</p><p>RecyclerView will scroll the minimum amount that is necessary to make thetarget position visible. If you are looking for a similar behavior to <a href=https://developer.android.com/reference/kotlin/android/widget/ListView.html#setselection>setSelection</a> or <a href=https://developer.android.com/reference/kotlin/android/widget/AbsListView.html#setselectionfromtop>setSelectionFromTop</a>, use <a href=LinearLayoutManager.html#scrollToPositionWithOffset(int,int)>scrollToPositionWithOffset</a>.</p><p>Note that scroll position change will not be reflected until the next layout call.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>position</code> - Scroll to this adapter position</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="scrollToPositionWithOffset(int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>scrollToPositionWithOffset</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#scrollToPositionWithOffset(int,int)>scrollToPositionWithOffset</a>(int position, int offset)</pre>
+                                        <div class="block"><p>Scroll to the specified adapter position with the given offset from resolved layoutstart. Resolved layout start depends on <a href=LinearLayoutManager.html#getReverseLayout()>getReverseLayout</a>, <a href=../../core/view/ViewCompat.html#getLayoutDirection(View)>getLayoutDirection</a> and <a href=LinearLayoutManager.html#getStackFromEnd()>getStackFromEnd</a>.</p><p>For example, if layout is <a href=LinearLayoutManager.html#VERTICAL>VERTICAL</a> and <a href=LinearLayoutManager.html#getStackFromEnd()>getStackFromEnd</a> is true, calling<code>scrollToPositionWithOffset(10, 20)</code> will layout such that<code>item[10]</code>'s bottom is 20 pixels above the RecyclerView's bottom.</p><p>Note that scroll position change will not be reflected until the next layout call.</p><p>If you are just trying to make a position visible, use <a href=LinearLayoutManager.html#scrollToPosition(int)>scrollToPosition</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>position</code> - Index (starting at 0) of the reference item.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>offset</code> - The distance (in pixels) between the start edge of the item view andstart edge of the RecyclerView.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="scrollHorizontallyBy(int,RecyclerView.Recycler,RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>scrollHorizontallyBy</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#scrollHorizontallyBy(int,RecyclerView.Recycler,RecyclerView.State)>scrollHorizontallyBy</a>(int dx, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Scroll horizontally by dx pixels in screen coordinates and return the distance traveled.The default implementation does nothing and returns 0.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="scrollVerticallyBy(int,RecyclerView.Recycler,RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>scrollVerticallyBy</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#scrollVerticallyBy(int,RecyclerView.Recycler,RecyclerView.State)>scrollVerticallyBy</a>(int dy, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Scroll vertically by dy pixels in screen coordinates and return the distance traveled.The default implementation does nothing and returns 0.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="computeHorizontalScrollOffset(RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>computeHorizontalScrollOffset</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#computeHorizontalScrollOffset(RecyclerView.State)>computeHorizontalScrollOffset</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Override this method if you want to support scroll bars.</p><p>Read <a href=RecyclerView.html#computeHorizontalScrollOffset()>computeHorizontalScrollOffset</a> for details.</p><p>Default implementation returns 0.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - Current State of RecyclerView where you can find total item count</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="computeVerticalScrollOffset(RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>computeVerticalScrollOffset</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#computeVerticalScrollOffset(RecyclerView.State)>computeVerticalScrollOffset</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Override this method if you want to support scroll bars.</p><p>Read <a href=RecyclerView.html#computeVerticalScrollOffset()>computeVerticalScrollOffset</a> for details.</p><p>Default implementation returns 0.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - Current State of RecyclerView where you can find total item count</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="computeHorizontalScrollExtent(RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>computeHorizontalScrollExtent</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#computeHorizontalScrollExtent(RecyclerView.State)>computeHorizontalScrollExtent</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Override this method if you want to support scroll bars.</p><p>Read <a href=RecyclerView.html#computeHorizontalScrollExtent()>computeHorizontalScrollExtent</a> for details.</p><p>Default implementation returns 0.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - Current state of RecyclerView</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="computeVerticalScrollExtent(RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>computeVerticalScrollExtent</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#computeVerticalScrollExtent(RecyclerView.State)>computeVerticalScrollExtent</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Override this method if you want to support scroll bars.</p><p>Read <a href=RecyclerView.html#computeVerticalScrollExtent()>computeVerticalScrollExtent</a> for details.</p><p>Default implementation returns 0.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - Current state of RecyclerView</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="computeHorizontalScrollRange(RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>computeHorizontalScrollRange</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#computeHorizontalScrollRange(RecyclerView.State)>computeHorizontalScrollRange</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Override this method if you want to support scroll bars.</p><p>Read <a href=RecyclerView.html#computeHorizontalScrollRange()>computeHorizontalScrollRange</a> for details.</p><p>Default implementation returns 0.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - Current State of RecyclerView where you can find total item count</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="computeVerticalScrollRange(RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>computeVerticalScrollRange</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#computeVerticalScrollRange(RecyclerView.State)>computeVerticalScrollRange</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Override this method if you want to support scroll bars.</p><p>Read <a href=RecyclerView.html#computeVerticalScrollRange()>computeVerticalScrollRange</a> for details.</p><p>Default implementation returns 0.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - Current State of RecyclerView where you can find total item count</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setSmoothScrollbarEnabled(boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setSmoothScrollbarEnabled</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#setSmoothScrollbarEnabled(boolean)>setSmoothScrollbarEnabled</a>(boolean enabled)</pre>
+                                        <div class="block"><p>When smooth scrollbar is enabled, the position and size of the scrollbar thumb is computedbased on the number of visible pixels in the visible items. This however assumes that alllist items have similar or equal widths or heights (depending on list orientation).If you use a list in which items have different dimensions, the scrollbar will changeappearance as the user scrolls through the list. To avoid this issue, you need to disablethis property.When smooth scrollbar is disabled, the position and size of the scrollbar thumb is basedsolely on the number of items in the adapter and the position of the visible items insidethe adapter. This provides a stable scrollbar as the user navigates through a list of itemswith varying widths / heights.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>enabled</code> - Whether or not to enable smooth scrollbar.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isSmoothScrollbarEnabled()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isSmoothScrollbarEnabled</h4>
+                                        <pre class="methodSignature"> boolean <a href=LinearLayoutManager.html#isSmoothScrollbarEnabled()>isSmoothScrollbarEnabled</a>()</pre>
+                                        <div class="block"><p>Returns the current state of the smooth scrollbar feature. It is enabled by default.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="collectInitialPrefetchPositions(int,RecyclerView.LayoutManager.LayoutPrefetchRegistry)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>collectInitialPrefetchPositions</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#collectInitialPrefetchPositions(int,RecyclerView.LayoutManager.LayoutPrefetchRegistry)>collectInitialPrefetchPositions</a>(int adapterItemCount, <a href=RecyclerView.LayoutManager.LayoutPrefetchRegistry.html>RecyclerView.LayoutManager.LayoutPrefetchRegistry</a> layoutPrefetchRegistry)</pre>
+                                        <div class="block"><p>Gather all positions from the LayoutManager to be prefetched in preperation for itsRecyclerView to come on screen, due to the movement of another, containing RecyclerView.</p><p>This method is only called when a RecyclerView is nested in another RecyclerView.</p><p>If item prefetch is enabled for this LayoutManager, as well in another containingLayoutManager, this method is called in between draw traversals to gatherwhich positions this LayoutManager will first need, once it appears on the screen.</p><p>For example, if this LayoutManager represents a horizontally scrolling list within avertically scrolling LayoutManager, this method would be called when the horizontal listis about to come onscreen.</p><p>The LayoutManager should call <a href=RecyclerView.LayoutManager.LayoutPrefetchRegistry.html#addPosition(int,int)>addPosition</a> foreach item to be prepared, and these positions will have their ViewHolders created andbound, if there is sufficient time available, in advance of being needed by ascroll or layout.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>adapterItemCount</code> - number of items in the associated adapter.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>layoutPrefetchRegistry</code> - PrefetchRegistry to add prefetch entries into.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setInitialPrefetchItemCount(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setInitialPrefetchItemCount</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#setInitialPrefetchItemCount(int)>setInitialPrefetchItemCount</a>(int itemCount)</pre>
+                                        <div class="block"><p>Sets the number of items to prefetch in <a href=LinearLayoutManager.html#collectInitialPrefetchPositions(int,RecyclerView.LayoutManager.LayoutPrefetchRegistry)>collectInitialPrefetchPositions</a>, which defineshow many inner items should be prefetched when this LayoutManager's RecyclerViewis nested inside another RecyclerView.</p><p>Set this value to the number of items this inner LayoutManager will display when it isfirst scrolled into the viewport. RecyclerView will attempt to prefetch that number of itemsso they are ready, avoiding jank as the inner RecyclerView is scrolled into the viewport.</p><p>For example, take a vertically scrolling RecyclerView with horizontally scrolling innerRecyclerViews. The rows always have 4 items visible in them (or 5 if not aligned). Passing<code>4</code> to this method for each inner RecyclerView's LinearLayoutManager will enableRecyclerView's prefetching feature to do create/bind work for 4 views within a row early,before it is scrolled on screen, instead of just the default 2.</p><p>Calling this method does nothing unless the LayoutManager is in a RecyclerViewnested in another RecyclerView.</p><p>Note: Setting this value to be larger than the number ofviews that will be visible in this view can incur unnecessary bind work, and an increase tothe number of Views created and in active use.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>itemCount</code> - Number of items to prefetch</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getInitialPrefetchItemCount()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getInitialPrefetchItemCount</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#getInitialPrefetchItemCount()>getInitialPrefetchItemCount</a>()</pre>
+                                        <div class="block"><p>Gets the number of items to prefetch in <a href=LinearLayoutManager.html#collectInitialPrefetchPositions(int,RecyclerView.LayoutManager.LayoutPrefetchRegistry)>collectInitialPrefetchPositions</a>, which defineshow many inner items should be prefetched when this LayoutManager's RecyclerViewis nested inside another RecyclerView.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="collectAdjacentPrefetchPositions(int,int,RecyclerView.State,RecyclerView.LayoutManager.LayoutPrefetchRegistry)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>collectAdjacentPrefetchPositions</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#collectAdjacentPrefetchPositions(int,int,RecyclerView.State,RecyclerView.LayoutManager.LayoutPrefetchRegistry)>collectAdjacentPrefetchPositions</a>(int dx, int dy, <a href=RecyclerView.State.html>RecyclerView.State</a> state, <a href=RecyclerView.LayoutManager.LayoutPrefetchRegistry.html>RecyclerView.LayoutManager.LayoutPrefetchRegistry</a> layoutPrefetchRegistry)</pre>
+                                        <div class="block"><p>Gather all positions from the LayoutManager to be prefetched, given specified momentum.</p><p>If item prefetch is enabled, this method is called in between traversals to gatherwhich positions the LayoutManager will soon need, given upcoming movement in subsequenttraversals.</p><p>The LayoutManager should call <a href=RecyclerView.LayoutManager.LayoutPrefetchRegistry.html#addPosition(int,int)>addPosition</a> foreach item to be prepared, and these positions will have their ViewHolders created andbound, if there is sufficient time available, in advance of being needed by ascroll or layout.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>dx</code> - X movement component.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>dy</code> - Y movement component.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>state</code> - State of RecyclerView</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>layoutPrefetchRegistry</code> - PrefetchRegistry to add prefetch entries into.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="assertNotInLayoutOrScroll(String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>assertNotInLayoutOrScroll</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#assertNotInLayoutOrScroll(String)>assertNotInLayoutOrScroll</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message)</pre>
+                                        <div class="block"><p>Checks if RecyclerView is in the middle of a layout or scroll and throws an <a href=https://developer.android.com/reference/kotlin/java/lang/IllegalStateException.html>IllegalStateException</a> if it is.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>message</code> - The message for the exception.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findFirstVisibleItemPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findFirstVisibleItemPosition</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#findFirstVisibleItemPosition()>findFirstVisibleItemPosition</a>()</pre>
+                                        <div class="block"><p>Returns the adapter position of the first visible view. This position does not includeadapter changes that were dispatched after the last layout pass.</p><p>Note that, this value is not affected by layout orientation or item order traversal.(<a href=LinearLayoutManager.html#setReverseLayout(boolean)>setReverseLayout</a>). Views are sorted by their positions in the adapter,not in the layout.</p><p>If RecyclerView has item decorators, they will be considered in calculations as well.</p><p>LayoutManager may pre-cache some views that are not necessarily visible. Those viewsare ignored in this method.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findFirstCompletelyVisibleItemPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findFirstCompletelyVisibleItemPosition</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#findFirstCompletelyVisibleItemPosition()>findFirstCompletelyVisibleItemPosition</a>()</pre>
+                                        <div class="block"><p>Returns the adapter position of the first fully visible view. This position does not includeadapter changes that were dispatched after the last layout pass.</p><p>Note that bounds check is only performed in the current orientation. That means, ifLayoutManager is horizontal, it will only check the view's left and right edges.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findLastVisibleItemPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findLastVisibleItemPosition</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#findLastVisibleItemPosition()>findLastVisibleItemPosition</a>()</pre>
+                                        <div class="block"><p>Returns the adapter position of the last visible view. This position does not includeadapter changes that were dispatched after the last layout pass.</p><p>Note that, this value is not affected by layout orientation or item order traversal.(<a href=LinearLayoutManager.html#setReverseLayout(boolean)>setReverseLayout</a>). Views are sorted by their positions in the adapter,not in the layout.</p><p>If RecyclerView has item decorators, they will be considered in calculations as well.</p><p>LayoutManager may pre-cache some views that are not necessarily visible. Those viewsare ignored in this method.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findLastCompletelyVisibleItemPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findLastCompletelyVisibleItemPosition</h4>
+                                        <pre class="methodSignature"> int <a href=LinearLayoutManager.html#findLastCompletelyVisibleItemPosition()>findLastCompletelyVisibleItemPosition</a>()</pre>
+                                        <div class="block"><p>Returns the adapter position of the last fully visible view. This position does not includeadapter changes that were dispatched after the last layout pass.</p><p>Note that bounds check is only performed in the current orientation. That means, ifLayoutManager is horizontal, it will only check the view's left and right edges.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onFocusSearchFailed(View,int,RecyclerView.Recycler,RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onFocusSearchFailed</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> <a href=LinearLayoutManager.html#onFocusSearchFailed(View,int,RecyclerView.Recycler,RecyclerView.State)>onFocusSearchFailed</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> focused, int focusDirection, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Called when searching for a focusable view in the given direction has failedfor the current content of the RecyclerView.</p><p>This is the LayoutManager's opportunity to populate views in the given directionto fulfill the request if it can. The LayoutManager should attach and returnthe view to be focused, if a focusable view in the given direction is found.Otherwise, if all the existing (or the newly populated views) are unfocusable, it returnsthe next unfocusable view to become visible on the screen. This unfocusable view istypically the first view that's either partially or fully out of RV's padded boundedarea in the given direction. The default implementation returns null.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>focused</code> - The currently focused view</dd>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            <dd><code>recycler</code> - The recycler to use for obtaining views for currently offscreen items</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>state</code> - Transient state of RecyclerView</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="supportsPredictiveItemAnimations()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>supportsPredictiveItemAnimations</h4>
+                                        <pre class="methodSignature"> boolean <a href=LinearLayoutManager.html#supportsPredictiveItemAnimations()>supportsPredictiveItemAnimations</a>()</pre>
+                                        <div class="block"><p>Returns whether this LayoutManager supports "predictive item animations".</p><p>"Predictive item animations" are automatically created animations that showwhere items came from, and where they are going to, as items are added, removed,or moved within a layout.</p><p>A LayoutManager wishing to support predictive item animations must override thismethod to return true (the default implementation returns false) and must obey certainbehavioral contracts outlined in <a href=RecyclerView.LayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a>.</p><p>Whether item animations actually occur in a RecyclerView is actually determined by boththe return value from this method and the <a href=RecyclerView.html#setItemAnimator(RecyclerView.ItemAnimator)>ItemAnimator</a> set on theRecyclerView itself. If the RecyclerView has a non-null ItemAnimator but thismethod returns false, then only "simple item animations" will be enabled in theRecyclerView, in which views whose position are changing are simply faded in/out. If theRecyclerView has a non-null ItemAnimator and this method returns true, then predictiveitem animations will be enabled in the RecyclerView.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="prepareForDrop(View,View,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>prepareForDrop</h4>
+                                        <pre class="methodSignature"> void <a href=LinearLayoutManager.html#prepareForDrop(View,View,int,int)>prepareForDrop</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int x, int y)</pre>
+                                        <div class="block"><p>Called by the after a View is dropped over another View.</p><p>A LayoutManager should implement this interface to get ready for the upcoming moveoperation.</p><p>For example, LinearLayoutManager sets up a "scrollToPositionWithOffset" calls so thatthe View under drag will be used as an anchor View while calculating the next layout,making layout stay consistent.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

@@ -1,0 +1,1177 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>ItemAnimator unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class RecyclerView.ItemAnimator" class="title">Class RecyclerView.ItemAnimator</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public abstract class <span class="typeNameLabel"><a href=RecyclerView.ItemAnimator.html>RecyclerView.ItemAnimator</a></span>
+
+                    </pre>
+                    <div class="block"><p>This class defines the animations that take place on items as changes are madeto the adapter.Subclasses of ItemAnimator can be used to implement custom animations for actions onViewHolder items. The RecyclerView will manage retaining these items while theyare being animated, but implementors must call <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> when a ViewHolder's animation is finished. In other words, there must be a matching <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> call for each <a href=RecyclerView.ItemAnimator.html#animateAppearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)>animateAppearance()</a>, <a href=RecyclerView.ItemAnimator.html#animateChange(RecyclerView.ViewHolder,RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animateChange()</a><a href=RecyclerView.ItemAnimator.html#animatePersistence(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)>animatePersistence()</a>,and <a href=RecyclerView.ItemAnimator.html#animateDisappearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animateDisappearance()</a> call.</p><p>By default, RecyclerView uses <a href=DefaultItemAnimator.html>DefaultItemAnimator</a>.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public @interface</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="RecyclerView.ItemAnimator.AdapterChanges.html">RecyclerView.ItemAnimator.AdapterChanges</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>The set of flags that might be passed to <a href=tds/androidx/recyclerview/widget/RecyclerView.ItemAnimator.html#recordPreLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder,int,List)>recordPreLayoutInformation</a>.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public interface</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="RecyclerView.ItemAnimator.ItemAnimatorFinishedListener.html">RecyclerView.ItemAnimator.ItemAnimatorFinishedListener</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>This interface is used to inform listeners when all pending or running animationsin an ItemAnimator are finished. This can be used, for example, to delay an actionin a data set until currently-running animations are complete.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="RecyclerView.ItemAnimator.ItemHolderInfo.html">RecyclerView.ItemAnimator.ItemHolderInfo</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>A simple data structure that holds information about an item's bounds.This information is used in calculating item animations. Default implementation of <a href=tds/androidx/recyclerview/widget/RecyclerView.ItemAnimator.html#recordPreLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder,int,List)>recordPreLayoutInformation</a> and <a href=tds/androidx/recyclerview/widget/RecyclerView.ItemAnimator.html#recordPostLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder)>recordPostLayoutInformation</a> returns this datastructure. You can extend this class if you would like to keep more information aboutthe Views.</p><p>If you want to provide your own implementation but still use `super` methods to recordbasic information, you can override <a href=tds/androidx/recyclerview/widget/RecyclerView.ItemAnimator.html#obtainHolderInfo()>obtainHolderInfo</a> to provide your owninstances.</p></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#FLAG_CHANGED>FLAG_CHANGED</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#FLAG_REMOVED>FLAG_REMOVED</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#FLAG_INVALIDATED>FLAG_INVALIDATED</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#FLAG_MOVED>FLAG_MOVED</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#FLAG_APPEARED_IN_PRE_LAYOUT>FLAG_APPEARED_IN_PRE_LAYOUT</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>long</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#getMoveDuration()>getMoveDuration</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the current duration for which all move animations will run.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#setMoveDuration(long)>setMoveDuration</a>(long moveDuration) </code>
+                                            </th>
+                                            <td class="colLast">Sets the duration for which all move animations will run.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>long</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#getAddDuration()>getAddDuration</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the current duration for which all add animations will run.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#setAddDuration(long)>setAddDuration</a>(long addDuration) </code>
+                                            </th>
+                                            <td class="colLast">Sets the duration for which all add animations will run.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>long</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#getRemoveDuration()>getRemoveDuration</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the current duration for which all remove animations will run.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#setRemoveDuration(long)>setRemoveDuration</a>(long removeDuration) </code>
+                                            </th>
+                                            <td class="colLast">Sets the duration for which all remove animations will run.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>long</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#getChangeDuration()>getChangeDuration</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the current duration for which all change animations will run.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#setChangeDuration(long)>setChangeDuration</a>(long changeDuration) </code>
+                                            </th>
+                                            <td class="colLast">Sets the duration for which all change animations will run.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code><a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#recordPreLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder,int,List)>recordPreLayoutInformation</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.State.html>RecyclerView.State</a> state, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder, int changeFlags, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a>&gt; payloads) </code>
+                                            </th>
+                                            <td class="colLast">Called by the RecyclerView before the layout begins.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code><a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#recordPostLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder)>recordPostLayoutInformation</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.State.html>RecyclerView.State</a> state, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder) </code>
+                                            </th>
+                                            <td class="colLast">Called by the RecyclerView after the layout is complete.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>abstract boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#animateDisappearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)>animateDisappearance</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> preLayoutInfo, @<a href=../../annotation/Nullable.html>Nullable</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> postLayoutInfo) </code>
+                                            </th>
+                                            <td class="colLast">Called by the RecyclerView when a ViewHolder has disappeared from the layout.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>abstract boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#animateAppearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)>animateAppearance</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder, @<a href=../../annotation/Nullable.html>Nullable</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> preLayoutInfo, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> postLayoutInfo) </code>
+                                            </th>
+                                            <td class="colLast">Called by the RecyclerView when a ViewHolder is added to the layout.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>abstract boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#animatePersistence(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)>animatePersistence</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> preLayoutInfo, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> postLayoutInfo) </code>
+                                            </th>
+                                            <td class="colLast">Called by the RecyclerView when a ViewHolder is present in both before and after thelayout and RecyclerView has not received a <a href=RecyclerView.Adapter.html#notifyItemChanged(int)>notifyItemChanged</a> callfor it or a <a href=RecyclerView.Adapter.html#notifyDataSetChanged()>notifyDataSetChanged</a> call.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>abstract boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#animateChange(RecyclerView.ViewHolder,RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)>animateChange</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> oldHolder, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> newHolder, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> preLayoutInfo, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> postLayoutInfo) </code>
+                                            </th>
+                                            <td class="colLast">Called by the RecyclerView when an adapter item is present both before and after thelayout and RecyclerView has received a <a href=RecyclerView.Adapter.html#notifyItemChanged(int)>notifyItemChanged</a> callfor it.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#runPendingAnimations()>runPendingAnimations</a>() </code>
+                                            </th>
+                                            <td class="colLast">Called when there are pending animations waiting to be started.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#endAnimation(RecyclerView.ViewHolder)>endAnimation</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> item) </code>
+                                            </th>
+                                            <td class="colLast">Method called when an animation on a view should be ended immediately.This could happen when other events, like scrolling, occur, so thatanimating views can be quickly put into their proper end locations.Implementations should ensure that any animations running on the itemare canceled and affected properties are set to their end values.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#endAnimations()>endAnimations</a>() </code>
+                                            </th>
+                                            <td class="colLast">Method called when all item animations should be ended immediately.This could happen when other events, like scrolling, occur, so thatanimating views can be quickly put into their proper end locations.Implementations should ensure that any animations running on any itemsare canceled and affected properties are set to their end values.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>abstract boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#isRunning()>isRunning</a>() </code>
+                                            </th>
+                                            <td class="colLast">Method which returns whether there are any item animations currently running.This method can be used to determine whether to delay other actions untilanimations end.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>final void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder) </code>
+                                            </th>
+                                            <td class="colLast">Method to be called by subclasses when an animation is finished.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#onAnimationFinished(RecyclerView.ViewHolder)>onAnimationFinished</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder) </code>
+                                            </th>
+                                            <td class="colLast">Called after <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> is called by theItemAnimator.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>final void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#dispatchAnimationStarted(RecyclerView.ViewHolder)>dispatchAnimationStarted</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder) </code>
+                                            </th>
+                                            <td class="colLast">Method to be called by subclasses when an animation is started.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#onAnimationStarted(RecyclerView.ViewHolder)>onAnimationStarted</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder) </code>
+                                            </th>
+                                            <td class="colLast">Called when a new animation is started on the given ViewHolder.</td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>final boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#isRunning(RecyclerView.ItemAnimator.ItemAnimatorFinishedListener)>isRunning</a>(@<a href=../../annotation/Nullable.html>Nullable</a>() <a href=RecyclerView.ItemAnimator.ItemAnimatorFinishedListener.html>RecyclerView.ItemAnimator.ItemAnimatorFinishedListener</a> listener) </code>
+                                            </th>
+                                            <td class="colLast">Like <a href=RecyclerView.ItemAnimator.html#isRunning()>isRunning</a>, this method returns whether there are any itemanimations currently running.</td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#canReuseUpdatedViewHolder(RecyclerView.ViewHolder)>canReuseUpdatedViewHolder</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder) </code>
+                                            </th>
+                                            <td class="colLast">When an item is changed, ItemAnimator can decide whether it wants to re-usethe same ViewHolder for animations or RecyclerView should create a copy of theitem and ItemAnimator will use both to run the animation (e.g.</td>
+                                        </tr>
+                                        
+                                        <tr id="i24" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#canReuseUpdatedViewHolder(RecyclerView.ViewHolder,List)>canReuseUpdatedViewHolder</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a>&gt; payloads) </code>
+                                            </th>
+                                            <td class="colLast">When an item is changed, ItemAnimator can decide whether it wants to re-usethe same ViewHolder for animations or RecyclerView should create a copy of theitem and ItemAnimator will use both to run the animation (e.g.</td>
+                                        </tr>
+                                        
+                                        <tr id="i25" class="rowColor">
+                                            <td class="colFirst"><code>final void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#dispatchAnimationsFinished()>dispatchAnimationsFinished</a>() </code>
+                                            </th>
+                                            <td class="colLast">This method should be called by ItemAnimator implementations to notifyany listeners that all pending and active item animations are finished.</td>
+                                        </tr>
+                                        
+                                        <tr id="i26" class="altColor">
+                                            <td class="colFirst"><code><a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.ItemAnimator.html#obtainHolderInfo()>obtainHolderInfo</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns a new <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>ItemHolderInfo</a> which will be used to store information about theViewHolder.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="getMoveDuration()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMoveDuration</h4>
+                                        <pre class="methodSignature"> long <a href=RecyclerView.ItemAnimator.html#getMoveDuration()>getMoveDuration</a>()</pre>
+                                        <div class="block"><p>Gets the current duration for which all move animations will run.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setMoveDuration(long)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setMoveDuration</h4>
+                                        <pre class="methodSignature"> void <a href=RecyclerView.ItemAnimator.html#setMoveDuration(long)>setMoveDuration</a>(long moveDuration)</pre>
+                                        <div class="block"><p>Sets the duration for which all move animations will run.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>moveDuration</code> - The move duration</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getAddDuration()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getAddDuration</h4>
+                                        <pre class="methodSignature"> long <a href=RecyclerView.ItemAnimator.html#getAddDuration()>getAddDuration</a>()</pre>
+                                        <div class="block"><p>Gets the current duration for which all add animations will run.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setAddDuration(long)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setAddDuration</h4>
+                                        <pre class="methodSignature"> void <a href=RecyclerView.ItemAnimator.html#setAddDuration(long)>setAddDuration</a>(long addDuration)</pre>
+                                        <div class="block"><p>Sets the duration for which all add animations will run.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>addDuration</code> - The add duration</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getRemoveDuration()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getRemoveDuration</h4>
+                                        <pre class="methodSignature"> long <a href=RecyclerView.ItemAnimator.html#getRemoveDuration()>getRemoveDuration</a>()</pre>
+                                        <div class="block"><p>Gets the current duration for which all remove animations will run.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setRemoveDuration(long)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setRemoveDuration</h4>
+                                        <pre class="methodSignature"> void <a href=RecyclerView.ItemAnimator.html#setRemoveDuration(long)>setRemoveDuration</a>(long removeDuration)</pre>
+                                        <div class="block"><p>Sets the duration for which all remove animations will run.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>removeDuration</code> - The remove duration</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getChangeDuration()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getChangeDuration</h4>
+                                        <pre class="methodSignature"> long <a href=RecyclerView.ItemAnimator.html#getChangeDuration()>getChangeDuration</a>()</pre>
+                                        <div class="block"><p>Gets the current duration for which all change animations will run.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setChangeDuration(long)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setChangeDuration</h4>
+                                        <pre class="methodSignature"> void <a href=RecyclerView.ItemAnimator.html#setChangeDuration(long)>setChangeDuration</a>(long changeDuration)</pre>
+                                        <div class="block"><p>Sets the duration for which all change animations will run.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>changeDuration</code> - The change duration</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="recordPreLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder,int,List)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>recordPreLayoutInformation</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> <a href=RecyclerView.ItemAnimator.html#recordPreLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder,int,List)>recordPreLayoutInformation</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.State.html>RecyclerView.State</a> state, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder, int changeFlags, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a>&gt; payloads)</pre>
+                                        <div class="block"><p>Called by the RecyclerView before the layout begins. Item animator should recordnecessary information about the View before it is potentially rebound, moved or removed.</p><p>The data returned from this method will be passed to the related <code>animate**</code>methods.</p><p>Note that this method may be called after pre-layout phase if LayoutManager adds newViews to the layout in pre-layout pass.</p><p>The default implementation returns an <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>ItemHolderInfo</a> which holds the bounds ofthe View and the adapter change flags.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - The current State of RecyclerView which includes some useful dataabout the layout that will be calculated.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The ViewHolder whose information should be recorded.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>changeFlags</code> - Additional information about what changes happened in the Adapterabout the Item represented by this ViewHolder.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>payloads</code> - The payload list that was previously passed to<a href=RecyclerView.Adapter.html#notifyItemChanged(int,Object)>notifyItemChanged</a> or<a href=RecyclerView.Adapter.html#notifyItemRangeChanged(int,int,Object)>notifyItemRangeChanged</a>.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="recordPostLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>recordPostLayoutInformation</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> <a href=RecyclerView.ItemAnimator.html#recordPostLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder)>recordPostLayoutInformation</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.State.html>RecyclerView.State</a> state, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder)</pre>
+                                        <div class="block"><p>Called by the RecyclerView after the layout is complete. Item animator should recordnecessary information about the View's final state.</p><p>The data returned from this method will be passed to the related <code>animate**</code>methods.</p><p>The default implementation returns an <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>ItemHolderInfo</a> which holds the bounds ofthe View.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - The current State of RecyclerView which includes some useful data aboutthe layout that will be calculated.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The ViewHolder whose information should be recorded.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="animateDisappearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>animateDisappearance</h4>
+                                        <pre class="methodSignature"> abstract boolean <a href=RecyclerView.ItemAnimator.html#animateDisappearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)>animateDisappearance</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> preLayoutInfo, @<a href=../../annotation/Nullable.html>Nullable</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> postLayoutInfo)</pre>
+                                        <div class="block"><p>Called by the RecyclerView when a ViewHolder has disappeared from the layout.</p><p>This means that the View was a child of the LayoutManager when layout started but hasbeen removed by the LayoutManager. It might have been removed from the adapter or simplybecome invisible due to other factors. You can distinguish these two cases by checkingthe change flags that were passed to <a href=RecyclerView.ItemAnimator.html#recordPreLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder,int,List)>recordPreLayoutInformation</a>.</p><p>Note that when a ViewHolder both changes and disappears in the same layout pass, theanimation callback method which will be called by the RecyclerView depends on theItemAnimator's decision whether to re-use the same ViewHolder or not, and also theLayoutManager's decision whether to layout the changed version of a disappearingViewHolder or not. RecyclerView will call <a href=RecyclerView.ItemAnimator.html#animateChange(RecyclerView.ViewHolder,RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animateChange</a> instead of <code>{@code animateDisappearance}</code> if and only if the ItemAnimatorreturns <code>{@code false}</code> from <a href=RecyclerView.ItemAnimator.html#canReuseUpdatedViewHolder(RecyclerView.ViewHolder)>canReuseUpdatedViewHolder</a> and theLayoutManager lays out a new disappearing view that holds the updated information.Built-in LayoutManagers try to avoid laying out updated versions of disappearing views.</p><p>If LayoutManager supports predictive animations, it might provide a target disappearlocation for the View by laying it out in that location. When that happens,RecyclerView will call <a href=RecyclerView.ItemAnimator.html#recordPostLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder)>recordPostLayoutInformation</a> and theresponse of that call will be passed to this method as the <code>postLayoutInfo</code>.</p><p>ItemAnimator must call <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> when the animationis complete (or instantly call <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> if itdecides not to animate the view).</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The ViewHolder which should be animated</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>preLayoutInfo</code> - The information that was returned from<a href=RecyclerView.ItemAnimator.html#recordPreLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder,int,List)>recordPreLayoutInformation</a>.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>postLayoutInfo</code> - The information that was returned from<a href=RecyclerView.ItemAnimator.html#recordPostLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder)>recordPostLayoutInformation</a>.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="animateAppearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>animateAppearance</h4>
+                                        <pre class="methodSignature"> abstract boolean <a href=RecyclerView.ItemAnimator.html#animateAppearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)>animateAppearance</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder, @<a href=../../annotation/Nullable.html>Nullable</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> preLayoutInfo, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> postLayoutInfo)</pre>
+                                        <div class="block"><p>Called by the RecyclerView when a ViewHolder is added to the layout.</p><p>In detail, this means that the ViewHolder was not a child when the layout startedbut has been added by the LayoutManager. It might be newly added to the adapter orsimply become visible due to other factors.</p><p>ItemAnimator must call <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> when the animationis complete (or instantly call <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> if itdecides not to animate the view).</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The ViewHolder which should be animated</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>preLayoutInfo</code> - The information that was returned from<a href=RecyclerView.ItemAnimator.html#recordPreLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder,int,List)>recordPreLayoutInformation</a>.Might be null if Item was just added to the adapter orLayoutManager does not support predictive animations or it couldnot predict that this ViewHolder will become visible.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>postLayoutInfo</code> - The information that was returned from <a href=RecyclerView.ItemAnimator.html#recordPreLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder,int,List)></a>.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="animatePersistence(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>animatePersistence</h4>
+                                        <pre class="methodSignature"> abstract boolean <a href=RecyclerView.ItemAnimator.html#animatePersistence(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)>animatePersistence</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> preLayoutInfo, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> postLayoutInfo)</pre>
+                                        <div class="block"><p>Called by the RecyclerView when a ViewHolder is present in both before and after thelayout and RecyclerView has not received a <a href=RecyclerView.Adapter.html#notifyItemChanged(int)>notifyItemChanged</a> callfor it or a <a href=RecyclerView.Adapter.html#notifyDataSetChanged()>notifyDataSetChanged</a> call.</p><p>This ViewHolder still represents the same data that it was representing when the layoutstarted but its position / size may be changed by the LayoutManager.</p><p>If the Item's layout position didn't change, RecyclerView still calls this method becauseit does not track this information (or does not necessarily know that an animation isnot required). Your ItemAnimator should handle this case and if there is nothing toanimate, it should call <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> and return<code>false</code>.</p><p>ItemAnimator must call <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> when the animationis complete (or instantly call <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> if itdecides not to animate the view).</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The ViewHolder which should be animated</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>preLayoutInfo</code> - The information that was returned from<a href=RecyclerView.ItemAnimator.html#recordPreLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder,int,List)>recordPreLayoutInformation</a>.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>postLayoutInfo</code> - The information that was returned from <a href=RecyclerView.ItemAnimator.html#recordPreLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder,int,List)></a>.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="animateChange(RecyclerView.ViewHolder,RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>animateChange</h4>
+                                        <pre class="methodSignature"> abstract boolean <a href=RecyclerView.ItemAnimator.html#animateChange(RecyclerView.ViewHolder,RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)>animateChange</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> oldHolder, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> newHolder, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> preLayoutInfo, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> postLayoutInfo)</pre>
+                                        <div class="block"><p>Called by the RecyclerView when an adapter item is present both before and after thelayout and RecyclerView has received a <a href=RecyclerView.Adapter.html#notifyItemChanged(int)>notifyItemChanged</a> callfor it. This method may also be called when <a href=RecyclerView.Adapter.html#notifyDataSetChanged()>notifyDataSetChanged</a> is called and adapter has stable ids so thatRecyclerView could still rebind views to the same ViewHolders. If viewType changes when <a href=RecyclerView.Adapter.html#notifyDataSetChanged()>notifyDataSetChanged</a> is called, this method will not be called,instead, <a href=RecyclerView.ItemAnimator.html#animateAppearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)>animateAppearance</a> will becalled for the new ViewHolder and the old one will be recycled.</p><p>If this method is called due to a <a href=RecyclerView.Adapter.html#notifyDataSetChanged()>notifyDataSetChanged</a> call, there isa good possibility that item contents didn't really change but it is rebound from theadapter. <a href=DefaultItemAnimator.html>DefaultItemAnimator</a> will skip animating the View if its location on thescreen didn't change and your animator should handle this case as well and avoid creatingunnecessary animations.</p><p>When an item is updated, ItemAnimator has a chance to ask RecyclerView to keep theprevious presentation of the item as-is and supply a new ViewHolder for the updatedpresentation (see: <a href=RecyclerView.ItemAnimator.html#canReuseUpdatedViewHolder(RecyclerView.ViewHolder,List)>canReuseUpdatedViewHolder</a>.This is useful if you don't know the contents of the Item and would liketo cross-fade the old and the new one (<a href=DefaultItemAnimator.html>DefaultItemAnimator</a> uses this technique).</p><p>When you are writing a custom item animator for your layout, it might be more performantand elegant to re-use the same ViewHolder and animate the content changes manually.</p><p>When <a href=RecyclerView.Adapter.html#notifyItemChanged(int)>notifyItemChanged</a> is called, the Item's view type may change.If the Item's view type has changed or ItemAnimator returned <code>false</code> forthis ViewHolder when <a href=RecyclerView.ItemAnimator.html#canReuseUpdatedViewHolder(RecyclerView.ViewHolder,List)>canReuseUpdatedViewHolder</a> was called, the<code>oldHolder</code> and <code>newHolder</code> will be different ViewHolder instanceswhich represent the same Item. In that case, only the new ViewHolder is visibleto the LayoutManager but RecyclerView keeps old ViewHolder attached for animations.</p><p>ItemAnimator must call <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> for each distinctViewHolder when their animation is complete(or instantly call <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> if it decides not toanimate the view).</p><p>If oldHolder and newHolder are the same instance, you should call <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a>only once.</p><p>Note that when a ViewHolder both changes and disappears in the same layout pass, theanimation callback method which will be called by the RecyclerView depends on theItemAnimator's decision whether to re-use the same ViewHolder or not, and also theLayoutManager's decision whether to layout the changed version of a disappearingViewHolder or not. RecyclerView will call <code>{@code animateChange}</code> instead of <a href=RecyclerView.ItemAnimator.html#animateDisappearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animateDisappearance</a> if and only if the ItemAnimator returns <code>{@code false}</code> from <a href=RecyclerView.ItemAnimator.html#canReuseUpdatedViewHolder(RecyclerView.ViewHolder)>canReuseUpdatedViewHolder</a> and theLayoutManager lays out a new disappearing view that holds the updated information.Built-in LayoutManagers try to avoid laying out updated versions of disappearing views.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>oldHolder</code> - The ViewHolder before the layout is started, might be the sameinstance with newHolder.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>newHolder</code> - The ViewHolder after the layout is finished, might be the sameinstance with oldHolder.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>preLayoutInfo</code> - The information that was returned from<a href=RecyclerView.ItemAnimator.html#recordPreLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder,int,List)>recordPreLayoutInformation</a>.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>postLayoutInfo</code> - The information that was returned from <a href=RecyclerView.ItemAnimator.html#recordPreLayoutInformation(RecyclerView.State,RecyclerView.ViewHolder,int,List)></a>.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="runPendingAnimations()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>runPendingAnimations</h4>
+                                        <pre class="methodSignature"> abstract void <a href=RecyclerView.ItemAnimator.html#runPendingAnimations()>runPendingAnimations</a>()</pre>
+                                        <div class="block"><p>Called when there are pending animations waiting to be started. This stateis governed by the return values from <a href=RecyclerView.ItemAnimator.html#animateAppearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animateAppearance()</a>, <a href=RecyclerView.ItemAnimator.html#animateChange(RecyclerView.ViewHolder,RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animateChange()</a><a href=RecyclerView.ItemAnimator.html#animatePersistence(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animatePersistence()</a>, and <a href=RecyclerView.ItemAnimator.html#animateDisappearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animateDisappearance()</a>, which inform the RecyclerView that the ItemAnimator wants to becalled later to start the associated animations. runPendingAnimations() will be scheduledto be run on the next frame.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="endAnimation(RecyclerView.ViewHolder)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>endAnimation</h4>
+                                        <pre class="methodSignature"> abstract void <a href=RecyclerView.ItemAnimator.html#endAnimation(RecyclerView.ViewHolder)>endAnimation</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> item)</pre>
+                                        <div class="block"><p>Method called when an animation on a view should be ended immediately.This could happen when other events, like scrolling, occur, so thatanimating views can be quickly put into their proper end locations.Implementations should ensure that any animations running on the itemare canceled and affected properties are set to their end values.Also, <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> should be called for each finishedanimation since the animations are effectively done when this method is called.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>item</code> - The item for which an animation should be stopped.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="endAnimations()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>endAnimations</h4>
+                                        <pre class="methodSignature"> abstract void <a href=RecyclerView.ItemAnimator.html#endAnimations()>endAnimations</a>()</pre>
+                                        <div class="block"><p>Method called when all item animations should be ended immediately.This could happen when other events, like scrolling, occur, so thatanimating views can be quickly put into their proper end locations.Implementations should ensure that any animations running on any itemsare canceled and affected properties are set to their end values.Also, <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> should be called for each finishedanimation since the animations are effectively done when this method is called.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isRunning()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isRunning</h4>
+                                        <pre class="methodSignature"> abstract boolean <a href=RecyclerView.ItemAnimator.html#isRunning()>isRunning</a>()</pre>
+                                        <div class="block"><p>Method which returns whether there are any item animations currently running.This method can be used to determine whether to delay other actions untilanimations end.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="dispatchAnimationFinished(RecyclerView.ViewHolder)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>dispatchAnimationFinished</h4>
+                                        <pre class="methodSignature"> final void <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder)</pre>
+                                        <div class="block"><p>Method to be called by subclasses when an animation is finished.</p><p>For each call RecyclerView makes to <a href=RecyclerView.ItemAnimator.html#animateAppearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animateAppearance()</a>, <a href=RecyclerView.ItemAnimator.html#animatePersistence(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animatePersistence()</a>, or <a href=RecyclerView.ItemAnimator.html#animateDisappearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animateDisappearance()</a>, thereshouldbe a matching <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> call by the subclass.</p><p>For <a href=RecyclerView.ItemAnimator.html#animateChange(RecyclerView.ViewHolder,RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animateChange()</a>, subclass should call this method for both the <code>oldHolder</code>and <code>newHolder</code> (if they are not the same instance).</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The ViewHolder whose animation is finished.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onAnimationFinished(RecyclerView.ViewHolder)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onAnimationFinished</h4>
+                                        <pre class="methodSignature"> void <a href=RecyclerView.ItemAnimator.html#onAnimationFinished(RecyclerView.ViewHolder)>onAnimationFinished</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder)</pre>
+                                        <div class="block"><p>Called after <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a> is called by theItemAnimator.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The ViewHolder whose animation is finished.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="dispatchAnimationStarted(RecyclerView.ViewHolder)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>dispatchAnimationStarted</h4>
+                                        <pre class="methodSignature"> final void <a href=RecyclerView.ItemAnimator.html#dispatchAnimationStarted(RecyclerView.ViewHolder)>dispatchAnimationStarted</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder)</pre>
+                                        <div class="block"><p>Method to be called by subclasses when an animation is started.</p><p>For each call RecyclerView makes to <a href=RecyclerView.ItemAnimator.html#animateAppearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animateAppearance()</a>, <a href=RecyclerView.ItemAnimator.html#animatePersistence(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animatePersistence()</a>, or <a href=RecyclerView.ItemAnimator.html#animateDisappearance(RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animateDisappearance()</a>, there should be a matching <a href=RecyclerView.ItemAnimator.html#dispatchAnimationStarted(RecyclerView.ViewHolder)>dispatchAnimationStarted</a> call by the subclass.</p><p>For <a href=RecyclerView.ItemAnimator.html#animateChange(RecyclerView.ViewHolder,RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)> animateChange()</a>, subclass should call this method for both the <code>oldHolder</code>and <code>newHolder</code> (if they are not the same instance).</p><p>If your ItemAnimator decides not to animate a ViewHolder, it should call <a href=RecyclerView.ItemAnimator.html#dispatchAnimationFinished(RecyclerView.ViewHolder)>dispatchAnimationFinished</a>without calling <a href=RecyclerView.ItemAnimator.html#dispatchAnimationStarted(RecyclerView.ViewHolder)>dispatchAnimationStarted</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The ViewHolder whose animation is starting.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onAnimationStarted(RecyclerView.ViewHolder)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onAnimationStarted</h4>
+                                        <pre class="methodSignature"> void <a href=RecyclerView.ItemAnimator.html#onAnimationStarted(RecyclerView.ViewHolder)>onAnimationStarted</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder)</pre>
+                                        <div class="block"><p>Called when a new animation is started on the given ViewHolder.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The ViewHolder which started animating.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isRunning(RecyclerView.ItemAnimator.ItemAnimatorFinishedListener)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isRunning</h4>
+                                        <pre class="methodSignature"> final boolean <a href=RecyclerView.ItemAnimator.html#isRunning(RecyclerView.ItemAnimator.ItemAnimatorFinishedListener)>isRunning</a>(@<a href=../../annotation/Nullable.html>Nullable</a>() <a href=RecyclerView.ItemAnimator.ItemAnimatorFinishedListener.html>RecyclerView.ItemAnimator.ItemAnimatorFinishedListener</a> listener)</pre>
+                                        <div class="block"><p>Like <a href=RecyclerView.ItemAnimator.html#isRunning()>isRunning</a>, this method returns whether there are any itemanimations currently running. Additionally, the listener passed in will be calledwhen there are no item animations running, either immediately (before the methodreturns) if no animations are currently running, or when the currently runninganimations are <a href=RecyclerView.ItemAnimator.html#dispatchAnimationsFinished()>finished</a>.</p><p>Note that the listener is transient - it is either called immediately and notstored at all, or stored only until it is called when running animationsare finished sometime later.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>listener</code> - A listener to be called immediately if no animations are runningor later when currently-running animations have finished.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="canReuseUpdatedViewHolder(RecyclerView.ViewHolder)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>canReuseUpdatedViewHolder</h4>
+                                        <pre class="methodSignature"> boolean <a href=RecyclerView.ItemAnimator.html#canReuseUpdatedViewHolder(RecyclerView.ViewHolder)>canReuseUpdatedViewHolder</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder)</pre>
+                                        <div class="block"><p>When an item is changed, ItemAnimator can decide whether it wants to re-usethe same ViewHolder for animations or RecyclerView should create a copy of theitem and ItemAnimator will use both to run the animation (e.g. cross-fade).</p><p>Note that this method will only be called if the <a href=RecyclerView.ViewHolder.html>ViewHolder</a> still has the sametype (<a href=RecyclerView.Adapter.html#getItemViewType(int)>getItemViewType</a>). Otherwise, ItemAnimator will always receiveboth <a href=RecyclerView.ViewHolder.html>ViewHolder</a>s in the <a href=RecyclerView.ItemAnimator.html#animateChange(RecyclerView.ViewHolder,RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)>animateChange</a> method.</p><p>If your application is using change payloads, you can override <a href=RecyclerView.ItemAnimator.html#canReuseUpdatedViewHolder(RecyclerView.ViewHolder,List)>canReuseUpdatedViewHolder</a> to decide based on payloads.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The ViewHolder which represents the changed item's old content.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="canReuseUpdatedViewHolder(RecyclerView.ViewHolder,List)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>canReuseUpdatedViewHolder</h4>
+                                        <pre class="methodSignature"> boolean <a href=RecyclerView.ItemAnimator.html#canReuseUpdatedViewHolder(RecyclerView.ViewHolder,List)>canReuseUpdatedViewHolder</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a>&gt; payloads)</pre>
+                                        <div class="block"><p>When an item is changed, ItemAnimator can decide whether it wants to re-usethe same ViewHolder for animations or RecyclerView should create a copy of theitem and ItemAnimator will use both to run the animation (e.g. cross-fade).</p><p>Note that this method will only be called if the <a href=RecyclerView.ViewHolder.html>ViewHolder</a> still has the sametype (<a href=RecyclerView.Adapter.html#getItemViewType(int)>getItemViewType</a>). Otherwise, ItemAnimator will always receiveboth <a href=RecyclerView.ViewHolder.html>ViewHolder</a>s in the <a href=RecyclerView.ItemAnimator.html#animateChange(RecyclerView.ViewHolder,RecyclerView.ViewHolder,RecyclerView.ItemAnimator.ItemHolderInfo,RecyclerView.ItemAnimator.ItemHolderInfo)>animateChange</a> method.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The ViewHolder which represents the changed item's old content.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>payloads</code> - A non-null list of merged payloads that were sent with changenotifications.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="dispatchAnimationsFinished()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>dispatchAnimationsFinished</h4>
+                                        <pre class="methodSignature"> final void <a href=RecyclerView.ItemAnimator.html#dispatchAnimationsFinished()>dispatchAnimationsFinished</a>()</pre>
+                                        <div class="block"><p>This method should be called by ItemAnimator implementations to notifyany listeners that all pending and active item animations are finished.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="obtainHolderInfo()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>obtainHolderInfo</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>RecyclerView.ItemAnimator.ItemHolderInfo</a> <a href=RecyclerView.ItemAnimator.html#obtainHolderInfo()>obtainHolderInfo</a>()</pre>
+                                        <div class="block"><p>Returns a new <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>ItemHolderInfo</a> which will be used to store information about theViewHolder. This information will later be passed into <code>animate**</code> methods.</p><p>You can override this method if you want to extend <a href=RecyclerView.ItemAnimator.ItemHolderInfo.html>ItemHolderInfo</a> and provideyour own instances.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

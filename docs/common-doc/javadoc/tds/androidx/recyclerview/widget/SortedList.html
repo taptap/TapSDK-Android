@@ -1,0 +1,936 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>SortedList unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class SortedList" class="title">Class SortedList</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=SortedList.html>SortedList</a>&lt;T&gt;</span>
+
+                    </pre>
+                    <div class="block"><p>A Sorted list implementation that can keep items in order and also notify for changes in the list such that it can be bound to a <a href=RecyclerView.Adapter.html> RecyclerView.Adapter</a>. </p><p>It keeps items ordered using the <a href=SortedList.Callback.html#compare(T2,T2)>compare</a> method and uses binary search to retrieve items. If the sorting criteria of your items may change, make sure you call appropriate methods while editing them to avoid data inconsistencies. </p><p>You can control the order of items and change notifications via the <a href=SortedList.Callback.html>Callback</a> parameter.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public abstract class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="SortedList.Callback.html">SortedList.Callback</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>The class that controls the behavior of the <a href=tds/androidx/recyclerview/widget/SortedList.html>SortedList</a>.</p><p>It defines how items should be sorted and how duplicates should be handled.</p><p>SortedList calls the callback methods on this class to notify changes about the underlyingdata.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="SortedList.BatchedCallback.html">SortedList.BatchedCallback</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>A callback implementation that can batch notify events dispatched by the SortedList.</p><p>This class can be useful if you want to do multiple operations on a SortedList but don'twant to dispatch each event one by one, which may result in a performance issue.</p><p>For example, if you are going to add multiple items to a SortedList, BatchedCallback callconvert individual <code>onInserted(index, 1)</code> calls into one<code>onInserted(index, N)</code> if items are added into consecutive indices. This changecan help RecyclerView resolve changes much more easily.</p><p>If consecutive changes in the SortedList are not suitable for batching, BatchingCallbackdispatches them as soon as such case is detected. After your edits on the SortedList iscomplete, you must always call <a href=tds/androidx/recyclerview/widget/SortedList.BatchedCallback.html#dispatchLastEvent()>dispatchLastEvent</a> to flushall changes to the Callback.</p></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#INVALID_POSITION>INVALID_POSITION</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#SortedList(Class,SortedList.Callback)">SortedList</a></span>(<a href=https://developer.android.com/reference/kotlin/java/lang/Class.html>Class</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; klass, <a href=SortedList.Callback.html>SortedList.Callback</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; callback)</code></th>
+                                                <td class="colLast">Creates a new SortedList of type T.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#SortedList(Class,SortedList.Callback,int)">SortedList</a></span>(<a href=https://developer.android.com/reference/kotlin/java/lang/Class.html>Class</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; klass, <a href=SortedList.Callback.html>SortedList.Callback</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; callback, int initialCapacity)</code></th>
+                                                <td class="colLast">Creates a new SortedList of type T.</td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#size()>size</a>() </code>
+                                            </th>
+                                            <td class="colLast">The number of items in the list.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#add(T)>add</a>(<a href=../../core/util/Pools.SynchronizedPool.html>T</a> item) </code>
+                                            </th>
+                                            <td class="colLast">Adds the given item to the list.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#addAll(Array,boolean)>addAll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; items, boolean mayModifyInput) </code>
+                                            </th>
+                                            <td class="colLast">Adds the given items to the list.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#addAll(Array)>addAll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; items) </code>
+                                            </th>
+                                            <td class="colLast">Adds the given items to the list.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#addAll(Collection)>addAll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/util/Collection.html>Collection</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; items) </code>
+                                            </th>
+                                            <td class="colLast">Adds the given items to the list.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#replaceAll(Array,boolean)>replaceAll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; items, boolean mayModifyInput) </code>
+                                            </th>
+                                            <td class="colLast">Replaces the current items with the new items, dispatching <a href=ListUpdateCallback.html>ListUpdateCallback</a> eventsfor each change detected as appropriate.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#replaceAll(Array)>replaceAll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; items) </code>
+                                            </th>
+                                            <td class="colLast">Replaces the current items with the new items, dispatching <a href=ListUpdateCallback.html>ListUpdateCallback</a> eventsfor each change detected as appropriate.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#replaceAll(Collection)>replaceAll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/util/Collection.html>Collection</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; items) </code>
+                                            </th>
+                                            <td class="colLast">Replaces the current items with the new items, dispatching <a href=ListUpdateCallback.html>ListUpdateCallback</a> eventsfor each change detected as appropriate.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#beginBatchedUpdates()>beginBatchedUpdates</a>() </code>
+                                            </th>
+                                            <td class="colLast">Batches adapter updates that happen after calling this method and before calling <a href=SortedList.html#endBatchedUpdates()>endBatchedUpdates</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#endBatchedUpdates()>endBatchedUpdates</a>() </code>
+                                            </th>
+                                            <td class="colLast">Ends the update transaction and dispatches any remaining event to the callback.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#remove(T)>remove</a>(<a href=../../core/util/Pools.SynchronizedPool.html>T</a> item) </code>
+                                            </th>
+                                            <td class="colLast">Removes the provided item from the list and calls <a href=ListUpdateCallback.html#onRemoved(int,int)>onRemoved</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code><a href=../../core/util/Pools.SynchronizedPool.html>T</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#removeItemAt(int)>removeItemAt</a>(int index) </code>
+                                            </th>
+                                            <td class="colLast">Removes the item at the given index and calls <a href=ListUpdateCallback.html#onRemoved(int,int)>onRemoved</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#updateItemAt(int,T)>updateItemAt</a>(int index, <a href=../../core/util/Pools.SynchronizedPool.html>T</a> item) </code>
+                                            </th>
+                                            <td class="colLast">Updates the item at the given index and calls <a href=SortedList.Callback.html#onChanged(int,int)>onChanged</a> and/or <a href=ListUpdateCallback.html#onMoved(int,int)>onMoved</a> if necessary.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#recalculatePositionOfItemAt(int)>recalculatePositionOfItemAt</a>(int index) </code>
+                                            </th>
+                                            <td class="colLast">This method can be used to recalculate the position of the item at the given index, withouttriggering an <a href=SortedList.Callback.html#onChanged(int,int)>onChanged</a> callback.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code><a href=../../core/util/Pools.SynchronizedPool.html>T</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#get(int)>get</a>(int index) </code>
+                                            </th>
+                                            <td class="colLast">Returns the item at the given index.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#indexOf(T)>indexOf</a>(<a href=../../core/util/Pools.SynchronizedPool.html>T</a> item) </code>
+                                            </th>
+                                            <td class="colLast">Returns the position of the provided item.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SortedList.html#clear()>clear</a>() </code>
+                                            </th>
+                                            <td class="colLast">Removes all items from the SortedList.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="SortedList(Class,SortedList.Callback)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>SortedList</h4>
+                                        <pre>SortedList(<a href=https://developer.android.com/reference/kotlin/java/lang/Class.html>Class</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; klass, <a href=SortedList.Callback.html>SortedList.Callback</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; callback)</pre>
+                                        <div class="block">Creates a new SortedList of type T.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>klass</code> - The class of the contents of the SortedList.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>callback</code> - The callback that controls the behavior of SortedList.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="SortedList(Class,SortedList.Callback,int)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>SortedList</h4>
+                                        <pre>SortedList(<a href=https://developer.android.com/reference/kotlin/java/lang/Class.html>Class</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; klass, <a href=SortedList.Callback.html>SortedList.Callback</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; callback, int initialCapacity)</pre>
+                                        <div class="block">Creates a new SortedList of type T.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>klass</code> - The class of the contents of the SortedList.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>callback</code> - The callback that controls the behavior of SortedList.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>initialCapacity</code> - The initial capacity to hold items.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="size()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>size</h4>
+                                        <pre class="methodSignature"> int <a href=SortedList.html#size()>size</a>()</pre>
+                                        <div class="block"><p>The number of items in the list.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="add(T)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>add</h4>
+                                        <pre class="methodSignature"> int <a href=SortedList.html#add(T)>add</a>(<a href=../../core/util/Pools.SynchronizedPool.html>T</a> item)</pre>
+                                        <div class="block"><p>Adds the given item to the list. If this is a new item, SortedList calls <a href=ListUpdateCallback.html#onInserted(int,int)>onInserted</a>.</p><p>If the item already exists in the list and its sorting criteria is not changed, it isreplaced with the existing Item. SortedList uses <a href=SortedList.Callback.html#areItemsTheSame(T2,T2)>areItemsTheSame</a> to check if two items are the same itemand uses <a href=SortedList.Callback.html#areContentsTheSame(T2,T2)>areContentsTheSame</a> to decide whether it shouldcall <a href=SortedList.Callback.html#onChanged(int,int)>onChanged</a> or not. In both cases, it always removes thereference to the old item and puts the new item into the backing array even if <a href=SortedList.Callback.html#areContentsTheSame(T2,T2)>areContentsTheSame</a> returns false.</p><p>If the sorting criteria of the item is changed, SortedList won't be able to findits duplicate in the list which will result in having a duplicate of the Item in the list.If you need to update sorting criteria of an item that already exists in the list,use <a href=SortedList.html#updateItemAt(int,T)>updateItemAt</a>. You can find the index of the item using <a href=SortedList.html#indexOf(T)>indexOf</a> before you update the object.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>item</code> - The item to be added into the list.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="addAll(Array,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>addAll</h4>
+                                        <pre class="methodSignature"> void <a href=SortedList.html#addAll(Array,boolean)>addAll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; items, boolean mayModifyInput)</pre>
+                                        <div class="block"><p>Adds the given items to the list. Equivalent to calling add in a loop,except the callback events may be in a different order/granularity since addAll can batchthem for better performance.</p><p>If allowed, will reference the input array during, and possibly after, the operation to avoidextra memory allocation, in which case you should not continue to reference or modify thearray yourself.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>items</code> - Array of items to be added into the list.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>mayModifyInput</code> - If true, SortedList is allowed to modify and permanently reference theinput array.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="addAll(Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>addAll</h4>
+                                        <pre class="methodSignature"> void <a href=SortedList.html#addAll(Array)>addAll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; items)</pre>
+                                        <div class="block"><p>Adds the given items to the list. Does not modify or retain the input.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>items</code> - Array of items to be added into the list.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="addAll(Collection)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>addAll</h4>
+                                        <pre class="methodSignature"> void <a href=SortedList.html#addAll(Collection)>addAll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/util/Collection.html>Collection</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; items)</pre>
+                                        <div class="block"><p>Adds the given items to the list. Does not modify or retain the input.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>items</code> - Collection of items to be added into the list.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="replaceAll(Array,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>replaceAll</h4>
+                                        <pre class="methodSignature"> void <a href=SortedList.html#replaceAll(Array,boolean)>replaceAll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; items, boolean mayModifyInput)</pre>
+                                        <div class="block"><p>Replaces the current items with the new items, dispatching <a href=ListUpdateCallback.html>ListUpdateCallback</a> eventsfor each change detected as appropriate.</p><p>If allowed, will reference the input array during, and possibly after, the operation to avoidextra memory allocation, in which case you should not continue to reference or modify thearray yourself.</p><p>Note: this method does not detect moves or dispatch <a href=ListUpdateCallback.html#onMoved(int,int)>onMoved</a> events. It instead treats moves as a removefollowed by an add and therefore dispatches <a href=ListUpdateCallback.html#onRemoved(int,int)>onRemoved</a> and <a href=ListUpdateCallback.html#onRemoved(int,int)>onRemoved</a> events. See <a href=DiffUtil.html>DiffUtil</a> if you wantyour implementation to dispatch move events.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>items</code> - Array of items to replace current items.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>mayModifyInput</code> - If true, SortedList is allowed to modify and permanently reference theinput array.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="replaceAll(Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>replaceAll</h4>
+                                        <pre class="methodSignature"> void <a href=SortedList.html#replaceAll(Array)>replaceAll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; items)</pre>
+                                        <div class="block"><p>Replaces the current items with the new items, dispatching <a href=ListUpdateCallback.html>ListUpdateCallback</a> eventsfor each change detected as appropriate. Does not modify or retain the input.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>items</code> - Array of items to replace current items.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="replaceAll(Collection)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>replaceAll</h4>
+                                        <pre class="methodSignature"> void <a href=SortedList.html#replaceAll(Collection)>replaceAll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/util/Collection.html>Collection</a>&lt;<a href=../../core/util/Pools.SynchronizedPool.html>T</a>&gt; items)</pre>
+                                        <div class="block"><p>Replaces the current items with the new items, dispatching <a href=ListUpdateCallback.html>ListUpdateCallback</a> eventsfor each change detected as appropriate. Does not modify or retain the input.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>items</code> - Array of items to replace current items.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="beginBatchedUpdates()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>beginBatchedUpdates</h4>
+                                        <pre class="methodSignature"> void <a href=SortedList.html#beginBatchedUpdates()>beginBatchedUpdates</a>()</pre>
+                                        <div class="block"><p>Batches adapter updates that happen after calling this method and before calling <a href=SortedList.html#endBatchedUpdates()>endBatchedUpdates</a>. For example, if you add multiple items in a loopand they are placed into consecutive indices, SortedList calls <a href=ListUpdateCallback.html#onInserted(int,int)>onInserted</a> only once with the proper item count. If an eventcannot be merged with the previous event, the previous event is dispatchedto the callback instantly.</p><p>After running your data updates, you must call <a href=SortedList.html#endBatchedUpdates()>endBatchedUpdates</a> which will dispatch any deferred data change event to the current callback.</p><p>A sample implementation may look like this:</p><pre><code>    mSortedList.beginBatchedUpdates();
+    try {
+        mSortedList.add(item1)
+        mSortedList.add(item2)
+        mSortedList.remove(item3)
+        ...
+    } finally {
+        mSortedList.endBatchedUpdates();
+    }
+</code></pre><p>Instead of using this method to batch calls, you can use a Callback that extends <a href=SortedList.BatchedCallback.html>BatchedCallback</a>. In that case, you must make sure that you are manually calling <a href=SortedList.BatchedCallback.html#dispatchLastEvent()>dispatchLastEvent</a> right after you complete your data changes.Failing to do so may create data inconsistencies with the Callback.</p><p>If the current Callback is an instance of <a href=SortedList.BatchedCallback.html>BatchedCallback</a>, calling this methodhas no effect.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="endBatchedUpdates()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>endBatchedUpdates</h4>
+                                        <pre class="methodSignature"> void <a href=SortedList.html#endBatchedUpdates()>endBatchedUpdates</a>()</pre>
+                                        <div class="block"><p>Ends the update transaction and dispatches any remaining event to the callback.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="remove(T)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>remove</h4>
+                                        <pre class="methodSignature"> boolean <a href=SortedList.html#remove(T)>remove</a>(<a href=../../core/util/Pools.SynchronizedPool.html>T</a> item)</pre>
+                                        <div class="block"><p>Removes the provided item from the list and calls <a href=ListUpdateCallback.html#onRemoved(int,int)>onRemoved</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>item</code> - The item to be removed from the list.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="removeItemAt(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>removeItemAt</h4>
+                                        <pre class="methodSignature"> <a href=../../core/util/Pools.SynchronizedPool.html>T</a> <a href=SortedList.html#removeItemAt(int)>removeItemAt</a>(int index)</pre>
+                                        <div class="block"><p>Removes the item at the given index and calls <a href=ListUpdateCallback.html#onRemoved(int,int)>onRemoved</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>index</code> - The index of the item to be removed.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="updateItemAt(int,T)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>updateItemAt</h4>
+                                        <pre class="methodSignature"> void <a href=SortedList.html#updateItemAt(int,T)>updateItemAt</a>(int index, <a href=../../core/util/Pools.SynchronizedPool.html>T</a> item)</pre>
+                                        <div class="block"><p>Updates the item at the given index and calls <a href=SortedList.Callback.html#onChanged(int,int)>onChanged</a> and/or <a href=ListUpdateCallback.html#onMoved(int,int)>onMoved</a> if necessary.</p><p>You can use this method if you need to change an existing Item such that its position in thelist may change.</p><p>If the new object is a different object (<code>get(index) != item</code>) and <a href=SortedList.Callback.html#areContentsTheSame(T2,T2)>areContentsTheSame</a> returns <code>true</code>, SortedListavoids calling <a href=SortedList.Callback.html#onChanged(int,int)>onChanged</a> otherwise it calls <a href=SortedList.Callback.html#onChanged(int,int)>onChanged</a>.</p><p>If the new position of the item is different than the provided <code>index</code>,SortedListcalls <a href=ListUpdateCallback.html#onMoved(int,int)>onMoved</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>index</code> - The index of the item to replace</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>item</code> - The item to replace the item at the given Index.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="recalculatePositionOfItemAt(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>recalculatePositionOfItemAt</h4>
+                                        <pre class="methodSignature"> void <a href=SortedList.html#recalculatePositionOfItemAt(int)>recalculatePositionOfItemAt</a>(int index)</pre>
+                                        <div class="block"><p>This method can be used to recalculate the position of the item at the given index, withouttriggering an <a href=SortedList.Callback.html#onChanged(int,int)>onChanged</a> callback.</p><p>If you are editing objects in the list such that their position in the list may change butyou don't want to trigger an onChange animation, you can use this method to re-position it.If the item changes position, SortedList will call <a href=ListUpdateCallback.html#onMoved(int,int)>onMoved</a> withoutcalling <a href=SortedList.Callback.html#onChanged(int,int)>onChanged</a>.</p><p>A sample usage may look like:</p><pre><code>    final int position = mSortedList.indexOf(item);
+    item.incrementPriority(); // assume items are sorted by priority
+    mSortedList.recalculatePositionOfItemAt(position);
+</code></pre>In the example above, because the sorting criteria of the item has been changed,mSortedList.indexOf(item) will not be able to find the item. This is why the code abovefirstgets the position before editing the item, edits it and informs the SortedList that itemshould be repositioned.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>index</code> - The current index of the Item whose position should be re-calculated.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="get(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>get</h4>
+                                        <pre class="methodSignature"> <a href=../../core/util/Pools.SynchronizedPool.html>T</a> <a href=SortedList.html#get(int)>get</a>(int index)</pre>
+                                        <div class="block"><p>Returns the item at the given index.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>index</code> - The index of the item to retrieve.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="indexOf(T)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>indexOf</h4>
+                                        <pre class="methodSignature"> int <a href=SortedList.html#indexOf(T)>indexOf</a>(<a href=../../core/util/Pools.SynchronizedPool.html>T</a> item)</pre>
+                                        <div class="block"><p>Returns the position of the provided item.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>item</code> - The item to query for position.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="clear()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>clear</h4>
+                                        <pre class="methodSignature"> void <a href=SortedList.html#clear()>clear</a>()</pre>
+                                        <div class="block"><p>Removes all items from the SortedList.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

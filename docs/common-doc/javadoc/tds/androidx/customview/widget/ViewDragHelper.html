@@ -1,0 +1,1275 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>ViewDragHelper unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class ViewDragHelper" class="title">Class ViewDragHelper</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=ViewDragHelper.html>ViewDragHelper</a></span>
+
+                    </pre>
+                    <div class="block"><p>ViewDragHelper is a utility class for writing custom ViewGroups. It offers a number of useful operations and state tracking for allowing a user to drag and reposition views within their parent ViewGroup.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public abstract class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="ViewDragHelper.Callback.html">ViewDragHelper.Callback</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>A Callback is used as a communication channel with the ViewDragHelper back to theparent view using it. <code>on*</code>methods are invoked on siginficant events and severalaccessor methods are expected to provide the ViewDragHelper with more informationabout the state of the parent view upon request. The callback also makes decisionsgoverning the range and draggability of child views.</p></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#INVALID_POINTER>INVALID_POINTER</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#STATE_IDLE>STATE_IDLE</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#STATE_DRAGGING>STATE_DRAGGING</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#STATE_SETTLING>STATE_SETTLING</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#EDGE_LEFT>EDGE_LEFT</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#EDGE_RIGHT>EDGE_RIGHT</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#EDGE_TOP>EDGE_TOP</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#EDGE_BOTTOM>EDGE_BOTTOM</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#EDGE_ALL>EDGE_ALL</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#DIRECTION_HORIZONTAL>DIRECTION_HORIZONTAL</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#DIRECTION_VERTICAL>DIRECTION_VERTICAL</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#DIRECTION_ALL>DIRECTION_ALL</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>static <a href=ViewDragHelper.html>ViewDragHelper</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#create(ViewGroup,ViewDragHelper.Callback)>create</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> forParent, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=ViewDragHelper.Callback.html>ViewDragHelper.Callback</a> cb) </code>
+                                            </th>
+                                            <td class="colLast">Factory method to create a new ViewDragHelper.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=ViewDragHelper.html>ViewDragHelper</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#create(ViewGroup,float,ViewDragHelper.Callback)>create</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> forParent, float sensitivity, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=ViewDragHelper.Callback.html>ViewDragHelper.Callback</a> cb) </code>
+                                            </th>
+                                            <td class="colLast">Factory method to create a new ViewDragHelper.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#setMinVelocity(float)>setMinVelocity</a>(float minVel) </code>
+                                            </th>
+                                            <td class="colLast">Set the minimum velocity that will be detected as having a magnitude greater than zeroin pixels per second.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>float</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#getMinVelocity()>getMinVelocity</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return the currently configured minimum velocity.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#getViewDragState()>getViewDragState</a>() </code>
+                                            </th>
+                                            <td class="colLast">Retrieve the current drag state of this helper.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#setEdgeTrackingEnabled(int)>setEdgeTrackingEnabled</a>(int edgeFlags) </code>
+                                            </th>
+                                            <td class="colLast">Enable edge tracking for the selected edges of the parent view.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#getEdgeSize()>getEdgeSize</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return the size of an edge.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#setEdgeSize(int)>setEdgeSize</a>(@<a href=../../annotation/Px.html>Px</a>() int size) </code>
+                                            </th>
+                                            <td class="colLast">Set the range in pixels along the edges of this view that will activelydetect edge touches or drags if edge tracking is enabled.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#getDefaultEdgeSize()>getDefaultEdgeSize</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return the default size used for edge tracking.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#captureChildView(View,int)>captureChildView</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> childView, int activePointerId) </code>
+                                            </th>
+                                            <td class="colLast">Capture a specific child view for dragging within the parent.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#getCapturedView()>getCapturedView</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#getActivePointerId()>getActivePointerId</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#getTouchSlop()>getTouchSlop</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#cancel()>cancel</a>() </code>
+                                            </th>
+                                            <td class="colLast">The result of a call to this method is equivalent to <a href=ViewDragHelper.html#processTouchEvent(MotionEvent)>processTouchEvent</a> receiving an ACTION_CANCEL event.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#abort()>abort</a>() </code>
+                                            </th>
+                                            <td class="colLast"><a href=ViewDragHelper.html#cancel()>cancel</a>, but also abort all motion in progress and snap to the end of anyanimation.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#smoothSlideViewTo(View,int,int)>smoothSlideViewTo</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, int finalLeft, int finalTop) </code>
+                                            </th>
+                                            <td class="colLast">Animate the view <code>child</code> to the given (left, top) position.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#settleCapturedViewAt(int,int)>settleCapturedViewAt</a>(int finalLeft, int finalTop) </code>
+                                            </th>
+                                            <td class="colLast">Settle the captured view at the given (left, top) position.The appropriate velocity from prior motion will be taken into account.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#flingCapturedView(int,int,int,int)>flingCapturedView</a>(int minLeft, int minTop, int maxLeft, int maxTop) </code>
+                                            </th>
+                                            <td class="colLast">Settle the captured view based on standard free-moving fling behavior.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#continueSettling(boolean)>continueSettling</a>(boolean deferCallbacks) </code>
+                                            </th>
+                                            <td class="colLast">Move the captured settling view by the appropriate amount for the current time.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#isPointerDown(int)>isPointerDown</a>(int pointerId) </code>
+                                            </th>
+                                            <td class="colLast">Check if the given pointer ID represents a pointer that is currently down (to the bestof the ViewDragHelper's knowledge).</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#shouldInterceptTouchEvent(MotionEvent)>shouldInterceptTouchEvent</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html>MotionEvent</a> ev) </code>
+                                            </th>
+                                            <td class="colLast">Check if this event as provided to the parent view's onInterceptTouchEvent shouldcause the parent to intercept the touch event stream.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#processTouchEvent(MotionEvent)>processTouchEvent</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html>MotionEvent</a> ev) </code>
+                                            </th>
+                                            <td class="colLast">Process a touch event received by the parent view.</td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#checkTouchSlop(int)>checkTouchSlop</a>(int directions) </code>
+                                            </th>
+                                            <td class="colLast">Check if any pointer tracked in the current gesture has crossedthe required slop threshold.</td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#checkTouchSlop(int,int)>checkTouchSlop</a>(int directions, int pointerId) </code>
+                                            </th>
+                                            <td class="colLast">Check if the specified pointer tracked in the current gesture has crossedthe required slop threshold.</td>
+                                        </tr>
+                                        
+                                        <tr id="i24" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#isEdgeTouched(int)>isEdgeTouched</a>(int edges) </code>
+                                            </th>
+                                            <td class="colLast">Check if any of the edges specified were initially touched in the currently active gesture.If there is no currently active gesture this method will return false.</td>
+                                        </tr>
+                                        
+                                        <tr id="i25" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#isEdgeTouched(int,int)>isEdgeTouched</a>(int edges, int pointerId) </code>
+                                            </th>
+                                            <td class="colLast">Check if any of the edges specified were initially touched by the pointer withthe specified ID.</td>
+                                        </tr>
+                                        
+                                        <tr id="i26" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#isCapturedViewUnder(int,int)>isCapturedViewUnder</a>(int x, int y) </code>
+                                            </th>
+                                            <td class="colLast">Determine if the currently captured view is under the given point in theparent view's coordinate system.</td>
+                                        </tr>
+                                        
+                                        <tr id="i27" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#isViewUnder(View,int,int)>isViewUnder</a>(@<a href=../../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view, int x, int y) </code>
+                                            </th>
+                                            <td class="colLast">Determine if the supplied view is under the given point in theparent view's coordinate system.</td>
+                                        </tr>
+                                        
+                                        <tr id="i28" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewDragHelper.html#findTopChildUnder(int,int)>findTopChildUnder</a>(int x, int y) </code>
+                                            </th>
+                                            <td class="colLast">Find the topmost child under the given point within the parent view's coordinate system.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="create(ViewGroup,ViewDragHelper.Callback)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>create</h4>
+                                        <pre class="methodSignature"> static <a href=ViewDragHelper.html>ViewDragHelper</a> <a href=ViewDragHelper.html#create(ViewGroup,ViewDragHelper.Callback)>create</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> forParent, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=ViewDragHelper.Callback.html>ViewDragHelper.Callback</a> cb)</pre>
+                                        <div class="block"><p>Factory method to create a new ViewDragHelper.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>forParent</code> - Parent view to monitor</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>cb</code> - Callback to provide information and receive events</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="create(ViewGroup,float,ViewDragHelper.Callback)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>create</h4>
+                                        <pre class="methodSignature"> static <a href=ViewDragHelper.html>ViewDragHelper</a> <a href=ViewDragHelper.html#create(ViewGroup,float,ViewDragHelper.Callback)>create</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> forParent, float sensitivity, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=ViewDragHelper.Callback.html>ViewDragHelper.Callback</a> cb)</pre>
+                                        <div class="block"><p>Factory method to create a new ViewDragHelper.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>forParent</code> - Parent view to monitor</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>sensitivity</code> - Multiplier for how sensitive the helper should be about detectingthe start of a drag.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>cb</code> - Callback to provide information and receive events</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setMinVelocity(float)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setMinVelocity</h4>
+                                        <pre class="methodSignature"> void <a href=ViewDragHelper.html#setMinVelocity(float)>setMinVelocity</a>(float minVel)</pre>
+                                        <div class="block"><p>Set the minimum velocity that will be detected as having a magnitude greater than zeroin pixels per second. Callback methods accepting a velocity will be clamped appropriately.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>minVel</code> - Minimum velocity to detect</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getMinVelocity()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMinVelocity</h4>
+                                        <pre class="methodSignature"> float <a href=ViewDragHelper.html#getMinVelocity()>getMinVelocity</a>()</pre>
+                                        <div class="block"><p>Return the currently configured minimum velocity. Any flings with a magnitude lessthan this value in pixels per second. Callback methods accepting a velocity will receivezero as a velocity value if the real detected velocity was below this threshold.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getViewDragState()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getViewDragState</h4>
+                                        <pre class="methodSignature"> int <a href=ViewDragHelper.html#getViewDragState()>getViewDragState</a>()</pre>
+                                        <div class="block"><p>Retrieve the current drag state of this helper. This will return one of <a href=ViewDragHelper.html#STATE_IDLE>STATE_IDLE</a>, <a href=ViewDragHelper.html#STATE_DRAGGING>STATE_DRAGGING</a> or <a href=ViewDragHelper.html#STATE_SETTLING>STATE_SETTLING</a>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setEdgeTrackingEnabled(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setEdgeTrackingEnabled</h4>
+                                        <pre class="methodSignature"> void <a href=ViewDragHelper.html#setEdgeTrackingEnabled(int)>setEdgeTrackingEnabled</a>(int edgeFlags)</pre>
+                                        <div class="block"><p>Enable edge tracking for the selected edges of the parent view.The callback's <a href=ViewDragHelper.Callback.html#onEdgeTouched(int,int)>onEdgeTouched</a> and <a href=ViewDragHelper.Callback.html#onEdgeDragStarted(int,int)>onEdgeDragStarted</a> methods will only be invokedfor edges for which edge tracking has been enabled.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>edgeFlags</code> - Combination of edge flags describing the edges to watch</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getEdgeSize()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getEdgeSize</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/Px.html>Px</a>() int <a href=ViewDragHelper.html#getEdgeSize()>getEdgeSize</a>()</pre>
+                                        <div class="block"><p>Return the size of an edge. This is the range in pixels along the edges of this viewthat will actively detect edge touches or drags if edge tracking is enabled.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setEdgeSize(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setEdgeSize</h4>
+                                        <pre class="methodSignature"> void <a href=ViewDragHelper.html#setEdgeSize(int)>setEdgeSize</a>(@<a href=../../annotation/Px.html>Px</a>() int size)</pre>
+                                        <div class="block"><p>Set the range in pixels along the edges of this view that will activelydetect edge touches or drags if edge tracking is enabled.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>size</code> - Edge size in pixels</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getDefaultEdgeSize()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getDefaultEdgeSize</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/Px.html>Px</a>() int <a href=ViewDragHelper.html#getDefaultEdgeSize()>getDefaultEdgeSize</a>()</pre>
+                                        <div class="block"><p>Return the default size used for edge tracking.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="captureChildView(View,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>captureChildView</h4>
+                                        <pre class="methodSignature"> void <a href=ViewDragHelper.html#captureChildView(View,int)>captureChildView</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> childView, int activePointerId)</pre>
+                                        <div class="block"><p>Capture a specific child view for dragging within the parent. The callback will be notifiedbut <a href=ViewDragHelper.Callback.html#tryCaptureView(View,int)>tryCaptureView</a> will not be asked permission tocapture this view.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>childView</code> - Child view to capture</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>activePointerId</code> - ID of the pointer that is dragging the captured child view</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getCapturedView()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getCapturedView</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> <a href=ViewDragHelper.html#getCapturedView()>getCapturedView</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getActivePointerId()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getActivePointerId</h4>
+                                        <pre class="methodSignature"> int <a href=ViewDragHelper.html#getActivePointerId()>getActivePointerId</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getTouchSlop()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getTouchSlop</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/Px.html>Px</a>() int <a href=ViewDragHelper.html#getTouchSlop()>getTouchSlop</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="cancel()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>cancel</h4>
+                                        <pre class="methodSignature"> void <a href=ViewDragHelper.html#cancel()>cancel</a>()</pre>
+                                        <div class="block"><p>The result of a call to this method is equivalent to <a href=ViewDragHelper.html#processTouchEvent(MotionEvent)>processTouchEvent</a> receiving an ACTION_CANCEL event.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="abort()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>abort</h4>
+                                        <pre class="methodSignature"> void <a href=ViewDragHelper.html#abort()>abort</a>()</pre>
+                                        <div class="block"><p><a href=ViewDragHelper.html#cancel()>cancel</a>, but also abort all motion in progress and snap to the end of anyanimation.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="smoothSlideViewTo(View,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>smoothSlideViewTo</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewDragHelper.html#smoothSlideViewTo(View,int,int)>smoothSlideViewTo</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, int finalLeft, int finalTop)</pre>
+                                        <div class="block"><p>Animate the view <code>child</code> to the given (left, top) position.If this method returns true, the caller should invoke <a href=ViewDragHelper.html#continueSettling(boolean)>continueSettling</a> on each subsequent frame to continue the motion until it returns false. If this methodreturns false there is no further work to do to complete the movement.</p><p>This operation does not count as a capture event, though <a href=ViewDragHelper.html#getCapturedView()>getCapturedView</a> will still report the sliding view while the slide is in progress.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>child</code> - Child view to capture and animate</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>finalLeft</code> - Final left position of child</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>finalTop</code> - Final top position of child</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="settleCapturedViewAt(int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>settleCapturedViewAt</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewDragHelper.html#settleCapturedViewAt(int,int)>settleCapturedViewAt</a>(int finalLeft, int finalTop)</pre>
+                                        <div class="block"><p>Settle the captured view at the given (left, top) position.The appropriate velocity from prior motion will be taken into account.If this method returns true, the caller should invoke <a href=ViewDragHelper.html#continueSettling(boolean)>continueSettling</a> on each subsequent frame to continue the motion until it returns false. If this methodreturns false there is no further work to do to complete the movement.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>finalLeft</code> - Settled left edge position for the captured view</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>finalTop</code> - Settled top edge position for the captured view</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="flingCapturedView(int,int,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>flingCapturedView</h4>
+                                        <pre class="methodSignature"> void <a href=ViewDragHelper.html#flingCapturedView(int,int,int,int)>flingCapturedView</a>(int minLeft, int minTop, int maxLeft, int maxTop)</pre>
+                                        <div class="block"><p>Settle the captured view based on standard free-moving fling behavior.The caller should invoke <a href=ViewDragHelper.html#continueSettling(boolean)>continueSettling</a> on each subsequent frameto continue the motion until it returns false.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>minLeft</code> - Minimum X position for the view's left edge</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>minTop</code> - Minimum Y position for the view's top edge</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>maxLeft</code> - Maximum X position for the view's left edge</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>maxTop</code> - Maximum Y position for the view's top edge</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="continueSettling(boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>continueSettling</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewDragHelper.html#continueSettling(boolean)>continueSettling</a>(boolean deferCallbacks)</pre>
+                                        <div class="block"><p>Move the captured settling view by the appropriate amount for the current time.If <code>continueSettling</code> returns true, the caller should call it againon the next frame to continue.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>deferCallbacks</code> - true if state callbacks should be deferred via posted message.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isPointerDown(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isPointerDown</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewDragHelper.html#isPointerDown(int)>isPointerDown</a>(int pointerId)</pre>
+                                        <div class="block"><p>Check if the given pointer ID represents a pointer that is currently down (to the bestof the ViewDragHelper's knowledge).</p><p>The state used to report this information is populated by the methods <a href=ViewDragHelper.html#shouldInterceptTouchEvent(MotionEvent)>shouldInterceptTouchEvent</a> or <a href=ViewDragHelper.html#processTouchEvent(MotionEvent)>processTouchEvent</a>. If one of these methods has notbeen called for all relevant MotionEvents to track, the information reportedby this method may be stale or incorrect.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>pointerId</code> - pointer ID to check; corresponds to IDs provided by MotionEvent</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="shouldInterceptTouchEvent(MotionEvent)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>shouldInterceptTouchEvent</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewDragHelper.html#shouldInterceptTouchEvent(MotionEvent)>shouldInterceptTouchEvent</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html>MotionEvent</a> ev)</pre>
+                                        <div class="block"><p>Check if this event as provided to the parent view's onInterceptTouchEvent shouldcause the parent to intercept the touch event stream.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>ev</code> - MotionEvent provided to onInterceptTouchEvent</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="processTouchEvent(MotionEvent)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>processTouchEvent</h4>
+                                        <pre class="methodSignature"> void <a href=ViewDragHelper.html#processTouchEvent(MotionEvent)>processTouchEvent</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html>MotionEvent</a> ev)</pre>
+                                        <div class="block"><p>Process a touch event received by the parent view. This method will dispatch callback eventsas needed before returning. The parent view's onTouchEvent implementation should call this.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>ev</code> - The touch event received by the parent view</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="checkTouchSlop(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>checkTouchSlop</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewDragHelper.html#checkTouchSlop(int)>checkTouchSlop</a>(int directions)</pre>
+                                        <div class="block"><p>Check if any pointer tracked in the current gesture has crossedthe required slop threshold.</p><p>This depends on internal state populated by <a href=ViewDragHelper.html#shouldInterceptTouchEvent(MotionEvent)>shouldInterceptTouchEvent</a> or <a href=ViewDragHelper.html#processTouchEvent(MotionEvent)>processTouchEvent</a>. You should only rely onthe results of this method after all currently available touch datahas been provided to one of these two methods.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>directions</code> - Combination of direction flags, see <a href=ViewDragHelper.html#DIRECTION_HORIZONTAL>DIRECTION_HORIZONTAL</a>,<a href=ViewDragHelper.html#DIRECTION_VERTICAL>DIRECTION_VERTICAL</a>, <a href=ViewDragHelper.html#DIRECTION_ALL>DIRECTION_ALL</a></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="checkTouchSlop(int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>checkTouchSlop</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewDragHelper.html#checkTouchSlop(int,int)>checkTouchSlop</a>(int directions, int pointerId)</pre>
+                                        <div class="block"><p>Check if the specified pointer tracked in the current gesture has crossedthe required slop threshold.</p><p>This depends on internal state populated by <a href=ViewDragHelper.html#shouldInterceptTouchEvent(MotionEvent)>shouldInterceptTouchEvent</a> or <a href=ViewDragHelper.html#processTouchEvent(MotionEvent)>processTouchEvent</a>. You should only rely onthe results of this method after all currently available touch datahas been provided to one of these two methods.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>directions</code> - Combination of direction flags, see <a href=ViewDragHelper.html#DIRECTION_HORIZONTAL>DIRECTION_HORIZONTAL</a>,<a href=ViewDragHelper.html#DIRECTION_VERTICAL>DIRECTION_VERTICAL</a>, <a href=ViewDragHelper.html#DIRECTION_ALL>DIRECTION_ALL</a></dd>
+                                            
+                                            
+                                            
+                                            <dd><code>pointerId</code> - ID of the pointer to slop check as specified by MotionEvent</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isEdgeTouched(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isEdgeTouched</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewDragHelper.html#isEdgeTouched(int)>isEdgeTouched</a>(int edges)</pre>
+                                        <div class="block"><p>Check if any of the edges specified were initially touched in the currently active gesture.If there is no currently active gesture this method will return false.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>edges</code> - Edges to check for an initial edge touch.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isEdgeTouched(int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isEdgeTouched</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewDragHelper.html#isEdgeTouched(int,int)>isEdgeTouched</a>(int edges, int pointerId)</pre>
+                                        <div class="block"><p>Check if any of the edges specified were initially touched by the pointer withthe specified ID. If there is no currently active gesture or if there is no pointer withthe given ID currently down this method will return false.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>edges</code> - Edges to check for an initial edge touch.</dd>
+                                            
+                                            
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isCapturedViewUnder(int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isCapturedViewUnder</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewDragHelper.html#isCapturedViewUnder(int,int)>isCapturedViewUnder</a>(int x, int y)</pre>
+                                        <div class="block"><p>Determine if the currently captured view is under the given point in theparent view's coordinate system. If there is no captured view this methodwill return false.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>x</code> - X position to test in the parent's coordinate system</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>y</code> - Y position to test in the parent's coordinate system</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isViewUnder(View,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isViewUnder</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewDragHelper.html#isViewUnder(View,int,int)>isViewUnder</a>(@<a href=../../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view, int x, int y)</pre>
+                                        <div class="block"><p>Determine if the supplied view is under the given point in theparent view's coordinate system.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>view</code> - Child view of the parent to hit test</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>x</code> - X position to test in the parent's coordinate system</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>y</code> - Y position to test in the parent's coordinate system</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findTopChildUnder(int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findTopChildUnder</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> <a href=ViewDragHelper.html#findTopChildUnder(int,int)>findTopChildUnder</a>(int x, int y)</pre>
+                                        <div class="block"><p>Find the topmost child under the given point within the parent view's coordinate system.The child order is determined using <a href=ViewDragHelper.Callback.html#getOrderedChildIndex(int)>getOrderedChildIndex</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>x</code> - X position to test in the parent's coordinate system</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>y</code> - Y position to test in the parent's coordinate system</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

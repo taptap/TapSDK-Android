@@ -1,0 +1,1525 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>ViewPager unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../search.js"></script>
+    <script async type="text/javascript" src="../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class ViewPager" class="title">Class ViewPager</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                            <code>android.graphics.drawable.Drawable.Callback</code>
+                            
+                            ,
+                            
+                            
+                            <code>android.view.KeyEvent.Callback</code>
+                            
+                            ,
+                            
+                            
+                            <code>android.view.ViewManager</code>
+                            
+                            ,
+                            
+                            
+                            <code>android.view.ViewParent</code>
+                            
+                            ,
+                            
+                            
+                            <code>android.view.accessibility.AccessibilityEventSource</code>
+                            
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=ViewPager.html>ViewPager</a></span>
+extends <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a>
+                    </pre>
+                    <div class="block"><p>Layout manager that allows the user to flip left and right through pages of data. You supply an implementation of a <a href=PagerAdapter.html>PagerAdapter</a> to generate the pages that the view shows. </p><p>ViewPager is most often used in conjunction with <a href=https://developer.android.com/reference/kotlin/android/app/Fragment.html>android.app.Fragment</a>, which is a convenient way to supply and manage the lifecycle of each page. There are standard adapters implemented for using fragments with the ViewPager, which cover the most common use cases. These are classes have simple code showing how to build a full user interface with them. </p><p>Views which are annotated with the <a href=ViewPager.DecorView.html>DecorView</a> annotation are treated as part of the view pagers 'decor'. Each decor view's position can be controlled via its <code>{@code android:layout_gravity}</code> attribute. For example: </p><pre><code>&lt;android.support.v4.view.ViewPager
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"&gt;
+
+    &lt;android.support.v4.view.PagerTitleStrip
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top" /&gt;
+
+&lt;/android.support.v4.view.ViewPager&gt;
+</code></pre><p>For more information about how to use ViewPager, read <a href={@docRoot}training/implementing-navigation/lateral.html>Creating Swipe Views with Tabs</a>.</p><p>You can find examples of using ViewPager in the API 4+ Support Demos and API 13+ Support Demos sample code.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public interface</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="ViewPager.OnPageChangeListener.html">ViewPager.OnPageChangeListener</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>Callback interface for responding to changing state of the selected page.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="ViewPager.SimpleOnPageChangeListener.html">ViewPager.SimpleOnPageChangeListener</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>Simple implementation of the <a href=tds/androidx/viewpager/ViewPager.OnPageChangeListener.html>OnPageChangeListener</a> interface with stubimplementations of each method. Extend this if you do not intend to overrideevery method of <a href=tds/androidx/viewpager/ViewPager.OnPageChangeListener.html>OnPageChangeListener</a>.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public interface</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="ViewPager.PageTransformer.html">ViewPager.PageTransformer</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>A PageTransformer is invoked whenever a visible/attached page is scrolled.This offers an opportunity for the application to apply a custom transformationto the page views using animation properties.</p><p>As property animation is only supported as of Android 3.0 and forward,setting a PageTransformer on a ViewPager on earlier platform versions willbe ignored.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public interface</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="ViewPager.OnAdapterChangeListener.html">ViewPager.OnAdapterChangeListener</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>Callback interface for responding to adapter changes.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public @interface</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="ViewPager.DecorView.html">ViewPager.DecorView</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>Annotation which allows marking of views to be decoration views when added to a viewpager.</p><p>Views marked with this annotation can be added to the view pager with a layout resource.</p><p>You can also control whether a view is a decor view but setting <a href=tds/androidx/viewpager/ViewPager.LayoutParams.html#isDecor>isDecor</a> on the child's layout params.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="ViewPager.SavedState.html">ViewPager.SavedState</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>This is the persistent state that is saved by ViewPager. Only neededif you are creating a sublass of ViewPager that must save its ownstate, in which case it should implement a subclass of this whichcontains that state.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="ViewPager.LayoutParams.html">ViewPager.LayoutParams</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>Layout parameters that should be supplied for views added to aViewPager.</p></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#SCROLL_STATE_IDLE>SCROLL_STATE_IDLE</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#SCROLL_STATE_DRAGGING>SCROLL_STATE_DRAGGING</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#SCROLL_STATE_SETTLING>SCROLL_STATE_SETTLING</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#ViewPager(Context)">ViewPager</a></span>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#ViewPager(Context,AttributeSet)">ViewPager</a></span>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#setAdapter(PagerAdapter)>setAdapter</a>(@<a href=../annotation/Nullable.html>Nullable</a>() <a href=PagerAdapter.html>PagerAdapter</a> adapter) </code>
+                                            </th>
+                                            <td class="colLast">Set a PagerAdapter that will supply views for this pager as needed.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code><a href=PagerAdapter.html>PagerAdapter</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#getAdapter()>getAdapter</a>() </code>
+                                            </th>
+                                            <td class="colLast">Retrieve the current adapter supplying pages.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#addOnAdapterChangeListener(ViewPager.OnAdapterChangeListener)>addOnAdapterChangeListener</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=ViewPager.OnAdapterChangeListener.html>ViewPager.OnAdapterChangeListener</a> listener) </code>
+                                            </th>
+                                            <td class="colLast">Add a listener that will be invoked whenever the adapter for this ViewPager changes.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#removeOnAdapterChangeListener(ViewPager.OnAdapterChangeListener)>removeOnAdapterChangeListener</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=ViewPager.OnAdapterChangeListener.html>ViewPager.OnAdapterChangeListener</a> listener) </code>
+                                            </th>
+                                            <td class="colLast">Remove a listener that was previously added via <a href=ViewPager.html#addOnAdapterChangeListener(ViewPager.OnAdapterChangeListener)>addOnAdapterChangeListener</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#setCurrentItem(int)>setCurrentItem</a>(int item) </code>
+                                            </th>
+                                            <td class="colLast">Set the currently selected page.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#setCurrentItem(int,boolean)>setCurrentItem</a>(int item, boolean smoothScroll) </code>
+                                            </th>
+                                            <td class="colLast">Set the currently selected page.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#getCurrentItem()>getCurrentItem</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#setOnPageChangeListener(ViewPager.OnPageChangeListener)>setOnPageChangeListener</a>(<a href=ViewPager.OnPageChangeListener.html>ViewPager.OnPageChangeListener</a> listener) </code>
+                                            </th>
+                                            <td class="colLast">Set a listener that will be invoked whenever the page changes or is incrementallyscrolled.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#addOnPageChangeListener(ViewPager.OnPageChangeListener)>addOnPageChangeListener</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=ViewPager.OnPageChangeListener.html>ViewPager.OnPageChangeListener</a> listener) </code>
+                                            </th>
+                                            <td class="colLast">Add a listener that will be invoked whenever the page changes or is incrementallyscrolled.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#removeOnPageChangeListener(ViewPager.OnPageChangeListener)>removeOnPageChangeListener</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=ViewPager.OnPageChangeListener.html>ViewPager.OnPageChangeListener</a> listener) </code>
+                                            </th>
+                                            <td class="colLast">Remove a listener that was previously added via <a href=ViewPager.html#addOnPageChangeListener(ViewPager.OnPageChangeListener)>addOnPageChangeListener</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#clearOnPageChangeListeners()>clearOnPageChangeListeners</a>() </code>
+                                            </th>
+                                            <td class="colLast">Remove all listeners that are notified of any changes in scroll state or position.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#setPageTransformer(boolean,ViewPager.PageTransformer)>setPageTransformer</a>(boolean reverseDrawingOrder, @<a href=../annotation/Nullable.html>Nullable</a>() <a href=ViewPager.PageTransformer.html>ViewPager.PageTransformer</a> transformer) </code>
+                                            </th>
+                                            <td class="colLast">Sets a <a href=ViewPager.PageTransformer.html>PageTransformer</a> that will be called for each attached page wheneverthe scroll position is changed.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#setPageTransformer(boolean,ViewPager.PageTransformer,int)>setPageTransformer</a>(boolean reverseDrawingOrder, @<a href=../annotation/Nullable.html>Nullable</a>() <a href=ViewPager.PageTransformer.html>ViewPager.PageTransformer</a> transformer, int pageLayerType) </code>
+                                            </th>
+                                            <td class="colLast">Sets a <a href=ViewPager.PageTransformer.html>PageTransformer</a> that will be called for each attached page wheneverthe scroll position is changed.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#getOffscreenPageLimit()>getOffscreenPageLimit</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the number of pages that will be retained to either side of thecurrent page in the view hierarchy in an idle state.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#setOffscreenPageLimit(int)>setOffscreenPageLimit</a>(int limit) </code>
+                                            </th>
+                                            <td class="colLast">Set the number of pages that should be retained to either side of thecurrent page in the view hierarchy in an idle state.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#setPageMargin(int)>setPageMargin</a>(int marginPixels) </code>
+                                            </th>
+                                            <td class="colLast">Set the margin between pages.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#getPageMargin()>getPageMargin</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return the margin between pages.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#setPageMarginDrawable(Drawable)>setPageMarginDrawable</a>(@<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/android/graphics/drawable/Drawable.html>Drawable</a> d) </code>
+                                            </th>
+                                            <td class="colLast">Set a drawable that will be used to fill the margin between pages.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#setPageMarginDrawable(int)>setPageMarginDrawable</a>(@<a href=../annotation/DrawableRes.html>DrawableRes</a>() int resId) </code>
+                                            </th>
+                                            <td class="colLast">Set a drawable that will be used to fill the margin between pages.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/android/os/Parcelable.html>Parcelable</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#onSaveInstanceState()>onSaveInstanceState</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#onRestoreInstanceState(Parcelable)>onRestoreInstanceState</a>(<a href=https://developer.android.com/reference/kotlin/android/os/Parcelable.html>Parcelable</a> state) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#addView(View,int,ViewGroup.LayoutParams)>addView</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, int index, <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.LayoutParams.html>ViewGroup.LayoutParams</a> params) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#removeView(View)>removeView</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#computeScroll()>computeScroll</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i24" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#onInterceptTouchEvent(MotionEvent)>onInterceptTouchEvent</a>(<a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html>MotionEvent</a> ev) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i25" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#onTouchEvent(MotionEvent)>onTouchEvent</a>(<a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html>MotionEvent</a> ev) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i26" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#draw(Canvas)>draw</a>(<a href=https://developer.android.com/reference/kotlin/android/graphics/Canvas.html>Canvas</a> canvas) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i27" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#beginFakeDrag()>beginFakeDrag</a>() </code>
+                                            </th>
+                                            <td class="colLast">Start a fake drag of the pager.</td>
+                                        </tr>
+                                        
+                                        <tr id="i28" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#endFakeDrag()>endFakeDrag</a>() </code>
+                                            </th>
+                                            <td class="colLast">End a fake drag of the pager.</td>
+                                        </tr>
+                                        
+                                        <tr id="i29" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#fakeDragBy(float)>fakeDragBy</a>(float xOffset) </code>
+                                            </th>
+                                            <td class="colLast">Fake drag by an offset in pixels.</td>
+                                        </tr>
+                                        
+                                        <tr id="i30" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#isFakeDragging()>isFakeDragging</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns true if a fake drag is in progress.</td>
+                                        </tr>
+                                        
+                                        <tr id="i31" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#canScrollHorizontally(int)>canScrollHorizontally</a>(int direction) </code>
+                                            </th>
+                                            <td class="colLast">Check if this ViewPager can be scrolled horizontally in a certain direction.</td>
+                                        </tr>
+                                        
+                                        <tr id="i32" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#dispatchKeyEvent(KeyEvent)>dispatchKeyEvent</a>(<a href=https://developer.android.com/reference/kotlin/android/view/KeyEvent.html>KeyEvent</a> event) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i33" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#executeKeyEvent(KeyEvent)>executeKeyEvent</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/KeyEvent.html>KeyEvent</a> event) </code>
+                                            </th>
+                                            <td class="colLast">You can call this function yourself to have the scroll view performscrolling from a key event, just as if the event had been dispatched toit by the view hierarchy.</td>
+                                        </tr>
+                                        
+                                        <tr id="i34" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#arrowScroll(int)>arrowScroll</a>(int direction) </code>
+                                            </th>
+                                            <td class="colLast">Handle scrolling in response to a left or right arrow click.</td>
+                                        </tr>
+                                        
+                                        <tr id="i35" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#addFocusables(ArrayList,int,int)>addFocusables</a>(<a href=https://developer.android.com/reference/kotlin/java/util/ArrayList.html>ArrayList</a>&lt;<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a>&gt; views, int direction, int focusableMode) </code>
+                                            </th>
+                                            <td class="colLast">We only want the current page that is being shown to be focusable.</td>
+                                        </tr>
+                                        
+                                        <tr id="i36" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#addTouchables(ArrayList)>addTouchables</a>(<a href=https://developer.android.com/reference/kotlin/java/util/ArrayList.html>ArrayList</a>&lt;<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a>&gt; views) </code>
+                                            </th>
+                                            <td class="colLast">We only want the current page that is being shown to be touchable.</td>
+                                        </tr>
+                                        
+                                        <tr id="i37" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.LayoutParams.html>ViewGroup.LayoutParams</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ViewPager.html#generateLayoutParams(AttributeSet)>generateLayoutParams</a>(<a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.android.view.ViewGroup">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;android.view.ViewGroup</h3>
+                                            <code>addChildrenForAccessibility, addExtraDataToAccessibilityNodeInfo, addFocusables, addKeyboardNavigationClusters, addStatesFromChildren, addTouchables, addView, bringChildToFront, childDrawableStateChanged, childHasTransientStateChanged, clearChildFocus, clearDisappearingChildren, clearFocus, dispatchApplyWindowInsets, dispatchCapturedPointerEvent, dispatchConfigurationChanged, dispatchDisplayHint, dispatchDragEvent, dispatchDrawableHotspotChanged, dispatchFinishTemporaryDetach, dispatchKeyEvent, dispatchKeyEventPreIme, dispatchKeyShortcutEvent, dispatchPointerCaptureChanged, dispatchProvideAutofillStructure, dispatchProvideStructure, dispatchSetActivated, dispatchSetSelected, dispatchStartTemporaryDetach, dispatchSystemUiVisibilityChanged, dispatchTouchEvent, dispatchTrackballEvent, dispatchUnhandledMove, dispatchWindowFocusChanged, dispatchWindowInsetsAnimationEnd, dispatchWindowInsetsAnimationPrepare, dispatchWindowInsetsAnimationProgress, dispatchWindowInsetsAnimationStart, dispatchWindowSystemUiVisiblityChanged, dispatchWindowVisibilityChanged, endViewTransition, findFocus, findViewsWithText, focusSearch, focusableViewAvailable, gatherTransparentRegion, generateLayoutParams, getAccessibilityClassName, getChildAt, getChildCount, getChildMeasureSpec, getChildVisibleRect, getClipChildren, getClipToPadding, getDescendantFocusability, getFocusedChild, getLayoutAnimation, getLayoutAnimationListener, getLayoutMode, getLayoutTransition, getNestedScrollAxes, getOverlay, getPersistentDrawingCache, getTouchscreenBlocksFocus, hasFocus, hasTransientState, indexOfChild, invalidateChild, invalidateChildInParent, isAlwaysDrawnWithCacheEnabled, isAnimationCacheEnabled, isLayoutSuppressed, isMotionEventSplittingEnabled, isTransitionGroup, jumpDrawablesToCurrentState, layout, notifySubtreeAccessibilityStateChanged, offsetDescendantRectToMyCoords, offsetRectIntoDescendantCoords, onDescendantInvalidated, onInterceptHoverEvent, onInterceptTouchEvent, onNestedFling, onNestedPreFling, onNestedPrePerformAccessibilityAction, onNestedPreScroll, onNestedScroll, onNestedScrollAccepted, onRequestSendAccessibilityEvent, onResolvePointerIcon, onStartNestedScroll, onStopNestedScroll, onViewAdded, onViewRemoved, recomputeViewAttributes, removeAllViews, removeAllViewsInLayout, removeView, removeViewAt, removeViewInLayout, removeViews, removeViewsInLayout, requestChildFocus, requestChildRectangleOnScreen, requestDisallowInterceptTouchEvent, requestFocus, requestSendAccessibilityEvent, requestTransparentRegion, restoreDefaultFocus, scheduleLayoutAnimation, setAddStatesFromChildren, setAlwaysDrawnWithCacheEnabled, setAnimationCacheEnabled, setClipChildren, setClipToPadding, setDescendantFocusability, setLayoutAnimation, setLayoutAnimationListener, setLayoutMode, setLayoutTransition, setMotionEventSplittingEnabled, setOnHierarchyChangeListener, setPersistentDrawingCache, setTouchscreenBlocksFocus, setTransitionGroup, setWindowInsetsAnimationCallback, shouldDelayChildPressedState, showContextMenuForChild, startActionModeForChild, startLayoutAnimation, startViewTransition, suppressLayout, updateViewLayout</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.android.view.View">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;android.view.View</h3>
+                                            <code>addOnAttachStateChangeListener, addOnLayoutChangeListener, addOnUnhandledKeyEventListener, animate, announceForAccessibility, autofill, bringToFront, buildDrawingCache, buildLayer, callOnClick, canResolveLayoutDirection, canResolveTextAlignment, canResolveTextDirection, canScrollHorizontally, canScrollVertically, cancelDragAndDrop, cancelLongPress, cancelPendingInputEvents, checkInputConnectionProxy, clearAnimation, combineMeasuredStates, computeScroll, computeSystemWindowInsets, createAccessibilityNodeInfo, createContextMenu, destroyDrawingCache, dispatchGenericMotionEvent, dispatchNestedFling, dispatchNestedPreFling, dispatchNestedPrePerformAccessibilityAction, dispatchNestedPreScroll, dispatchNestedScroll, dispatchPopulateAccessibilityEvent, draw, drawableHotspotChanged, findViewById, findViewWithTag, forceHasOverlappingRendering, forceLayout, generateViewId, getAccessibilityDelegate, getAccessibilityLiveRegion, getAccessibilityNodeProvider, getAccessibilityPaneTitle, getAccessibilityTraversalAfter, getAccessibilityTraversalBefore, getAlpha, getAnimation, getAnimationMatrix, getApplicationWindowToken, getAttributeResolutionStack, getAttributeSourceResourceMap, getAutofillHints, getAutofillId, getAutofillType, getAutofillValue, getBackground, getBackgroundTintBlendMode, getBackgroundTintList, getBackgroundTintMode, getBaseline, getBottom, getCameraDistance, getClipBounds, getClipBounds, getClipToOutline, getContentCaptureSession, getContentDescription, getContext, getDefaultFocusHighlightEnabled, getDefaultSize, getDisplay, getDrawableState, getDrawingCache, getDrawingCacheBackgroundColor, getDrawingCacheQuality, getDrawingRect, getDrawingTime, getElevation, getExplicitStyle, getFilterTouchesWhenObscured, getFitsSystemWindows, getFocusable, getFocusables, getFocusedRect, getForeground, getForegroundGravity, getForegroundTintBlendMode, getForegroundTintList, getForegroundTintMode, getGlobalVisibleRect, getHandler, getHasOverlappingRendering, getHeight, getHitRect, getHorizontalFadingEdgeLength, getHorizontalScrollbarThumbDrawable, getHorizontalScrollbarTrackDrawable, getId, getImportantForAccessibility, getImportantForAutofill, getImportantForContentCapture, getKeepScreenOn, getKeyDispatcherState, getLabelFor, getLayerType, getLayoutDirection, getLayoutParams, getLeft, getLocalVisibleRect, getLocationInSurface, getLocationInWindow, getLocationOnScreen, getMatrix, getMeasuredHeight, getMeasuredHeightAndState, getMeasuredState, getMeasuredWidth, getMeasuredWidthAndState, getMinimumHeight, getMinimumWidth, getNextClusterForwardId, getNextFocusDownId, getNextFocusForwardId, getNextFocusLeftId, getNextFocusRightId, getNextFocusUpId, getOnFocusChangeListener, getOutlineAmbientShadowColor, getOutlineProvider, getOutlineSpotShadowColor, getOverScrollMode, getOverlay, getPaddingBottom, getPaddingEnd, getPaddingLeft, getPaddingRight, getPaddingStart, getPaddingTop, getParent, getParentForAccessibility, getPivotX, getPivotY, getPointerIcon, getResources, getRevealOnFocusHint, getRight, getRootView, getRootWindowInsets, getRotation, getRotationX, getRotationY, getScaleX, getScaleY, getScrollBarDefaultDelayBeforeFade, getScrollBarFadeDuration, getScrollBarSize, getScrollBarStyle, getScrollIndicators, getScrollX, getScrollY, getSolidColor, getSourceLayoutResId, getStateDescription, getStateListAnimator, getSystemGestureExclusionRects, getSystemUiVisibility, getTag, getTextAlignment, getTextDirection, getTooltipText, getTop, getTouchDelegate, getTouchables, getTransitionAlpha, getTransitionName, getTranslationX, getTranslationY, getTranslationZ, getUniqueDrawingId, getVerticalFadingEdgeLength, getVerticalScrollbarPosition, getVerticalScrollbarThumbDrawable, getVerticalScrollbarTrackDrawable, getVerticalScrollbarWidth, getViewTreeObserver, getVisibility, getWidth, getWindowId, getWindowInsetsController, getWindowSystemUiVisibility, getWindowToken, getWindowVisibility, getWindowVisibleDisplayFrame, getX, getY, getZ, hasExplicitFocusable, hasFocusable, hasNestedScrollingParent, hasOnClickListeners, hasOnLongClickListeners, hasOverlappingRendering, hasPointerCapture, hasWindowFocus, inflate, invalidate, invalidateDrawable, invalidateOutline, isAccessibilityFocused, isAccessibilityHeading, isActivated, isAttachedToWindow, isClickable, isContextClickable, isDirty, isDrawingCacheEnabled, isDuplicateParentStateEnabled, isEnabled, isFocusable, isFocusableInTouchMode, isFocused, isFocusedByDefault, isForceDarkAllowed, isHapticFeedbackEnabled, isHardwareAccelerated, isHorizontalFadingEdgeEnabled, isHorizontalScrollBarEnabled, isHovered, isImportantForAccessibility, isImportantForAutofill, isImportantForContentCapture, isInEditMode, isInLayout, isInTouchMode, isKeyboardNavigationCluster, isLaidOut, isLayoutDirectionResolved, isLayoutRequested, isLongClickable, isNestedScrollingEnabled, isOpaque, isPaddingRelative, isPivotSet, isPressed, isSaveEnabled, isSaveFromParentEnabled, isScreenReaderFocusable, isScrollContainer, isScrollbarFadingEnabled, isSelected, isShowingLayoutBounds, isShown, isSoundEffectsEnabled, isTemporarilyDetached, isTextAlignmentResolved, isTextDirectionResolved, isVerticalFadingEdgeEnabled, isVerticalScrollBarEnabled, isVisibleToUserForAutofill, keyboardNavigationClusterSearch, measure, offsetLeftAndRight, offsetTopAndBottom, onApplyWindowInsets, onCancelPendingInputEvents, onCapturedPointerEvent, onCheckIsTextEditor, onCreateInputConnection, onDragEvent, onDrawForeground, onFilterTouchEventForSecurity, onFinishTemporaryDetach, onGenericMotionEvent, onHoverChanged, onHoverEvent, onInitializeAccessibilityEvent, onInitializeAccessibilityNodeInfo, onKeyDown, onKeyLongPress, onKeyMultiple, onKeyPreIme, onKeyShortcut, onKeyUp, onPointerCaptureChange, onPopulateAccessibilityEvent, onProvideAutofillStructure, onProvideAutofillVirtualStructure, onProvideContentCaptureStructure, onProvideStructure, onProvideVirtualStructure, onRtlPropertiesChanged, onScreenStateChanged, onStartTemporaryDetach, onTouchEvent, onTrackballEvent, onVisibilityAggregated, onWindowFocusChanged, onWindowSystemUiVisibilityChanged, performAccessibilityAction, performClick, performContextClick, performHapticFeedback, performLongClick, playSoundEffect, post, postDelayed, postInvalidate, postInvalidateDelayed, postInvalidateOnAnimation, postOnAnimation, postOnAnimationDelayed, refreshDrawableState, releasePointerCapture, removeCallbacks, removeOnAttachStateChangeListener, removeOnLayoutChangeListener, removeOnUnhandledKeyEventListener, requestApplyInsets, requestFitSystemWindows, requestFocusFromTouch, requestLayout, requestPointerCapture, requestRectangleOnScreen, requestUnbufferedDispatch, requireViewById, resetPivot, resolveSize, resolveSizeAndState, restoreHierarchyState, saveAttributeDataForStyleable, saveHierarchyState, scheduleDrawable, scrollBy, scrollTo, sendAccessibilityEvent, sendAccessibilityEventUnchecked, setAccessibilityDelegate, setAccessibilityHeading, setAccessibilityLiveRegion, setAccessibilityPaneTitle, setAccessibilityTraversalAfter, setAccessibilityTraversalBefore, setActivated, setAlpha, setAnimation, setAnimationMatrix, setAutofillHints, setAutofillId, setBackground, setBackgroundColor, setBackgroundDrawable, setBackgroundResource, setBackgroundTintBlendMode, setBackgroundTintList, setBackgroundTintMode, setBottom, setCameraDistance, setClickable, setClipBounds, setClipToOutline, setContentCaptureSession, setContentDescription, setContextClickable, setDefaultFocusHighlightEnabled, setDrawingCacheBackgroundColor, setDrawingCacheEnabled, setDrawingCacheQuality, setDuplicateParentStateEnabled, setElevation, setEnabled, setFadingEdgeLength, setFilterTouchesWhenObscured, setFitsSystemWindows, setFocusable, setFocusableInTouchMode, setFocusedByDefault, setForceDarkAllowed, setForeground, setForegroundGravity, setForegroundTintBlendMode, setForegroundTintList, setForegroundTintMode, setHapticFeedbackEnabled, setHasTransientState, setHorizontalFadingEdgeEnabled, setHorizontalScrollBarEnabled, setHorizontalScrollbarThumbDrawable, setHorizontalScrollbarTrackDrawable, setHovered, setId, setImportantForAccessibility, setImportantForAutofill, setImportantForContentCapture, setKeepScreenOn, setKeyboardNavigationCluster, setLabelFor, setLayerPaint, setLayerType, setLayoutDirection, setLayoutParams, setLeft, setLeftTopRightBottom, setLongClickable, setMinimumHeight, setMinimumWidth, setNestedScrollingEnabled, setNextClusterForwardId, setNextFocusDownId, setNextFocusForwardId, setNextFocusLeftId, setNextFocusRightId, setNextFocusUpId, setOnApplyWindowInsetsListener, setOnCapturedPointerListener, setOnClickListener, setOnContextClickListener, setOnCreateContextMenuListener, setOnDragListener, setOnFocusChangeListener, setOnGenericMotionListener, setOnHoverListener, setOnKeyListener, setOnLongClickListener, setOnScrollChangeListener, setOnSystemUiVisibilityChangeListener, setOnTouchListener, setOutlineAmbientShadowColor, setOutlineProvider, setOutlineSpotShadowColor, setOverScrollMode, setPadding, setPaddingRelative, setPivotX, setPivotY, setPointerIcon, setPressed, setRevealOnFocusHint, setRight, setRotation, setRotationX, setRotationY, setSaveEnabled, setSaveFromParentEnabled, setScaleX, setScaleY, setScreenReaderFocusable, setScrollBarDefaultDelayBeforeFade, setScrollBarFadeDuration, setScrollBarSize, setScrollBarStyle, setScrollContainer, setScrollIndicators, setScrollX, setScrollY, setScrollbarFadingEnabled, setSelected, setSoundEffectsEnabled, setStateDescription, setStateListAnimator, setSystemGestureExclusionRects, setSystemUiVisibility, setTag, setTextAlignment, setTextDirection, setTooltipText, setTop, setTouchDelegate, setTransitionAlpha, setTransitionName, setTransitionVisibility, setTranslationX, setTranslationY, setTranslationZ, setVerticalFadingEdgeEnabled, setVerticalScrollBarEnabled, setVerticalScrollbarPosition, setVerticalScrollbarThumbDrawable, setVerticalScrollbarTrackDrawable, setVisibility, setWillNotCacheDrawing, setWillNotDraw, setX, setY, setZ, showContextMenu, startActionMode, startAnimation, startDrag, startDragAndDrop, startNestedScroll, stopNestedScroll, toString, transformMatrixToGlobal, transformMatrixToLocal, unscheduleDrawable, updateDragShadow, willNotCacheDrawing, willNotDraw</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="ViewPager(Context)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>ViewPager</h4>
+                                        <pre>ViewPager(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="ViewPager(Context,AttributeSet)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>ViewPager</h4>
+                                        <pre>ViewPager(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="setAdapter(PagerAdapter)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setAdapter</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#setAdapter(PagerAdapter)>setAdapter</a>(@<a href=../annotation/Nullable.html>Nullable</a>() <a href=PagerAdapter.html>PagerAdapter</a> adapter)</pre>
+                                        <div class="block"><p>Set a PagerAdapter that will supply views for this pager as needed.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>adapter</code> - Adapter to use</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getAdapter()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getAdapter</h4>
+                                        <pre class="methodSignature">@<a href=../annotation/Nullable.html>Nullable</a>() <a href=PagerAdapter.html>PagerAdapter</a> <a href=ViewPager.html#getAdapter()>getAdapter</a>()</pre>
+                                        <div class="block"><p>Retrieve the current adapter supplying pages.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="addOnAdapterChangeListener(ViewPager.OnAdapterChangeListener)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>addOnAdapterChangeListener</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#addOnAdapterChangeListener(ViewPager.OnAdapterChangeListener)>addOnAdapterChangeListener</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=ViewPager.OnAdapterChangeListener.html>ViewPager.OnAdapterChangeListener</a> listener)</pre>
+                                        <div class="block"><p>Add a listener that will be invoked whenever the adapter for this ViewPager changes.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>listener</code> - listener to add</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="removeOnAdapterChangeListener(ViewPager.OnAdapterChangeListener)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>removeOnAdapterChangeListener</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#removeOnAdapterChangeListener(ViewPager.OnAdapterChangeListener)>removeOnAdapterChangeListener</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=ViewPager.OnAdapterChangeListener.html>ViewPager.OnAdapterChangeListener</a> listener)</pre>
+                                        <div class="block"><p>Remove a listener that was previously added via <a href=ViewPager.html#addOnAdapterChangeListener(ViewPager.OnAdapterChangeListener)>addOnAdapterChangeListener</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>listener</code> - listener to remove</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setCurrentItem(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setCurrentItem</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#setCurrentItem(int)>setCurrentItem</a>(int item)</pre>
+                                        <div class="block"><p>Set the currently selected page. If the ViewPager has already been through its firstlayout with its current adapter there will be a smooth animated transition betweenthe current item and the specified item.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>item</code> - Item index to select</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setCurrentItem(int,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setCurrentItem</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#setCurrentItem(int,boolean)>setCurrentItem</a>(int item, boolean smoothScroll)</pre>
+                                        <div class="block"><p>Set the currently selected page.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>item</code> - Item index to select</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>smoothScroll</code> - True to smoothly scroll to the new item, false to transition immediately</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getCurrentItem()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getCurrentItem</h4>
+                                        <pre class="methodSignature"> int <a href=ViewPager.html#getCurrentItem()>getCurrentItem</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnPageChangeListener(ViewPager.OnPageChangeListener)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnPageChangeListener</h4>
+                                        <pre class="methodSignature">@<a href=https://developer.android.com/reference/kotlin/java/lang/Deprecated.html>Deprecated</a>() void <a href=ViewPager.html#setOnPageChangeListener(ViewPager.OnPageChangeListener)>setOnPageChangeListener</a>(<a href=ViewPager.OnPageChangeListener.html>ViewPager.OnPageChangeListener</a> listener)</pre>
+                                        <div class="block"><p>Set a listener that will be invoked whenever the page changes or is incrementallyscrolled. See <a href=ViewPager.OnPageChangeListener.html>OnPageChangeListener</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>listener</code> - Listener to set</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="addOnPageChangeListener(ViewPager.OnPageChangeListener)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>addOnPageChangeListener</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#addOnPageChangeListener(ViewPager.OnPageChangeListener)>addOnPageChangeListener</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=ViewPager.OnPageChangeListener.html>ViewPager.OnPageChangeListener</a> listener)</pre>
+                                        <div class="block"><p>Add a listener that will be invoked whenever the page changes or is incrementallyscrolled. See <a href=ViewPager.OnPageChangeListener.html>OnPageChangeListener</a>.</p><p>Components that add a listener should take care to remove it when finished.Other components that take ownership of a view may call <a href=ViewPager.html#clearOnPageChangeListeners()>clearOnPageChangeListeners</a> to remove all attached listeners.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>listener</code> - listener to add</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="removeOnPageChangeListener(ViewPager.OnPageChangeListener)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>removeOnPageChangeListener</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#removeOnPageChangeListener(ViewPager.OnPageChangeListener)>removeOnPageChangeListener</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=ViewPager.OnPageChangeListener.html>ViewPager.OnPageChangeListener</a> listener)</pre>
+                                        <div class="block"><p>Remove a listener that was previously added via <a href=ViewPager.html#addOnPageChangeListener(ViewPager.OnPageChangeListener)>addOnPageChangeListener</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>listener</code> - listener to remove</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="clearOnPageChangeListeners()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>clearOnPageChangeListeners</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#clearOnPageChangeListeners()>clearOnPageChangeListeners</a>()</pre>
+                                        <div class="block"><p>Remove all listeners that are notified of any changes in scroll state or position.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setPageTransformer(boolean,ViewPager.PageTransformer)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setPageTransformer</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#setPageTransformer(boolean,ViewPager.PageTransformer)>setPageTransformer</a>(boolean reverseDrawingOrder, @<a href=../annotation/Nullable.html>Nullable</a>() <a href=ViewPager.PageTransformer.html>ViewPager.PageTransformer</a> transformer)</pre>
+                                        <div class="block"><p>Sets a <a href=ViewPager.PageTransformer.html>PageTransformer</a> that will be called for each attached page wheneverthe scroll position is changed. This allows the application to apply custom propertytransformations to each page, overriding the default sliding behavior.</p><p>Note: By default, calling this method will cause contained pages to use <a href=https://developer.android.com/reference/kotlin/android/view/View.html#layer_type_hardware>LAYER_TYPE_HARDWARE</a>. This layer type allows custom alpha transformations,but it will cause issues if any of your pages contain a <a href=https://developer.android.com/reference/kotlin/android/view/SurfaceView.html>android.view.SurfaceView</a> and you have not called <a href=https://developer.android.com/reference/kotlin/android/view/SurfaceView.html#setzorderontop>setZOrderOnTop</a> to put that <a href=https://developer.android.com/reference/kotlin/android/view/SurfaceView.html>android.view.SurfaceView</a> above your app content. To disable this behavior, call <a href=ViewPager.html#setPageTransformer(boolean,ViewPager.PageTransformer,int)>setPageTransformer</a> and pass <a href=https://developer.android.com/reference/kotlin/android/view/View.html#layer_type_none>LAYER_TYPE_NONE</a> for <code>{@code pageLayerType}</code>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>reverseDrawingOrder</code> - true if the supplied PageTransformer requires page viewsto be drawn from last to first instead of first to last.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>transformer</code> - PageTransformer that will modify each page's animation properties</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setPageTransformer(boolean,ViewPager.PageTransformer,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setPageTransformer</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#setPageTransformer(boolean,ViewPager.PageTransformer,int)>setPageTransformer</a>(boolean reverseDrawingOrder, @<a href=../annotation/Nullable.html>Nullable</a>() <a href=ViewPager.PageTransformer.html>ViewPager.PageTransformer</a> transformer, int pageLayerType)</pre>
+                                        <div class="block"><p>Sets a <a href=ViewPager.PageTransformer.html>PageTransformer</a> that will be called for each attached page wheneverthe scroll position is changed. This allows the application to apply custom propertytransformations to each page, overriding the default sliding behavior.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>reverseDrawingOrder</code> - true if the supplied PageTransformer requires page viewsto be drawn from last to first instead of first to last.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>transformer</code> - PageTransformer that will modify each page's animation properties</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>pageLayerType</code> - View layer type that should be used for ViewPager pages.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOffscreenPageLimit()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOffscreenPageLimit</h4>
+                                        <pre class="methodSignature"> int <a href=ViewPager.html#getOffscreenPageLimit()>getOffscreenPageLimit</a>()</pre>
+                                        <div class="block"><p>Returns the number of pages that will be retained to either side of thecurrent page in the view hierarchy in an idle state. Defaults to 1.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOffscreenPageLimit(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOffscreenPageLimit</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#setOffscreenPageLimit(int)>setOffscreenPageLimit</a>(int limit)</pre>
+                                        <div class="block"><p>Set the number of pages that should be retained to either side of thecurrent page in the view hierarchy in an idle state. Pages beyond thislimit will be recreated from the adapter when needed.</p><p>This is offered as an optimization. If you know in advance the numberof pages you will need to support or have lazy-loading mechanisms in placeon your pages, tweaking this setting can have benefits in perceived smoothnessof paging animations and interaction. If you have a small number of pages (3-4)that you can keep active all at once, less time will be spent in layout fornewly created view subtrees as the user pages back and forth.</p><p>You should keep this limit low, especially if your pages have complex layouts.This setting defaults to 1.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>limit</code> - How many pages will be kept offscreen in an idle state.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setPageMargin(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setPageMargin</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#setPageMargin(int)>setPageMargin</a>(int marginPixels)</pre>
+                                        <div class="block"><p>Set the margin between pages.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>marginPixels</code> - Distance between adjacent pages in pixels</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getPageMargin()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getPageMargin</h4>
+                                        <pre class="methodSignature"> int <a href=ViewPager.html#getPageMargin()>getPageMargin</a>()</pre>
+                                        <div class="block"><p>Return the margin between pages.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setPageMarginDrawable(Drawable)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setPageMarginDrawable</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#setPageMarginDrawable(Drawable)>setPageMarginDrawable</a>(@<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/android/graphics/drawable/Drawable.html>Drawable</a> d)</pre>
+                                        <div class="block"><p>Set a drawable that will be used to fill the margin between pages.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>d</code> - Drawable to display between pages</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setPageMarginDrawable(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setPageMarginDrawable</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#setPageMarginDrawable(int)>setPageMarginDrawable</a>(@<a href=../annotation/DrawableRes.html>DrawableRes</a>() int resId)</pre>
+                                        <div class="block"><p>Set a drawable that will be used to fill the margin between pages.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>resId</code> - Resource ID of a drawable to display between pages</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onSaveInstanceState()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onSaveInstanceState</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/android/os/Parcelable.html>Parcelable</a> <a href=ViewPager.html#onSaveInstanceState()>onSaveInstanceState</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onRestoreInstanceState(Parcelable)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onRestoreInstanceState</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#onRestoreInstanceState(Parcelable)>onRestoreInstanceState</a>(<a href=https://developer.android.com/reference/kotlin/android/os/Parcelable.html>Parcelable</a> state)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="addView(View,int,ViewGroup.LayoutParams)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>addView</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#addView(View,int,ViewGroup.LayoutParams)>addView</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, int index, <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.LayoutParams.html>ViewGroup.LayoutParams</a> params)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="removeView(View)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>removeView</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#removeView(View)>removeView</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="computeScroll()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>computeScroll</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#computeScroll()>computeScroll</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onInterceptTouchEvent(MotionEvent)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onInterceptTouchEvent</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewPager.html#onInterceptTouchEvent(MotionEvent)>onInterceptTouchEvent</a>(<a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html>MotionEvent</a> ev)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onTouchEvent(MotionEvent)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onTouchEvent</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewPager.html#onTouchEvent(MotionEvent)>onTouchEvent</a>(<a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html>MotionEvent</a> ev)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="draw(Canvas)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>draw</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#draw(Canvas)>draw</a>(<a href=https://developer.android.com/reference/kotlin/android/graphics/Canvas.html>Canvas</a> canvas)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="beginFakeDrag()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>beginFakeDrag</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewPager.html#beginFakeDrag()>beginFakeDrag</a>()</pre>
+                                        <div class="block"><p>Start a fake drag of the pager.</p><p>A fake drag can be useful if you want to synchronize the motion of the ViewPagerwith the touch scrolling of another view, while still letting the ViewPagercontrol the snapping motion and fling behavior. (e.g. parallax-scrolling tabs.)Call <a href=ViewPager.html#fakeDragBy(float)>fakeDragBy</a> to simulate the actual drag motion. Call <a href=ViewPager.html#endFakeDrag()>endFakeDrag</a> to complete the fake drag and fling as necessary.</p><p>During a fake drag the ViewPager will ignore all touch events. If a real dragis already in progress, this method will return false.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="endFakeDrag()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>endFakeDrag</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#endFakeDrag()>endFakeDrag</a>()</pre>
+                                        <div class="block"><p>End a fake drag of the pager.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="fakeDragBy(float)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>fakeDragBy</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#fakeDragBy(float)>fakeDragBy</a>(float xOffset)</pre>
+                                        <div class="block"><p>Fake drag by an offset in pixels. You must have called <a href=ViewPager.html#beginFakeDrag()>beginFakeDrag</a> first.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>xOffset</code> - Offset in pixels to drag by.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isFakeDragging()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isFakeDragging</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewPager.html#isFakeDragging()>isFakeDragging</a>()</pre>
+                                        <div class="block"><p>Returns true if a fake drag is in progress.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="canScrollHorizontally(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>canScrollHorizontally</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewPager.html#canScrollHorizontally(int)>canScrollHorizontally</a>(int direction)</pre>
+                                        <div class="block"><p>Check if this ViewPager can be scrolled horizontally in a certain direction.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>direction</code> - Negative to check scrolling left, positive to check scrolling right.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="dispatchKeyEvent(KeyEvent)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>dispatchKeyEvent</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewPager.html#dispatchKeyEvent(KeyEvent)>dispatchKeyEvent</a>(<a href=https://developer.android.com/reference/kotlin/android/view/KeyEvent.html>KeyEvent</a> event)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="executeKeyEvent(KeyEvent)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>executeKeyEvent</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewPager.html#executeKeyEvent(KeyEvent)>executeKeyEvent</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/KeyEvent.html>KeyEvent</a> event)</pre>
+                                        <div class="block"><p>You can call this function yourself to have the scroll view performscrolling from a key event, just as if the event had been dispatched toit by the view hierarchy.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>event</code> - The key event to execute.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="arrowScroll(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>arrowScroll</h4>
+                                        <pre class="methodSignature"> boolean <a href=ViewPager.html#arrowScroll(int)>arrowScroll</a>(int direction)</pre>
+                                        <div class="block"><p>Handle scrolling in response to a left or right arrow click.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>direction</code> - The direction corresponding to the arrow key that was pressed.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="addFocusables(ArrayList,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>addFocusables</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#addFocusables(ArrayList,int,int)>addFocusables</a>(<a href=https://developer.android.com/reference/kotlin/java/util/ArrayList.html>ArrayList</a>&lt;<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a>&gt; views, int direction, int focusableMode)</pre>
+                                        <div class="block"><p>We only want the current page that is being shown to be focusable.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="addTouchables(ArrayList)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>addTouchables</h4>
+                                        <pre class="methodSignature"> void <a href=ViewPager.html#addTouchables(ArrayList)>addTouchables</a>(<a href=https://developer.android.com/reference/kotlin/java/util/ArrayList.html>ArrayList</a>&lt;<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a>&gt; views)</pre>
+                                        <div class="block"><p>We only want the current page that is being shown to be touchable.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="generateLayoutParams(AttributeSet)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>generateLayoutParams</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.LayoutParams.html>ViewGroup.LayoutParams</a> <a href=ViewPager.html#generateLayoutParams(AttributeSet)>generateLayoutParams</a>(<a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

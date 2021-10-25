@@ -1,0 +1,2254 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>WebSocketClient unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class WebSocketClient" class="title">Class WebSocketClient</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                            <code>com.tds.common.websocket.conn.WebSocket</code>
+                            
+                            ,
+                            
+                            
+                            <code>com.tds.common.websocket.conn.WebSocketListener</code>
+                            
+                            ,
+                            
+                            
+                            <code>java.lang.Runnable</code>
+                            
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public abstract class <span class="typeNameLabel"><a href=WebSocketClient.html>WebSocketClient</a></span>
+extends <a href=../conn/AbstractWebSocket.html>AbstractWebSocket</a> implements <a href=https://developer.android.com/reference/kotlin/java/lang/Runnable.html>Runnable</a>, <a href=../conn/WebSocket.html>WebSocket</a>
+                    </pre>
+                    <div class="block"><p>A subclass must implement at least onOpen, onClose, and onMessage to be useful. At runtime the user is expected to establish a connection via <a href=WebSocketClient.html#connect()>connect</a>, then receive events like <a href=WebSocketClient.html#onMessage(String)>onMessage</a> via the overloaded methods and to <a href=WebSocketClient.html#send(String)>send</a> data to the server.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>protected  <a href=https://developer.android.com/reference/kotlin/java/net/URI.html>URI</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#uri>uri</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>private  <a href=https://developer.android.com/reference/kotlin/java/net/Socket.html>Socket</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#socket>socket</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>private  <a href=https://developer.android.com/reference/kotlin/javax/net/SocketFactory.html>SocketFactory</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#socketFactory>socketFactory</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>private  <a href=https://developer.android.com/reference/kotlin/java/net/Proxy.html>Proxy</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#proxy>proxy</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>private  <a href=../drafts/Draft.html>Draft</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#draft>draft</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>private  <a href=DnsResolver.html>DnsResolver</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#dnsResolver>dnsResolver</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#WebSocketClient(URI)">WebSocketClient</a></span>(<a href=https://developer.android.com/reference/kotlin/java/net/URI.html>URI</a> serverUri)</code></th>
+                                                <td class="colLast">Constructs a WebSocketClient instance and sets it to the connect to the specified URI.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#WebSocketClient(URI,Draft)">WebSocketClient</a></span>(<a href=https://developer.android.com/reference/kotlin/java/net/URI.html>URI</a> serverUri, <a href=../drafts/Draft.html>Draft</a> protocolDraft)</code></th>
+                                                <td class="colLast">Constructs a WebSocketClient instance and sets it to the connect to the specified URI.</td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#WebSocketClient(URI,Map)">WebSocketClient</a></span>(<a href=https://developer.android.com/reference/kotlin/java/net/URI.html>URI</a> serverUri, <a href=https://developer.android.com/reference/kotlin/java/util/Map.html>Map</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; httpHeaders)</code></th>
+                                                <td class="colLast">Constructs a WebSocketClient instance and sets it to the connect to the specified URI.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#WebSocketClient(URI,Draft,Map)">WebSocketClient</a></span>(<a href=https://developer.android.com/reference/kotlin/java/net/URI.html>URI</a> serverUri, <a href=../drafts/Draft.html>Draft</a> protocolDraft, <a href=https://developer.android.com/reference/kotlin/java/util/Map.html>Map</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; httpHeaders)</code></th>
+                                                <td class="colLast">Constructs a WebSocketClient instance and sets it to the connect to the specified URI.</td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#WebSocketClient(URI,Draft,Map,int)">WebSocketClient</a></span>(<a href=https://developer.android.com/reference/kotlin/java/net/URI.html>URI</a> serverUri, <a href=../drafts/Draft.html>Draft</a> protocolDraft, <a href=https://developer.android.com/reference/kotlin/java/util/Map.html>Map</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; httpHeaders, int connectTimeout)</code></th>
+                                                <td class="colLast">Constructs a WebSocketClient instance and sets it to the connect to the specified URI.</td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/net/URI.html>URI</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#getURI()>getURI</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the URI that this WebSocketClient is connected to.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/net/Socket.html>Socket</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#getSocket()>getSocket</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the socket to allow Hostname Verification</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#setSocket(Socket)>setSocket</a>(<a href=https://developer.android.com/reference/kotlin/java/net/Socket.html>Socket</a> socket) </code>
+                                            </th>
+                                            <td class="colLast">Accepts bound and unbound sockets.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#setSocketFactory(SocketFactory)>setSocketFactory</a>(<a href=https://developer.android.com/reference/kotlin/javax/net/SocketFactory.html>SocketFactory</a> socketFactory) </code>
+                                            </th>
+                                            <td class="colLast">Accepts a SocketFactory.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#setProxy(Proxy)>setProxy</a>(<a href=https://developer.android.com/reference/kotlin/java/net/Proxy.html>Proxy</a> proxy) </code>
+                                            </th>
+                                            <td class="colLast">Method to set a proxy for this connection</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code><a href=../drafts/Draft.html>Draft</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#getDraft()>getDraft</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the protocol version this channel uses.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#setDnsResolver(DnsResolver)>setDnsResolver</a>(<a href=DnsResolver.html>DnsResolver</a> dnsResolver) </code>
+                                            </th>
+                                            <td class="colLast">Sets a custom DNS resolver.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#addHeader(String,String)>addHeader</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> key, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> value) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#removeHeader(String)>removeHeader</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> key) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#clearHeaders()>clearHeaders</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#reconnect()>reconnect</a>() </code>
+                                            </th>
+                                            <td class="colLast">Reinitiates the websocket connection.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#reconnectBlocking()>reconnectBlocking</a>() </code>
+                                            </th>
+                                            <td class="colLast">Same as <code>reconnect</code> but blocks until the websocket reconnected or failed to doso.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#connect()>connect</a>() </code>
+                                            </th>
+                                            <td class="colLast">Initiates the websocket connection.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#connectBlocking()>connectBlocking</a>() </code>
+                                            </th>
+                                            <td class="colLast">Same as <code>connect</code> but blocks until the websocket connected or failed to do so.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#connectBlocking(long,TimeUnit)>connectBlocking</a>(long timeout, <a href=https://developer.android.com/reference/kotlin/java/util/concurrent/TimeUnit.html>TimeUnit</a> timeUnit) </code>
+                                            </th>
+                                            <td class="colLast">Same as <code>connect</code> but blocks with a timeout until the websocket connected or failedto do so.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#close()>close</a>() </code>
+                                            </th>
+                                            <td class="colLast">Initiates the websocket close handshake.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#closeBlocking()>closeBlocking</a>() </code>
+                                            </th>
+                                            <td class="colLast">Same as <code>close</code> but blocks until the websocket closed or failed to do so.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#send(String)>send</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> text) </code>
+                                            </th>
+                                            <td class="colLast">Sends text to the connected websocket server.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#send(Array)>send</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt; data) </code>
+                                            </th>
+                                            <td class="colLast">Sends binary data to the connected webSocket server.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>&lt;T&gt; <a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#getAttachment()>getAttachment</a>() </code>
+                                            </th>
+                                            <td class="colLast">Getter for the connection attachment.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>&lt;T&gt; void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#setAttachment(T)>setAttachment</a>(<a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a> attachment) </code>
+                                            </th>
+                                            <td class="colLast">Setter for an attachment on the socket connection.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#sendPing()>sendPing</a>() </code>
+                                            </th>
+                                            <td class="colLast">Send a ping to the other end</td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#run()>run</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code><a href=../enums/ReadyState.html>ReadyState</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#getReadyState()>getReadyState</a>() </code>
+                                            </th>
+                                            <td class="colLast">This represents the state of the connection.</td>
+                                        </tr>
+                                        
+                                        <tr id="i24" class="altColor">
+                                            <td class="colFirst"><code>final void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onWebsocketMessage(WebSocket,String)>onWebsocketMessage</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Calls subclass' implementation of onMessage.</td>
+                                        </tr>
+                                        
+                                        <tr id="i25" class="rowColor">
+                                            <td class="colFirst"><code>final void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onWebsocketMessage(WebSocket,ByteBuffer)>onWebsocketMessage</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, <a href=https://developer.android.com/reference/kotlin/java/nio/ByteBuffer.html>ByteBuffer</a> blob) </code>
+                                            </th>
+                                            <td class="colLast">Called when an entire binary frame has been received.</td>
+                                        </tr>
+                                        
+                                        <tr id="i26" class="altColor">
+                                            <td class="colFirst"><code>final void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onWebsocketOpen(WebSocket,Handshakedata)>onWebsocketOpen</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, <a href=../handshake/Handshakedata.html>Handshakedata</a> handshake) </code>
+                                            </th>
+                                            <td class="colLast">Calls subclass' implementation of onOpen.</td>
+                                        </tr>
+                                        
+                                        <tr id="i27" class="rowColor">
+                                            <td class="colFirst"><code>final void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onWebsocketClose(WebSocket,int,String,boolean)>onWebsocketClose</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> reason, boolean remote) </code>
+                                            </th>
+                                            <td class="colLast">Calls subclass' implementation of onClose.</td>
+                                        </tr>
+                                        
+                                        <tr id="i28" class="altColor">
+                                            <td class="colFirst"><code>final void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onWebsocketError(WebSocket,Exception)>onWebsocketError</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, <a href=https://developer.android.com/reference/kotlin/java/lang/Exception.html>Exception</a> ex) </code>
+                                            </th>
+                                            <td class="colLast">Calls subclass' implementation of onIOError.</td>
+                                        </tr>
+                                        
+                                        <tr id="i29" class="rowColor">
+                                            <td class="colFirst"><code>final void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onWriteDemand(WebSocket)>onWriteDemand</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn) </code>
+                                            </th>
+                                            <td class="colLast">This method is used to inform the selector thread that there is data queued to be written tothe socket.</td>
+                                        </tr>
+                                        
+                                        <tr id="i30" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onWebsocketCloseInitiated(WebSocket,int,String)>onWebsocketCloseInitiated</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> reason) </code>
+                                            </th>
+                                            <td class="colLast">send when this peer sends a close handshake</td>
+                                        </tr>
+                                        
+                                        <tr id="i31" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onWebsocketClosing(WebSocket,int,String,boolean)>onWebsocketClosing</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> reason, boolean remote) </code>
+                                            </th>
+                                            <td class="colLast">Called as soon as no further frames are accepted</td>
+                                        </tr>
+                                        
+                                        <tr id="i32" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onCloseInitiated(int,String)>onCloseInitiated</a>(int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> reason) </code>
+                                            </th>
+                                            <td class="colLast">Send when this peer sends a close handshake</td>
+                                        </tr>
+                                        
+                                        <tr id="i33" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onClosing(int,String,boolean)>onClosing</a>(int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> reason, boolean remote) </code>
+                                            </th>
+                                            <td class="colLast">Called as soon as no further frames are accepted</td>
+                                        </tr>
+                                        
+                                        <tr id="i34" class="altColor">
+                                            <td class="colFirst"><code><a href=../conn/WebSocket.html>WebSocket</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#getConnection()>getConnection</a>() </code>
+                                            </th>
+                                            <td class="colLast">Getter for the engine</td>
+                                        </tr>
+                                        
+                                        <tr id="i35" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/net/InetSocketAddress.html>InetSocketAddress</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#getLocalSocketAddress(WebSocket)>getLocalSocketAddress</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i36" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/net/InetSocketAddress.html>InetSocketAddress</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#getRemoteSocketAddress(WebSocket)>getRemoteSocketAddress</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i37" class="rowColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onOpen(ServerHandshake)>onOpen</a>(<a href=../handshake/ServerHandshake.html>ServerHandshake</a> handshakedata) </code>
+                                            </th>
+                                            <td class="colLast">Called after an opening handshake has been performed and the given websocket is ready to bewritten on.</td>
+                                        </tr>
+                                        
+                                        <tr id="i38" class="altColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onMessage(String)>onMessage</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message) </code>
+                                            </th>
+                                            <td class="colLast">Callback for string messages received from the remote host</td>
+                                        </tr>
+                                        
+                                        <tr id="i39" class="rowColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onClose(int,String,boolean)>onClose</a>(int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> reason, boolean remote) </code>
+                                            </th>
+                                            <td class="colLast">Called after the websocket connection has been closed.</td>
+                                        </tr>
+                                        
+                                        <tr id="i40" class="altColor">
+                                            <td class="colFirst"><code>abstract void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onError(Exception)>onError</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Exception.html>Exception</a> ex) </code>
+                                            </th>
+                                            <td class="colLast">Called when errors occurs.</td>
+                                        </tr>
+                                        
+                                        <tr id="i41" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#onMessage(ByteBuffer)>onMessage</a>(<a href=https://developer.android.com/reference/kotlin/java/nio/ByteBuffer.html>ByteBuffer</a> bytes) </code>
+                                            </th>
+                                            <td class="colLast">Callback for binary messages received from the remote host</td>
+                                        </tr>
+                                        
+                                        <tr id="i42" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#sendFragmentedFrame(Opcode,ByteBuffer,boolean)>sendFragmentedFrame</a>(<a href=../enums/Opcode.html>Opcode</a> op, <a href=https://developer.android.com/reference/kotlin/java/nio/ByteBuffer.html>ByteBuffer</a> buffer, boolean fin) </code>
+                                            </th>
+                                            <td class="colLast">Allows to send continuous/fragmented frames conveniently.</td>
+                                        </tr>
+                                        
+                                        <tr id="i43" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#isOpen()>isOpen</a>() </code>
+                                            </th>
+                                            <td class="colLast">Is the websocket in the state OPEN</td>
+                                        </tr>
+                                        
+                                        <tr id="i44" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#isFlushAndClose()>isFlushAndClose</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns true when no further frames may be submitted This happens before the socketconnection is closed.</td>
+                                        </tr>
+                                        
+                                        <tr id="i45" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#isClosed()>isClosed</a>() </code>
+                                            </th>
+                                            <td class="colLast">Is the websocket in the state CLOSED</td>
+                                        </tr>
+                                        
+                                        <tr id="i46" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#isClosing()>isClosing</a>() </code>
+                                            </th>
+                                            <td class="colLast">Is the websocket in the state CLOSING</td>
+                                        </tr>
+                                        
+                                        <tr id="i47" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#hasBufferedData()>hasBufferedData</a>() </code>
+                                            </th>
+                                            <td class="colLast">Checks if the websocket has buffered data</td>
+                                        </tr>
+                                        
+                                        <tr id="i48" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#close(int)>close</a>(int code) </code>
+                                            </th>
+                                            <td class="colLast">sends the closing handshake.</td>
+                                        </tr>
+                                        
+                                        <tr id="i49" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#close(int,String)>close</a>(int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message) </code>
+                                            </th>
+                                            <td class="colLast">sends the closing handshake.</td>
+                                        </tr>
+                                        
+                                        <tr id="i50" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#closeConnection(int,String)>closeConnection</a>(int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message) </code>
+                                            </th>
+                                            <td class="colLast">This will close the connection immediately without a proper close handshake.</td>
+                                        </tr>
+                                        
+                                        <tr id="i51" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#send(ByteBuffer)>send</a>(<a href=https://developer.android.com/reference/kotlin/java/nio/ByteBuffer.html>ByteBuffer</a> bytes) </code>
+                                            </th>
+                                            <td class="colLast">Send Binary data (plain bytes) to the other end.</td>
+                                        </tr>
+                                        
+                                        <tr id="i52" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#sendFrame(Framedata)>sendFrame</a>(<a href=../framing/Framedata.html>Framedata</a> framedata) </code>
+                                            </th>
+                                            <td class="colLast">Send a frame to the other end</td>
+                                        </tr>
+                                        
+                                        <tr id="i53" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#sendFrame(Collection)>sendFrame</a>(<a href=https://developer.android.com/reference/kotlin/java/util/Collection.html>Collection</a>&lt;<a href=../framing/Framedata.html>Framedata</a>&gt; frames) </code>
+                                            </th>
+                                            <td class="colLast">Send a collection of frames to the other end</td>
+                                        </tr>
+                                        
+                                        <tr id="i54" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/net/InetSocketAddress.html>InetSocketAddress</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#getLocalSocketAddress()>getLocalSocketAddress</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the address of the endpoint this socket is bound to.</td>
+                                        </tr>
+                                        
+                                        <tr id="i55" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/net/InetSocketAddress.html>InetSocketAddress</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#getRemoteSocketAddress()>getRemoteSocketAddress</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the address of the endpoint this socket is connected to, or<code>{@code null}</code> if it isunconnected.</td>
+                                        </tr>
+                                        
+                                        <tr id="i56" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#getResourceDescriptor()>getResourceDescriptor</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the HTTP Request-URI as defined by http://tools.ietf.org/html/rfc2616#section-5.1.</td>
+                                        </tr>
+                                        
+                                        <tr id="i57" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#hasSSLSupport()>hasSSLSupport</a>() </code>
+                                            </th>
+                                            <td class="colLast">Does this websocket use an encrypted (wss/ssl) or unencrypted (ws) connection</td>
+                                        </tr>
+                                        
+                                        <tr id="i58" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/javax/net/ssl/SSLSession.html>SSLSession</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#getSSLSession()>getSSLSession</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the ssl session of websocket, if ssl/wss is used for this instance.</td>
+                                        </tr>
+                                        
+                                        <tr id="i59" class="rowColor">
+                                            <td class="colFirst"><code><a href=../protocols/IProtocol.html>IProtocol</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=WebSocketClient.html#getProtocol()>getProtocol</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the used Sec-WebSocket-Protocol for this websocket connection</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.com.tds.common.websocket.conn.AbstractWebSocket">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;com.tds.common.websocket.conn.AbstractWebSocket</h3>
+                                            <code>getConnectionLostTimeout, isReuseAddr, isTcpNoDelay, setConnectionLostTimeout, setReuseAddr, setTcpNoDelay</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.com.tds.common.websocket.conn.WebSocketAdapter">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;com.tds.common.websocket.conn.WebSocketAdapter</h3>
+                                            <code>onPreparePing, onWebsocketHandshakeReceivedAsClient, onWebsocketHandshakeReceivedAsServer, onWebsocketHandshakeSentAsClient, onWebsocketPing, onWebsocketPong</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.com.tds.common.websocket.conn.WebSocketListener">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;com.tds.common.websocket.conn.WebSocketListener</h3>
+                                            <code>onWebsocketClose, onWebsocketCloseInitiated, onWebsocketClosing, onWebsocketHandshakeReceivedAsClient, onWebsocketHandshakeReceivedAsServer, onWebsocketOpen</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Runnable">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;java.lang.Runnable</h3>
+                                            <code>run</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.com.tds.common.websocket.conn.WebSocket">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;com.tds.common.websocket.conn.WebSocket</h3>
+                                            <code>send</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="WebSocketClient(URI)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>WebSocketClient</h4>
+                                        <pre>WebSocketClient(<a href=https://developer.android.com/reference/kotlin/java/net/URI.html>URI</a> serverUri)</pre>
+                                        <div class="block">Constructs a WebSocketClient instance and sets it to the connect to the specified URI.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>serverUri</code> - the server URI to connect to</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="WebSocketClient(URI,Draft)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>WebSocketClient</h4>
+                                        <pre>WebSocketClient(<a href=https://developer.android.com/reference/kotlin/java/net/URI.html>URI</a> serverUri, <a href=../drafts/Draft.html>Draft</a> protocolDraft)</pre>
+                                        <div class="block">Constructs a WebSocketClient instance and sets it to the connect to the specified URI.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>serverUri</code> - the server URI to connect to</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>protocolDraft</code> - The draft which should be used for this connection</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="WebSocketClient(URI,Map)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>WebSocketClient</h4>
+                                        <pre>WebSocketClient(<a href=https://developer.android.com/reference/kotlin/java/net/URI.html>URI</a> serverUri, <a href=https://developer.android.com/reference/kotlin/java/util/Map.html>Map</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; httpHeaders)</pre>
+                                        <div class="block">Constructs a WebSocketClient instance and sets it to the connect to the specified URI.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>serverUri</code> - the server URI to connect to</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>httpHeaders</code> - Additional HTTP-Headers</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="WebSocketClient(URI,Draft,Map)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>WebSocketClient</h4>
+                                        <pre>WebSocketClient(<a href=https://developer.android.com/reference/kotlin/java/net/URI.html>URI</a> serverUri, <a href=../drafts/Draft.html>Draft</a> protocolDraft, <a href=https://developer.android.com/reference/kotlin/java/util/Map.html>Map</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; httpHeaders)</pre>
+                                        <div class="block">Constructs a WebSocketClient instance and sets it to the connect to the specified URI.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>serverUri</code> - the server URI to connect to</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>protocolDraft</code> - The draft which should be used for this connection</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>httpHeaders</code> - Additional HTTP-Headers</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="WebSocketClient(URI,Draft,Map,int)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>WebSocketClient</h4>
+                                        <pre>WebSocketClient(<a href=https://developer.android.com/reference/kotlin/java/net/URI.html>URI</a> serverUri, <a href=../drafts/Draft.html>Draft</a> protocolDraft, <a href=https://developer.android.com/reference/kotlin/java/util/Map.html>Map</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; httpHeaders, int connectTimeout)</pre>
+                                        <div class="block">Constructs a WebSocketClient instance and sets it to the connect to the specified URI.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>serverUri</code> - the server URI to connect to</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>protocolDraft</code> - The draft which should be used for this connection</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>httpHeaders</code> - Additional HTTP-Headers</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>connectTimeout</code> - The Timeout for the connection</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="getURI()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getURI</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/net/URI.html>URI</a> <a href=WebSocketClient.html#getURI()>getURI</a>()</pre>
+                                        <div class="block"><p>Returns the URI that this WebSocketClient is connected to.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getSocket()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getSocket</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/net/Socket.html>Socket</a> <a href=WebSocketClient.html#getSocket()>getSocket</a>()</pre>
+                                        <div class="block"><p>Returns the socket to allow Hostname Verification</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setSocket(Socket)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setSocket</h4>
+                                        <pre class="methodSignature">@<a href=https://developer.android.com/reference/kotlin/java/lang/Deprecated.html>Deprecated</a>() void <a href=WebSocketClient.html#setSocket(Socket)>setSocket</a>(<a href=https://developer.android.com/reference/kotlin/java/net/Socket.html>Socket</a> socket)</pre>
+                                        <div class="block"><p>Accepts bound and unbound sockets. This method must be called before <code>connect</code>.If the given socket is not yet bound it will be bound to the uri specified in the constructor.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>socket</code> - The socket which should be used for the connection</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setSocketFactory(SocketFactory)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setSocketFactory</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#setSocketFactory(SocketFactory)>setSocketFactory</a>(<a href=https://developer.android.com/reference/kotlin/javax/net/SocketFactory.html>SocketFactory</a> socketFactory)</pre>
+                                        <div class="block"><p>Accepts a SocketFactory. This method must be called before <code>connect</code>. The socketwill be bound to the uri specified in the constructor.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>socketFactory</code> - The socket factory which should be used for the connection.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setProxy(Proxy)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setProxy</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#setProxy(Proxy)>setProxy</a>(<a href=https://developer.android.com/reference/kotlin/java/net/Proxy.html>Proxy</a> proxy)</pre>
+                                        <div class="block"><p>Method to set a proxy for this connection</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>proxy</code> - the proxy to use for this websocket client</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getDraft()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getDraft</h4>
+                                        <pre class="methodSignature"> <a href=../drafts/Draft.html>Draft</a> <a href=WebSocketClient.html#getDraft()>getDraft</a>()</pre>
+                                        <div class="block"><p>Returns the protocol version this channel uses. For more infos seehttps://github.com/TooTallNate/Java-WebSocket/wiki/Drafts</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setDnsResolver(DnsResolver)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setDnsResolver</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#setDnsResolver(DnsResolver)>setDnsResolver</a>(<a href=DnsResolver.html>DnsResolver</a> dnsResolver)</pre>
+                                        <div class="block"><p>Sets a custom DNS resolver.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>dnsResolver</code> - The DnsResolver to use.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="addHeader(String,String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>addHeader</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#addHeader(String,String)>addHeader</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> key, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> value)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - Name of the header to add.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>value</code> - Value of the header to add.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="removeHeader(String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>removeHeader</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=WebSocketClient.html#removeHeader(String)>removeHeader</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> key)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - Name of the header to remove.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="clearHeaders()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>clearHeaders</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#clearHeaders()>clearHeaders</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="reconnect()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>reconnect</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#reconnect()>reconnect</a>()</pre>
+                                        <div class="block"><p>Reinitiates the websocket connection. This method does not block.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="reconnectBlocking()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>reconnectBlocking</h4>
+                                        <pre class="methodSignature"> boolean <a href=WebSocketClient.html#reconnectBlocking()>reconnectBlocking</a>()</pre>
+                                        <div class="block"><p>Same as <code>reconnect</code> but blocks until the websocket reconnected or failed to doso.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="connect()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>connect</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#connect()>connect</a>()</pre>
+                                        <div class="block"><p>Initiates the websocket connection. This method does not block.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="connectBlocking()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>connectBlocking</h4>
+                                        <pre class="methodSignature"> boolean <a href=WebSocketClient.html#connectBlocking()>connectBlocking</a>()</pre>
+                                        <div class="block"><p>Same as <code>connect</code> but blocks until the websocket connected or failed to do so.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="connectBlocking(long,TimeUnit)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>connectBlocking</h4>
+                                        <pre class="methodSignature"> boolean <a href=WebSocketClient.html#connectBlocking(long,TimeUnit)>connectBlocking</a>(long timeout, <a href=https://developer.android.com/reference/kotlin/java/util/concurrent/TimeUnit.html>TimeUnit</a> timeUnit)</pre>
+                                        <div class="block"><p>Same as <code>connect</code> but blocks with a timeout until the websocket connected or failedto do so.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>timeout</code> - The connect timeout</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>timeUnit</code> - The timeout time unit</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="close()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>close</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#close()>close</a>()</pre>
+                                        <div class="block"><p>Initiates the websocket close handshake. This method does not block In oder to make surethe connection is closed use <code>closeBlocking</code></p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="closeBlocking()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>closeBlocking</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#closeBlocking()>closeBlocking</a>()</pre>
+                                        <div class="block"><p>Same as <code>close</code> but blocks until the websocket closed or failed to do so.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="send(String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>send</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#send(String)>send</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> text)</pre>
+                                        <div class="block"><p>Sends text to the connected websocket server.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>text</code> - The string which will be transmitted.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="send(Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>send</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#send(Array)>send</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt; data)</pre>
+                                        <div class="block"><p>Sends binary data to the connected webSocket server.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>data</code> - The byte-Array of data to send to the WebSocket server.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getAttachment()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getAttachment</h4>
+                                        <pre class="methodSignature"> &lt;T&gt; <a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a> <a href=WebSocketClient.html#getAttachment()>getAttachment</a>()</pre>
+                                        <div class="block"><p>Getter for the connection attachment.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setAttachment(T)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setAttachment</h4>
+                                        <pre class="methodSignature"> &lt;T&gt; void <a href=WebSocketClient.html#setAttachment(T)>setAttachment</a>(<a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a> attachment)</pre>
+                                        <div class="block"><p>Setter for an attachment on the socket connection. The attachment may be of any type.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>attachment</code> - The object to be attached to the user</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="sendPing()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>sendPing</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#sendPing()>sendPing</a>()</pre>
+                                        <div class="block"><p>Send a ping to the other end</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="run()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>run</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#run()>run</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getReadyState()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getReadyState</h4>
+                                        <pre class="methodSignature"> <a href=../enums/ReadyState.html>ReadyState</a> <a href=WebSocketClient.html#getReadyState()>getReadyState</a>()</pre>
+                                        <div class="block"><p>This represents the state of the connection.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onWebsocketMessage(WebSocket,String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onWebsocketMessage</h4>
+                                        <pre class="methodSignature"> final void <a href=WebSocketClient.html#onWebsocketMessage(WebSocket,String)>onWebsocketMessage</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message)</pre>
+                                        <div class="block"><p>Calls subclass' implementation of onMessage.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onWebsocketMessage(WebSocket,ByteBuffer)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onWebsocketMessage</h4>
+                                        <pre class="methodSignature"> final void <a href=WebSocketClient.html#onWebsocketMessage(WebSocket,ByteBuffer)>onWebsocketMessage</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, <a href=https://developer.android.com/reference/kotlin/java/nio/ByteBuffer.html>ByteBuffer</a> blob)</pre>
+                                        <div class="block"><p>Called when an entire binary frame has been received. Do whatever you want here...</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>conn</code> - The WebSocket instance this event is occurring on.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>blob</code> - The binary message that was received.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onWebsocketOpen(WebSocket,Handshakedata)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onWebsocketOpen</h4>
+                                        <pre class="methodSignature"> final void <a href=WebSocketClient.html#onWebsocketOpen(WebSocket,Handshakedata)>onWebsocketOpen</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, <a href=../handshake/Handshakedata.html>Handshakedata</a> handshake)</pre>
+                                        <div class="block"><p>Calls subclass' implementation of onOpen.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onWebsocketClose(WebSocket,int,String,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onWebsocketClose</h4>
+                                        <pre class="methodSignature"> final void <a href=WebSocketClient.html#onWebsocketClose(WebSocket,int,String,boolean)>onWebsocketClose</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> reason, boolean remote)</pre>
+                                        <div class="block"><p>Calls subclass' implementation of onClose.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onWebsocketError(WebSocket,Exception)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onWebsocketError</h4>
+                                        <pre class="methodSignature"> final void <a href=WebSocketClient.html#onWebsocketError(WebSocket,Exception)>onWebsocketError</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, <a href=https://developer.android.com/reference/kotlin/java/lang/Exception.html>Exception</a> ex)</pre>
+                                        <div class="block"><p>Calls subclass' implementation of onIOError.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onWriteDemand(WebSocket)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onWriteDemand</h4>
+                                        <pre class="methodSignature"> final void <a href=WebSocketClient.html#onWriteDemand(WebSocket)>onWriteDemand</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn)</pre>
+                                        <div class="block"><p>This method is used to inform the selector thread that there is data queued to be written tothe socket.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>conn</code> - The WebSocket instance this event is occurring on.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onWebsocketCloseInitiated(WebSocket,int,String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onWebsocketCloseInitiated</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#onWebsocketCloseInitiated(WebSocket,int,String)>onWebsocketCloseInitiated</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> reason)</pre>
+                                        <div class="block"><p>send when this peer sends a close handshake</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            
+                                            
+                                            <dd><code>code</code> - The codes can be looked up here: <a href=../framing/CloseFrame.html>CloseFrame</a></dd>
+                                            
+                                            
+                                            
+                                            <dd><code>reason</code> - Additional information string</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onWebsocketClosing(WebSocket,int,String,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onWebsocketClosing</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#onWebsocketClosing(WebSocket,int,String,boolean)>onWebsocketClosing</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn, int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> reason, boolean remote)</pre>
+                                        <div class="block"><p>Called as soon as no further frames are accepted</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            
+                                            
+                                            <dd><code>code</code> - The codes can be looked up here: <a href=../framing/CloseFrame.html>CloseFrame</a></dd>
+                                            
+                                            
+                                            
+                                            <dd><code>reason</code> - Additional information string</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>remote</code> - Returns whether or not the closing of the connection was initiated by the remotehost.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onCloseInitiated(int,String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onCloseInitiated</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#onCloseInitiated(int,String)>onCloseInitiated</a>(int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> reason)</pre>
+                                        <div class="block"><p>Send when this peer sends a close handshake</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>code</code> - The codes can be looked up here: <a href=../framing/CloseFrame.html>CloseFrame</a></dd>
+                                            
+                                            
+                                            
+                                            <dd><code>reason</code> - Additional information string</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onClosing(int,String,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onClosing</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#onClosing(int,String,boolean)>onClosing</a>(int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> reason, boolean remote)</pre>
+                                        <div class="block"><p>Called as soon as no further frames are accepted</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>code</code> - The codes can be looked up here: <a href=../framing/CloseFrame.html>CloseFrame</a></dd>
+                                            
+                                            
+                                            
+                                            <dd><code>reason</code> - Additional information string</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>remote</code> - Returns whether or not the closing of the connection was initiated by the remotehost.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getConnection()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getConnection</h4>
+                                        <pre class="methodSignature"> <a href=../conn/WebSocket.html>WebSocket</a> <a href=WebSocketClient.html#getConnection()>getConnection</a>()</pre>
+                                        <div class="block"><p>Getter for the engine</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getLocalSocketAddress(WebSocket)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getLocalSocketAddress</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/net/InetSocketAddress.html>InetSocketAddress</a> <a href=WebSocketClient.html#getLocalSocketAddress(WebSocket)>getLocalSocketAddress</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>conn</code> - The WebSocket instance this event is occurring on.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getRemoteSocketAddress(WebSocket)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getRemoteSocketAddress</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/net/InetSocketAddress.html>InetSocketAddress</a> <a href=WebSocketClient.html#getRemoteSocketAddress(WebSocket)>getRemoteSocketAddress</a>(<a href=../conn/WebSocket.html>WebSocket</a> conn)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>conn</code> - The WebSocket instance this event is occurring on.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onOpen(ServerHandshake)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onOpen</h4>
+                                        <pre class="methodSignature"> abstract void <a href=WebSocketClient.html#onOpen(ServerHandshake)>onOpen</a>(<a href=../handshake/ServerHandshake.html>ServerHandshake</a> handshakedata)</pre>
+                                        <div class="block"><p>Called after an opening handshake has been performed and the given websocket is ready to bewritten on.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>handshakedata</code> - The handshake of the websocket instance</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMessage(String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMessage</h4>
+                                        <pre class="methodSignature"> abstract void <a href=WebSocketClient.html#onMessage(String)>onMessage</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message)</pre>
+                                        <div class="block"><p>Callback for string messages received from the remote host</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>message</code> - The UTF-8 decoded message that was received.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onClose(int,String,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onClose</h4>
+                                        <pre class="methodSignature"> abstract void <a href=WebSocketClient.html#onClose(int,String,boolean)>onClose</a>(int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> reason, boolean remote)</pre>
+                                        <div class="block"><p>Called after the websocket connection has been closed.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>code</code> - The codes can be looked up here: <a href=../framing/CloseFrame.html>CloseFrame</a></dd>
+                                            
+                                            
+                                            
+                                            <dd><code>reason</code> - Additional information string</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>remote</code> - Returns whether or not the closing of the connection was initiated by the remotehost.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onError(Exception)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onError</h4>
+                                        <pre class="methodSignature"> abstract void <a href=WebSocketClient.html#onError(Exception)>onError</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Exception.html>Exception</a> ex)</pre>
+                                        <div class="block"><p>Called when errors occurs. If an error causes the websocket connection to fail <a href=WebSocketClient.html#onClose(int,String,boolean)></a> will be called additionally. This method will be calledprimarily because of IO or protocol errors. If the given exception is an RuntimeExceptionthat probably means that you encountered a bug.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>ex</code> - The exception causing this error</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMessage(ByteBuffer)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMessage</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#onMessage(ByteBuffer)>onMessage</a>(<a href=https://developer.android.com/reference/kotlin/java/nio/ByteBuffer.html>ByteBuffer</a> bytes)</pre>
+                                        <div class="block"><p>Callback for binary messages received from the remote host</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>bytes</code> - The binary message that was received.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="sendFragmentedFrame(Opcode,ByteBuffer,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>sendFragmentedFrame</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#sendFragmentedFrame(Opcode,ByteBuffer,boolean)>sendFragmentedFrame</a>(<a href=../enums/Opcode.html>Opcode</a> op, <a href=https://developer.android.com/reference/kotlin/java/nio/ByteBuffer.html>ByteBuffer</a> buffer, boolean fin)</pre>
+                                        <div class="block"><p>Allows to send continuous/fragmented frames conveniently.  For more into on this frame typesee http://tools.ietf.org/html/rfc6455#section-5.4</p><p>If the first frame you send is also the last then it is not a fragmented frame and willreceived via onMessage instead of onFragmented even though it was send by this method.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>op</code> - This is only important for the first frame in the sequence.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>buffer</code> - The buffer which contains the payload.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>fin</code> - true means the current frame is the last in the sequence.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isOpen()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isOpen</h4>
+                                        <pre class="methodSignature"> boolean <a href=WebSocketClient.html#isOpen()>isOpen</a>()</pre>
+                                        <div class="block"><p>Is the websocket in the state OPEN</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isFlushAndClose()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isFlushAndClose</h4>
+                                        <pre class="methodSignature"> boolean <a href=WebSocketClient.html#isFlushAndClose()>isFlushAndClose</a>()</pre>
+                                        <div class="block"><p>Returns true when no further frames may be submitted This happens before the socketconnection is closed.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isClosed()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isClosed</h4>
+                                        <pre class="methodSignature"> boolean <a href=WebSocketClient.html#isClosed()>isClosed</a>()</pre>
+                                        <div class="block"><p>Is the websocket in the state CLOSED</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isClosing()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isClosing</h4>
+                                        <pre class="methodSignature"> boolean <a href=WebSocketClient.html#isClosing()>isClosing</a>()</pre>
+                                        <div class="block"><p>Is the websocket in the state CLOSING</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="hasBufferedData()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>hasBufferedData</h4>
+                                        <pre class="methodSignature"> boolean <a href=WebSocketClient.html#hasBufferedData()>hasBufferedData</a>()</pre>
+                                        <div class="block"><p>Checks if the websocket has buffered data</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="close(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>close</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#close(int)>close</a>(int code)</pre>
+                                        <div class="block"><p>sends the closing handshake. may be send in response to an other handshake.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>code</code> - the closing code</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="close(int,String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>close</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#close(int,String)>close</a>(int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message)</pre>
+                                        <div class="block"><p>sends the closing handshake. may be send in response to an other handshake.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>code</code> - the closing code</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>message</code> - the closing message</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="closeConnection(int,String)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>closeConnection</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#closeConnection(int,String)>closeConnection</a>(int code, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> message)</pre>
+                                        <div class="block"><p>This will close the connection immediately without a proper close handshake. The code and themessage therefore won't be transferred over the wire also they will be forwarded toonClose/onWebsocketClose.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>code</code> - the closing code</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>message</code> - the closing message</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="send(ByteBuffer)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>send</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#send(ByteBuffer)>send</a>(<a href=https://developer.android.com/reference/kotlin/java/nio/ByteBuffer.html>ByteBuffer</a> bytes)</pre>
+                                        <div class="block"><p>Send Binary data (plain bytes) to the other end.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>bytes</code> - the binary data to send</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="sendFrame(Framedata)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>sendFrame</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#sendFrame(Framedata)>sendFrame</a>(<a href=../framing/Framedata.html>Framedata</a> framedata)</pre>
+                                        <div class="block"><p>Send a frame to the other end</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>framedata</code> - the frame to send to the other end</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="sendFrame(Collection)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>sendFrame</h4>
+                                        <pre class="methodSignature"> void <a href=WebSocketClient.html#sendFrame(Collection)>sendFrame</a>(<a href=https://developer.android.com/reference/kotlin/java/util/Collection.html>Collection</a>&lt;<a href=../framing/Framedata.html>Framedata</a>&gt; frames)</pre>
+                                        <div class="block"><p>Send a collection of frames to the other end</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>frames</code> - the frames to send to the other end</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getLocalSocketAddress()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getLocalSocketAddress</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/net/InetSocketAddress.html>InetSocketAddress</a> <a href=WebSocketClient.html#getLocalSocketAddress()>getLocalSocketAddress</a>()</pre>
+                                        <div class="block"><p>Returns the address of the endpoint this socket is bound to.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getRemoteSocketAddress()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getRemoteSocketAddress</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/net/InetSocketAddress.html>InetSocketAddress</a> <a href=WebSocketClient.html#getRemoteSocketAddress()>getRemoteSocketAddress</a>()</pre>
+                                        <div class="block"><p>Returns the address of the endpoint this socket is connected to, or<code>{@code null}</code> if it isunconnected.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getResourceDescriptor()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getResourceDescriptor</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=WebSocketClient.html#getResourceDescriptor()>getResourceDescriptor</a>()</pre>
+                                        <div class="block"><p>Returns the HTTP Request-URI as defined by http://tools.ietf.org/html/rfc2616#section-5.1.2If the opening handshake has not yet happened it will return null.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="hasSSLSupport()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>hasSSLSupport</h4>
+                                        <pre class="methodSignature"> boolean <a href=WebSocketClient.html#hasSSLSupport()>hasSSLSupport</a>()</pre>
+                                        <div class="block"><p>Does this websocket use an encrypted (wss/ssl) or unencrypted (ws) connection</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getSSLSession()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getSSLSession</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/javax/net/ssl/SSLSession.html>SSLSession</a> <a href=WebSocketClient.html#getSSLSession()>getSSLSession</a>()</pre>
+                                        <div class="block"><p>Returns the ssl session of websocket, if ssl/wss is used for this instance.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getProtocol()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getProtocol</h4>
+                                        <pre class="methodSignature"> <a href=../protocols/IProtocol.html>IProtocol</a> <a href=WebSocketClient.html#getProtocol()>getProtocol</a>()</pre>
+                                        <div class="block"><p>Returns the used Sec-WebSocket-Protocol for this websocket connection</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

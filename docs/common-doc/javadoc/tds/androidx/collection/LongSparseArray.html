@@ -1,0 +1,930 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>LongSparseArray unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../search.js"></script>
+    <script async type="text/javascript" src="../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class LongSparseArray" class="title">Class LongSparseArray</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                            <code>java.lang.Cloneable</code>
+                            
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=LongSparseArray.html>LongSparseArray</a>&lt;E&gt;</span>
+ implements <a href=https://developer.android.com/reference/kotlin/java/lang/Cloneable.html>Cloneable</a>
+                    </pre>
+                    <div class="block"><p>SparseArray mapping longs to Objects. Unlike a normal array of Objects, there can be gaps in the indices. It is intended to be more memory efficient than using a HashMap to map Longs to Objects, both because it avoids auto-boxing keys and its data structure doesn't rely on an extra entry object for each mapping. </p><p>Note that this container keeps its mappings in an array data structure, using a binary search to find keys. The implementation is not intended to be appropriate for data structures that may contain large numbers of items. It is generally slower than a traditional HashMap, since lookups require a binary search and adds and removes require inserting and deleting entries in the array. For containers holding up to hundreds of items, the performance difference is not significant, less than 50%.</p><p>To help with performance, the container includes an optimization when removing keys: instead of compacting its array immediately, it leaves the removed entry marked as deleted. The entry can then be re-used for the same key, or compacted later in a single garbage collection step of all removed entries. This garbage collection will need to be performed at any time the array needs to be grown or the the map size or entry values are retrieved.</p><p>It is possible to iterate over the items in this container using <a href=LongSparseArray.html#keyAt(int)>keyAt</a> and <a href=LongSparseArray.html#valueAt(int)>valueAt</a>. Iterating over the keys using <code>keyAt(int)</code> with ascending values of the index will return the keys in ascending order, or the values corresponding to the keys in ascending order in the case of <code>valueAt(int)</code>.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#LongSparseArray()">LongSparseArray</a></span>()</code></th>
+                                                <td class="colLast">Creates a new LongSparseArray containing no mappings.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#LongSparseArray(int)">LongSparseArray</a></span>(int initialCapacity)</code></th>
+                                                <td class="colLast">Creates a new LongSparseArray containing no mappings that will notrequire any additional memory allocation to store the specifiednumber of mappings.</td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code><a href=LongSparseArray.html>LongSparseArray</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#clone()>clone</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#get(long)>get</a>(long key) </code>
+                                            </th>
+                                            <td class="colLast">Gets the Object mapped from the specified key, or <code>null</code>if no such mapping has been made.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#get(long,E)>get</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> valueIfKeyNotFound) </code>
+                                            </th>
+                                            <td class="colLast">Gets the Object mapped from the specified key, or the specified Objectif no such mapping has been made.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#delete(long)>delete</a>(long key) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#remove(long)>remove</a>(long key) </code>
+                                            </th>
+                                            <td class="colLast">Removes the mapping from the specified key, if there was any.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#remove(long,Object)>remove</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Remove an existing key from the array map only if it is currently mapped to <code>{@code value}</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#removeAt(int)>removeAt</a>(int index) </code>
+                                            </th>
+                                            <td class="colLast">Removes the mapping at the specified index.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#replace(long,E)>replace</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Replace the mapping for <code>{@code key}</code> only if it is already mapped to a value.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#replace(long,E,E)>replace</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> oldValue, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> newValue) </code>
+                                            </th>
+                                            <td class="colLast">Replace the mapping for <code>{@code key}</code> only if it is already mapped to a value.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#put(long,E)>put</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Adds a mapping from the specified key to the specified value,replacing the previous mapping from the specified key if therewas one.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#putAll(LongSparseArray)>putAll</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=LongSparseArray.html>LongSparseArray</a>&lt;out <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a>&gt; other) </code>
+                                            </th>
+                                            <td class="colLast">Copies all of the mappings from the <code>{@code other}</code> to this map.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#putIfAbsent(long,E)>putIfAbsent</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Add a new value to the array map only if the key does not already have a value or it ismapped to <code>{@code null}</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#size()>size</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the number of key-value mappings that this LongSparseArraycurrently stores.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#isEmpty()>isEmpty</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return true if size() is 0.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>long</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#keyAt(int)>keyAt</a>(int index) </code>
+                                            </th>
+                                            <td class="colLast">Given an index in the range <code>0...size()-1</code>, returnsthe key from the <code>index</code>th key-value mapping that thisLongSparseArray stores.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#valueAt(int)>valueAt</a>(int index) </code>
+                                            </th>
+                                            <td class="colLast">Given an index in the range <code>0...size()-1</code>, returnsthe value from the <code>index</code>th key-value mapping that thisLongSparseArray stores.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#setValueAt(int,E)>setValueAt</a>(int index, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Given an index in the range <code>0...size()-1</code>, sets a newvalue for the <code>index</code>th key-value mapping that thisLongSparseArray stores.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#indexOfKey(long)>indexOfKey</a>(long key) </code>
+                                            </th>
+                                            <td class="colLast">Returns the index for which <a href=LongSparseArray.html#keyAt(int)>keyAt</a> would return thespecified key, or a negative number if the specifiedkey is not mapped.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#indexOfValue(E)>indexOfValue</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Returns an index for which <a href=LongSparseArray.html#valueAt(int)>valueAt</a> would return thespecified key, or a negative number if no keys map to thespecified value.Beware that this is a linear search, unlike lookups by key,and that multiple keys can map to the same value and this willfind only one of them.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#containsKey(long)>containsKey</a>(long key) </code>
+                                            </th>
+                                            <td class="colLast">Returns true if the specified key is mapped.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#containsValue(E)>containsValue</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Returns true if the specified value is mapped from any key.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#clear()>clear</a>() </code>
+                                            </th>
+                                            <td class="colLast">Removes all key-value mappings from this LongSparseArray.</td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#append(long,E)>append</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Puts a key/value pair into the array, optimizing for the case wherethe key is greater than all existing keys in the array.</td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=LongSparseArray.html#toString()>toString</a>() </code>
+                                            </th>
+                                            <td class="colLast">This implementation composes a string by iterating over its mappings.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="LongSparseArray()"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>LongSparseArray</h4>
+                                        <pre>LongSparseArray()</pre>
+                                        <div class="block">Creates a new LongSparseArray containing no mappings.</div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="LongSparseArray(int)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>LongSparseArray</h4>
+                                        <pre>LongSparseArray(int initialCapacity)</pre>
+                                        <div class="block">Creates a new LongSparseArray containing no mappings that will notrequire any additional memory allocation to store the specifiednumber of mappings.</div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="clone()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>clone</h4>
+                                        <pre class="methodSignature"> <a href=LongSparseArray.html>LongSparseArray</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a>&gt; <a href=LongSparseArray.html#clone()>clone</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="get(long)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>get</h4>
+                                        <pre class="methodSignature">@<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> <a href=LongSparseArray.html#get(long)>get</a>(long key)</pre>
+                                        <div class="block"><p>Gets the Object mapped from the specified key, or <code>null</code>if no such mapping has been made.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="get(long,E)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>get</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> <a href=LongSparseArray.html#get(long,E)>get</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> valueIfKeyNotFound)</pre>
+                                        <div class="block"><p>Gets the Object mapped from the specified key, or the specified Objectif no such mapping has been made.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="delete(long)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>delete</h4>
+                                        <pre class="methodSignature">@<a href=https://developer.android.com/reference/kotlin/java/lang/Deprecated.html>Deprecated</a>() void <a href=LongSparseArray.html#delete(long)>delete</a>(long key)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="remove(long)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>remove</h4>
+                                        <pre class="methodSignature"> void <a href=LongSparseArray.html#remove(long)>remove</a>(long key)</pre>
+                                        <div class="block"><p>Removes the mapping from the specified key, if there was any.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="remove(long,Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>remove</h4>
+                                        <pre class="methodSignature"> boolean <a href=LongSparseArray.html#remove(long,Object)>remove</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> value)</pre>
+                                        <div class="block"><p>Remove an existing key from the array map only if it is currently mapped to <code>{@code value}</code>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key of the mapping to remove.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>value</code> - The value expected to be mapped to the key.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="removeAt(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>removeAt</h4>
+                                        <pre class="methodSignature"> void <a href=LongSparseArray.html#removeAt(int)>removeAt</a>(int index)</pre>
+                                        <div class="block"><p>Removes the mapping at the specified index.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="replace(long,E)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>replace</h4>
+                                        <pre class="methodSignature">@<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> <a href=LongSparseArray.html#replace(long,E)>replace</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value)</pre>
+                                        <div class="block"><p>Replace the mapping for <code>{@code key}</code> only if it is already mapped to a value.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key of the mapping to replace.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>value</code> - The value to store for the given key.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="replace(long,E,E)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>replace</h4>
+                                        <pre class="methodSignature"> boolean <a href=LongSparseArray.html#replace(long,E,E)>replace</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> oldValue, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> newValue)</pre>
+                                        <div class="block"><p>Replace the mapping for <code>{@code key}</code> only if it is already mapped to a value.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key of the mapping to replace.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>oldValue</code> - The value expected to be mapped to the key.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>newValue</code> - The value to store for the given key.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="put(long,E)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>put</h4>
+                                        <pre class="methodSignature"> void <a href=LongSparseArray.html#put(long,E)>put</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value)</pre>
+                                        <div class="block"><p>Adds a mapping from the specified key to the specified value,replacing the previous mapping from the specified key if therewas one.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="putAll(LongSparseArray)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>putAll</h4>
+                                        <pre class="methodSignature"> void <a href=LongSparseArray.html#putAll(LongSparseArray)>putAll</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=LongSparseArray.html>LongSparseArray</a>&lt;out <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a>&gt; other)</pre>
+                                        <div class="block"><p>Copies all of the mappings from the <code>{@code other}</code> to this map. The effect of this call isequivalent to that of calling <a href=LongSparseArray.html#put(long,E)>put</a> on this map once for each mappingfrom key to value in <code>{@code other}</code>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="putIfAbsent(long,E)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>putIfAbsent</h4>
+                                        <pre class="methodSignature">@<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> <a href=LongSparseArray.html#putIfAbsent(long,E)>putIfAbsent</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value)</pre>
+                                        <div class="block"><p>Add a new value to the array map only if the key does not already have a value or it ismapped to <code>{@code null}</code>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key under which to store the value.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>value</code> - The value to store for the given key.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="size()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>size</h4>
+                                        <pre class="methodSignature"> int <a href=LongSparseArray.html#size()>size</a>()</pre>
+                                        <div class="block"><p>Returns the number of key-value mappings that this LongSparseArraycurrently stores.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isEmpty()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isEmpty</h4>
+                                        <pre class="methodSignature"> boolean <a href=LongSparseArray.html#isEmpty()>isEmpty</a>()</pre>
+                                        <div class="block"><p>Return true if size() is 0.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="keyAt(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>keyAt</h4>
+                                        <pre class="methodSignature"> long <a href=LongSparseArray.html#keyAt(int)>keyAt</a>(int index)</pre>
+                                        <div class="block"><p>Given an index in the range <code>0...size()-1</code>, returnsthe key from the <code>index</code>th key-value mapping that thisLongSparseArray stores.</p><p>The keys corresponding to indices in ascending order are guaranteed tobe in ascending order, e.g., <code>keyAt(0)</code> will return thesmallest key and <code>keyAt(size()-1)</code> will return the largestkey.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="valueAt(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>valueAt</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> <a href=LongSparseArray.html#valueAt(int)>valueAt</a>(int index)</pre>
+                                        <div class="block"><p>Given an index in the range <code>0...size()-1</code>, returnsthe value from the <code>index</code>th key-value mapping that thisLongSparseArray stores.</p><p>The values corresponding to indices in ascending order are guaranteedto be associated with keys in ascending order, e.g.,<code>valueAt(0)</code> will return the value associated with thesmallest key and <code>valueAt(size()-1)</code> will return the valueassociated with the largest key.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setValueAt(int,E)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setValueAt</h4>
+                                        <pre class="methodSignature"> void <a href=LongSparseArray.html#setValueAt(int,E)>setValueAt</a>(int index, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value)</pre>
+                                        <div class="block"><p>Given an index in the range <code>0...size()-1</code>, sets a newvalue for the <code>index</code>th key-value mapping that thisLongSparseArray stores.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="indexOfKey(long)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>indexOfKey</h4>
+                                        <pre class="methodSignature"> int <a href=LongSparseArray.html#indexOfKey(long)>indexOfKey</a>(long key)</pre>
+                                        <div class="block"><p>Returns the index for which <a href=LongSparseArray.html#keyAt(int)>keyAt</a> would return thespecified key, or a negative number if the specifiedkey is not mapped.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="indexOfValue(E)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>indexOfValue</h4>
+                                        <pre class="methodSignature"> int <a href=LongSparseArray.html#indexOfValue(E)>indexOfValue</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value)</pre>
+                                        <div class="block"><p>Returns an index for which <a href=LongSparseArray.html#valueAt(int)>valueAt</a> would return thespecified key, or a negative number if no keys map to thespecified value.Beware that this is a linear search, unlike lookups by key,and that multiple keys can map to the same value and this willfind only one of them.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="containsKey(long)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>containsKey</h4>
+                                        <pre class="methodSignature"> boolean <a href=LongSparseArray.html#containsKey(long)>containsKey</a>(long key)</pre>
+                                        <div class="block"><p>Returns true if the specified key is mapped.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="containsValue(E)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>containsValue</h4>
+                                        <pre class="methodSignature"> boolean <a href=LongSparseArray.html#containsValue(E)>containsValue</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value)</pre>
+                                        <div class="block"><p>Returns true if the specified value is mapped from any key.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="clear()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>clear</h4>
+                                        <pre class="methodSignature"> void <a href=LongSparseArray.html#clear()>clear</a>()</pre>
+                                        <div class="block"><p>Removes all key-value mappings from this LongSparseArray.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="append(long,E)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>append</h4>
+                                        <pre class="methodSignature"> void <a href=LongSparseArray.html#append(long,E)>append</a>(long key, <a href=https://developer.android.com/reference/kotlin/java/lang/Enum.html>E</a> value)</pre>
+                                        <div class="block"><p>Puts a key/value pair into the array, optimizing for the case wherethe key is greater than all existing keys in the array.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="toString()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>toString</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=LongSparseArray.html#toString()>toString</a>()</pre>
+                                        <div class="block"><p>This implementation composes a string by iterating over its mappings. Ifthis map contains itself as a value, the string "(this Map)"will appear in its place.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>
