@@ -1,0 +1,939 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>PagerAdapter unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../search.js"></script>
+    <script async type="text/javascript" src="../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class PagerAdapter" class="title">Class PagerAdapter</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public abstract class <span class="typeNameLabel"><a href=PagerAdapter.html>PagerAdapter</a></span>
+
+                    </pre>
+                    <div class="block"><p>Base class providing the adapter to populate pages inside of a <a href=ViewPager.html>ViewPager</a>. You will most likely want to use a more specific implementation of this, such as</p><p>When you implement a PagerAdapter, you must override the following methods at minimum:</p><ul><li><a href=PagerAdapter.html#instantiateItem(ViewGroup,int)>instantiateItem</a></li><li><a href=PagerAdapter.html#destroyItem(ViewGroup,int,Object)>destroyItem</a></li><li><a href=PagerAdapter.html#getCount()>getCount</a></li><li><a href=PagerAdapter.html#isViewFromObject(View,Object)>isViewFromObject</a></li></ul><p>PagerAdapter is more general than the adapters used for <a href=https://developer.android.com/reference/kotlin/android/widget/AdapterView.html>AdapterViews</a>. Instead of providing a View recycling mechanism directly ViewPager uses callbacks to indicate the steps taken during an update. A PagerAdapter may implement a form of View recycling if desired or use a more sophisticated method of managing page Views such as Fragment transactions where each page is represented by its own Fragment.</p><p>ViewPager associates each page with a key Object instead of working with Views directly. This key is used to track and uniquely identify a given page independent of its position in the adapter. A call to the PagerAdapter method <a href=PagerAdapter.html#startUpdate(ViewGroup)>startUpdate</a> indicates that the contents of the ViewPager are about to change. One or more calls to <a href=PagerAdapter.html#instantiateItem(ViewGroup,int)>instantiateItem</a> and/or <a href=PagerAdapter.html#destroyItem(ViewGroup,int,Object)>destroyItem</a> will follow, and the end of an update will be signaled by a call to <a href=PagerAdapter.html#finishUpdate(ViewGroup)>finishUpdate</a>. By the time <a href=PagerAdapter.html#finishUpdate(ViewGroup)>finishUpdate</a> returns the views associated with the key objects returned by <a href=PagerAdapter.html#instantiateItem(ViewGroup,int)>instantiateItem</a> should be added to the parent ViewGroup passed to these methods and the views associated with the keys passed to <a href=PagerAdapter.html#destroyItem(ViewGroup,int,Object)>destroyItem</a> should be removed. The method <a href=PagerAdapter.html#isViewFromObject(View,Object)>isViewFromObject</a> identifies whether a page View is associated with a given key object.</p><p>A very simple PagerAdapter may choose to use the page Views themselves as key objects, returning them from <a href=PagerAdapter.html#instantiateItem(ViewGroup,int)>instantiateItem</a> after creation and adding them to the parent ViewGroup. A matching <a href=PagerAdapter.html#destroyItem(ViewGroup,int,Object)>destroyItem</a> implementation would remove the View from the parent ViewGroup and <a href=PagerAdapter.html#isViewFromObject(View,Object)>isViewFromObject</a> could be implemented as <code>return view == object;</code>.</p><p>PagerAdapter supports data set changes. Data set changes must occur on the main thread and must end with a call to <a href=PagerAdapter.html#notifyDataSetChanged()>notifyDataSetChanged</a> similar to AdapterView adapters derived from <a href=https://developer.android.com/reference/kotlin/android/widget/BaseAdapter.html>android.widget.BaseAdapter</a>. A data set change may involve pages being added, removed, or changing position. The ViewPager will keep the current page active provided the adapter implements the method <a href=PagerAdapter.html#getItemPosition(Object)>getItemPosition</a>.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#POSITION_UNCHANGED>POSITION_UNCHANGED</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#POSITION_NONE>POSITION_NONE</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>abstract int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#getCount()>getCount</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return the number of views available.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#startUpdate(ViewGroup)>startUpdate</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> container) </code>
+                                            </th>
+                                            <td class="colLast">Called when a change in the shown pages is going to start being made.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#instantiateItem(ViewGroup,int)>instantiateItem</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> container, int position) </code>
+                                            </th>
+                                            <td class="colLast">Create the page for the given position.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#destroyItem(ViewGroup,int,Object)>destroyItem</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> container, int position, @<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object) </code>
+                                            </th>
+                                            <td class="colLast">Remove a page for the given position.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#setPrimaryItem(ViewGroup,int,Object)>setPrimaryItem</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> container, int position, @<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object) </code>
+                                            </th>
+                                            <td class="colLast">Called to inform the adapter of which item is currently considered tobe the "primary", that is the one show to the user as the current page.This method will not be invoked when the adapter contains no items.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#finishUpdate(ViewGroup)>finishUpdate</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> container) </code>
+                                            </th>
+                                            <td class="colLast">Called when the a change in the shown pages has been completed.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#startUpdate(View)>startUpdate</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> container) </code>
+                                            </th>
+                                            <td class="colLast">Called when a change in the shown pages is going to start being made.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#instantiateItem(View,int)>instantiateItem</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> container, int position) </code>
+                                            </th>
+                                            <td class="colLast">Create the page for the given position.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#destroyItem(View,int,Object)>destroyItem</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> container, int position, @<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object) </code>
+                                            </th>
+                                            <td class="colLast">Remove a page for the given position.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#setPrimaryItem(View,int,Object)>setPrimaryItem</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> container, int position, @<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object) </code>
+                                            </th>
+                                            <td class="colLast">Called to inform the adapter of which item is currently considered tobe the "primary", that is the one show to the user as the current page.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#finishUpdate(View)>finishUpdate</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> container) </code>
+                                            </th>
+                                            <td class="colLast">Called when the a change in the shown pages has been completed.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>abstract boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#isViewFromObject(View,Object)>isViewFromObject</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view, @<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object) </code>
+                                            </th>
+                                            <td class="colLast">Determines whether a page View is associated with a specific key objectas returned by <a href=PagerAdapter.html#instantiateItem(ViewGroup,int)>instantiateItem</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/android/os/Parcelable.html>Parcelable</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#saveState()>saveState</a>() </code>
+                                            </th>
+                                            <td class="colLast">Save any instance state associated with this adapter and its pages that should berestored if the current UI state needs to be reconstructed.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#restoreState(Parcelable,ClassLoader)>restoreState</a>(@<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/android/os/Parcelable.html>Parcelable</a> state, @<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/ClassLoader.html>ClassLoader</a> loader) </code>
+                                            </th>
+                                            <td class="colLast">Restore any instance state associated with this adapter and its pagesthat was previously saved by <a href=PagerAdapter.html#saveState()>saveState</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#getItemPosition(Object)>getItemPosition</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object) </code>
+                                            </th>
+                                            <td class="colLast">Called when the host view is attempting to determine if an item's positionhas changed.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#notifyDataSetChanged()>notifyDataSetChanged</a>() </code>
+                                            </th>
+                                            <td class="colLast">This method should be called by the application if the data backing this adapter has changedand associated views should update.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#registerDataSetObserver(DataSetObserver)>registerDataSetObserver</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/database/DataSetObserver.html>DataSetObserver</a> observer) </code>
+                                            </th>
+                                            <td class="colLast">Register an observer to receive callbacks related to the adapter's data changing.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#unregisterDataSetObserver(DataSetObserver)>unregisterDataSetObserver</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/database/DataSetObserver.html>DataSetObserver</a> observer) </code>
+                                            </th>
+                                            <td class="colLast">Unregister an observer from callbacks related to the adapter's data changing.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/CharSequence.html>CharSequence</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#getPageTitle(int)>getPageTitle</a>(int position) </code>
+                                            </th>
+                                            <td class="colLast">This method may be called by the ViewPager to obtain a title stringto describe the specified page.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>float</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=PagerAdapter.html#getPageWidth(int)>getPageWidth</a>(int position) </code>
+                                            </th>
+                                            <td class="colLast">Returns the proportional width of a given page as a percentage of theViewPager's measured width from (0.f-1.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="getCount()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getCount</h4>
+                                        <pre class="methodSignature"> abstract int <a href=PagerAdapter.html#getCount()>getCount</a>()</pre>
+                                        <div class="block"><p>Return the number of views available.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="startUpdate(ViewGroup)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>startUpdate</h4>
+                                        <pre class="methodSignature"> void <a href=PagerAdapter.html#startUpdate(ViewGroup)>startUpdate</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> container)</pre>
+                                        <div class="block"><p>Called when a change in the shown pages is going to start being made.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>container</code> - The containing View which is displaying this adapter'spage views.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="instantiateItem(ViewGroup,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>instantiateItem</h4>
+                                        <pre class="methodSignature">@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> <a href=PagerAdapter.html#instantiateItem(ViewGroup,int)>instantiateItem</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> container, int position)</pre>
+                                        <div class="block"><p>Create the page for the given position. The adapter is responsiblefor adding the view to the container given here, although it onlymust ensure this is done by the time it returns from <a href=PagerAdapter.html#finishUpdate(ViewGroup)>finishUpdate</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>container</code> - The containing View in which the page will be shown.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>position</code> - The page position to be instantiated.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="destroyItem(ViewGroup,int,Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>destroyItem</h4>
+                                        <pre class="methodSignature"> void <a href=PagerAdapter.html#destroyItem(ViewGroup,int,Object)>destroyItem</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> container, int position, @<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object)</pre>
+                                        <div class="block"><p>Remove a page for the given position. The adapter is responsiblefor removing the view from its container, although it only must ensurethis is done by the time it returns from <a href=PagerAdapter.html#finishUpdate(ViewGroup)>finishUpdate</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>container</code> - The containing View from which the page will be removed.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>position</code> - The page position to be removed.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>object</code> - The same object that was returned by <a href=PagerAdapter.html#instantiateItem(View,int)>instantiateItem</a>.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setPrimaryItem(ViewGroup,int,Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setPrimaryItem</h4>
+                                        <pre class="methodSignature"> void <a href=PagerAdapter.html#setPrimaryItem(ViewGroup,int,Object)>setPrimaryItem</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> container, int position, @<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object)</pre>
+                                        <div class="block"><p>Called to inform the adapter of which item is currently considered tobe the "primary", that is the one show to the user as the current page.This method will not be invoked when the adapter contains no items.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>container</code> - The containing View from which the page will be removed.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>position</code> - The page position that is now the primary.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>object</code> - The same object that was returned by <a href=PagerAdapter.html#instantiateItem(View,int)>instantiateItem</a>.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="finishUpdate(ViewGroup)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>finishUpdate</h4>
+                                        <pre class="methodSignature"> void <a href=PagerAdapter.html#finishUpdate(ViewGroup)>finishUpdate</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> container)</pre>
+                                        <div class="block"><p>Called when the a change in the shown pages has been completed. At thispoint you must ensure that all of the pages have actually been added orremoved from the container as appropriate.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>container</code> - The containing View which is displaying this adapter'spage views.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="startUpdate(View)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>startUpdate</h4>
+                                        <pre class="methodSignature">@<a href=https://developer.android.com/reference/kotlin/java/lang/Deprecated.html>Deprecated</a>() void <a href=PagerAdapter.html#startUpdate(View)>startUpdate</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> container)</pre>
+                                        <div class="block"><p>Called when a change in the shown pages is going to start being made.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>container</code> - The containing View which is displaying this adapter'spage views.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="instantiateItem(View,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>instantiateItem</h4>
+                                        <pre class="methodSignature">@<a href=https://developer.android.com/reference/kotlin/java/lang/Deprecated.html>Deprecated</a>()@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> <a href=PagerAdapter.html#instantiateItem(View,int)>instantiateItem</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> container, int position)</pre>
+                                        <div class="block"><p>Create the page for the given position. The adapter is responsiblefor adding the view to the container given here, although it onlymust ensure this is done by the time it returns from <a href=PagerAdapter.html#finishUpdate(ViewGroup)>finishUpdate</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>container</code> - The containing View in which the page will be shown.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>position</code> - The page position to be instantiated.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="destroyItem(View,int,Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>destroyItem</h4>
+                                        <pre class="methodSignature">@<a href=https://developer.android.com/reference/kotlin/java/lang/Deprecated.html>Deprecated</a>() void <a href=PagerAdapter.html#destroyItem(View,int,Object)>destroyItem</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> container, int position, @<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object)</pre>
+                                        <div class="block"><p>Remove a page for the given position. The adapter is responsiblefor removing the view from its container, although it only must ensurethis is done by the time it returns from <a href=PagerAdapter.html#finishUpdate(View)>finishUpdate</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>container</code> - The containing View from which the page will be removed.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>position</code> - The page position to be removed.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>object</code> - The same object that was returned by <a href=PagerAdapter.html#instantiateItem(View,int)>instantiateItem</a>.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setPrimaryItem(View,int,Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setPrimaryItem</h4>
+                                        <pre class="methodSignature">@<a href=https://developer.android.com/reference/kotlin/java/lang/Deprecated.html>Deprecated</a>() void <a href=PagerAdapter.html#setPrimaryItem(View,int,Object)>setPrimaryItem</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> container, int position, @<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object)</pre>
+                                        <div class="block"><p>Called to inform the adapter of which item is currently considered tobe the "primary", that is the one show to the user as the current page.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>container</code> - The containing View from which the page will be removed.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>position</code> - The page position that is now the primary.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>object</code> - The same object that was returned by <a href=PagerAdapter.html#instantiateItem(View,int)>instantiateItem</a>.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="finishUpdate(View)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>finishUpdate</h4>
+                                        <pre class="methodSignature">@<a href=https://developer.android.com/reference/kotlin/java/lang/Deprecated.html>Deprecated</a>() void <a href=PagerAdapter.html#finishUpdate(View)>finishUpdate</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> container)</pre>
+                                        <div class="block"><p>Called when the a change in the shown pages has been completed. At thispoint you must ensure that all of the pages have actually been added orremoved from the container as appropriate.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>container</code> - The containing View which is displaying this adapter'spage views.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isViewFromObject(View,Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isViewFromObject</h4>
+                                        <pre class="methodSignature"> abstract boolean <a href=PagerAdapter.html#isViewFromObject(View,Object)>isViewFromObject</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view, @<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object)</pre>
+                                        <div class="block"><p>Determines whether a page View is associated with a specific key objectas returned by <a href=PagerAdapter.html#instantiateItem(ViewGroup,int)>instantiateItem</a>. This method isrequired for a PagerAdapter to function properly.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>view</code> - Page View to check for association with <code>object</code></dd>
+                                            
+                                            
+                                            
+                                            <dd><code>object</code> - Object to check for association with <code>view</code></dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="saveState()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>saveState</h4>
+                                        <pre class="methodSignature">@<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/android/os/Parcelable.html>Parcelable</a> <a href=PagerAdapter.html#saveState()>saveState</a>()</pre>
+                                        <div class="block"><p>Save any instance state associated with this adapter and its pages that should berestored if the current UI state needs to be reconstructed.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="restoreState(Parcelable,ClassLoader)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>restoreState</h4>
+                                        <pre class="methodSignature"> void <a href=PagerAdapter.html#restoreState(Parcelable,ClassLoader)>restoreState</a>(@<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/android/os/Parcelable.html>Parcelable</a> state, @<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/ClassLoader.html>ClassLoader</a> loader)</pre>
+                                        <div class="block"><p>Restore any instance state associated with this adapter and its pagesthat was previously saved by <a href=PagerAdapter.html#saveState()>saveState</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - State previously saved by a call to <a href=PagerAdapter.html#saveState()>saveState</a></dd>
+                                            
+                                            
+                                            
+                                            <dd><code>loader</code> - A ClassLoader that should be used to instantiate any restored objects</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getItemPosition(Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getItemPosition</h4>
+                                        <pre class="methodSignature"> int <a href=PagerAdapter.html#getItemPosition(Object)>getItemPosition</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object)</pre>
+                                        <div class="block"><p>Called when the host view is attempting to determine if an item's positionhas changed. Returns <a href=PagerAdapter.html#POSITION_UNCHANGED>POSITION_UNCHANGED</a> if the position of the givenitem has not changed or <a href=PagerAdapter.html#POSITION_NONE>POSITION_NONE</a> if the item is no longer presentin the adapter.</p><p>The default implementation assumes that items will neverchange position and always returns <a href=PagerAdapter.html#POSITION_UNCHANGED>POSITION_UNCHANGED</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>object</code> - Object representing an item, previously returned by a call to<a href=PagerAdapter.html#instantiateItem(View,int)>instantiateItem</a>.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="notifyDataSetChanged()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>notifyDataSetChanged</h4>
+                                        <pre class="methodSignature"> void <a href=PagerAdapter.html#notifyDataSetChanged()>notifyDataSetChanged</a>()</pre>
+                                        <div class="block"><p>This method should be called by the application if the data backing this adapter has changedand associated views should update.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="registerDataSetObserver(DataSetObserver)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>registerDataSetObserver</h4>
+                                        <pre class="methodSignature"> void <a href=PagerAdapter.html#registerDataSetObserver(DataSetObserver)>registerDataSetObserver</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/database/DataSetObserver.html>DataSetObserver</a> observer)</pre>
+                                        <div class="block"><p>Register an observer to receive callbacks related to the adapter's data changing.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>observer</code> - The <a href=https://developer.android.com/reference/kotlin/android/database/DataSetObserver.html>android.database.DataSetObserver</a> which will receive callbacks.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="unregisterDataSetObserver(DataSetObserver)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>unregisterDataSetObserver</h4>
+                                        <pre class="methodSignature"> void <a href=PagerAdapter.html#unregisterDataSetObserver(DataSetObserver)>unregisterDataSetObserver</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/database/DataSetObserver.html>DataSetObserver</a> observer)</pre>
+                                        <div class="block"><p>Unregister an observer from callbacks related to the adapter's data changing.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>observer</code> - The <a href=https://developer.android.com/reference/kotlin/android/database/DataSetObserver.html>android.database.DataSetObserver</a> which will be unregistered.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getPageTitle(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getPageTitle</h4>
+                                        <pre class="methodSignature">@<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/CharSequence.html>CharSequence</a> <a href=PagerAdapter.html#getPageTitle(int)>getPageTitle</a>(int position)</pre>
+                                        <div class="block"><p>This method may be called by the ViewPager to obtain a title stringto describe the specified page. This method may return nullindicating no title for this page. The default implementation returnsnull.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>position</code> - The position of the title requested</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getPageWidth(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getPageWidth</h4>
+                                        <pre class="methodSignature"> float <a href=PagerAdapter.html#getPageWidth(int)>getPageWidth</a>(int position)</pre>
+                                        <div class="block"><p>Returns the proportional width of a given page as a percentage of theViewPager's measured width from (0.f-1.f]</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>position</code> - The position of the page requested</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

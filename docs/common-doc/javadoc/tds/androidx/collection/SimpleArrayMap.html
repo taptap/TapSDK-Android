@@ -1,0 +1,1033 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>SimpleArrayMap unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../search.js"></script>
+    <script async type="text/javascript" src="../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class SimpleArrayMap" class="title">Class SimpleArrayMap</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=SimpleArrayMap.html>SimpleArrayMap</a>&lt;K, V&gt;</span>
+
+                    </pre>
+                    <div class="block"><p>Base implementation of ArrayMap that doesn't include any standard Java container API interoperability. These features are generally heavier-weight ways to interact with the container, so discouraged, but they can be useful to make it easier to use as a drop-in replacement for HashMap. If you don't need them, this class can be preferrable since it doesn't bring in any of the implementation of those APIs, allowing that code to be stripped by ProGuard.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#SimpleArrayMap()">SimpleArrayMap</a></span>()</code></th>
+                                                <td class="colLast">Create a new empty ArrayMap.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#SimpleArrayMap(int)">SimpleArrayMap</a></span>(int capacity)</code></th>
+                                                <td class="colLast">Create a new ArrayMap with a given initial capacity.</td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#SimpleArrayMap(SimpleArrayMap)">SimpleArrayMap</a></span>(<a href=SimpleArrayMap.html>SimpleArrayMap</a>&lt;<a href=SimpleArrayMap.html>K</a>, <a href=SimpleArrayMap.html>V</a>&gt; map)</code></th>
+                                                <td class="colLast">Create a new ArrayMap with the mappings from the given ArrayMap.</td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#clear()>clear</a>() </code>
+                                            </th>
+                                            <td class="colLast">Make the array map empty.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#ensureCapacity(int)>ensureCapacity</a>(int minimumCapacity) </code>
+                                            </th>
+                                            <td class="colLast">Ensure the array map can hold at least minimumCapacityitems.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#containsKey(Object)>containsKey</a>(@<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> key) </code>
+                                            </th>
+                                            <td class="colLast">Check whether a key exists in the array.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#indexOfKey(Object)>indexOfKey</a>(@<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> key) </code>
+                                            </th>
+                                            <td class="colLast">Returns the index of a key in the set.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#containsValue(Object)>containsValue</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Check whether a value exists in the array.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code><a href=SimpleArrayMap.html>V</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#get(Object)>get</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> key) </code>
+                                            </th>
+                                            <td class="colLast">Retrieve a value from the array.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code><a href=SimpleArrayMap.html>V</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#getOrDefault(Object,V)>getOrDefault</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> key, <a href=SimpleArrayMap.html>V</a> defaultValue) </code>
+                                            </th>
+                                            <td class="colLast">Retrieve a value from the array, or <code>{@code defaultValue}</code> if there is no mapping for the key.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code><a href=SimpleArrayMap.html>K</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#keyAt(int)>keyAt</a>(int index) </code>
+                                            </th>
+                                            <td class="colLast">Return the key at the given index in the array.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code><a href=SimpleArrayMap.html>V</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#valueAt(int)>valueAt</a>(int index) </code>
+                                            </th>
+                                            <td class="colLast">Return the value at the given index in the array.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code><a href=SimpleArrayMap.html>V</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#setValueAt(int,V)>setValueAt</a>(int index, <a href=SimpleArrayMap.html>V</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Set the value at a given index in the array.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#isEmpty()>isEmpty</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return true if the array map contains no items.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code><a href=SimpleArrayMap.html>V</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#put(K,V)>put</a>(<a href=SimpleArrayMap.html>K</a> key, <a href=SimpleArrayMap.html>V</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Add a new value to the array map.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#putAll(SimpleArrayMap)>putAll</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=SimpleArrayMap.html>SimpleArrayMap</a>&lt;out <a href=SimpleArrayMap.html>K</a>, out <a href=SimpleArrayMap.html>V</a>&gt; array) </code>
+                                            </th>
+                                            <td class="colLast">Perform a <a href=SimpleArrayMap.html#put(K,V)>put</a> of all key/value pairs in array</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code><a href=SimpleArrayMap.html>V</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#putIfAbsent(K,V)>putIfAbsent</a>(<a href=SimpleArrayMap.html>K</a> key, <a href=SimpleArrayMap.html>V</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Add a new value to the array map only if the key does not already have a value or it ismapped to <code>{@code null}</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code><a href=SimpleArrayMap.html>V</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#remove(Object)>remove</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> key) </code>
+                                            </th>
+                                            <td class="colLast">Remove an existing key from the array map.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#remove(Object,Object)>remove</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> key, <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Remove an existing key from the array map only if it is currently mapped to <code>{@code value}</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code><a href=SimpleArrayMap.html>V</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#removeAt(int)>removeAt</a>(int index) </code>
+                                            </th>
+                                            <td class="colLast">Remove the key/value mapping at the given index.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code><a href=SimpleArrayMap.html>V</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#replace(K,V)>replace</a>(<a href=SimpleArrayMap.html>K</a> key, <a href=SimpleArrayMap.html>V</a> value) </code>
+                                            </th>
+                                            <td class="colLast">Replace the mapping for <code>{@code key}</code> only if it is already mapped to a value.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#replace(K,V,V)>replace</a>(<a href=SimpleArrayMap.html>K</a> key, <a href=SimpleArrayMap.html>V</a> oldValue, <a href=SimpleArrayMap.html>V</a> newValue) </code>
+                                            </th>
+                                            <td class="colLast">Replace the mapping for <code>{@code key}</code> only if it is already mapped to a value.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#size()>size</a>() </code>
+                                            </th>
+                                            <td class="colLast">Return the number of items in this array map.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#equals(Object)>equals</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object) </code>
+                                            </th>
+                                            <td class="colLast">This implementation returns false if the object is not a Map orSimpleArrayMap, or if the maps have different sizes.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#hashCode()>hashCode</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=SimpleArrayMap.html#toString()>toString</a>() </code>
+                                            </th>
+                                            <td class="colLast">This implementation composes a string by iterating over its mappings.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="SimpleArrayMap()"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>SimpleArrayMap</h4>
+                                        <pre>SimpleArrayMap()</pre>
+                                        <div class="block">Create a new empty ArrayMap.</div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="SimpleArrayMap(int)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>SimpleArrayMap</h4>
+                                        <pre>SimpleArrayMap(int capacity)</pre>
+                                        <div class="block">Create a new ArrayMap with a given initial capacity.</div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="SimpleArrayMap(SimpleArrayMap)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>SimpleArrayMap</h4>
+                                        <pre>SimpleArrayMap(<a href=SimpleArrayMap.html>SimpleArrayMap</a>&lt;<a href=SimpleArrayMap.html>K</a>, <a href=SimpleArrayMap.html>V</a>&gt; map)</pre>
+                                        <div class="block">Create a new ArrayMap with the mappings from the given ArrayMap.</div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="clear()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>clear</h4>
+                                        <pre class="methodSignature"> void <a href=SimpleArrayMap.html#clear()>clear</a>()</pre>
+                                        <div class="block"><p>Make the array map empty. All storage is released.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="ensureCapacity(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>ensureCapacity</h4>
+                                        <pre class="methodSignature"> void <a href=SimpleArrayMap.html#ensureCapacity(int)>ensureCapacity</a>(int minimumCapacity)</pre>
+                                        <div class="block"><p>Ensure the array map can hold at least minimumCapacityitems.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="containsKey(Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>containsKey</h4>
+                                        <pre class="methodSignature"> boolean <a href=SimpleArrayMap.html#containsKey(Object)>containsKey</a>(@<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> key)</pre>
+                                        <div class="block"><p>Check whether a key exists in the array.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key to search for.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="indexOfKey(Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>indexOfKey</h4>
+                                        <pre class="methodSignature"> int <a href=SimpleArrayMap.html#indexOfKey(Object)>indexOfKey</a>(@<a href=../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> key)</pre>
+                                        <div class="block"><p>Returns the index of a key in the set.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key to search for.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="containsValue(Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>containsValue</h4>
+                                        <pre class="methodSignature"> boolean <a href=SimpleArrayMap.html#containsValue(Object)>containsValue</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> value)</pre>
+                                        <div class="block"><p>Check whether a value exists in the array. This requires a linear searchthrough the entire array.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>value</code> - The value to search for.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="get(Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>get</h4>
+                                        <pre class="methodSignature">@<a href=../annotation/Nullable.html>Nullable</a>() <a href=SimpleArrayMap.html>V</a> <a href=SimpleArrayMap.html#get(Object)>get</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> key)</pre>
+                                        <div class="block"><p>Retrieve a value from the array.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key of the value to retrieve.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOrDefault(Object,V)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOrDefault</h4>
+                                        <pre class="methodSignature"> <a href=SimpleArrayMap.html>V</a> <a href=SimpleArrayMap.html#getOrDefault(Object,V)>getOrDefault</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> key, <a href=SimpleArrayMap.html>V</a> defaultValue)</pre>
+                                        <div class="block"><p>Retrieve a value from the array, or <code>{@code defaultValue}</code> if there is no mapping for the key.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key of the value to retrieve.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>defaultValue</code> - The default mapping of the key</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="keyAt(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>keyAt</h4>
+                                        <pre class="methodSignature"> <a href=SimpleArrayMap.html>K</a> <a href=SimpleArrayMap.html#keyAt(int)>keyAt</a>(int index)</pre>
+                                        <div class="block"><p>Return the key at the given index in the array.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>index</code> - The desired index, must be between 0 and <a href=SimpleArrayMap.html#size()>size</a>-1.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="valueAt(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>valueAt</h4>
+                                        <pre class="methodSignature"> <a href=SimpleArrayMap.html>V</a> <a href=SimpleArrayMap.html#valueAt(int)>valueAt</a>(int index)</pre>
+                                        <div class="block"><p>Return the value at the given index in the array.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>index</code> - The desired index, must be between 0 and <a href=SimpleArrayMap.html#size()>size</a>-1.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setValueAt(int,V)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setValueAt</h4>
+                                        <pre class="methodSignature"> <a href=SimpleArrayMap.html>V</a> <a href=SimpleArrayMap.html#setValueAt(int,V)>setValueAt</a>(int index, <a href=SimpleArrayMap.html>V</a> value)</pre>
+                                        <div class="block"><p>Set the value at a given index in the array.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>index</code> - The desired index, must be between 0 and <a href=SimpleArrayMap.html#size()>size</a>-1.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>value</code> - The new value to store at this index.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isEmpty()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isEmpty</h4>
+                                        <pre class="methodSignature"> boolean <a href=SimpleArrayMap.html#isEmpty()>isEmpty</a>()</pre>
+                                        <div class="block"><p>Return true if the array map contains no items.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="put(K,V)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>put</h4>
+                                        <pre class="methodSignature">@<a href=../annotation/Nullable.html>Nullable</a>() <a href=SimpleArrayMap.html>V</a> <a href=SimpleArrayMap.html#put(K,V)>put</a>(<a href=SimpleArrayMap.html>K</a> key, <a href=SimpleArrayMap.html>V</a> value)</pre>
+                                        <div class="block"><p>Add a new value to the array map.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key under which to store the value.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>value</code> - The value to store for the given key.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="putAll(SimpleArrayMap)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>putAll</h4>
+                                        <pre class="methodSignature"> void <a href=SimpleArrayMap.html#putAll(SimpleArrayMap)>putAll</a>(@<a href=../annotation/NonNull.html>NonNull</a>() <a href=SimpleArrayMap.html>SimpleArrayMap</a>&lt;out <a href=SimpleArrayMap.html>K</a>, out <a href=SimpleArrayMap.html>V</a>&gt; array)</pre>
+                                        <div class="block"><p>Perform a <a href=SimpleArrayMap.html#put(K,V)>put</a> of all key/value pairs in array</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>array</code> - The array whose contents are to be retrieved.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="putIfAbsent(K,V)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>putIfAbsent</h4>
+                                        <pre class="methodSignature">@<a href=../annotation/Nullable.html>Nullable</a>() <a href=SimpleArrayMap.html>V</a> <a href=SimpleArrayMap.html#putIfAbsent(K,V)>putIfAbsent</a>(<a href=SimpleArrayMap.html>K</a> key, <a href=SimpleArrayMap.html>V</a> value)</pre>
+                                        <div class="block"><p>Add a new value to the array map only if the key does not already have a value or it ismapped to <code>{@code null}</code>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key under which to store the value.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>value</code> - The value to store for the given key.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="remove(Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>remove</h4>
+                                        <pre class="methodSignature">@<a href=../annotation/Nullable.html>Nullable</a>() <a href=SimpleArrayMap.html>V</a> <a href=SimpleArrayMap.html#remove(Object)>remove</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> key)</pre>
+                                        <div class="block"><p>Remove an existing key from the array map.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key of the mapping to remove.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="remove(Object,Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>remove</h4>
+                                        <pre class="methodSignature"> boolean <a href=SimpleArrayMap.html#remove(Object,Object)>remove</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> key, <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> value)</pre>
+                                        <div class="block"><p>Remove an existing key from the array map only if it is currently mapped to <code>{@code value}</code>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key of the mapping to remove.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>value</code> - The value expected to be mapped to the key.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="removeAt(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>removeAt</h4>
+                                        <pre class="methodSignature"> <a href=SimpleArrayMap.html>V</a> <a href=SimpleArrayMap.html#removeAt(int)>removeAt</a>(int index)</pre>
+                                        <div class="block"><p>Remove the key/value mapping at the given index.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>index</code> - The desired index, must be between 0 and <a href=SimpleArrayMap.html#size()>size</a>-1.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="replace(K,V)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>replace</h4>
+                                        <pre class="methodSignature">@<a href=../annotation/Nullable.html>Nullable</a>() <a href=SimpleArrayMap.html>V</a> <a href=SimpleArrayMap.html#replace(K,V)>replace</a>(<a href=SimpleArrayMap.html>K</a> key, <a href=SimpleArrayMap.html>V</a> value)</pre>
+                                        <div class="block"><p>Replace the mapping for <code>{@code key}</code> only if it is already mapped to a value.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key of the mapping to replace.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>value</code> - The value to store for the given key.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="replace(K,V,V)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>replace</h4>
+                                        <pre class="methodSignature"> boolean <a href=SimpleArrayMap.html#replace(K,V,V)>replace</a>(<a href=SimpleArrayMap.html>K</a> key, <a href=SimpleArrayMap.html>V</a> oldValue, <a href=SimpleArrayMap.html>V</a> newValue)</pre>
+                                        <div class="block"><p>Replace the mapping for <code>{@code key}</code> only if it is already mapped to a value.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>key</code> - The key of the mapping to replace.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>oldValue</code> - The value expected to be mapped to the key.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>newValue</code> - The value to store for the given key.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="size()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>size</h4>
+                                        <pre class="methodSignature"> int <a href=SimpleArrayMap.html#size()>size</a>()</pre>
+                                        <div class="block"><p>Return the number of items in this array map.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="equals(Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>equals</h4>
+                                        <pre class="methodSignature"> boolean <a href=SimpleArrayMap.html#equals(Object)>equals</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> object)</pre>
+                                        <div class="block"><p>This implementation returns false if the object is not a Map orSimpleArrayMap, or if the maps have different sizes. Otherwise, for eachkey in this map, values of both maps are compared. If the values for anykey are not equal, the method returns false, otherwise it returns true.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="hashCode()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>hashCode</h4>
+                                        <pre class="methodSignature"> int <a href=SimpleArrayMap.html#hashCode()>hashCode</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="toString()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>toString</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=SimpleArrayMap.html#toString()>toString</a>()</pre>
+                                        <div class="block"><p>This implementation composes a string by iterating over its mappings. Ifthis map contains itself as a key or a value, the string "(this Map)"will appear in its place.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

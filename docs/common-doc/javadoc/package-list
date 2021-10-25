@@ -1,0 +1,250 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.tds.common.account/TdsAccount.AccountType///PointingToDeclaration/com/tds/common/account/TdsAccount.AccountType.html
+$dokka.location:com.tds.common.entities/TapConfig.Builder///PointingToDeclaration/com/tds/common/entities/TapConfig.Builder.html
+$dokka.location:com.tds.common.log.entities/LogConfig.Builder///PointingToDeclaration/com/tds/common/log/entities/LogConfig.Builder.html
+$dokka.location:com.tds.common.models/TapRegionType.Region///PointingToDeclaration/com/tds/common/models/TapRegionType.Region.html
+$dokka.location:com.tds.common.net.constant/Constants.HTTP_COMMON_HEADERS///PointingToDeclaration/com/tds/common/net/constant/Constants.HTTP_COMMON_HEADERS.html
+$dokka.location:com.tds.common.net.constant/Constants.HTTP_CONTENT_TYPE///PointingToDeclaration/com/tds/common/net/constant/Constants.HTTP_CONTENT_TYPE.html
+$dokka.location:com.tds.common.net.constant/Constants.HTTP_STANDARD_HEADERS///PointingToDeclaration/com/tds/common/net/constant/Constants.HTTP_STANDARD_HEADERS.html
+$dokka.location:com.tds.common.net.intercerptor/AuthInterceptor.TDSAccountProvider///PointingToDeclaration/com/tds/common/net/intercerptor/AuthInterceptor.TDSAccountProvider.html
+$dokka.location:com.tds.common.net/TDSNetInterceptor.CheckAuthCallback///PointingToDeclaration/com/tds/common/net/TDSNetInterceptor.CheckAuthCallback.html
+$dokka.location:com.tds.common.net/TdsApiClient.Builder///PointingToDeclaration/com/tds/common/net/TdsApiClient.Builder.html
+$dokka.location:com.tds.common.net/TdsHttp.Call///PointingToDeclaration/com/tds/common/net/TdsHttp.Call.html
+$dokka.location:com.tds.common.net/TdsHttp.Client.Builder///PointingToDeclaration/com/tds/common/net/TdsHttp.Client.Builder.html
+$dokka.location:com.tds.common.net/TdsHttp.Client///PointingToDeclaration/com/tds/common/net/TdsHttp.Client.html
+$dokka.location:com.tds.common.net/TdsHttp.FormBody.Builder///PointingToDeclaration/com/tds/common/net/TdsHttp.FormBody.Builder.html
+$dokka.location:com.tds.common.net/TdsHttp.FormBody///PointingToDeclaration/com/tds/common/net/TdsHttp.FormBody.html
+$dokka.location:com.tds.common.net/TdsHttp.Interceptor.Chain///PointingToDeclaration/com/tds/common/net/TdsHttp.Interceptor.Chain.html
+$dokka.location:com.tds.common.net/TdsHttp.Interceptor///PointingToDeclaration/com/tds/common/net/TdsHttp.Interceptor.html
+$dokka.location:com.tds.common.net/TdsHttp.MultipartBody.Builder///PointingToDeclaration/com/tds/common/net/TdsHttp.MultipartBody.Builder.html
+$dokka.location:com.tds.common.net/TdsHttp.MultipartBody.Part///PointingToDeclaration/com/tds/common/net/TdsHttp.MultipartBody.Part.html
+$dokka.location:com.tds.common.net/TdsHttp.MultipartBody///PointingToDeclaration/com/tds/common/net/TdsHttp.MultipartBody.html
+$dokka.location:com.tds.common.net/TdsHttp.Request.Builder///PointingToDeclaration/com/tds/common/net/TdsHttp.Request.Builder.html
+$dokka.location:com.tds.common.net/TdsHttp.Request///PointingToDeclaration/com/tds/common/net/TdsHttp.Request.html
+$dokka.location:com.tds.common.net/TdsHttp.RequestBody///PointingToDeclaration/com/tds/common/net/TdsHttp.RequestBody.html
+$dokka.location:com.tds.common.net/TdsHttp.Response.Builder///PointingToDeclaration/com/tds/common/net/TdsHttp.Response.Builder.html
+$dokka.location:com.tds.common.net/TdsHttp.Response///PointingToDeclaration/com/tds/common/net/TdsHttp.Response.html
+$dokka.location:com.tds.common.net/TdsHttp.ResponseBody///PointingToDeclaration/com/tds/common/net/TdsHttp.ResponseBody.html
+$dokka.location:com.tds.common.net/XUAParams.Builder///PointingToDeclaration/com/tds/common/net/XUAParams.Builder.html
+$dokka.location:com.tds.common.reactor.exceptions/OnErrorThrowable.OnNextValue///PointingToDeclaration/com/tds/common/reactor/exceptions/OnErrorThrowable.OnNextValue.html
+$dokka.location:com.tds.common.reactor.schedulers/Scheduler.Worker///PointingToDeclaration/com/tds/common/reactor/schedulers/Scheduler.Worker.html
+$dokka.location:com.tds.common.reactor.transformer/FlowArbiter.FlowResult///PointingToDeclaration/com/tds/common/reactor/transformer/FlowArbiter.FlowResult.html
+$dokka.location:com.tds.common.reactor/Emitter.BackpressureMode///PointingToDeclaration/com/tds/common/reactor/Emitter.BackpressureMode.html
+$dokka.location:com.tds.common.reactor/Observable.OnSubscribe///PointingToDeclaration/com/tds/common/reactor/Observable.OnSubscribe.html
+$dokka.location:com.tds.common.reactor/Observable.Operator///PointingToDeclaration/com/tds/common/reactor/Observable.Operator.html
+$dokka.location:com.tds.common.region/TdsRegionHelper.RegionCallback///PointingToDeclaration/com/tds/common/region/TdsRegionHelper.RegionCallback.html
+$dokka.location:com.tds.common.tracker.annotations/Login.StringLoginActionType///PointingToDeclaration/com/tds/common/tracker/annotations/Login.StringLoginActionType.html
+$dokka.location:com.tds.common.tracker.annotations/Login.StringLoginType///PointingToDeclaration/com/tds/common/tracker/annotations/Login.StringLoginType.html
+$dokka.location:com.tds.common.tracker.annotations/Page.StringAction///PointingToDeclaration/com/tds/common/tracker/annotations/Page.StringAction.html
+$dokka.location:com.tds.common.tracker.annotations/Page.StringID///PointingToDeclaration/com/tds/common/tracker/annotations/Page.StringID.html
+$dokka.location:com.tds.common.tracker.annotations/Page.StringName///PointingToDeclaration/com/tds/common/tracker/annotations/Page.StringName.html
+$dokka.location:com.tds.common.tracker.annotations/Session.IntType///PointingToDeclaration/com/tds/common/tracker/annotations/Session.IntType.html
+$dokka.location:com.tds.common.tracker.constants/TrackerType.Type///PointingToDeclaration/com/tds/common/tracker/constants/TrackerType.Type.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.Log.Builder///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.Log.Builder.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.Log///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.Log.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.LogContent.Builder///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.LogContent.Builder.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.LogContent///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.LogContent.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.LogContentOrBuilder///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.LogContentOrBuilder.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.LogGroup.Builder///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.LogGroup.Builder.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.LogGroup///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.LogGroup.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.LogGroupList.Builder///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.LogGroupList.Builder.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.LogGroupList///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.LogGroupList.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.LogGroupListOrBuilder///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.LogGroupListOrBuilder.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.LogGroupOrBuilder///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.LogGroupOrBuilder.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.LogOrBuilder///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.LogOrBuilder.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.LogTag.Builder///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.LogTag.Builder.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.LogTag///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.LogTag.html
+$dokka.location:com.tds.common.tracker.entities/LogBean.LogTagOrBuilder///PointingToDeclaration/com/tds/common/tracker/entities/LogBean.LogTagOrBuilder.html
+$dokka.location:com.tds.common.tracker.model/ActionModel.Type///PointingToDeclaration/com/tds/common/tracker/model/ActionModel.Type.html
+$dokka.location:com.tds.common.tracker/TdsTrackerConfig.Builder///PointingToDeclaration/com/tds/common/tracker/TdsTrackerConfig.Builder.html
+$dokka.location:com.tds.common.tracker/TdsTrackerManager.Holder///PointingToDeclaration/com/tds/common/tracker/TdsTrackerManager.Holder.html
+$dokka.location:com.tds.common.tracker/TdsTrackerManager.TrackerEvent///PointingToDeclaration/com/tds/common/tracker/TdsTrackerManager.TrackerEvent.html
+$dokka.location:com.tds.common.websocket.server/WebSocketServer.WebSocketWorker///PointingToDeclaration/com/tds/common/websocket/server/WebSocketServer.WebSocketWorker.html
+$dokka.location:com.tds.common.websocket.util/Base64.OutputStream///PointingToDeclaration/com/tds/common/websocket/util/Base64.OutputStream.html
+$dokka.location:com.tds.common.websocket/TDSWebSocketService.WebSocketConfig///PointingToDeclaration/com/tds/common/websocket/TDSWebSocketService.WebSocketConfig.html
+$dokka.location:com.tds.common.websocket/TDSWebSocketService.WebSocketConfigBuilder///PointingToDeclaration/com/tds/common/websocket/TDSWebSocketService.WebSocketConfigBuilder.html
+$dokka.location:com.tds.common.websocket/WebSocketMessage.Type///PointingToDeclaration/com/tds/common/websocket/WebSocketMessage.Type.html
+$dokka.location:com.tds.common.widgets.behavior/BottomSheetBehavior.BottomSheetCallback///PointingToDeclaration/com/tds/common/widgets/behavior/BottomSheetBehavior.BottomSheetCallback.html
+$dokka.location:com.tds.common.widgets.behavior/BottomSheetBehavior.SaveFlags///PointingToDeclaration/com/tds/common/widgets/behavior/BottomSheetBehavior.SaveFlags.html
+$dokka.location:com.tds.common.widgets.behavior/BottomSheetBehavior.State///PointingToDeclaration/com/tds/common/widgets/behavior/BottomSheetBehavior.State.html
+$dokka.location:com.tds.common.widgets.dialog/AbstractAlertDialog.AlertClickCallback///PointingToDeclaration/com/tds/common/widgets/dialog/AbstractAlertDialog.AlertClickCallback.html
+$dokka.location:com.tds.common.widgets.dialog/AbstractAlertDialog.Event///PointingToDeclaration/com/tds/common/widgets/dialog/AbstractAlertDialog.Event.html
+$dokka.location:tds.androidx.annotation/RestrictTo.Scope///PointingToDeclaration/tds/androidx/annotation/RestrictTo.Scope.html
+$dokka.location:tds.androidx.coordinatorlayout.widget/CoordinatorLayout.AttachedBehavior///PointingToDeclaration/tds/androidx/coordinatorlayout/widget/CoordinatorLayout.AttachedBehavior.html
+$dokka.location:tds.androidx.coordinatorlayout.widget/CoordinatorLayout.Behavior///PointingToDeclaration/tds/androidx/coordinatorlayout/widget/CoordinatorLayout.Behavior.html
+$dokka.location:tds.androidx.coordinatorlayout.widget/CoordinatorLayout.DefaultBehavior///PointingToDeclaration/tds/androidx/coordinatorlayout/widget/CoordinatorLayout.DefaultBehavior.html
+$dokka.location:tds.androidx.coordinatorlayout.widget/CoordinatorLayout.DispatchChangeEvent///PointingToDeclaration/tds/androidx/coordinatorlayout/widget/CoordinatorLayout.DispatchChangeEvent.html
+$dokka.location:tds.androidx.coordinatorlayout.widget/CoordinatorLayout.LayoutParams///PointingToDeclaration/tds/androidx/coordinatorlayout/widget/CoordinatorLayout.LayoutParams.html
+$dokka.location:tds.androidx.core.util/Pools.Pool///PointingToDeclaration/tds/androidx/core/util/Pools.Pool.html
+$dokka.location:tds.androidx.core.util/Pools.SimplePool///PointingToDeclaration/tds/androidx/core/util/Pools.SimplePool.html
+$dokka.location:tds.androidx.core.util/Pools.SynchronizedPool///PointingToDeclaration/tds/androidx/core/util/Pools.SynchronizedPool.html
+$dokka.location:tds.androidx.core.view/ViewCompat.FocusDirection///PointingToDeclaration/tds/androidx/core/view/ViewCompat.FocusDirection.html
+$dokka.location:tds.androidx.core.view/ViewCompat.FocusRealDirection///PointingToDeclaration/tds/androidx/core/view/ViewCompat.FocusRealDirection.html
+$dokka.location:tds.androidx.core.view/ViewCompat.FocusRelativeDirection///PointingToDeclaration/tds/androidx/core/view/ViewCompat.FocusRelativeDirection.html
+$dokka.location:tds.androidx.core.view/ViewCompat.NestedScrollType///PointingToDeclaration/tds/androidx/core/view/ViewCompat.NestedScrollType.html
+$dokka.location:tds.androidx.core.view/ViewCompat.OnUnhandledKeyEventListenerCompat///PointingToDeclaration/tds/androidx/core/view/ViewCompat.OnUnhandledKeyEventListenerCompat.html
+$dokka.location:tds.androidx.core.view/ViewCompat.ScrollAxis///PointingToDeclaration/tds/androidx/core/view/ViewCompat.ScrollAxis.html
+$dokka.location:tds.androidx.core.view/ViewCompat.ScrollIndicators///PointingToDeclaration/tds/androidx/core/view/ViewCompat.ScrollIndicators.html
+$dokka.location:tds.androidx.core.view/WindowInsetsCompat.Builder///PointingToDeclaration/tds/androidx/core/view/WindowInsetsCompat.Builder.html
+$dokka.location:tds.androidx.core.view/WindowInsetsCompat.Type.InsetsType///PointingToDeclaration/tds/androidx/core/view/WindowInsetsCompat.Type.InsetsType.html
+$dokka.location:tds.androidx.core.view/WindowInsetsCompat.Type///PointingToDeclaration/tds/androidx/core/view/WindowInsetsCompat.Type.html
+$dokka.location:tds.androidx.customview.widget/ViewDragHelper.Callback///PointingToDeclaration/tds/androidx/customview/widget/ViewDragHelper.Callback.html
+$dokka.location:tds.androidx.recyclerview.widget/AsyncDifferConfig.Builder///PointingToDeclaration/tds/androidx/recyclerview/widget/AsyncDifferConfig.Builder.html
+$dokka.location:tds.androidx.recyclerview.widget/AsyncListDiffer.ListListener///PointingToDeclaration/tds/androidx/recyclerview/widget/AsyncListDiffer.ListListener.html
+$dokka.location:tds.androidx.recyclerview.widget/AsyncListUtil.DataCallback///PointingToDeclaration/tds/androidx/recyclerview/widget/AsyncListUtil.DataCallback.html
+$dokka.location:tds.androidx.recyclerview.widget/AsyncListUtil.ViewCallback///PointingToDeclaration/tds/androidx/recyclerview/widget/AsyncListUtil.ViewCallback.html
+$dokka.location:tds.androidx.recyclerview.widget/ConcatAdapter.Config.Builder///PointingToDeclaration/tds/androidx/recyclerview/widget/ConcatAdapter.Config.Builder.html
+$dokka.location:tds.androidx.recyclerview.widget/ConcatAdapter.Config.StableIdMode///PointingToDeclaration/tds/androidx/recyclerview/widget/ConcatAdapter.Config.StableIdMode.html
+$dokka.location:tds.androidx.recyclerview.widget/ConcatAdapter.Config///PointingToDeclaration/tds/androidx/recyclerview/widget/ConcatAdapter.Config.html
+$dokka.location:tds.androidx.recyclerview.widget/DiffUtil.Callback///PointingToDeclaration/tds/androidx/recyclerview/widget/DiffUtil.Callback.html
+$dokka.location:tds.androidx.recyclerview.widget/DiffUtil.DiffResult///PointingToDeclaration/tds/androidx/recyclerview/widget/DiffUtil.DiffResult.html
+$dokka.location:tds.androidx.recyclerview.widget/DiffUtil.ItemCallback///PointingToDeclaration/tds/androidx/recyclerview/widget/DiffUtil.ItemCallback.html
+$dokka.location:tds.androidx.recyclerview.widget/GridLayoutManager.DefaultSpanSizeLookup///PointingToDeclaration/tds/androidx/recyclerview/widget/GridLayoutManager.DefaultSpanSizeLookup.html
+$dokka.location:tds.androidx.recyclerview.widget/GridLayoutManager.LayoutParams///PointingToDeclaration/tds/androidx/recyclerview/widget/GridLayoutManager.LayoutParams.html
+$dokka.location:tds.androidx.recyclerview.widget/GridLayoutManager.SpanSizeLookup///PointingToDeclaration/tds/androidx/recyclerview/widget/GridLayoutManager.SpanSizeLookup.html
+$dokka.location:tds.androidx.recyclerview.widget/ItemTouchHelper.Callback///PointingToDeclaration/tds/androidx/recyclerview/widget/ItemTouchHelper.Callback.html
+$dokka.location:tds.androidx.recyclerview.widget/ItemTouchHelper.SimpleCallback///PointingToDeclaration/tds/androidx/recyclerview/widget/ItemTouchHelper.SimpleCallback.html
+$dokka.location:tds.androidx.recyclerview.widget/ItemTouchHelper.ViewDropHandler///PointingToDeclaration/tds/androidx/recyclerview/widget/ItemTouchHelper.ViewDropHandler.html
+$dokka.location:tds.androidx.recyclerview.widget/LinearLayoutManager.SavedState///PointingToDeclaration/tds/androidx/recyclerview/widget/LinearLayoutManager.SavedState.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.Adapter.StateRestorationPolicy///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.Adapter.StateRestorationPolicy.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.Adapter///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.Adapter.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.AdapterDataObserver///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.AdapterDataObserver.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.ChildDrawingOrderCallback///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.ChildDrawingOrderCallback.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.EdgeEffectFactory.EdgeDirection///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.EdgeEffectFactory.EdgeDirection.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.EdgeEffectFactory///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.EdgeEffectFactory.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.ItemAnimator.AdapterChanges///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.ItemAnimator.AdapterChanges.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.ItemAnimator.ItemAnimatorFinishedListener///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.ItemAnimator.ItemAnimatorFinishedListener.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.ItemAnimator.ItemHolderInfo///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.ItemAnimator.ItemHolderInfo.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.ItemAnimator///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.ItemAnimator.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.ItemDecoration///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.ItemDecoration.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.LayoutManager.LayoutPrefetchRegistry///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.LayoutManager.LayoutPrefetchRegistry.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.LayoutManager.Properties///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.LayoutManager.Properties.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.LayoutManager///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.LayoutManager.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.LayoutParams///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.LayoutParams.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.OnChildAttachStateChangeListener///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.OnChildAttachStateChangeListener.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.OnFlingListener///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.OnFlingListener.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.OnItemTouchListener///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.OnItemTouchListener.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.OnScrollListener///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.OnScrollListener.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.Orientation///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.Orientation.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.RecycledViewPool///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.RecycledViewPool.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.Recycler///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.Recycler.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.RecyclerListener///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.RecyclerListener.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.SavedState///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.SavedState.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.SimpleOnItemTouchListener///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.SimpleOnItemTouchListener.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.SmoothScroller.Action///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.SmoothScroller.Action.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.SmoothScroller.ScrollVectorProvider///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.SmoothScroller.ScrollVectorProvider.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.SmoothScroller///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.SmoothScroller.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.State///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.State.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.ViewCacheExtension///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.ViewCacheExtension.html
+$dokka.location:tds.androidx.recyclerview.widget/RecyclerView.ViewHolder///PointingToDeclaration/tds/androidx/recyclerview/widget/RecyclerView.ViewHolder.html
+$dokka.location:tds.androidx.recyclerview.widget/SortedList.BatchedCallback///PointingToDeclaration/tds/androidx/recyclerview/widget/SortedList.BatchedCallback.html
+$dokka.location:tds.androidx.recyclerview.widget/SortedList.Callback///PointingToDeclaration/tds/androidx/recyclerview/widget/SortedList.Callback.html
+$dokka.location:tds.androidx.recyclerview.widget/StaggeredGridLayoutManager.LayoutParams///PointingToDeclaration/tds/androidx/recyclerview/widget/StaggeredGridLayoutManager.LayoutParams.html
+$dokka.location:tds.androidx.recyclerview.widget/StaggeredGridLayoutManager.SavedState///PointingToDeclaration/tds/androidx/recyclerview/widget/StaggeredGridLayoutManager.SavedState.html
+$dokka.location:tds.androidx.viewpager/FragmentCompat.OnRequestPermissionsResultCallback///PointingToDeclaration/tds/androidx/viewpager/FragmentCompat.OnRequestPermissionsResultCallback.html
+$dokka.location:tds.androidx.viewpager/FragmentCompat.PermissionCompatDelegate///PointingToDeclaration/tds/androidx/viewpager/FragmentCompat.PermissionCompatDelegate.html
+$dokka.location:tds.androidx.viewpager/ViewPager.DecorView///PointingToDeclaration/tds/androidx/viewpager/ViewPager.DecorView.html
+$dokka.location:tds.androidx.viewpager/ViewPager.LayoutParams///PointingToDeclaration/tds/androidx/viewpager/ViewPager.LayoutParams.html
+$dokka.location:tds.androidx.viewpager/ViewPager.OnAdapterChangeListener///PointingToDeclaration/tds/androidx/viewpager/ViewPager.OnAdapterChangeListener.html
+$dokka.location:tds.androidx.viewpager/ViewPager.OnPageChangeListener///PointingToDeclaration/tds/androidx/viewpager/ViewPager.OnPageChangeListener.html
+$dokka.location:tds.androidx.viewpager/ViewPager.PageTransformer///PointingToDeclaration/tds/androidx/viewpager/ViewPager.PageTransformer.html
+$dokka.location:tds.androidx.viewpager/ViewPager.SavedState///PointingToDeclaration/tds/androidx/viewpager/ViewPager.SavedState.html
+$dokka.location:tds.androidx.viewpager/ViewPager.SimpleOnPageChangeListener///PointingToDeclaration/tds/androidx/viewpager/ViewPager.SimpleOnPageChangeListener.html
+$dokka.location:tds.com.google.android.material.internal/ViewUtils.OnApplyWindowInsetsListener///PointingToDeclaration/tds/com/google/android/material/internal/ViewUtils.OnApplyWindowInsetsListener.html
+$dokka.location:tds.com.google.android.material.internal/ViewUtils.RelativePadding///PointingToDeclaration/tds/com/google/android/material/internal/ViewUtils.RelativePadding.html
+com.tds.common.account
+com.tds.common.annotation
+com.tds.common.bridge
+com.tds.common.bridge.annotation
+com.tds.common.bridge.command
+com.tds.common.bridge.exception
+com.tds.common.bridge.result
+com.tds.common.bridge.utils
+com.tds.common.entities
+com.tds.common.io
+com.tds.common.isc
+com.tds.common.localize
+com.tds.common.localize.model
+com.tds.common.log
+com.tds.common.log.constants
+com.tds.common.log.entities
+com.tds.common.log.wrapper
+com.tds.common.models
+com.tds.common.net
+com.tds.common.net.constant
+com.tds.common.net.error
+com.tds.common.net.exception
+com.tds.common.net.intercerptor
+com.tds.common.net.json
+com.tds.common.net.util
+com.tds.common.permission
+com.tds.common.reactor
+com.tds.common.reactor.exceptions
+com.tds.common.reactor.functions
+com.tds.common.reactor.internal.observers
+com.tds.common.reactor.internal.operators
+com.tds.common.reactor.internal.producers
+com.tds.common.reactor.internal.schedulers
+com.tds.common.reactor.internal.util
+com.tds.common.reactor.internal.util.atomic
+com.tds.common.reactor.internal.util.unsafe
+com.tds.common.reactor.observers
+com.tds.common.reactor.operators
+com.tds.common.reactor.plugins
+com.tds.common.reactor.rxandroid.plugins
+com.tds.common.reactor.rxandroid.schedulers
+com.tds.common.reactor.schedulers
+com.tds.common.reactor.subjects
+com.tds.common.reactor.subscriptions
+com.tds.common.reactor.transformer
+com.tds.common.reactor.util
+com.tds.common.region
+com.tds.common.tracker
+com.tds.common.tracker.annotations
+com.tds.common.tracker.constants
+com.tds.common.tracker.entities
+com.tds.common.tracker.exceptions
+com.tds.common.tracker.model
+com.tds.common.tracker.session
+com.tds.common.utils
+com.tds.common.websocket
+com.tds.common.websocket.client
+com.tds.common.websocket.conn
+com.tds.common.websocket.drafts
+com.tds.common.websocket.enums
+com.tds.common.websocket.exceptions
+com.tds.common.websocket.extensions
+com.tds.common.websocket.extensions.permessage_deflate
+com.tds.common.websocket.framing
+com.tds.common.websocket.handshake
+com.tds.common.websocket.interfaces
+com.tds.common.websocket.protocols
+com.tds.common.websocket.server
+com.tds.common.websocket.util
+com.tds.common.widgets
+com.tds.common.widgets.behavior
+com.tds.common.widgets.dialog
+com.tds.common.widgets.image
+com.tds.common.widgets.slidesheet
+com.tds.common.widgets.toast
+com.tds.common.wrapper
+tds.androidx.annotation
+tds.androidx.collection
+tds.androidx.coordinatorlayout.widget
+tds.androidx.core.accessibilityservice
+tds.androidx.core.app
+tds.androidx.core.content
+tds.androidx.core.graphics
+tds.androidx.core.graphics.drawable
+tds.androidx.core.math
+tds.androidx.core.os
+tds.androidx.core.util
+tds.androidx.core.view
+tds.androidx.core.widget
+tds.androidx.customview.view
+tds.androidx.customview.widget
+tds.androidx.recyclerview.widget
+tds.androidx.viewpager
+tds.com.google.android.material.internal
+

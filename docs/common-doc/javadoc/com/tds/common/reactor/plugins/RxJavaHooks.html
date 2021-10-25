@@ -1,0 +1,1544 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>RxJavaHooks unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class RxJavaHooks" class="title">Class RxJavaHooks</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public final class <span class="typeNameLabel"><a href=RxJavaHooks.html>RxJavaHooks</a></span>
+
+                    </pre>
+                    <div class="block"><p>Utility class that holds hooks for various Observable, Single and Completable lifecycle-related points as well as Scheduler hooks. </p><p>The class features a lockdown state, see <a href=RxJavaHooks.html#lockdown()>lockdown</a> and <a href=RxJavaHooks.html#isLockdown()>isLockdown</a>, to prevent further changes to the hooks.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code> static volatile <a href=../functions/Action1.html>Action1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onError>onError</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code> static volatile <a href=../functions/Func1.html>Func1</a>&lt;<a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onObservableCreate>onObservableCreate</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code> static volatile <a href=../functions/Func2.html>Func2</a>&lt;<a href=../Observable.html>Observable</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onObservableStart>onObservableStart</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code> static volatile <a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onComputationScheduler>onComputationScheduler</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code> static volatile <a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onIOScheduler>onIOScheduler</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code> static volatile <a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onNewThreadScheduler>onNewThreadScheduler</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code> static volatile <a href=../functions/Func1.html>Func1</a>&lt;<a href=../functions/Action0.html>Action0</a>, <a href=../functions/Action0.html>Action0</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onScheduleAction>onScheduleAction</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code> static volatile <a href=../functions/Func1.html>Func1</a>&lt;<a href=../Subscription.html>Subscription</a>, <a href=../Subscription.html>Subscription</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onObservableReturn>onObservableReturn</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code> static volatile <a href=../functions/Func1.html>Func1</a>&lt;<a href=../Subscription.html>Subscription</a>, <a href=../Subscription.html>Subscription</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onSingleReturn>onSingleReturn</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code> static volatile <a href=../functions/Func0.html>Func0</a>&lt;out <a href=https://developer.android.com/reference/kotlin/java/util/concurrent/ScheduledExecutorService.html>ScheduledExecutorService</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onGenericScheduledExecutorService>onGenericScheduledExecutorService</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code> static volatile <a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onObservableSubscribeError>onObservableSubscribeError</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code> static volatile <a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onSingleSubscribeError>onSingleSubscribeError</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code> static volatile <a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt;</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onCompletableSubscribeError>onCompletableSubscribeError</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Action1.html>Action1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#getOnError()>getOnError</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current global error handler hook action or null if it isset to the default one that signals errors to the current threadsUncaughtExceptionHandler.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#setOnError(Action1)>setOnError</a>(<a href=../functions/Action1.html>Action1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt; onError) </code>
+                                            </th>
+                                            <td class="colLast">Sets the global error consumer action unless a lockdown is in effect.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#getOnObservableCreate()>getOnObservableCreate</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current Observable onCreate hook function or null if it isset to the default pass-through.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#setOnObservableCreate(Func1)>setOnObservableCreate</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&gt; onObservableCreate) </code>
+                                            </th>
+                                            <td class="colLast">Sets the Observable onCreate hook function unless a lockdown is in effect.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Func2.html>Func2</a>&lt;<a href=../Observable.html>Observable</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#getOnObservableStart()>getOnObservableStart</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current Observable onStart hook function or null if it isset to the default pass-through.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#setOnObservableStart(Func2)>setOnObservableStart</a>(<a href=../functions/Func2.html>Func2</a>&lt;<a href=../Observable.html>Observable</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&gt; onObservableStart) </code>
+                                            </th>
+                                            <td class="colLast">Sets the hook function that is called when a subscriber subscribes to a Observableunless a lockdown is in effect.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#getOnComputationScheduler()>getOnComputationScheduler</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current computation scheduler hook function or null if it isset to the default pass-through.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#setOnComputationScheduler(Func1)>setOnComputationScheduler</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt; onComputationScheduler) </code>
+                                            </th>
+                                            <td class="colLast">Sets the hook function for returning a scheduler when the Schedulers.computation() is calledunless a lockdown is in effect.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#getOnIOScheduler()>getOnIOScheduler</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current io scheduler hook function or null if it isset to the default pass-through.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#setOnIOScheduler(Func1)>setOnIOScheduler</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt; onIOScheduler) </code>
+                                            </th>
+                                            <td class="colLast">Sets the hook function for returning a scheduler when the Schedulers.io() is calledunless a lockdown is in effect.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#getOnNewThreadScheduler()>getOnNewThreadScheduler</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current new thread scheduler hook function or null if it isset to the default pass-through.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#setOnNewThreadScheduler(Func1)>setOnNewThreadScheduler</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt; onNewThreadScheduler) </code>
+                                            </th>
+                                            <td class="colLast">Sets the hook function for returning a scheduler when the Schedulers.newThread() is calledunless a lockdown is in effect.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../functions/Action0.html>Action0</a>, <a href=../functions/Action0.html>Action0</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#getOnScheduleAction()>getOnScheduleAction</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current schedule action hook function or null if it isset to the default pass-through.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#setOnScheduleAction(Func1)>setOnScheduleAction</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../functions/Action0.html>Action0</a>, <a href=../functions/Action0.html>Action0</a>&gt; onScheduleAction) </code>
+                                            </th>
+                                            <td class="colLast">Sets the hook function that is called before an action is scheduled, allowingdecorating that function, unless a lockdown is in effect.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../Subscription.html>Subscription</a>, <a href=../Subscription.html>Subscription</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#getOnObservableReturn()>getOnObservableReturn</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current Observable onReturn hook function or null if it isset to the default pass-through.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#setOnObservableReturn(Func1)>setOnObservableReturn</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../Subscription.html>Subscription</a>, <a href=../Subscription.html>Subscription</a>&gt; onObservableReturn) </code>
+                                            </th>
+                                            <td class="colLast">Sets a hook function that is called when the Observable.subscribe() callis about to return a Subscription unless a lockdown is in effect.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../Subscription.html>Subscription</a>, <a href=../Subscription.html>Subscription</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#getOnSingleReturn()>getOnSingleReturn</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current Single onReturn hook function or null if it isset to the default pass-through.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#setOnSingleReturn(Func1)>setOnSingleReturn</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../Subscription.html>Subscription</a>, <a href=../Subscription.html>Subscription</a>&gt; onSingleReturn) </code>
+                                            </th>
+                                            <td class="colLast">Sets a hook function that is called when the Single.subscribe() callis about to return a Subscription unless a lockdown is in effect.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Func0.html>Func0</a>&lt;out <a href=https://developer.android.com/reference/kotlin/java/util/concurrent/ScheduledExecutorService.html>ScheduledExecutorService</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#getOnGenericScheduledExecutorService()>getOnGenericScheduledExecutorService</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current factory for creating ScheduledExecutorServices inGenericScheduledExecutorService utility.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#setOnGenericScheduledExecutorService(Func0)>setOnGenericScheduledExecutorService</a>(<a href=../functions/Func0.html>Func0</a>&lt;out <a href=https://developer.android.com/reference/kotlin/java/util/concurrent/ScheduledExecutorService.html>ScheduledExecutorService</a>&gt; factory) </code>
+                                            </th>
+                                            <td class="colLast">Sets the hook function for returning a ScheduledExecutorService usedby the GenericScheduledExecutorService for background tasks.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#getOnObservableSubscribeError()>getOnObservableSubscribeError</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current Observable onSubscribeError hook function or null if it isset to the default pass-through.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#setOnObservableSubscribeError(Func1)>setOnObservableSubscribeError</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt; onObservableSubscribeError) </code>
+                                            </th>
+                                            <td class="colLast">Sets a hook function that is called when the Observable.subscribe() callfails with an exception.</td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#getOnSingleSubscribeError()>getOnSingleSubscribeError</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current Single onSubscribeError hook function or null if it isset to the default pass-through.</td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#setOnSingleSubscribeError(Func1)>setOnSingleSubscribeError</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt; onSingleSubscribeError) </code>
+                                            </th>
+                                            <td class="colLast">Sets a hook function that is called when the Single.subscribe() callfails with an exception.</td>
+                                        </tr>
+                                        
+                                        <tr id="i24" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#getOnCompletableSubscribeError()>getOnCompletableSubscribeError</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current Completable onSubscribeError hook function or null if it isset to the default pass-through.</td>
+                                        </tr>
+                                        
+                                        <tr id="i25" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#setOnCompletableSubscribeError(Func1)>setOnCompletableSubscribeError</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt; onCompletableSubscribeError) </code>
+                                            </th>
+                                            <td class="colLast">Sets a hook function that is called when the Completable.subscribe() callfails with an exception.</td>
+                                        </tr>
+                                        
+                                        <tr id="i26" class="altColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#reset()>reset</a>() </code>
+                                            </th>
+                                            <td class="colLast">Reset all hook callbacks to those of the current RxJavaPlugins handlers.</td>
+                                        </tr>
+                                        
+                                        <tr id="i27" class="rowColor">
+                                            <td class="colFirst"><code>static &lt;T, R&gt; <a href=../Observable.Operator.html>Observable.Operator</a>&lt;R, <a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onObservableLift(Observable.Operator)>onObservableLift</a>(<a href=../Observable.Operator.html>Observable.Operator</a>&lt;R, <a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt; operator) </code>
+                                            </th>
+                                            <td class="colLast">Hook to call before the child subscriber would subscribe to an Operator.</td>
+                                        </tr>
+                                        
+                                        <tr id="i28" class="altColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#clear()>clear</a>() </code>
+                                            </th>
+                                            <td class="colLast">Clears all hooks to be no-op (and pass-through)and onError hook to signal errors to the caller thread'sUncaughtExceptionHandler.</td>
+                                        </tr>
+                                        
+                                        <tr id="i29" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#lockdown()>lockdown</a>() </code>
+                                            </th>
+                                            <td class="colLast">Prevents changing the hooks.</td>
+                                        </tr>
+                                        
+                                        <tr id="i30" class="altColor">
+                                            <td class="colFirst"><code>static boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#isLockdown()>isLockdown</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns true if the hooks can no longer be changed.</td>
+                                        </tr>
+                                        
+                                        <tr id="i31" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onError(Throwable)>onError</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a> ex) </code>
+                                            </th>
+                                            <td class="colLast">Consume undeliverable Throwables (acts as a global catch).</td>
+                                        </tr>
+                                        
+                                        <tr id="i32" class="altColor">
+                                            <td class="colFirst"><code>static &lt;T&gt; <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&lt;<a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onCreate(Observable.OnSubscribe)>onCreate</a>(<a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&lt;<a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt; onSubscribe) </code>
+                                            </th>
+                                            <td class="colLast">Hook to call when an Observable is created.</td>
+                                        </tr>
+                                        
+                                        <tr id="i33" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=../schedulers/Scheduler.html>Scheduler</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onComputationScheduler(Scheduler)>onComputationScheduler</a>(<a href=../schedulers/Scheduler.html>Scheduler</a> scheduler) </code>
+                                            </th>
+                                            <td class="colLast">Hook to call when the Schedulers.computation() is called.</td>
+                                        </tr>
+                                        
+                                        <tr id="i34" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../schedulers/Scheduler.html>Scheduler</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onIOScheduler(Scheduler)>onIOScheduler</a>(<a href=../schedulers/Scheduler.html>Scheduler</a> scheduler) </code>
+                                            </th>
+                                            <td class="colLast">Hook to call when the Schedulers.io() is called.</td>
+                                        </tr>
+                                        
+                                        <tr id="i35" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=../schedulers/Scheduler.html>Scheduler</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onNewThreadScheduler(Scheduler)>onNewThreadScheduler</a>(<a href=../schedulers/Scheduler.html>Scheduler</a> scheduler) </code>
+                                            </th>
+                                            <td class="colLast">Hook to call when the Schedulers.newThread() is called.</td>
+                                        </tr>
+                                        
+                                        <tr id="i36" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../functions/Action0.html>Action0</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onScheduledAction(Action0)>onScheduledAction</a>(<a href=../functions/Action0.html>Action0</a> action) </code>
+                                            </th>
+                                            <td class="colLast">Hook to call before the action is scheduled, allowsdecorating the original action.</td>
+                                        </tr>
+                                        
+                                        <tr id="i37" class="rowColor">
+                                            <td class="colFirst"><code>static &lt;T&gt; <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&lt;<a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onObservableStart(Observable,Observable.OnSubscribe)>onObservableStart</a>(<a href=../Observable.html>Observable</a>&lt;<a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt; instance, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&lt;<a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt; onSubscribe) </code>
+                                            </th>
+                                            <td class="colLast">Hook to call before the child subscriber is subscribed to the OnSubscribe action.</td>
+                                        </tr>
+                                        
+                                        <tr id="i38" class="altColor">
+                                            <td class="colFirst"><code>static <a href=../Subscription.html>Subscription</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onObservableReturn(Subscription)>onObservableReturn</a>(<a href=../Subscription.html>Subscription</a> subscription) </code>
+                                            </th>
+                                            <td class="colLast">Hook to call before the Observable.subscribe() method is about to return a Subscription.</td>
+                                        </tr>
+                                        
+                                        <tr id="i39" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#onObservableError(Throwable)>onObservableError</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a> error) </code>
+                                            </th>
+                                            <td class="colLast">Hook to call if the Observable.subscribe() crashes for some reason.</td>
+                                        </tr>
+                                        
+                                        <tr id="i40" class="altColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#resetAssemblyTracking()>resetAssemblyTracking</a>() </code>
+                                            </th>
+                                            <td class="colLast">Resets the assembly tracking hooks to their default delegates toRxJavaPlugins.</td>
+                                        </tr>
+                                        
+                                        <tr id="i41" class="rowColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#clearAssemblyTracking()>clearAssemblyTracking</a>() </code>
+                                            </th>
+                                            <td class="colLast">Clears the assembly tracking hooks to their default pass-through behavior.</td>
+                                        </tr>
+                                        
+                                        <tr id="i42" class="altColor">
+                                            <td class="colFirst"><code>static void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RxJavaHooks.html#enableAssemblyTracking()>enableAssemblyTracking</a>() </code>
+                                            </th>
+                                            <td class="colLast">Sets up hooks that capture the current stacktrace when a source or anoperator is instantiated, keeping it in a field for debugging purposesand alters exceptions passing along to hold onto this stacktrace.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="getOnError()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOnError</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Action1.html>Action1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt; <a href=RxJavaHooks.html#getOnError()>getOnError</a>()</pre>
+                                        <div class="block"><p>Returns the current global error handler hook action or null if it isset to the default one that signals errors to the current threadsUncaughtExceptionHandler.</p><p>This operation is thread-safe.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnError(Action1)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnError</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#setOnError(Action1)>setOnError</a>(<a href=../functions/Action1.html>Action1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt; onError)</pre>
+                                        <div class="block"><p>Sets the global error consumer action unless a lockdown is in effect.</p><p>This operation is thread-safe.</p><p>Calling with a <code>{@code null}</code> parameter has the effect thaterrors are routed to the current thread's <a href=https://developer.android.com/reference/kotlin/java/lang/Thread.UncaughtExceptionHandler.html>UncaughtExceptionHandler</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>onError</code> - the action that will receive undeliverable Throwables</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOnObservableCreate()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOnObservableCreate</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&gt; <a href=RxJavaHooks.html#getOnObservableCreate()>getOnObservableCreate</a>()</pre>
+                                        <div class="block"><p>Returns the current Observable onCreate hook function or null if it isset to the default pass-through.</p><p>This operation is thread-safe.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnObservableCreate(Func1)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnObservableCreate</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#setOnObservableCreate(Func1)>setOnObservableCreate</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&gt; onObservableCreate)</pre>
+                                        <div class="block"><p>Sets the Observable onCreate hook function unless a lockdown is in effect.</p><p>This operation is thread-safe.</p><p>Calling with a <code>{@code null}</code> parameter restores the default behavior:the hook returns the same object.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>onObservableCreate</code> - the function that takes the original OnSubscribeand should return a OnSubscribe.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOnObservableStart()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOnObservableStart</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Func2.html>Func2</a>&lt;<a href=../Observable.html>Observable</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&gt; <a href=RxJavaHooks.html#getOnObservableStart()>getOnObservableStart</a>()</pre>
+                                        <div class="block"><p>Returns the current Observable onStart hook function or null if it isset to the default pass-through.</p><p>This operation is thread-safe.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnObservableStart(Func2)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnObservableStart</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#setOnObservableStart(Func2)>setOnObservableStart</a>(<a href=../functions/Func2.html>Func2</a>&lt;<a href=../Observable.html>Observable</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&gt; onObservableStart)</pre>
+                                        <div class="block"><p>Sets the hook function that is called when a subscriber subscribes to a Observableunless a lockdown is in effect.</p><p>This operation is thread-safe.</p><p>Calling with a <code>{@code null}</code> parameter restores the default behavior:the hook returns the same OnSubscribe object.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>onObservableStart</code> - the function that is called with the current Observable instance,its OnSubscribe function and should return a OnSubscribe functionthat gets actually subscribed to.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOnComputationScheduler()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOnComputationScheduler</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt; <a href=RxJavaHooks.html#getOnComputationScheduler()>getOnComputationScheduler</a>()</pre>
+                                        <div class="block"><p>Returns the current computation scheduler hook function or null if it isset to the default pass-through.</p><p>This operation is thread-safe.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnComputationScheduler(Func1)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnComputationScheduler</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#setOnComputationScheduler(Func1)>setOnComputationScheduler</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt; onComputationScheduler)</pre>
+                                        <div class="block"><p>Sets the hook function for returning a scheduler when the Schedulers.computation() is calledunless a lockdown is in effect.</p><p>This operation is thread-safe.</p><p>Calling with a <code>{@code null}</code> parameter restores the default behavior:the hook returns the same object.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>onComputationScheduler</code> - the function that receives the original computation schedulerand should return a scheduler.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOnIOScheduler()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOnIOScheduler</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt; <a href=RxJavaHooks.html#getOnIOScheduler()>getOnIOScheduler</a>()</pre>
+                                        <div class="block"><p>Returns the current io scheduler hook function or null if it isset to the default pass-through.</p><p>This operation is thread-safe.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnIOScheduler(Func1)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnIOScheduler</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#setOnIOScheduler(Func1)>setOnIOScheduler</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt; onIOScheduler)</pre>
+                                        <div class="block"><p>Sets the hook function for returning a scheduler when the Schedulers.io() is calledunless a lockdown is in effect.</p><p>This operation is thread-safe.</p><p>Calling with a <code>{@code null}</code> parameter restores the default behavior:the hook returns the same object.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>onIOScheduler</code> - the function that receives the original io schedulerand should return a scheduler.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOnNewThreadScheduler()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOnNewThreadScheduler</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt; <a href=RxJavaHooks.html#getOnNewThreadScheduler()>getOnNewThreadScheduler</a>()</pre>
+                                        <div class="block"><p>Returns the current new thread scheduler hook function or null if it isset to the default pass-through.</p><p>This operation is thread-safe.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnNewThreadScheduler(Func1)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnNewThreadScheduler</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#setOnNewThreadScheduler(Func1)>setOnNewThreadScheduler</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../schedulers/Scheduler.html>Scheduler</a>, <a href=../schedulers/Scheduler.html>Scheduler</a>&gt; onNewThreadScheduler)</pre>
+                                        <div class="block"><p>Sets the hook function for returning a scheduler when the Schedulers.newThread() is calledunless a lockdown is in effect.</p><p>This operation is thread-safe.</p><p>Calling with a <code>{@code null}</code> parameter restores the default behavior:the hook returns the same object.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>onNewThreadScheduler</code> - the function that receives the original new thread schedulerand should return a scheduler.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOnScheduleAction()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOnScheduleAction</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../functions/Action0.html>Action0</a>, <a href=../functions/Action0.html>Action0</a>&gt; <a href=RxJavaHooks.html#getOnScheduleAction()>getOnScheduleAction</a>()</pre>
+                                        <div class="block"><p>Returns the current schedule action hook function or null if it isset to the default pass-through.</p><p>This operation is thread-safe.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnScheduleAction(Func1)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnScheduleAction</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#setOnScheduleAction(Func1)>setOnScheduleAction</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../functions/Action0.html>Action0</a>, <a href=../functions/Action0.html>Action0</a>&gt; onScheduleAction)</pre>
+                                        <div class="block"><p>Sets the hook function that is called before an action is scheduled, allowingdecorating that function, unless a lockdown is in effect.</p><p>This operation is thread-safe.</p><p>Calling with a <code>{@code null}</code> parameter restores the default behavior:the hook returns the same object.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>onScheduleAction</code> - the function that receives the original action and shouldreturn an Action0.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOnObservableReturn()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOnObservableReturn</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../Subscription.html>Subscription</a>, <a href=../Subscription.html>Subscription</a>&gt; <a href=RxJavaHooks.html#getOnObservableReturn()>getOnObservableReturn</a>()</pre>
+                                        <div class="block"><p>Returns the current Observable onReturn hook function or null if it isset to the default pass-through.</p><p>This operation is thread-safe.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnObservableReturn(Func1)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnObservableReturn</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#setOnObservableReturn(Func1)>setOnObservableReturn</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../Subscription.html>Subscription</a>, <a href=../Subscription.html>Subscription</a>&gt; onObservableReturn)</pre>
+                                        <div class="block"><p>Sets a hook function that is called when the Observable.subscribe() callis about to return a Subscription unless a lockdown is in effect.</p><p>This operation is thread-safe.</p><p>Calling with a <code>{@code null}</code> parameter restores the default behavior:the hook returns the same object.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>onObservableReturn</code> - the function that is called with the Subscriber that has beensubscribed to the OnSubscribe function and returns a Subscription that will be returned bysubscribe().</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOnSingleReturn()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOnSingleReturn</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Func1.html>Func1</a>&lt;<a href=../Subscription.html>Subscription</a>, <a href=../Subscription.html>Subscription</a>&gt; <a href=RxJavaHooks.html#getOnSingleReturn()>getOnSingleReturn</a>()</pre>
+                                        <div class="block"><p>Returns the current Single onReturn hook function or null if it isset to the default pass-through.</p><p>This operation is thread-safe.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnSingleReturn(Func1)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnSingleReturn</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#setOnSingleReturn(Func1)>setOnSingleReturn</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=../Subscription.html>Subscription</a>, <a href=../Subscription.html>Subscription</a>&gt; onSingleReturn)</pre>
+                                        <div class="block"><p>Sets a hook function that is called when the Single.subscribe() callis about to return a Subscription unless a lockdown is in effect.</p><p>This operation is thread-safe.</p><p>Calling with a <code>{@code null}</code> parameter restores the default behavior:the hook returns the same object.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>onSingleReturn</code> - the function that is called with the SingleSubscriber that has beensubscribed to the OnSubscribe function and returns a Subscription that will be returned bysubscribe().</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOnGenericScheduledExecutorService()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOnGenericScheduledExecutorService</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Func0.html>Func0</a>&lt;out <a href=https://developer.android.com/reference/kotlin/java/util/concurrent/ScheduledExecutorService.html>ScheduledExecutorService</a>&gt; <a href=RxJavaHooks.html#getOnGenericScheduledExecutorService()>getOnGenericScheduledExecutorService</a>()</pre>
+                                        <div class="block"><p>Returns the current factory for creating ScheduledExecutorServices inGenericScheduledExecutorService utility.</p><p>This operation is thread-safe.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnGenericScheduledExecutorService(Func0)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnGenericScheduledExecutorService</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#setOnGenericScheduledExecutorService(Func0)>setOnGenericScheduledExecutorService</a>(<a href=../functions/Func0.html>Func0</a>&lt;out <a href=https://developer.android.com/reference/kotlin/java/util/concurrent/ScheduledExecutorService.html>ScheduledExecutorService</a>&gt; factory)</pre>
+                                        <div class="block"><p>Sets the hook function for returning a ScheduledExecutorService usedby the GenericScheduledExecutorService for background tasks.</p><p>This operation is thread-safe.</p><p>Calling with a <code>{@code null}</code> parameter restores the default behavior:create the default with <a href=https://developer.android.com/reference/kotlin/java/util/concurrent/Executors.html#newscheduledthreadpool>newScheduledThreadPool</a>.</p><p>For the changes to take effect, the Schedulers has to be restarted.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>factory</code> - the supplier that is called when the GenericScheduledExecutorServiceis (re)started</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOnObservableSubscribeError()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOnObservableSubscribeError</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt; <a href=RxJavaHooks.html#getOnObservableSubscribeError()>getOnObservableSubscribeError</a>()</pre>
+                                        <div class="block"><p>Returns the current Observable onSubscribeError hook function or null if it isset to the default pass-through.</p><p>This operation is thread-safe.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnObservableSubscribeError(Func1)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnObservableSubscribeError</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#setOnObservableSubscribeError(Func1)>setOnObservableSubscribeError</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt; onObservableSubscribeError)</pre>
+                                        <div class="block"><p>Sets a hook function that is called when the Observable.subscribe() callfails with an exception.</p><p>This operation is thread-safe.</p><p>Calling with a <code>{@code null}</code> parameter restores the default behavior:the hook returns the same object.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>onObservableSubscribeError</code> - the function that is called with the crash exception and should returnan exception.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOnSingleSubscribeError()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOnSingleSubscribeError</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt; <a href=RxJavaHooks.html#getOnSingleSubscribeError()>getOnSingleSubscribeError</a>()</pre>
+                                        <div class="block"><p>Returns the current Single onSubscribeError hook function or null if it isset to the default pass-through.</p><p>This operation is thread-safe.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnSingleSubscribeError(Func1)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnSingleSubscribeError</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#setOnSingleSubscribeError(Func1)>setOnSingleSubscribeError</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt; onSingleSubscribeError)</pre>
+                                        <div class="block"><p>Sets a hook function that is called when the Single.subscribe() callfails with an exception.</p><p>This operation is thread-safe.</p><p>Calling with a <code>{@code null}</code> parameter restores the default behavior:the hook returns the same object.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>onSingleSubscribeError</code> - the function that is called with the crash exception and should returnan exception.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getOnCompletableSubscribeError()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getOnCompletableSubscribeError</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt; <a href=RxJavaHooks.html#getOnCompletableSubscribeError()>getOnCompletableSubscribeError</a>()</pre>
+                                        <div class="block"><p>Returns the current Completable onSubscribeError hook function or null if it isset to the default pass-through.</p><p>This operation is thread-safe.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setOnCompletableSubscribeError(Func1)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnCompletableSubscribeError</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#setOnCompletableSubscribeError(Func1)>setOnCompletableSubscribeError</a>(<a href=../functions/Func1.html>Func1</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>, <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a>&gt; onCompletableSubscribeError)</pre>
+                                        <div class="block"><p>Sets a hook function that is called when the Completable.subscribe() callfails with an exception.</p><p>This operation is thread-safe.</p><p>Calling with a <code>{@code null}</code> parameter restores the default behavior:the hook returns the same object.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>onCompletableSubscribeError</code> - the function that is called with the crash exception and should returnan exception.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="reset()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>reset</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#reset()>reset</a>()</pre>
+                                        <div class="block"><p>Reset all hook callbacks to those of the current RxJavaPlugins handlers.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onObservableLift(Observable.Operator)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onObservableLift</h4>
+                                        <pre class="methodSignature"> static &lt;T, R&gt; <a href=../Observable.Operator.html>Observable.Operator</a>&lt;R, <a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt; <a href=RxJavaHooks.html#onObservableLift(Observable.Operator)>onObservableLift</a>(<a href=../Observable.Operator.html>Observable.Operator</a>&lt;R, <a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt; operator)</pre>
+                                        <div class="block"><p>Hook to call before the child subscriber would subscribe to an Operator.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>operator</code> - the original operator</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="clear()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>clear</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#clear()>clear</a>()</pre>
+                                        <div class="block"><p>Clears all hooks to be no-op (and pass-through)and onError hook to signal errors to the caller thread'sUncaughtExceptionHandler.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="lockdown()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>lockdown</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#lockdown()>lockdown</a>()</pre>
+                                        <div class="block"><p>Prevents changing the hooks.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isLockdown()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isLockdown</h4>
+                                        <pre class="methodSignature"> static boolean <a href=RxJavaHooks.html#isLockdown()>isLockdown</a>()</pre>
+                                        <div class="block"><p>Returns true if the hooks can no longer be changed.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onError(Throwable)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onError</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#onError(Throwable)>onError</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a> ex)</pre>
+                                        <div class="block"><p>Consume undeliverable Throwables (acts as a global catch).</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>ex</code> - the exception to handle</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onCreate(Observable.OnSubscribe)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onCreate</h4>
+                                        <pre class="methodSignature"> static &lt;T&gt; <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&lt;<a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt; <a href=RxJavaHooks.html#onCreate(Observable.OnSubscribe)>onCreate</a>(<a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&lt;<a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt; onSubscribe)</pre>
+                                        <div class="block"><p>Hook to call when an Observable is created.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>onSubscribe</code> - the original OnSubscribe logic</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onComputationScheduler(Scheduler)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onComputationScheduler</h4>
+                                        <pre class="methodSignature"> static <a href=../schedulers/Scheduler.html>Scheduler</a> <a href=RxJavaHooks.html#onComputationScheduler(Scheduler)>onComputationScheduler</a>(<a href=../schedulers/Scheduler.html>Scheduler</a> scheduler)</pre>
+                                        <div class="block"><p>Hook to call when the Schedulers.computation() is called.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>scheduler</code> - the default computation scheduler</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onIOScheduler(Scheduler)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onIOScheduler</h4>
+                                        <pre class="methodSignature"> static <a href=../schedulers/Scheduler.html>Scheduler</a> <a href=RxJavaHooks.html#onIOScheduler(Scheduler)>onIOScheduler</a>(<a href=../schedulers/Scheduler.html>Scheduler</a> scheduler)</pre>
+                                        <div class="block"><p>Hook to call when the Schedulers.io() is called.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>scheduler</code> - the default io scheduler</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onNewThreadScheduler(Scheduler)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onNewThreadScheduler</h4>
+                                        <pre class="methodSignature"> static <a href=../schedulers/Scheduler.html>Scheduler</a> <a href=RxJavaHooks.html#onNewThreadScheduler(Scheduler)>onNewThreadScheduler</a>(<a href=../schedulers/Scheduler.html>Scheduler</a> scheduler)</pre>
+                                        <div class="block"><p>Hook to call when the Schedulers.newThread() is called.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>scheduler</code> - the default new thread scheduler</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onScheduledAction(Action0)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onScheduledAction</h4>
+                                        <pre class="methodSignature"> static <a href=../functions/Action0.html>Action0</a> <a href=RxJavaHooks.html#onScheduledAction(Action0)>onScheduledAction</a>(<a href=../functions/Action0.html>Action0</a> action)</pre>
+                                        <div class="block"><p>Hook to call before the action is scheduled, allowsdecorating the original action.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>action</code> - the original action</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onObservableStart(Observable,Observable.OnSubscribe)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onObservableStart</h4>
+                                        <pre class="methodSignature"> static &lt;T&gt; <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&lt;<a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt; <a href=RxJavaHooks.html#onObservableStart(Observable,Observable.OnSubscribe)>onObservableStart</a>(<a href=../Observable.html>Observable</a>&lt;<a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt; instance, <a href=../Observable.OnSubscribe.html>Observable.OnSubscribe</a>&lt;<a href=../../../../../tds/androidx/core/util/Pools.SynchronizedPool.html>T</a>&gt; onSubscribe)</pre>
+                                        <div class="block"><p>Hook to call before the child subscriber is subscribed to the OnSubscribe action.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>instance</code> - the parent Observable instance</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>onSubscribe</code> - the original OnSubscribe action</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onObservableReturn(Subscription)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onObservableReturn</h4>
+                                        <pre class="methodSignature"> static <a href=../Subscription.html>Subscription</a> <a href=RxJavaHooks.html#onObservableReturn(Subscription)>onObservableReturn</a>(<a href=../Subscription.html>Subscription</a> subscription)</pre>
+                                        <div class="block"><p>Hook to call before the Observable.subscribe() method is about to return a Subscription.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>subscription</code> - the original subscription</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onObservableError(Throwable)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onObservableError</h4>
+                                        <pre class="methodSignature"> static <a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a> <a href=RxJavaHooks.html#onObservableError(Throwable)>onObservableError</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Throwable.html>Throwable</a> error)</pre>
+                                        <div class="block"><p>Hook to call if the Observable.subscribe() crashes for some reason.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>error</code> - the error</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="resetAssemblyTracking()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>resetAssemblyTracking</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#resetAssemblyTracking()>resetAssemblyTracking</a>()</pre>
+                                        <div class="block"><p>Resets the assembly tracking hooks to their default delegates toRxJavaPlugins.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="clearAssemblyTracking()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>clearAssemblyTracking</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#clearAssemblyTracking()>clearAssemblyTracking</a>()</pre>
+                                        <div class="block"><p>Clears the assembly tracking hooks to their default pass-through behavior.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="enableAssemblyTracking()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>enableAssemblyTracking</h4>
+                                        <pre class="methodSignature"> static void <a href=RxJavaHooks.html#enableAssemblyTracking()>enableAssemblyTracking</a>()</pre>
+                                        <div class="block"><p>Sets up hooks that capture the current stacktrace when a source or anoperator is instantiated, keeping it in a field for debugging purposesand alters exceptions passing along to hold onto this stacktrace.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

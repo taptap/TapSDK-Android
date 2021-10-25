@@ -1,0 +1,19 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.tapsdk.bootstrap.account/TDSUser.FriendshipNotification///PointingToDeclaration/com/tapsdk/bootstrap/account/TDSUser.FriendshipNotification.html
+$dokka.location:com.tapsdk.bootstrap.constants/Constants.COMMON_ERROR_CODE///PointingToDeclaration/com/tapsdk/bootstrap/constants/Constants.COMMON_ERROR_CODE.html
+$dokka.location:com.tapsdk.bootstrap.constants/Constants.COMMON_ERROR_MESSAGE///PointingToDeclaration/com/tapsdk/bootstrap/constants/Constants.COMMON_ERROR_MESSAGE.html
+$dokka.location:com.tapsdk.bootstrap.constants/Constants.SDK_INFO///PointingToDeclaration/com/tapsdk/bootstrap/constants/Constants.SDK_INFO.html
+$dokka.location:com.tapsdk.bootstrap.utils/SimpleLocalBroadcastManager.BroadcastReceiver///PointingToDeclaration/com/tapsdk/bootstrap/utils/SimpleLocalBroadcastManager.BroadcastReceiver.html
+com.tapsdk.bootstrap
+com.tapsdk.bootstrap.account
+com.tapsdk.bootstrap.constants
+com.tapsdk.bootstrap.entities
+com.tapsdk.bootstrap.exceptions
+com.tapsdk.bootstrap.gamesave
+com.tapsdk.bootstrap.init.exceptions
+com.tapsdk.bootstrap.model
+com.tapsdk.bootstrap.tracker
+com.tapsdk.bootstrap.utils
+com.tapsdk.bootstrap.wrapper
+

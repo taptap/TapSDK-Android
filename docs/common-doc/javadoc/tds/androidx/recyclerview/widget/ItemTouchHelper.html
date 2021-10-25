@@ -1,0 +1,770 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>ItemTouchHelper unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class ItemTouchHelper" class="title">Class ItemTouchHelper</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                            <code>tds.androidx.recyclerview.widget.RecyclerView.OnChildAttachStateChangeListener</code>
+                            
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=ItemTouchHelper.html>ItemTouchHelper</a></span>
+extends <a href=RecyclerView.ItemDecoration.html>RecyclerView.ItemDecoration</a> implements <a href=RecyclerView.OnChildAttachStateChangeListener.html>RecyclerView.OnChildAttachStateChangeListener</a>
+                    </pre>
+                    <div class="block"><p>This is a utility class to add swipe to dismiss and drag &amp; drop support to RecyclerView. </p><p>It works with a RecyclerView and a Callback class, which configures what type of interactions are enabled and also receives events when user performs these actions. </p><p>Depending on which functionality you support, you should override <a href=ItemTouchHelper.Callback.html#onMove(RecyclerView,RecyclerView.ViewHolder,RecyclerView.ViewHolder)>onMove</a> and / or <a href=ItemTouchHelper.Callback.html#onSwiped(RecyclerView.ViewHolder,int)>onSwiped</a>. </p><p>This class is designed to work with any LayoutManager but for certain situations, it can be optimized for your custom LayoutManager by extending methods in the <a href=ItemTouchHelper.Callback.html>Callback</a> class or implementing <a href=ItemTouchHelper.ViewDropHandler.html>ViewDropHandler</a> interface in your LayoutManager. </p><p>By default, ItemTouchHelper moves the items' translateX/Y properties to reposition them. You can customize these behaviors by overriding <a href=ItemTouchHelper.Callback.html#onChildDraw(Canvas,RecyclerView,RecyclerView.ViewHolder,float,float,int,boolean)>onChildDraw</a> or <a href=ItemTouchHelper.Callback.html#onChildDrawOver(Canvas,RecyclerView,RecyclerView.ViewHolder,float,float,int,boolean)>onChildDrawOver</a>. </p>Most of the time you only need to override <code>onChildDraw</code>.</div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public interface</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="ItemTouchHelper.ViewDropHandler.html">ItemTouchHelper.ViewDropHandler</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>An interface which can be implemented by LayoutManager for better integration with <a href=tds/androidx/recyclerview/widget/ItemTouchHelper.html>ItemTouchHelper</a>.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public abstract class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="ItemTouchHelper.Callback.html">ItemTouchHelper.Callback</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>This class is the contract between ItemTouchHelper and your application. It lets you controlwhich touch behaviors are enabled per each ViewHolder and also receive callbacks when userperforms these actions.</p><p>To control which actions user can take on each view, you should override <a href=tds/androidx/recyclerview/widget/ItemTouchHelper.Callback.html#getMovementFlags(RecyclerView,RecyclerView.ViewHolder)>getMovementFlags</a> and return appropriate setof direction flags. (<a href=tds/androidx/recyclerview/widget/ItemTouchHelper.html#LEFT>LEFT</a>, <a href=tds/androidx/recyclerview/widget/ItemTouchHelper.html#RIGHT>RIGHT</a>, <a href=tds/androidx/recyclerview/widget/ItemTouchHelper.html#START>START</a>, <a href=tds/androidx/recyclerview/widget/ItemTouchHelper.html#END>END</a>, <a href=tds/androidx/recyclerview/widget/ItemTouchHelper.html#UP>UP</a>, <a href=tds/androidx/recyclerview/widget/ItemTouchHelper.html#DOWN>DOWN</a>). You can use <a href=tds/androidx/recyclerview/widget/ItemTouchHelper.Callback.html#makeMovementFlags(int,int)>makeMovementFlags</a> to easily construct it. Alternatively, you can use <a href=tds/androidx/recyclerview/widget/ItemTouchHelper.SimpleCallback.html>SimpleCallback</a>.</p><p>If user drags an item, ItemTouchHelper will call <a href=tds/androidx/recyclerview/widget/ItemTouchHelper.Callback.html#onMove(RecyclerView,RecyclerView.ViewHolder,RecyclerView.ViewHolder)> onMove(recyclerView, dragged, target)</a>.Upon receiving this callback, you should move the item from the old position(<code>{@code dragged.getAdapterPosition()}</code>) to new position (<code>{@code target.getAdapterPosition()}</code>)in your adapter and also call <a href=tds/androidx/recyclerview/widget/RecyclerView.Adapter.html#notifyItemMoved(int,int)>notifyItemMoved</a>.To control where a View can be dropped, you can override <a href=tds/androidx/recyclerview/widget/ItemTouchHelper.Callback.html#canDropOver(RecyclerView,RecyclerView.ViewHolder,RecyclerView.ViewHolder)>canDropOver</a>. When adragging View overlaps multiple other views, Callback chooses the closest View with whichdragged View might have changed positions. Although this approach works for many use cases,if you have a custom LayoutManager, you can override <a href=tds/androidx/recyclerview/widget/ItemTouchHelper.Callback.html#chooseDropTarget(RecyclerView.ViewHolder,List,int,int)>chooseDropTarget</a> to select acustom drop target.</p><p>When a View is swiped, ItemTouchHelper animates it until it goes out of bounds, then calls <a href=tds/androidx/recyclerview/widget/ItemTouchHelper.Callback.html#onSwiped(RecyclerView.ViewHolder,int)>onSwiped</a>. At this point, you should update youradapter (e.g. remove the item) and call related Adapter#notify event.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public abstract class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="ItemTouchHelper.SimpleCallback.html">ItemTouchHelper.SimpleCallback</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>A simple wrapper to the default Callback which you can construct with drag and swipedirections and this class will handle the flag callbacks. You should still override onMoveoronSwiped depending on your use case.</p><pre><code>ItemTouchHelper mIth = new ItemTouchHelper(
+    new ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP | ItemTouchHelper.DOWN,
+        ItemTouchHelper.LEFT) {
+        public boolean onMove(RecyclerView recyclerView,
+            ViewHolder viewHolder, ViewHolder target) {
+            final int fromPos = viewHolder.getAdapterPosition();
+            final int toPos = target.getAdapterPosition();
+            // move item in `fromPos` to `toPos` in adapter.
+            return true;// true if moved, false otherwise
+        }
+        public void onSwiped(ViewHolder viewHolder, int direction) {
+            // remove from adapter
+        }
+});
+</code></pre></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#UP>UP</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#DOWN>DOWN</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#LEFT>LEFT</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#RIGHT>RIGHT</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#START>START</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#END>END</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#ACTION_STATE_IDLE>ACTION_STATE_IDLE</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#ACTION_STATE_SWIPE>ACTION_STATE_SWIPE</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#ACTION_STATE_DRAG>ACTION_STATE_DRAG</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#ANIMATION_TYPE_SWIPE_SUCCESS>ANIMATION_TYPE_SWIPE_SUCCESS</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#ANIMATION_TYPE_SWIPE_CANCEL>ANIMATION_TYPE_SWIPE_CANCEL</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#ANIMATION_TYPE_DRAG>ANIMATION_TYPE_DRAG</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#ItemTouchHelper(ItemTouchHelper.Callback)">ItemTouchHelper</a></span>(<a href=ItemTouchHelper.Callback.html>ItemTouchHelper.Callback</a> callback)</code></th>
+                                                <td class="colLast">Creates an ItemTouchHelper that will work with the given Callback.</td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#attachToRecyclerView(RecyclerView)>attachToRecyclerView</a>(@<a href=../../annotation/Nullable.html>Nullable</a>() <a href=RecyclerView.html>RecyclerView</a> recyclerView) </code>
+                                            </th>
+                                            <td class="colLast">Attaches the ItemTouchHelper to the provided RecyclerView.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#onDrawOver(Canvas,RecyclerView,RecyclerView.State)>onDrawOver</a>(<a href=https://developer.android.com/reference/kotlin/android/graphics/Canvas.html>Canvas</a> c, <a href=RecyclerView.html>RecyclerView</a> parent, <a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Draw any appropriate decorations into the Canvas supplied to the RecyclerView.Any content drawn by this method will be drawn after the item views are drawnand will thus appear over the views.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#onDraw(Canvas,RecyclerView,RecyclerView.State)>onDraw</a>(<a href=https://developer.android.com/reference/kotlin/android/graphics/Canvas.html>Canvas</a> c, <a href=RecyclerView.html>RecyclerView</a> parent, <a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Draw any appropriate decorations into the Canvas supplied to the RecyclerView.Any content drawn by this method will be drawn before the item views are drawn,and will thus appear underneath the views.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#onChildViewAttachedToWindow(View)>onChildViewAttachedToWindow</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view) </code>
+                                            </th>
+                                            <td class="colLast">Called when a view is attached to the RecyclerView.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#onChildViewDetachedFromWindow(View)>onChildViewDetachedFromWindow</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view) </code>
+                                            </th>
+                                            <td class="colLast">Called when a view is detached from RecyclerView.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#getItemOffsets(Rect,View,RecyclerView,RecyclerView.State)>getItemOffsets</a>(<a href=https://developer.android.com/reference/kotlin/android/graphics/Rect.html>Rect</a> outRect, <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view, <a href=RecyclerView.html>RecyclerView</a> parent, <a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Retrieve any offsets for the given item.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#startDrag(RecyclerView.ViewHolder)>startDrag</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder) </code>
+                                            </th>
+                                            <td class="colLast">Starts dragging the provided ViewHolder.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ItemTouchHelper.html#startSwipe(RecyclerView.ViewHolder)>startSwipe</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder) </code>
+                                            </th>
+                                            <td class="colLast">Starts swiping the provided ViewHolder.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.tds.androidx.recyclerview.widget.RecyclerView.ItemDecoration">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;tds.androidx.recyclerview.widget.RecyclerView.ItemDecoration</h3>
+                                            <code>getItemOffsets, getItemOffsets, onDraw, onDraw, onDrawOver, onDrawOver</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="ItemTouchHelper(ItemTouchHelper.Callback)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>ItemTouchHelper</h4>
+                                        <pre>ItemTouchHelper(<a href=ItemTouchHelper.Callback.html>ItemTouchHelper.Callback</a> callback)</pre>
+                                        <div class="block">Creates an ItemTouchHelper that will work with the given Callback.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>callback</code> - The Callback which controls the behavior of this touch helper.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="attachToRecyclerView(RecyclerView)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>attachToRecyclerView</h4>
+                                        <pre class="methodSignature"> void <a href=ItemTouchHelper.html#attachToRecyclerView(RecyclerView)>attachToRecyclerView</a>(@<a href=../../annotation/Nullable.html>Nullable</a>() <a href=RecyclerView.html>RecyclerView</a> recyclerView)</pre>
+                                        <div class="block"><p>Attaches the ItemTouchHelper to the provided RecyclerView. If TouchHelper is alreadyattached to a RecyclerView, it will first detach from the previous one. You can call thismethod with <code>{@code null}</code> to detach it from the current RecyclerView.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>recyclerView</code> - The RecyclerView instance to which you want to add this helper or<code>{@code null}</code> if you want to remove ItemTouchHelper from the currentRecyclerView.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onDrawOver(Canvas,RecyclerView,RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onDrawOver</h4>
+                                        <pre class="methodSignature"> void <a href=ItemTouchHelper.html#onDrawOver(Canvas,RecyclerView,RecyclerView.State)>onDrawOver</a>(<a href=https://developer.android.com/reference/kotlin/android/graphics/Canvas.html>Canvas</a> c, <a href=RecyclerView.html>RecyclerView</a> parent, <a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Draw any appropriate decorations into the Canvas supplied to the RecyclerView.Any content drawn by this method will be drawn after the item views are drawnand will thus appear over the views.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>c</code> - Canvas to draw into</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>parent</code> - RecyclerView this ItemDecoration is drawing into</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>state</code> - The current state of RecyclerView.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onDraw(Canvas,RecyclerView,RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onDraw</h4>
+                                        <pre class="methodSignature"> void <a href=ItemTouchHelper.html#onDraw(Canvas,RecyclerView,RecyclerView.State)>onDraw</a>(<a href=https://developer.android.com/reference/kotlin/android/graphics/Canvas.html>Canvas</a> c, <a href=RecyclerView.html>RecyclerView</a> parent, <a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Draw any appropriate decorations into the Canvas supplied to the RecyclerView.Any content drawn by this method will be drawn before the item views are drawn,and will thus appear underneath the views.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>c</code> - Canvas to draw into</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>parent</code> - RecyclerView this ItemDecoration is drawing into</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>state</code> - The current state of RecyclerView</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onChildViewAttachedToWindow(View)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onChildViewAttachedToWindow</h4>
+                                        <pre class="methodSignature"> void <a href=ItemTouchHelper.html#onChildViewAttachedToWindow(View)>onChildViewAttachedToWindow</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view)</pre>
+                                        <div class="block"><p>Called when a view is attached to the RecyclerView.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>view</code> - The View which is attached to the RecyclerView</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onChildViewDetachedFromWindow(View)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onChildViewDetachedFromWindow</h4>
+                                        <pre class="methodSignature"> void <a href=ItemTouchHelper.html#onChildViewDetachedFromWindow(View)>onChildViewDetachedFromWindow</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view)</pre>
+                                        <div class="block"><p>Called when a view is detached from RecyclerView.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>view</code> - The View which is being detached from the RecyclerView</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getItemOffsets(Rect,View,RecyclerView,RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getItemOffsets</h4>
+                                        <pre class="methodSignature"> void <a href=ItemTouchHelper.html#getItemOffsets(Rect,View,RecyclerView,RecyclerView.State)>getItemOffsets</a>(<a href=https://developer.android.com/reference/kotlin/android/graphics/Rect.html>Rect</a> outRect, <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view, <a href=RecyclerView.html>RecyclerView</a> parent, <a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Retrieve any offsets for the given item. Each field of <code>outRect</code> specifiesthe number of pixels that the item view should be inset by, similar to padding or margin.The default implementation sets the bounds of outRect to 0 and returns.</p><p>If this ItemDecoration does not affect the positioning of item views, it should setall four fields of <code>outRect</code> (left, top, right, bottom) to zerobefore returning.</p><p>If you need to access Adapter for additional data, you can call <a href=RecyclerView.html#getChildAdapterPosition(View)>getChildAdapterPosition</a> to get the adapter position of theView.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>outRect</code> - Rect to receive the output.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>view</code> - The child view to decorate</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>parent</code> - RecyclerView this ItemDecoration is decorating</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>state</code> - The current state of RecyclerView.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="startDrag(RecyclerView.ViewHolder)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>startDrag</h4>
+                                        <pre class="methodSignature"> void <a href=ItemTouchHelper.html#startDrag(RecyclerView.ViewHolder)>startDrag</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder)</pre>
+                                        <div class="block"><p>Starts dragging the provided ViewHolder. By default, ItemTouchHelper starts a drag when aView is long pressed. You can disable that behavior by overriding <a href=ItemTouchHelper.Callback.html#isLongPressDragEnabled()>isLongPressDragEnabled</a>.</p><p>For this method to work:</p><ul><li>The provided ViewHolder must be a child of the RecyclerView to which thisItemTouchHelperis attached.</li><li><a href=ItemTouchHelper.Callback.html>Callback</a> must have dragging enabled.</li><li>There must be a previous touch event that was reported to the ItemTouchHelperthrough RecyclerView's ItemTouchListener mechanism. As long as no other ItemTouchListenergrabs previous events, this should work as expected.</li></ul>For example, if you would like to let your user to be able to drag an Item by touching oneof its descendants, you may implement it as follows:<pre><code>    viewHolder.dragButton.setOnTouchListener(new View.OnTouchListener() {
+        public boolean onTouch(View v, MotionEvent event) {
+            if (MotionEvent.getActionMasked(event) == MotionEvent.ACTION_DOWN) {
+                mItemTouchHelper.startDrag(viewHolder);
+            }
+            return false;
+        }
+    });
+</code></pre></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The ViewHolder to start dragging.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="startSwipe(RecyclerView.ViewHolder)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>startSwipe</h4>
+                                        <pre class="methodSignature"> void <a href=ItemTouchHelper.html#startSwipe(RecyclerView.ViewHolder)>startSwipe</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder)</pre>
+                                        <div class="block"><p>Starts swiping the provided ViewHolder. By default, ItemTouchHelper starts swiping a Viewwhen user swipes their finger (or mouse pointer) over the View. You can disable thisbehaviorby overriding <a href=ItemTouchHelper.Callback.html>Callback</a></p><p>For this method to work:</p><ul><li>The provided ViewHolder must be a child of the RecyclerView to which thisItemTouchHelper is attached.</li><li><a href=ItemTouchHelper.Callback.html>Callback</a> must have swiping enabled.</li><li>There must be a previous touch event that was reported to the ItemTouchHelperthrough RecyclerView's ItemTouchListener mechanism. As long as no other ItemTouchListenergrabs previous events, this should work as expected.</li></ul>For example, if you would like to let your user to be able to swipe an Item by touching oneof its descendants, you may implement it as follows:<pre><code>    viewHolder.dragButton.setOnTouchListener(new View.OnTouchListener() {
+        public boolean onTouch(View v, MotionEvent event) {
+            if (MotionEvent.getActionMasked(event) == MotionEvent.ACTION_DOWN) {
+                mItemTouchHelper.startSwipe(viewHolder);
+            }
+            return false;
+        }
+    });
+</code></pre></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The ViewHolder to start swiping.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

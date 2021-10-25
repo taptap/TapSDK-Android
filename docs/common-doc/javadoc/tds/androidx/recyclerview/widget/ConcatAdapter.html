@@ -1,0 +1,1002 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>ConcatAdapter unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class ConcatAdapter" class="title">Class ConcatAdapter</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public final class <span class="typeNameLabel"><a href=ConcatAdapter.html>ConcatAdapter</a></span>
+extends <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;<a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt;
+                    </pre>
+                    <div class="block"><p>An <a href=RecyclerView.Adapter.html>Adapter</a> implementation that presents the contents of multiple adapters in sequence. </p><pre><code>MyAdapter adapter1 = ...;
+AnotherAdapter adapter2 = ...;
+ConcatAdapter concatenated = new ConcatAdapter(adapter1, adapter2);
+recyclerView.setAdapter(concatenated);
+</code></pre><p>By default, <a href=ConcatAdapter.html>ConcatAdapter</a> isolates view types of nested adapters from each other such that it will change the view type before reporting it back to the <a href=RecyclerView.html>RecyclerView</a> to avoid any conflicts between the view types of added adapters. This also means each added adapter will have its own isolated pool of <a href=RecyclerView.ViewHolder.html>ViewHolder</a>s, with no re-use in between added adapters. </p><p>If your <a href=RecyclerView.Adapter.html>Adapter</a>s share the same view types, and can support sharing <a href=RecyclerView.ViewHolder.html>ViewHolder</a> s between added adapters, provide an instance of <a href=ConcatAdapter.Config.html>Config</a> where you set <a href=ConcatAdapter.Config.html#isolateViewTypes>isolateViewTypes</a> to <code>{@code false}</code>. A common usage pattern for this is to return the <code>{@code R.layout.}</code> from the <a href=RecyclerView.Adapter.html#getItemViewType(int)>getItemViewType</a> method. </p><p>When an added adapter calls one of the <code>{@code notify}</code> methods, <a href=ConcatAdapter.html>ConcatAdapter</a> properly offsets values before reporting it back to the <a href=RecyclerView.html>RecyclerView</a>. If an adapter calls <a href=RecyclerView.Adapter.html#notifyDataSetChanged()>notifyDataSetChanged</a>, <a href=ConcatAdapter.html>ConcatAdapter</a> also calls <a href=RecyclerView.Adapter.html#notifyDataSetChanged()>notifyDataSetChanged</a> as calling <a href=RecyclerView.Adapter.html#notifyItemRangeChanged(int,int)>notifyItemRangeChanged</a> will confuse the <a href=RecyclerView.html>RecyclerView</a>. You are highly encouraged to to use <a href=SortedList.html>SortedList</a> or <a href=ListAdapter.html>ListAdapter</a> to avoid calling <a href=RecyclerView.Adapter.html#notifyDataSetChanged()>notifyDataSetChanged</a>. </p><p>Whether <a href=ConcatAdapter.html>ConcatAdapter</a> should support stable ids is defined in the <a href=ConcatAdapter.Config.html>Config</a> object. Calling <a href=RecyclerView.Adapter.html#setHasStableIds(boolean)>setHasStableIds</a> has no effect. See documentation for <a href=ConcatAdapter.Config.StableIdMode.html>Config.StableIdMode</a> for details on how to configure <a href=ConcatAdapter.html>ConcatAdapter</a> to use stable ids. By default, it will not use stable ids and sub adapter stable ids will be ignored. Similar to the case above, you are highly encouraged to use <a href=ListAdapter.html>ListAdapter</a>, which will automatically calculate the changes in the data set for you so you won't need stable ids. </p><p>It is common to find the adapter position of a <a href=RecyclerView.ViewHolder.html>ViewHolder</a> to handle user action on the <a href=RecyclerView.ViewHolder.html>ViewHolder</a>. For those cases, instead of calling <a href=RecyclerView.ViewHolder.html#getAdapterPosition()>getAdapterPosition</a>, use <a href=RecyclerView.ViewHolder.html#getBindingAdapterPosition()>getBindingAdapterPosition</a>. If your adapters share <a href=RecyclerView.ViewHolder.html>ViewHolder</a>s, you can use the <a href=RecyclerView.ViewHolder.html#getBindingAdapter()>getBindingAdapter</a> method to find the adapter which last bound that <a href=RecyclerView.ViewHolder.html>ViewHolder</a>.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="ConcatAdapter.Config.html">ConcatAdapter.Config</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>The configuration object for a <a href=tds/androidx/recyclerview/widget/ConcatAdapter.html>ConcatAdapter</a>.</p></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#ConcatAdapter(Array)">ConcatAdapter</a></span>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt;&gt; adapters)</code></th>
+                                                <td class="colLast">Creates a ConcatAdapter with <a href=ConcatAdapter.Config.html#DEFAULT>DEFAULT</a> and the given adapters in the givenorder.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#ConcatAdapter(ConcatAdapter.Config,Array)">ConcatAdapter</a></span>(<a href=ConcatAdapter.Config.html>ConcatAdapter.Config</a> config, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt;&gt; adapters)</code></th>
+                                                <td class="colLast">Creates a ConcatAdapter with the given config and the given adapters in the given order.</td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#ConcatAdapter(List)">ConcatAdapter</a></span>(<a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;out <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt;&gt; adapters)</code></th>
+                                                <td class="colLast">Creates a ConcatAdapter with <a href=ConcatAdapter.Config.html#DEFAULT>DEFAULT</a> and the given adapters in the givenorder.</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#ConcatAdapter(ConcatAdapter.Config,List)">ConcatAdapter</a></span>(<a href=ConcatAdapter.Config.html>ConcatAdapter.Config</a> config, <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;out <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt;&gt; adapters)</code></th>
+                                                <td class="colLast">Creates a ConcatAdapter with the given config and the given adapters in the given order.</td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#addAdapter(RecyclerView.Adapter)>addAdapter</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt; adapter) </code>
+                                            </th>
+                                            <td class="colLast">Appends the given adapter to the existing list of adapters and notifies the observers ofthis <a href=ConcatAdapter.html>ConcatAdapter</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#addAdapter(int,RecyclerView.Adapter)>addAdapter</a>(int index, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt; adapter) </code>
+                                            </th>
+                                            <td class="colLast">Adds the given adapter to the given index among other adapters that are already added.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#removeAdapter(RecyclerView.Adapter)>removeAdapter</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt; adapter) </code>
+                                            </th>
+                                            <td class="colLast">Removes the given adapter from the adapters list if it exists</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#getItemViewType(int)>getItemViewType</a>(int position) </code>
+                                            </th>
+                                            <td class="colLast">Return the view type of the item at <code>position</code> for the purposesof view recycling.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code><a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#onCreateViewHolder(ViewGroup,int)>onCreateViewHolder</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> parent, int viewType) </code>
+                                            </th>
+                                            <td class="colLast">Called when RecyclerView needs a new <a href=RecyclerView.ViewHolder.html>ViewHolder</a> of the given type to representan item.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#onBindViewHolder(RecyclerView.ViewHolder,int)>onBindViewHolder</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> holder, int position) </code>
+                                            </th>
+                                            <td class="colLast">Called by RecyclerView to display the data at the specified position.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#setHasStableIds(boolean)>setHasStableIds</a>(boolean hasStableIds) </code>
+                                            </th>
+                                            <td class="colLast">Calling this method is an error and will result in an <a href=https://developer.android.com/reference/kotlin/java/lang/UnsupportedOperationException.html>UnsupportedOperationException</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#setStateRestorationPolicy(RecyclerView.Adapter.StateRestorationPolicy)>setStateRestorationPolicy</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.Adapter.StateRestorationPolicy.html>RecyclerView.Adapter.StateRestorationPolicy</a> strategy) </code>
+                                            </th>
+                                            <td class="colLast">Calling this method is an error and will result in an <a href=https://developer.android.com/reference/kotlin/java/lang/UnsupportedOperationException.html>UnsupportedOperationException</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>long</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#getItemId(int)>getItemId</a>(int position) </code>
+                                            </th>
+                                            <td class="colLast">Return the stable ID for the item at <code>position</code>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#getItemCount()>getItemCount</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the total number of items in the data set held by the adapter.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#onFailedToRecycleView(RecyclerView.ViewHolder)>onFailedToRecycleView</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> holder) </code>
+                                            </th>
+                                            <td class="colLast">Called by the RecyclerView if a ViewHolder created by this Adapter cannot be recycleddue to its transient state.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#onViewAttachedToWindow(RecyclerView.ViewHolder)>onViewAttachedToWindow</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> holder) </code>
+                                            </th>
+                                            <td class="colLast">Called when a view created by this adapter has been attached to a window.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#onViewDetachedFromWindow(RecyclerView.ViewHolder)>onViewDetachedFromWindow</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> holder) </code>
+                                            </th>
+                                            <td class="colLast">Called when a view created by this adapter has been detached from its window.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#onViewRecycled(RecyclerView.ViewHolder)>onViewRecycled</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> holder) </code>
+                                            </th>
+                                            <td class="colLast">Called when a view created by this adapter has been recycled.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#onAttachedToRecyclerView(RecyclerView)>onAttachedToRecyclerView</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.html>RecyclerView</a> recyclerView) </code>
+                                            </th>
+                                            <td class="colLast">Called by RecyclerView when it starts observing this Adapter.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#onDetachedFromRecyclerView(RecyclerView)>onDetachedFromRecyclerView</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.html>RecyclerView</a> recyclerView) </code>
+                                            </th>
+                                            <td class="colLast">Called by RecyclerView when it stops observing this Adapter.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;out <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt;&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#getAdapters()>getAdapters</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns an unmodifiable copy of the list of adapters in this <a href=ConcatAdapter.html>ConcatAdapter</a>.Note that this is a copy hence future changes in the ConcatAdapter are not reflected inthis list.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=ConcatAdapter.html#findRelativeAdapterPositionIn(RecyclerView.Adapter,RecyclerView.ViewHolder,int)>findRelativeAdapterPositionIn</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt; adapter, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder, int globalPosition) </code>
+                                            </th>
+                                            <td class="colLast">Returns the position of the given <a href=RecyclerView.ViewHolder.html>ViewHolder</a> in the given <a href=RecyclerView.Adapter.html>Adapter</a>.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.tds.androidx.recyclerview.widget.RecyclerView.Adapter">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;tds.androidx.recyclerview.widget.RecyclerView.Adapter</h3>
+                                            <code>bindViewHolder, createViewHolder, findRelativeAdapterPositionIn, getStateRestorationPolicy, hasObservers, hasStableIds, notifyDataSetChanged, notifyItemChanged, notifyItemChanged, notifyItemInserted, notifyItemMoved, notifyItemRangeChanged, notifyItemRangeChanged, notifyItemRangeInserted, notifyItemRangeRemoved, notifyItemRemoved, onBindViewHolder, onBindViewHolder, onCreateViewHolder, onFailedToRecycleView, onViewAttachedToWindow, onViewDetachedFromWindow, onViewRecycled, registerAdapterDataObserver, unregisterAdapterDataObserver</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="ConcatAdapter(Array)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>ConcatAdapter</h4>
+                                        <pre>ConcatAdapter(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt;&gt; adapters)</pre>
+                                        <div class="block">Creates a ConcatAdapter with <a href=ConcatAdapter.Config.html#DEFAULT>DEFAULT</a> and the given adapters in the givenorder.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>adapters</code> - The list of adapters to add</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="ConcatAdapter(ConcatAdapter.Config,Array)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>ConcatAdapter</h4>
+                                        <pre>ConcatAdapter(<a href=ConcatAdapter.Config.html>ConcatAdapter.Config</a> config, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;<a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt;&gt; adapters)</pre>
+                                        <div class="block">Creates a ConcatAdapter with the given config and the given adapters in the given order.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>config</code> - The configuration for this ConcatAdapter</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>adapters</code> - The list of adapters to add</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="ConcatAdapter(List)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>ConcatAdapter</h4>
+                                        <pre>ConcatAdapter(<a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;out <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt;&gt; adapters)</pre>
+                                        <div class="block">Creates a ConcatAdapter with <a href=ConcatAdapter.Config.html#DEFAULT>DEFAULT</a> and the given adapters in the givenorder.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>adapters</code> - The list of adapters to add</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="ConcatAdapter(ConcatAdapter.Config,List)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>ConcatAdapter</h4>
+                                        <pre>ConcatAdapter(<a href=ConcatAdapter.Config.html>ConcatAdapter.Config</a> config, <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;out <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt;&gt; adapters)</pre>
+                                        <div class="block">Creates a ConcatAdapter with the given config and the given adapters in the given order.</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>config</code> - The configuration for this ConcatAdapter</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>adapters</code> - The list of adapters to add</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="addAdapter(RecyclerView.Adapter)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>addAdapter</h4>
+                                        <pre class="methodSignature"> boolean <a href=ConcatAdapter.html#addAdapter(RecyclerView.Adapter)>addAdapter</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt; adapter)</pre>
+                                        <div class="block"><p>Appends the given adapter to the existing list of adapters and notifies the observers ofthis <a href=ConcatAdapter.html>ConcatAdapter</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>adapter</code> - The new adapter to add</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="addAdapter(int,RecyclerView.Adapter)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>addAdapter</h4>
+                                        <pre class="methodSignature"> boolean <a href=ConcatAdapter.html#addAdapter(int,RecyclerView.Adapter)>addAdapter</a>(int index, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt; adapter)</pre>
+                                        <div class="block"><p>Adds the given adapter to the given index among other adapters that are already added.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>index</code> - The index into which to insert the adapter.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>adapter</code> - The new adapter to add to the adapters list.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="removeAdapter(RecyclerView.Adapter)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>removeAdapter</h4>
+                                        <pre class="methodSignature"> boolean <a href=ConcatAdapter.html#removeAdapter(RecyclerView.Adapter)>removeAdapter</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt; adapter)</pre>
+                                        <div class="block"><p>Removes the given adapter from the adapters list if it exists</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>adapter</code> - The adapter to remove</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getItemViewType(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getItemViewType</h4>
+                                        <pre class="methodSignature"> int <a href=ConcatAdapter.html#getItemViewType(int)>getItemViewType</a>(int position)</pre>
+                                        <div class="block"><p>Return the view type of the item at <code>position</code> for the purposesof view recycling.</p><p>The default implementation of this method returns 0, making the assumption ofa single view type for the adapter. Unlike ListView adapters, types need notbe contiguous. Consider using id resources to uniquely identify item view types.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>position</code> - position to query</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onCreateViewHolder(ViewGroup,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onCreateViewHolder</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> <a href=ConcatAdapter.html#onCreateViewHolder(ViewGroup,int)>onCreateViewHolder</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> parent, int viewType)</pre>
+                                        <div class="block"><p>Called when RecyclerView needs a new <a href=RecyclerView.ViewHolder.html>ViewHolder</a> of the given type to representan item.</p><p>This new ViewHolder should be constructed with a new View that can represent the itemsof the given type. You can either create a new View manually or inflate it from an XMLlayout file.</p><p>The new ViewHolder will be used to display items of the adapter using <a href=RecyclerView.Adapter.html#onBindViewHolder(VH,int,List)>onBindViewHolder</a>. Since it will be re-used to displaydifferent items in the data set, it is a good idea to cache references to sub views ofthe View to avoid unnecessary <a href=https://developer.android.com/reference/kotlin/android/view/View.html#findviewbyid>findViewById</a> calls.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>parent</code> - The ViewGroup into which the new View will be added after it is bound toan adapter position.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>viewType</code> - The view type of the new View.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onBindViewHolder(RecyclerView.ViewHolder,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onBindViewHolder</h4>
+                                        <pre class="methodSignature"> void <a href=ConcatAdapter.html#onBindViewHolder(RecyclerView.ViewHolder,int)>onBindViewHolder</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> holder, int position)</pre>
+                                        <div class="block"><p>Called by RecyclerView to display the data at the specified position. This method shouldupdate the contents of the <a href=RecyclerView.ViewHolder.html#itemView>itemView</a> to reflect the item at the givenposition.</p><p>Note that unlike <a href=https://developer.android.com/reference/kotlin/android/widget/ListView.html>android.widget.ListView</a>, RecyclerView will not call this methodagain if the position of the item changes in the data set unless the item itself isinvalidated or the new position cannot be determined. For this reason, you should onlyuse the <code>position</code> parameter while acquiring the related data item insidethis method and should not keep a copy of it. If you need the position of an item lateron (e.g. in a click listener), use <a href=RecyclerView.ViewHolder.html#getBindingAdapterPosition()>getBindingAdapterPosition</a> whichwill have the updated adapter position.Override <a href=RecyclerView.Adapter.html#onBindViewHolder(VH,int,List)>onBindViewHolder</a> instead if Adapter canhandle efficient partial bind.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>holder</code> - The ViewHolder which should be updated to represent the contents of theitem at the given position in the data set.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>position</code> - The position of the item within the adapter's data set.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setHasStableIds(boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setHasStableIds</h4>
+                                        <pre class="methodSignature"> void <a href=ConcatAdapter.html#setHasStableIds(boolean)>setHasStableIds</a>(boolean hasStableIds)</pre>
+                                        <div class="block"><p>Calling this method is an error and will result in an <a href=https://developer.android.com/reference/kotlin/java/lang/UnsupportedOperationException.html>UnsupportedOperationException</a>.You should use the <a href=ConcatAdapter.Config.html>Config</a> object passed into the ConcatAdapter to configure thisbehavior.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>hasStableIds</code> - Whether items in data set have unique identifiers or not.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setStateRestorationPolicy(RecyclerView.Adapter.StateRestorationPolicy)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setStateRestorationPolicy</h4>
+                                        <pre class="methodSignature"> void <a href=ConcatAdapter.html#setStateRestorationPolicy(RecyclerView.Adapter.StateRestorationPolicy)>setStateRestorationPolicy</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.Adapter.StateRestorationPolicy.html>RecyclerView.Adapter.StateRestorationPolicy</a> strategy)</pre>
+                                        <div class="block"><p>Calling this method is an error and will result in an <a href=https://developer.android.com/reference/kotlin/java/lang/UnsupportedOperationException.html>UnsupportedOperationException</a>.ConcatAdapter infers this value from added <a href=RecyclerView.Adapter.html>Adapter</a>s.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>strategy</code> - The saved state restoration strategy for this Adapter such that<a href=ConcatAdapter.html>ConcatAdapter</a> will allow state restoration only if all addedadapters allow it orthere are no adapters.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getItemId(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getItemId</h4>
+                                        <pre class="methodSignature"> long <a href=ConcatAdapter.html#getItemId(int)>getItemId</a>(int position)</pre>
+                                        <div class="block"><p>Return the stable ID for the item at <code>position</code>. If <a href=RecyclerView.Adapter.html#hasStableIds()>hasStableIds</a> would return false this method should return <a href=RecyclerView.html#NO_ID>NO_ID</a>. The default implementationof this method returns <a href=RecyclerView.html#NO_ID>NO_ID</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>position</code> - Adapter position to query</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getItemCount()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getItemCount</h4>
+                                        <pre class="methodSignature"> int <a href=ConcatAdapter.html#getItemCount()>getItemCount</a>()</pre>
+                                        <div class="block"><p>Returns the total number of items in the data set held by the adapter.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onFailedToRecycleView(RecyclerView.ViewHolder)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onFailedToRecycleView</h4>
+                                        <pre class="methodSignature"> boolean <a href=ConcatAdapter.html#onFailedToRecycleView(RecyclerView.ViewHolder)>onFailedToRecycleView</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> holder)</pre>
+                                        <div class="block"><p>Called by the RecyclerView if a ViewHolder created by this Adapter cannot be recycleddue to its transient state. Upon receiving this callback, Adapter can clear theanimation(s) that effect the View's transient state and return <code>true</code> so thatthe View can be recycled. Keep in mind that the View in question is already removed fromthe RecyclerView.</p><p>In some cases, it is acceptable to recycle a View although it has transient state. Mostof the time, this is a case where the transient state will be cleared in <a href=RecyclerView.Adapter.html#onBindViewHolder(VH,int)>onBindViewHolder</a> call when View is rebound to a new position.For this reason, RecyclerView leaves the decision to the Adapter and uses the returnvalue of this method to decide whether the View should be recycled or not.</p><p>Note that when all animations are created by <a href=RecyclerView.ItemAnimator.html>ItemAnimator</a>, youshould never receive this callback because RecyclerView keeps those Views as childrenuntil their animations are complete. This callback is useful when children of the itemviews create animations which may not be easy to implement using an <a href=RecyclerView.ItemAnimator.html>ItemAnimator</a>.</p><p>You should never fix this issue by calling<code>holder.itemView.setHasTransientState(false);</code> unless you've previously called<code>holder.itemView.setHasTransientState(true);</code>. Each<code>View.setHasTransientState(true)</code> call must be matched by a<code>View.setHasTransientState(false)</code> call, otherwise, the state of the Viewmay become inconsistent. You should always prefer to end or cancel animations that aretriggering the transient state instead of handling it manually.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>holder</code> - The ViewHolder containing the View that could not be recycled due to itstransient state.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onViewAttachedToWindow(RecyclerView.ViewHolder)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onViewAttachedToWindow</h4>
+                                        <pre class="methodSignature"> void <a href=ConcatAdapter.html#onViewAttachedToWindow(RecyclerView.ViewHolder)>onViewAttachedToWindow</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> holder)</pre>
+                                        <div class="block"><p>Called when a view created by this adapter has been attached to a window.</p><p>This can be used as a reasonable signal that the view is about to be seenby the user. If the adapter previously freed any resources in <a href=RecyclerView.Adapter.html#onViewDetachedFromWindow(VH)>onViewDetachedFromWindow</a> those resources should be restored here.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>holder</code> - Holder of the view being attached</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onViewDetachedFromWindow(RecyclerView.ViewHolder)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onViewDetachedFromWindow</h4>
+                                        <pre class="methodSignature"> void <a href=ConcatAdapter.html#onViewDetachedFromWindow(RecyclerView.ViewHolder)>onViewDetachedFromWindow</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> holder)</pre>
+                                        <div class="block"><p>Called when a view created by this adapter has been detached from its window.</p><p>Becoming detached from the window is not necessarily a permanent condition;the consumer of an Adapter's views may choose to cache views offscreen while theyare not visible, attaching and detaching them as appropriate.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>holder</code> - Holder of the view being detached</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onViewRecycled(RecyclerView.ViewHolder)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onViewRecycled</h4>
+                                        <pre class="methodSignature"> void <a href=ConcatAdapter.html#onViewRecycled(RecyclerView.ViewHolder)>onViewRecycled</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> holder)</pre>
+                                        <div class="block"><p>Called when a view created by this adapter has been recycled.</p><p>A view is recycled when a <a href=RecyclerView.LayoutManager.html>LayoutManager</a> decides that it no longerneeds to be attached to its parent <a href=RecyclerView.html>RecyclerView</a>. This can be because it hasfallen out of visibility or a set of cached views represented by views stillattached to the parent RecyclerView. If an item view has large or expensive databound to it such as large bitmaps, this may be a good place to release thoseresources.</p><p>RecyclerView calls this method right before clearing ViewHolder's internal data andsending it to RecycledViewPool. This way, if ViewHolder was holding valid informationbefore being recycled, you can call <a href=RecyclerView.ViewHolder.html#getBindingAdapterPosition()>getBindingAdapterPosition</a> to getits adapter position.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>holder</code> - The ViewHolder for the view being recycled</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onAttachedToRecyclerView(RecyclerView)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onAttachedToRecyclerView</h4>
+                                        <pre class="methodSignature"> void <a href=ConcatAdapter.html#onAttachedToRecyclerView(RecyclerView)>onAttachedToRecyclerView</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.html>RecyclerView</a> recyclerView)</pre>
+                                        <div class="block"><p>Called by RecyclerView when it starts observing this Adapter.</p><p>Keep in mind that same adapter may be observed by multiple RecyclerViews.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>recyclerView</code> - The RecyclerView instance which started observing this adapter.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onDetachedFromRecyclerView(RecyclerView)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onDetachedFromRecyclerView</h4>
+                                        <pre class="methodSignature"> void <a href=ConcatAdapter.html#onDetachedFromRecyclerView(RecyclerView)>onDetachedFromRecyclerView</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.html>RecyclerView</a> recyclerView)</pre>
+                                        <div class="block"><p>Called by RecyclerView when it stops observing this Adapter.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>recyclerView</code> - The RecyclerView instance which stopped observing this adapter.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getAdapters()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getAdapters</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;out <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt;&gt; <a href=ConcatAdapter.html#getAdapters()>getAdapters</a>()</pre>
+                                        <div class="block"><p>Returns an unmodifiable copy of the list of adapters in this <a href=ConcatAdapter.html>ConcatAdapter</a>.Note that this is a copy hence future changes in the ConcatAdapter are not reflected inthis list.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="findRelativeAdapterPositionIn(RecyclerView.Adapter,RecyclerView.ViewHolder,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>findRelativeAdapterPositionIn</h4>
+                                        <pre class="methodSignature"> int <a href=ConcatAdapter.html#findRelativeAdapterPositionIn(RecyclerView.Adapter,RecyclerView.ViewHolder,int)>findRelativeAdapterPositionIn</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.Adapter.html>RecyclerView.Adapter</a>&lt;out <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt; adapter, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a> viewHolder, int globalPosition)</pre>
+                                        <div class="block"><p>Returns the position of the given <a href=RecyclerView.ViewHolder.html>ViewHolder</a> in the given <a href=RecyclerView.Adapter.html>Adapter</a>.If the given <a href=RecyclerView.Adapter.html>Adapter</a> is not part of this <a href=ConcatAdapter.html>ConcatAdapter</a>, <a href=RecyclerView.html#NO_POSITION>NO_POSITION</a> is returned.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>adapter</code> - The adapter which is a sub adapter of this ConcatAdapter or itself.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>viewHolder</code> - The view holder whose local position in the given adapter will be returned.</dd>
+                                            
+                                            
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

@@ -1,0 +1,19 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.tds.tapdb.internal/HttpRequest.Base64///PointingToDeclaration/com/tds/tapdb/internal/HttpRequest.Base64.html
+$dokka.location:com.tds.tapdb.internal/HttpRequest.ConnectionFactory///PointingToDeclaration/com/tds/tapdb/internal/HttpRequest.ConnectionFactory.html
+$dokka.location:com.tds.tapdb.internal/HttpRequest.HttpRequestException///PointingToDeclaration/com/tds/tapdb/internal/HttpRequest.HttpRequestException.html
+$dokka.location:com.tds.tapdb.internal/HttpRequest.RequestOutputStream///PointingToDeclaration/com/tds/tapdb/internal/HttpRequest.RequestOutputStream.html
+$dokka.location:com.tds.tapdb.internal/HttpRequest.UploadProgress///PointingToDeclaration/com/tds/tapdb/internal/HttpRequest.UploadProgress.html
+$dokka.location:com.tds.tapdb.sdk/TapDB.TapDBDataDynamicProperties///PointingToDeclaration/com/tds/tapdb/sdk/TapDB.TapDBDataDynamicProperties.html
+com.tds.tapdb
+com.tds.tapdb.exceptions
+com.tds.tapdb.internal
+com.tds.tapdb.internal.executor
+com.tds.tapdb.internal.util
+com.tds.tapdb.proxy
+com.tds.tapdb.sdk
+com.tds.tapdb.service
+com.tds.tapdb.shumei
+com.tds.tapdb.wrapper
+

@@ -1,0 +1,1572 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>CoordinatorLayout unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class CoordinatorLayout" class="title">Class CoordinatorLayout</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                            <code>android.graphics.drawable.Drawable.Callback</code>
+                            
+                            ,
+                            
+                            
+                            <code>android.view.KeyEvent.Callback</code>
+                            
+                            ,
+                            
+                            
+                            <code>android.view.ViewManager</code>
+                            
+                            ,
+                            
+                            
+                            <code>android.view.ViewParent</code>
+                            
+                            ,
+                            
+                            
+                            <code>android.view.accessibility.AccessibilityEventSource</code>
+                            
+                            ,
+                            
+                            
+                            <code>tds.androidx.core.view.NestedScrollingParent</code>
+                            
+                            ,
+                            
+                            
+                            <code>tds.androidx.core.view.NestedScrollingParent2</code>
+                            
+                            ,
+                            
+                            
+                            <code>tds.androidx.core.view.NestedScrollingParent3</code>
+                            
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=CoordinatorLayout.html>CoordinatorLayout</a></span>
+extends <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.html>ViewGroup</a> implements <a href=../../core/view/NestedScrollingParent2.html>NestedScrollingParent2</a>, <a href=../../core/view/NestedScrollingParent3.html>NestedScrollingParent3</a>
+                    </pre>
+                    <div class="block"><p>CoordinatorLayout is a super-powered <a href=https://developer.android.com/reference/kotlin/android/widget/FrameLayout.html>FrameLayout</a>. </p><p>CoordinatorLayout is intended for two primary use cases:</p><ul><li>As a top-level application decor or chrome layout</li><li>As a container for a specific interaction with one or more child views</li></ul><p>By specifying <a href=CoordinatorLayout.Behavior.html>Behaviors</a> for child views of a CoordinatorLayout you can provide many different interactions within a single parent and those views can also interact with one another. View classes can specify a default behavior when used as a child of a CoordinatorLayout by implementing the <a href=CoordinatorLayout.AttachedBehavior.html>AttachedBehavior</a> interface.</p><p>Behaviors may be used to implement a variety of interactions and additional layout modifications ranging from sliding drawers and panels to swipe-dismissable elements and buttons that stick to other elements as they move and animate.</p><p>Children of a CoordinatorLayout may have an <a href=CoordinatorLayout.LayoutParams.html#setAnchorId(int)>anchor</a>. This view id must correspond to an arbitrary descendant of the CoordinatorLayout, but it may not be the anchored child itself or a descendant of the anchored child. This can be used to place floating views relative to other arbitrary content panes.</p><p>Children can specify <a href=CoordinatorLayout.LayoutParams.html#insetEdge>insetEdge</a> to describe how the view insets the CoordinatorLayout. Any child views which are set to dodge the same inset edges by <a href=CoordinatorLayout.LayoutParams.html#dodgeInsetEdges>dodgeInsetEdges</a> will be moved appropriately so that the views do not overlap.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public @interface</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="CoordinatorLayout.DispatchChangeEvent.html">CoordinatorLayout.DispatchChangeEvent</a></span></code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public @interface</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="CoordinatorLayout.DefaultBehavior.html">CoordinatorLayout.DefaultBehavior</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>Defines the default <a href=tds/androidx/coordinatorlayout/widget/CoordinatorLayout.Behavior.html>Behavior</a> of a <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> class.</p><p>When writing a custom view, use this annotation to define the default behaviorwhen used as a direct child of an <a href=tds/androidx/coordinatorlayout/widget/CoordinatorLayout.html>CoordinatorLayout</a>. The default behavior can beoverridden using <a href=tds/androidx/coordinatorlayout/widget/CoordinatorLayout.LayoutParams.html#setBehavior(CoordinatorLayout.Behavior)>setBehavior</a>.</p><p>Example: <code>@DefaultBehavior(MyBehavior.class)</code></p></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public interface</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="CoordinatorLayout.AttachedBehavior.html">CoordinatorLayout.AttachedBehavior</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>Defines the default attached <a href=tds/androidx/coordinatorlayout/widget/CoordinatorLayout.Behavior.html>Behavior</a> of a <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> class</p><p>When writing a custom view, implement this interface to return the default behaviorwhen used as a direct child of an <a href=tds/androidx/coordinatorlayout/widget/CoordinatorLayout.html>CoordinatorLayout</a>. The default behavior can beoverridden using <a href=tds/androidx/coordinatorlayout/widget/CoordinatorLayout.LayoutParams.html#setBehavior(CoordinatorLayout.Behavior)>setBehavior</a>.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public abstract class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="CoordinatorLayout.Behavior.html">CoordinatorLayout.Behavior</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>Interaction behavior plugin for child views of <a href=tds/androidx/coordinatorlayout/widget/CoordinatorLayout.html>CoordinatorLayout</a>.</p><p>A Behavior implements one or more interactions that a user can take on a child view.These interactions may include drags, swipes, flings, or any other gestures.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="CoordinatorLayout.LayoutParams.html">CoordinatorLayout.LayoutParams</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>Parameters describing the desired layout for a child of a <a href=tds/androidx/coordinatorlayout/widget/CoordinatorLayout.html>CoordinatorLayout</a>.</p></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#CoordinatorLayout(Context)">CoordinatorLayout</a></span>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#CoordinatorLayout(Context,AttributeSet)">CoordinatorLayout</a></span>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#CoordinatorLayout(Context,AttributeSet,int)">CoordinatorLayout</a></span>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs, int defStyleAttr)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#setOnHierarchyChangeListener(ViewGroup.OnHierarchyChangeListener)>setOnHierarchyChangeListener</a>(<a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.OnHierarchyChangeListener.html>ViewGroup.OnHierarchyChangeListener</a> onHierarchyChangeListener) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onAttachedToWindow()>onAttachedToWindow</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onDetachedFromWindow()>onDetachedFromWindow</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#setStatusBarBackground(Drawable)>setStatusBarBackground</a>(@<a href=../../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/android/graphics/drawable/Drawable.html>Drawable</a> bg) </code>
+                                            </th>
+                                            <td class="colLast">Set a drawable to draw in the insets area for the status bar.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/android/graphics/drawable/Drawable.html>Drawable</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#getStatusBarBackground()>getStatusBarBackground</a>() </code>
+                                            </th>
+                                            <td class="colLast">Gets the drawable used to draw in the insets area for the status bar.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#setVisibility(int)>setVisibility</a>(int visibility) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#setStatusBarBackgroundResource(int)>setStatusBarBackgroundResource</a>(@<a href=../../annotation/DrawableRes.html>DrawableRes</a>() int resId) </code>
+                                            </th>
+                                            <td class="colLast">Set a drawable to draw in the insets area for the status bar.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#setStatusBarBackgroundColor(int)>setStatusBarBackgroundColor</a>(@<a href=../../annotation/ColorInt.html>ColorInt</a>() int color) </code>
+                                            </th>
+                                            <td class="colLast">Set a drawable to draw in the insets area for the status bar.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>final <a href=../../core/view/WindowInsetsCompat.html>WindowInsetsCompat</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#getLastWindowInsets()>getLastWindowInsets</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onInterceptTouchEvent(MotionEvent)>onInterceptTouchEvent</a>(<a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html>MotionEvent</a> ev) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onTouchEvent(MotionEvent)>onTouchEvent</a>(<a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html>MotionEvent</a> ev) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#requestDisallowInterceptTouchEvent(boolean)>requestDisallowInterceptTouchEvent</a>(boolean disallowIntercept) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onMeasureChild(View,int,int,int,int)>onMeasureChild</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, int parentWidthMeasureSpec, int widthUsed, int parentHeightMeasureSpec, int heightUsed) </code>
+                                            </th>
+                                            <td class="colLast">Called to measure each individual child view unless a <a href=CoordinatorLayout.Behavior.html>Behavior</a> is present.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onLayoutChild(View,int)>onLayoutChild</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, int layoutDirection) </code>
+                                            </th>
+                                            <td class="colLast">Called to lay out each individual child view unless a <a href=CoordinatorLayout.Behavior.html>Behavior</a> is present.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onDraw(Canvas)>onDraw</a>(<a href=https://developer.android.com/reference/kotlin/android/graphics/Canvas.html>Canvas</a> c) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#setFitsSystemWindows(boolean)>setFitsSystemWindows</a>(boolean fitSystemWindows) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#dispatchDependentViewsChanged(View)>dispatchDependentViewsChanged</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view) </code>
+                                            </th>
+                                            <td class="colLast">Allows the caller to manually dispatch <a href=CoordinatorLayout.Behavior.html#onDependentViewChanged(CoordinatorLayout,V,View)>onDependentViewChanged</a> to the associated <a href=CoordinatorLayout.Behavior.html>Behavior</a> instances of views which depend on the provided <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#getDependencies(View)>getDependencies</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child) </code>
+                                            </th>
+                                            <td class="colLast">Returns the list of views which the provided view depends on.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#getDependents(View)>getDependents</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child) </code>
+                                            </th>
+                                            <td class="colLast">Returns the list of views which depend on the provided view.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#isPointInChildBounds(View,int,int)>isPointInChildBounds</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, int x, int y) </code>
+                                            </th>
+                                            <td class="colLast">Check if a given point in the CoordinatorLayout's coordinates are within the view bounds of thegiven direct child view.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#doViewsOverlap(View,View)>doViewsOverlap</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> first, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> second) </code>
+                                            </th>
+                                            <td class="colLast">Check whether two views overlap each other.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code><a href=CoordinatorLayout.LayoutParams.html>CoordinatorLayout.LayoutParams</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#generateLayoutParams(AttributeSet)>generateLayoutParams</a>(<a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onStartNestedScroll(View,View,int)>onStartNestedScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int nestedScrollAxes) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onStartNestedScroll(View,View,int,int)>onStartNestedScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int axes, int type) </code>
+                                            </th>
+                                            <td class="colLast">React to a descendant view initiating a nestable scroll operation, claiming thenested scroll operation if appropriate.</td>
+                                        </tr>
+                                        
+                                        <tr id="i24" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onNestedScrollAccepted(View,View,int)>onNestedScrollAccepted</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int nestedScrollAxes) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i25" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onNestedScrollAccepted(View,View,int,int)>onNestedScrollAccepted</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int nestedScrollAxes, int type) </code>
+                                            </th>
+                                            <td class="colLast">React to the successful claiming of a nested scroll operation.</td>
+                                        </tr>
+                                        
+                                        <tr id="i26" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onStopNestedScroll(View)>onStopNestedScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i27" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onStopNestedScroll(View,int)>onStopNestedScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int type) </code>
+                                            </th>
+                                            <td class="colLast">React to a nested scroll operation ending.</td>
+                                        </tr>
+                                        
+                                        <tr id="i28" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onNestedScroll(View,int,int,int,int)>onNestedScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i29" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onNestedScroll(View,int,int,int,int,int)>onNestedScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type) </code>
+                                            </th>
+                                            <td class="colLast">React to a nested scroll in progress.</td>
+                                        </tr>
+                                        
+                                        <tr id="i30" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onNestedScroll(View,int,int,int,int,int,Array)>onNestedScroll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;int&gt; consumed) </code>
+                                            </th>
+                                            <td class="colLast">React to a nested scroll in progress.</td>
+                                        </tr>
+                                        
+                                        <tr id="i31" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onNestedPreScroll(View,int,int,Array)>onNestedPreScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int dx, int dy, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;int&gt; consumed) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i32" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onNestedPreScroll(View,int,int,Array,int)>onNestedPreScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int dx, int dy, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;int&gt; consumed, int type) </code>
+                                            </th>
+                                            <td class="colLast">React to a nested scroll in progress before the target view consumes a portion of the scroll.</td>
+                                        </tr>
+                                        
+                                        <tr id="i33" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onNestedFling(View,float,float,boolean)>onNestedFling</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, float velocityX, float velocityY, boolean consumed) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i34" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#onNestedPreFling(View,float,float)>onNestedPreFling</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, float velocityX, float velocityY) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i35" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#getNestedScrollAxes()>getNestedScrollAxes</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i36" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=CoordinatorLayout.html#requestChildRectangleOnScreen(View,Rect,boolean)>requestChildRectangleOnScreen</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, <a href=https://developer.android.com/reference/kotlin/android/graphics/Rect.html>Rect</a> rectangle, boolean immediate) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.android.view.ViewGroup">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;android.view.ViewGroup</h3>
+                                            <code>addChildrenForAccessibility, addExtraDataToAccessibilityNodeInfo, addFocusables, addKeyboardNavigationClusters, addStatesFromChildren, addTouchables, addView, bringChildToFront, childDrawableStateChanged, childHasTransientStateChanged, clearChildFocus, clearDisappearingChildren, clearFocus, dispatchApplyWindowInsets, dispatchCapturedPointerEvent, dispatchConfigurationChanged, dispatchDisplayHint, dispatchDragEvent, dispatchDrawableHotspotChanged, dispatchFinishTemporaryDetach, dispatchKeyEvent, dispatchKeyEventPreIme, dispatchKeyShortcutEvent, dispatchPointerCaptureChanged, dispatchProvideAutofillStructure, dispatchProvideStructure, dispatchSetActivated, dispatchSetSelected, dispatchStartTemporaryDetach, dispatchSystemUiVisibilityChanged, dispatchTouchEvent, dispatchTrackballEvent, dispatchUnhandledMove, dispatchWindowFocusChanged, dispatchWindowInsetsAnimationEnd, dispatchWindowInsetsAnimationPrepare, dispatchWindowInsetsAnimationProgress, dispatchWindowInsetsAnimationStart, dispatchWindowSystemUiVisiblityChanged, dispatchWindowVisibilityChanged, endViewTransition, findFocus, findViewsWithText, focusSearch, focusableViewAvailable, gatherTransparentRegion, generateLayoutParams, getAccessibilityClassName, getChildAt, getChildCount, getChildMeasureSpec, getChildVisibleRect, getClipChildren, getClipToPadding, getDescendantFocusability, getFocusedChild, getLayoutAnimation, getLayoutAnimationListener, getLayoutMode, getLayoutTransition, getNestedScrollAxes, getOverlay, getPersistentDrawingCache, getTouchscreenBlocksFocus, hasFocus, hasTransientState, indexOfChild, invalidateChild, invalidateChildInParent, isAlwaysDrawnWithCacheEnabled, isAnimationCacheEnabled, isLayoutSuppressed, isMotionEventSplittingEnabled, isTransitionGroup, jumpDrawablesToCurrentState, layout, notifySubtreeAccessibilityStateChanged, offsetDescendantRectToMyCoords, offsetRectIntoDescendantCoords, onDescendantInvalidated, onInterceptHoverEvent, onInterceptTouchEvent, onNestedFling, onNestedPreFling, onNestedPrePerformAccessibilityAction, onNestedPreScroll, onNestedScroll, onNestedScrollAccepted, onRequestSendAccessibilityEvent, onResolvePointerIcon, onStartNestedScroll, onStopNestedScroll, onViewAdded, onViewRemoved, recomputeViewAttributes, removeAllViews, removeAllViewsInLayout, removeView, removeViewAt, removeViewInLayout, removeViews, removeViewsInLayout, requestChildFocus, requestChildRectangleOnScreen, requestDisallowInterceptTouchEvent, requestFocus, requestSendAccessibilityEvent, requestTransparentRegion, restoreDefaultFocus, scheduleLayoutAnimation, setAddStatesFromChildren, setAlwaysDrawnWithCacheEnabled, setAnimationCacheEnabled, setClipChildren, setClipToPadding, setDescendantFocusability, setLayoutAnimation, setLayoutAnimationListener, setLayoutMode, setLayoutTransition, setMotionEventSplittingEnabled, setOnHierarchyChangeListener, setPersistentDrawingCache, setTouchscreenBlocksFocus, setTransitionGroup, setWindowInsetsAnimationCallback, shouldDelayChildPressedState, showContextMenuForChild, startActionModeForChild, startLayoutAnimation, startViewTransition, suppressLayout, updateViewLayout</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.android.view.View">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;android.view.View</h3>
+                                            <code>addOnAttachStateChangeListener, addOnLayoutChangeListener, addOnUnhandledKeyEventListener, animate, announceForAccessibility, autofill, bringToFront, buildDrawingCache, buildLayer, callOnClick, canResolveLayoutDirection, canResolveTextAlignment, canResolveTextDirection, canScrollHorizontally, canScrollVertically, cancelDragAndDrop, cancelLongPress, cancelPendingInputEvents, checkInputConnectionProxy, clearAnimation, combineMeasuredStates, computeScroll, computeSystemWindowInsets, createAccessibilityNodeInfo, createContextMenu, destroyDrawingCache, dispatchGenericMotionEvent, dispatchNestedFling, dispatchNestedPreFling, dispatchNestedPrePerformAccessibilityAction, dispatchNestedPreScroll, dispatchNestedScroll, dispatchPopulateAccessibilityEvent, draw, drawableHotspotChanged, findViewById, findViewWithTag, forceHasOverlappingRendering, forceLayout, generateViewId, getAccessibilityDelegate, getAccessibilityLiveRegion, getAccessibilityNodeProvider, getAccessibilityPaneTitle, getAccessibilityTraversalAfter, getAccessibilityTraversalBefore, getAlpha, getAnimation, getAnimationMatrix, getApplicationWindowToken, getAttributeResolutionStack, getAttributeSourceResourceMap, getAutofillHints, getAutofillId, getAutofillType, getAutofillValue, getBackground, getBackgroundTintBlendMode, getBackgroundTintList, getBackgroundTintMode, getBaseline, getBottom, getCameraDistance, getClipBounds, getClipBounds, getClipToOutline, getContentCaptureSession, getContentDescription, getContext, getDefaultFocusHighlightEnabled, getDefaultSize, getDisplay, getDrawableState, getDrawingCache, getDrawingCacheBackgroundColor, getDrawingCacheQuality, getDrawingRect, getDrawingTime, getElevation, getExplicitStyle, getFilterTouchesWhenObscured, getFitsSystemWindows, getFocusable, getFocusables, getFocusedRect, getForeground, getForegroundGravity, getForegroundTintBlendMode, getForegroundTintList, getForegroundTintMode, getGlobalVisibleRect, getHandler, getHasOverlappingRendering, getHeight, getHitRect, getHorizontalFadingEdgeLength, getHorizontalScrollbarThumbDrawable, getHorizontalScrollbarTrackDrawable, getId, getImportantForAccessibility, getImportantForAutofill, getImportantForContentCapture, getKeepScreenOn, getKeyDispatcherState, getLabelFor, getLayerType, getLayoutDirection, getLayoutParams, getLeft, getLocalVisibleRect, getLocationInSurface, getLocationInWindow, getLocationOnScreen, getMatrix, getMeasuredHeight, getMeasuredHeightAndState, getMeasuredState, getMeasuredWidth, getMeasuredWidthAndState, getMinimumHeight, getMinimumWidth, getNextClusterForwardId, getNextFocusDownId, getNextFocusForwardId, getNextFocusLeftId, getNextFocusRightId, getNextFocusUpId, getOnFocusChangeListener, getOutlineAmbientShadowColor, getOutlineProvider, getOutlineSpotShadowColor, getOverScrollMode, getOverlay, getPaddingBottom, getPaddingEnd, getPaddingLeft, getPaddingRight, getPaddingStart, getPaddingTop, getParent, getParentForAccessibility, getPivotX, getPivotY, getPointerIcon, getResources, getRevealOnFocusHint, getRight, getRootView, getRootWindowInsets, getRotation, getRotationX, getRotationY, getScaleX, getScaleY, getScrollBarDefaultDelayBeforeFade, getScrollBarFadeDuration, getScrollBarSize, getScrollBarStyle, getScrollIndicators, getScrollX, getScrollY, getSolidColor, getSourceLayoutResId, getStateDescription, getStateListAnimator, getSystemGestureExclusionRects, getSystemUiVisibility, getTag, getTextAlignment, getTextDirection, getTooltipText, getTop, getTouchDelegate, getTouchables, getTransitionAlpha, getTransitionName, getTranslationX, getTranslationY, getTranslationZ, getUniqueDrawingId, getVerticalFadingEdgeLength, getVerticalScrollbarPosition, getVerticalScrollbarThumbDrawable, getVerticalScrollbarTrackDrawable, getVerticalScrollbarWidth, getViewTreeObserver, getVisibility, getWidth, getWindowId, getWindowInsetsController, getWindowSystemUiVisibility, getWindowToken, getWindowVisibility, getWindowVisibleDisplayFrame, getX, getY, getZ, hasExplicitFocusable, hasFocusable, hasNestedScrollingParent, hasOnClickListeners, hasOnLongClickListeners, hasOverlappingRendering, hasPointerCapture, hasWindowFocus, inflate, invalidate, invalidateDrawable, invalidateOutline, isAccessibilityFocused, isAccessibilityHeading, isActivated, isAttachedToWindow, isClickable, isContextClickable, isDirty, isDrawingCacheEnabled, isDuplicateParentStateEnabled, isEnabled, isFocusable, isFocusableInTouchMode, isFocused, isFocusedByDefault, isForceDarkAllowed, isHapticFeedbackEnabled, isHardwareAccelerated, isHorizontalFadingEdgeEnabled, isHorizontalScrollBarEnabled, isHovered, isImportantForAccessibility, isImportantForAutofill, isImportantForContentCapture, isInEditMode, isInLayout, isInTouchMode, isKeyboardNavigationCluster, isLaidOut, isLayoutDirectionResolved, isLayoutRequested, isLongClickable, isNestedScrollingEnabled, isOpaque, isPaddingRelative, isPivotSet, isPressed, isSaveEnabled, isSaveFromParentEnabled, isScreenReaderFocusable, isScrollContainer, isScrollbarFadingEnabled, isSelected, isShowingLayoutBounds, isShown, isSoundEffectsEnabled, isTemporarilyDetached, isTextAlignmentResolved, isTextDirectionResolved, isVerticalFadingEdgeEnabled, isVerticalScrollBarEnabled, isVisibleToUserForAutofill, keyboardNavigationClusterSearch, measure, offsetLeftAndRight, offsetTopAndBottom, onApplyWindowInsets, onCancelPendingInputEvents, onCapturedPointerEvent, onCheckIsTextEditor, onCreateInputConnection, onDragEvent, onDrawForeground, onFilterTouchEventForSecurity, onFinishTemporaryDetach, onGenericMotionEvent, onHoverChanged, onHoverEvent, onInitializeAccessibilityEvent, onInitializeAccessibilityNodeInfo, onKeyDown, onKeyLongPress, onKeyMultiple, onKeyPreIme, onKeyShortcut, onKeyUp, onPointerCaptureChange, onPopulateAccessibilityEvent, onProvideAutofillStructure, onProvideAutofillVirtualStructure, onProvideContentCaptureStructure, onProvideStructure, onProvideVirtualStructure, onRtlPropertiesChanged, onScreenStateChanged, onStartTemporaryDetach, onTouchEvent, onTrackballEvent, onVisibilityAggregated, onWindowFocusChanged, onWindowSystemUiVisibilityChanged, performAccessibilityAction, performClick, performContextClick, performHapticFeedback, performLongClick, playSoundEffect, post, postDelayed, postInvalidate, postInvalidateDelayed, postInvalidateOnAnimation, postOnAnimation, postOnAnimationDelayed, refreshDrawableState, releasePointerCapture, removeCallbacks, removeOnAttachStateChangeListener, removeOnLayoutChangeListener, removeOnUnhandledKeyEventListener, requestApplyInsets, requestFitSystemWindows, requestFocusFromTouch, requestLayout, requestPointerCapture, requestRectangleOnScreen, requestUnbufferedDispatch, requireViewById, resetPivot, resolveSize, resolveSizeAndState, restoreHierarchyState, saveAttributeDataForStyleable, saveHierarchyState, scheduleDrawable, scrollBy, scrollTo, sendAccessibilityEvent, sendAccessibilityEventUnchecked, setAccessibilityDelegate, setAccessibilityHeading, setAccessibilityLiveRegion, setAccessibilityPaneTitle, setAccessibilityTraversalAfter, setAccessibilityTraversalBefore, setActivated, setAlpha, setAnimation, setAnimationMatrix, setAutofillHints, setAutofillId, setBackground, setBackgroundColor, setBackgroundDrawable, setBackgroundResource, setBackgroundTintBlendMode, setBackgroundTintList, setBackgroundTintMode, setBottom, setCameraDistance, setClickable, setClipBounds, setClipToOutline, setContentCaptureSession, setContentDescription, setContextClickable, setDefaultFocusHighlightEnabled, setDrawingCacheBackgroundColor, setDrawingCacheEnabled, setDrawingCacheQuality, setDuplicateParentStateEnabled, setElevation, setEnabled, setFadingEdgeLength, setFilterTouchesWhenObscured, setFitsSystemWindows, setFocusable, setFocusableInTouchMode, setFocusedByDefault, setForceDarkAllowed, setForeground, setForegroundGravity, setForegroundTintBlendMode, setForegroundTintList, setForegroundTintMode, setHapticFeedbackEnabled, setHasTransientState, setHorizontalFadingEdgeEnabled, setHorizontalScrollBarEnabled, setHorizontalScrollbarThumbDrawable, setHorizontalScrollbarTrackDrawable, setHovered, setId, setImportantForAccessibility, setImportantForAutofill, setImportantForContentCapture, setKeepScreenOn, setKeyboardNavigationCluster, setLabelFor, setLayerPaint, setLayerType, setLayoutDirection, setLayoutParams, setLeft, setLeftTopRightBottom, setLongClickable, setMinimumHeight, setMinimumWidth, setNestedScrollingEnabled, setNextClusterForwardId, setNextFocusDownId, setNextFocusForwardId, setNextFocusLeftId, setNextFocusRightId, setNextFocusUpId, setOnApplyWindowInsetsListener, setOnCapturedPointerListener, setOnClickListener, setOnContextClickListener, setOnCreateContextMenuListener, setOnDragListener, setOnFocusChangeListener, setOnGenericMotionListener, setOnHoverListener, setOnKeyListener, setOnLongClickListener, setOnScrollChangeListener, setOnSystemUiVisibilityChangeListener, setOnTouchListener, setOutlineAmbientShadowColor, setOutlineProvider, setOutlineSpotShadowColor, setOverScrollMode, setPadding, setPaddingRelative, setPivotX, setPivotY, setPointerIcon, setPressed, setRevealOnFocusHint, setRight, setRotation, setRotationX, setRotationY, setSaveEnabled, setSaveFromParentEnabled, setScaleX, setScaleY, setScreenReaderFocusable, setScrollBarDefaultDelayBeforeFade, setScrollBarFadeDuration, setScrollBarSize, setScrollBarStyle, setScrollContainer, setScrollIndicators, setScrollX, setScrollY, setScrollbarFadingEnabled, setSelected, setSoundEffectsEnabled, setStateDescription, setStateListAnimator, setSystemGestureExclusionRects, setSystemUiVisibility, setTag, setTextAlignment, setTextDirection, setTooltipText, setTop, setTouchDelegate, setTransitionAlpha, setTransitionName, setTransitionVisibility, setTranslationX, setTranslationY, setTranslationZ, setVerticalFadingEdgeEnabled, setVerticalScrollBarEnabled, setVerticalScrollbarPosition, setVerticalScrollbarThumbDrawable, setVerticalScrollbarTrackDrawable, setVisibility, setWillNotCacheDrawing, setWillNotDraw, setX, setY, setZ, showContextMenu, startActionMode, startAnimation, startDrag, startDragAndDrop, startNestedScroll, stopNestedScroll, toString, transformMatrixToGlobal, transformMatrixToLocal, unscheduleDrawable, updateDragShadow, willNotCacheDrawing, willNotDraw</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.tds.androidx.core.view.NestedScrollingParent2">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;tds.androidx.core.view.NestedScrollingParent2</h3>
+                                            <code>onNestedPreScroll, onNestedScroll, onNestedScrollAccepted, onStartNestedScroll, onStopNestedScroll</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.tds.androidx.core.view.NestedScrollingParent">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;tds.androidx.core.view.NestedScrollingParent</h3>
+                                            <code>onNestedFling, onNestedPreFling, onNestedPreScroll, onNestedScroll, onNestedScrollAccepted, onStartNestedScroll, onStopNestedScroll</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.tds.androidx.core.view.NestedScrollingParent3">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;tds.androidx.core.view.NestedScrollingParent3</h3>
+                                            <code>onNestedScroll</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="CoordinatorLayout(Context)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>CoordinatorLayout</h4>
+                                        <pre>CoordinatorLayout(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="CoordinatorLayout(Context,AttributeSet)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>CoordinatorLayout</h4>
+                                        <pre>CoordinatorLayout(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="CoordinatorLayout(Context,AttributeSet,int)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>CoordinatorLayout</h4>
+                                        <pre>CoordinatorLayout(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs, int defStyleAttr)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="setOnHierarchyChangeListener(ViewGroup.OnHierarchyChangeListener)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setOnHierarchyChangeListener</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#setOnHierarchyChangeListener(ViewGroup.OnHierarchyChangeListener)>setOnHierarchyChangeListener</a>(<a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.OnHierarchyChangeListener.html>ViewGroup.OnHierarchyChangeListener</a> onHierarchyChangeListener)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onAttachedToWindow()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onAttachedToWindow</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onAttachedToWindow()>onAttachedToWindow</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onDetachedFromWindow()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onDetachedFromWindow</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onDetachedFromWindow()>onDetachedFromWindow</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setStatusBarBackground(Drawable)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setStatusBarBackground</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#setStatusBarBackground(Drawable)>setStatusBarBackground</a>(@<a href=../../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/android/graphics/drawable/Drawable.html>Drawable</a> bg)</pre>
+                                        <div class="block"><p>Set a drawable to draw in the insets area for the status bar. Note that this will only beactivated if this DrawerLayout fitsSystemWindows.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>bg</code> - Background drawable to draw behind the status bar</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getStatusBarBackground()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getStatusBarBackground</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/Nullable.html>Nullable</a>() <a href=https://developer.android.com/reference/kotlin/android/graphics/drawable/Drawable.html>Drawable</a> <a href=CoordinatorLayout.html#getStatusBarBackground()>getStatusBarBackground</a>()</pre>
+                                        <div class="block"><p>Gets the drawable used to draw in the insets area for the status bar.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setVisibility(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setVisibility</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#setVisibility(int)>setVisibility</a>(int visibility)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setStatusBarBackgroundResource(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setStatusBarBackgroundResource</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#setStatusBarBackgroundResource(int)>setStatusBarBackgroundResource</a>(@<a href=../../annotation/DrawableRes.html>DrawableRes</a>() int resId)</pre>
+                                        <div class="block"><p>Set a drawable to draw in the insets area for the status bar. Note that this will only beactivated if this DrawerLayout fitsSystemWindows.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>resId</code> - Resource id of a background drawable to draw behind the status bar</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setStatusBarBackgroundColor(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setStatusBarBackgroundColor</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#setStatusBarBackgroundColor(int)>setStatusBarBackgroundColor</a>(@<a href=../../annotation/ColorInt.html>ColorInt</a>() int color)</pre>
+                                        <div class="block"><p>Set a drawable to draw in the insets area for the status bar. Note that this will only beactivated if this DrawerLayout fitsSystemWindows.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>color</code> - Color to use as a background drawable to draw behind the status bar in 0xAARRGGBBformat.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getLastWindowInsets()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getLastWindowInsets</h4>
+                                        <pre class="methodSignature"> final <a href=../../core/view/WindowInsetsCompat.html>WindowInsetsCompat</a> <a href=CoordinatorLayout.html#getLastWindowInsets()>getLastWindowInsets</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onInterceptTouchEvent(MotionEvent)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onInterceptTouchEvent</h4>
+                                        <pre class="methodSignature"> boolean <a href=CoordinatorLayout.html#onInterceptTouchEvent(MotionEvent)>onInterceptTouchEvent</a>(<a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html>MotionEvent</a> ev)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onTouchEvent(MotionEvent)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onTouchEvent</h4>
+                                        <pre class="methodSignature"> boolean <a href=CoordinatorLayout.html#onTouchEvent(MotionEvent)>onTouchEvent</a>(<a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html>MotionEvent</a> ev)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="requestDisallowInterceptTouchEvent(boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>requestDisallowInterceptTouchEvent</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#requestDisallowInterceptTouchEvent(boolean)>requestDisallowInterceptTouchEvent</a>(boolean disallowIntercept)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onMeasureChild(View,int,int,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onMeasureChild</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onMeasureChild(View,int,int,int,int)>onMeasureChild</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, int parentWidthMeasureSpec, int widthUsed, int parentHeightMeasureSpec, int heightUsed)</pre>
+                                        <div class="block"><p>Called to measure each individual child view unless a <a href=CoordinatorLayout.Behavior.html>Behavior</a> is present. TheBehavior may choose to delegate child measurement to this method.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>child</code> - the child to measure</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>parentWidthMeasureSpec</code> - the width requirements for this view</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>widthUsed</code> - extra space that has been used up by the parent horizontally (possibly byother children of the parent)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>parentHeightMeasureSpec</code> - the height requirements for this view</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>heightUsed</code> - extra space that has been used up by the parent vertically (possibly by otherchildren of the parent)</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onLayoutChild(View,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onLayoutChild</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onLayoutChild(View,int)>onLayoutChild</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, int layoutDirection)</pre>
+                                        <div class="block"><p>Called to lay out each individual child view unless a <a href=CoordinatorLayout.Behavior.html>Behavior</a> is present. TheBehavior may choose to delegate child measurement to this method.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>child</code> - child view to lay out</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>layoutDirection</code> - the resolved layout direction for the CoordinatorLayout, such as <a href=../../core/view/ViewCompat.html#LAYOUT_DIRECTION_LTR></a> or <a href=../../core/view/ViewCompat.html#LAYOUT_DIRECTION_RTL>LAYOUT_DIRECTION_RTL</a>.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onDraw(Canvas)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onDraw</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onDraw(Canvas)>onDraw</a>(<a href=https://developer.android.com/reference/kotlin/android/graphics/Canvas.html>Canvas</a> c)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setFitsSystemWindows(boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setFitsSystemWindows</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#setFitsSystemWindows(boolean)>setFitsSystemWindows</a>(boolean fitSystemWindows)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="dispatchDependentViewsChanged(View)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>dispatchDependentViewsChanged</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#dispatchDependentViewsChanged(View)>dispatchDependentViewsChanged</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view)</pre>
+                                        <div class="block"><p>Allows the caller to manually dispatch <a href=CoordinatorLayout.Behavior.html#onDependentViewChanged(CoordinatorLayout,V,View)>onDependentViewChanged</a> to the associated <a href=CoordinatorLayout.Behavior.html>Behavior</a> instances of views which depend on the provided <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a>.</p><p>You should not normally need to call this method as the it will be automatically donewhen the view has changed.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>view</code> - the View to find dependents of to dispatch the call.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getDependencies(View)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getDependencies</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a>&gt; <a href=CoordinatorLayout.html#getDependencies(View)>getDependencies</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child)</pre>
+                                        <div class="block"><p>Returns the list of views which the provided view depends on. Do not store this list as itscontents may not be valid beyond the caller.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>child</code> - the view to find dependencies for.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getDependents(View)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getDependents</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a>&gt; <a href=CoordinatorLayout.html#getDependents(View)>getDependents</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child)</pre>
+                                        <div class="block"><p>Returns the list of views which depend on the provided view. Do not store this list as itscontents may not be valid beyond the caller.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>child</code> - the view to find dependents of.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isPointInChildBounds(View,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isPointInChildBounds</h4>
+                                        <pre class="methodSignature"> boolean <a href=CoordinatorLayout.html#isPointInChildBounds(View,int,int)>isPointInChildBounds</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, int x, int y)</pre>
+                                        <div class="block"><p>Check if a given point in the CoordinatorLayout's coordinates are within the view bounds of thegiven direct child view.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>child</code> - child view to test</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>x</code> - X coordinate to test, in the CoordinatorLayout's coordinate system</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>y</code> - Y coordinate to test, in the CoordinatorLayout's coordinate system</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="doViewsOverlap(View,View)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>doViewsOverlap</h4>
+                                        <pre class="methodSignature"> boolean <a href=CoordinatorLayout.html#doViewsOverlap(View,View)>doViewsOverlap</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> first, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> second)</pre>
+                                        <div class="block"><p>Check whether two views overlap each other. The views need to be descendants of this  in the view hierarchy.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>first</code> - first child view to test</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>second</code> - second child view to test</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="generateLayoutParams(AttributeSet)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>generateLayoutParams</h4>
+                                        <pre class="methodSignature"> <a href=CoordinatorLayout.LayoutParams.html>CoordinatorLayout.LayoutParams</a> <a href=CoordinatorLayout.html#generateLayoutParams(AttributeSet)>generateLayoutParams</a>(<a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onStartNestedScroll(View,View,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onStartNestedScroll</h4>
+                                        <pre class="methodSignature"> boolean <a href=CoordinatorLayout.html#onStartNestedScroll(View,View,int)>onStartNestedScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int nestedScrollAxes)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onStartNestedScroll(View,View,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onStartNestedScroll</h4>
+                                        <pre class="methodSignature"> boolean <a href=CoordinatorLayout.html#onStartNestedScroll(View,View,int,int)>onStartNestedScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int axes, int type)</pre>
+                                        <div class="block"><p>React to a descendant view initiating a nestable scroll operation, claiming thenested scroll operation if appropriate.</p><p>This method will be called in response to a descendant view invoking <a href=../../core/view/ViewCompat.html#startNestedScroll(View,int)>startNestedScroll</a>. Each parent up the view hierarchy will begiven an opportunity to respond and claim the nested scrolling operation by returning<code>true</code>.</p><p>This method may be overridden by ViewParent implementations to indicate when the viewis willing to support a nested scrolling operation that is about to begin. If it returnstrue, this ViewParent will become the target view's nested scrolling parent for the durationof the scroll operation in progress. When the nested scroll is finished this ViewParentwill receive a call to <a href=../../core/view/NestedScrollingParent2.html#onStopNestedScroll(View,int)>onStopNestedScroll</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>child</code> - Direct child of this ViewParent containing target</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>target</code> - View that initiated the nested scroll</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>axes</code> - Flags consisting of <a href=../../core/view/ViewCompat.html#SCROLL_AXIS_HORIZONTAL>SCROLL_AXIS_HORIZONTAL</a>,<a href=../../core/view/ViewCompat.html#SCROLL_AXIS_VERTICAL>SCROLL_AXIS_VERTICAL</a> or both</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>type</code> - the type of input which cause this scroll event</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onNestedScrollAccepted(View,View,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onNestedScrollAccepted</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onNestedScrollAccepted(View,View,int)>onNestedScrollAccepted</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int nestedScrollAxes)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onNestedScrollAccepted(View,View,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onNestedScrollAccepted</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onNestedScrollAccepted(View,View,int,int)>onNestedScrollAccepted</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int nestedScrollAxes, int type)</pre>
+                                        <div class="block"><p>React to the successful claiming of a nested scroll operation.</p><p>This method will be called after <a href=../../core/view/NestedScrollingParent2.html#onStartNestedScroll(View,View,int,int)>onStartNestedScroll</a> returns true. Itoffers an opportunity for the view and its superclasses to perform initial configurationfor the nested scroll. Implementations of this method should always call their superclass'simplementation of this method if one is present.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>child</code> - Direct child of this ViewParent containing target</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>target</code> - View that initiated the nested scroll</dd>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            <dd><code>type</code> - the type of input which cause this scroll event</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onStopNestedScroll(View)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onStopNestedScroll</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onStopNestedScroll(View)>onStopNestedScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onStopNestedScroll(View,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onStopNestedScroll</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onStopNestedScroll(View,int)>onStopNestedScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int type)</pre>
+                                        <div class="block"><p>React to a nested scroll operation ending.</p><p>Perform cleanup after a nested scrolling operation.This method will be called when a nested scroll stops, for example when a nested touchscroll ends with a <a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html#action_up>ACTION_UP</a> or <a href=https://developer.android.com/reference/kotlin/android/view/MotionEvent.html#action_cancel>ACTION_CANCEL</a> event.Implementations of this method should always call their superclass's implementation of thismethod if one is present.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>target</code> - View that initiated the nested scroll</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>type</code> - the type of input which cause this scroll event</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onNestedScroll(View,int,int,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onNestedScroll</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onNestedScroll(View,int,int,int,int)>onNestedScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onNestedScroll(View,int,int,int,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onNestedScroll</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onNestedScroll(View,int,int,int,int,int)>onNestedScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type)</pre>
+                                        <div class="block"><p>React to a nested scroll in progress.</p><p>This method will be called when the ViewParent's current nested scrolling child viewdispatches a nested scroll event. To receive calls to this method the ViewParent must havepreviously returned <code>true</code> for a call to <a href=../../core/view/NestedScrollingParent2.html#onStartNestedScroll(View,View,int,int)>onStartNestedScroll</a>.</p><p>Both the consumed and unconsumed portions of the scroll distance are reported to theViewParent. An implementation may choose to use the consumed portion to match or chase scrollposition of multiple child elements, for example. The unconsumed portion may be used toallow continuous dragging of multiple scrolling or draggable elements, such as scrollinga list within a vertical drawer where the drawer begins dragging once the edge of innerscrolling content is reached.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>target</code> - The descendent view controlling the nested scroll</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>dxConsumed</code> - Horizontal scroll distance in pixels already consumed by target</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>dyConsumed</code> - Vertical scroll distance in pixels already consumed by target</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>dxUnconsumed</code> - Horizontal scroll distance in pixels not consumed by target</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>dyUnconsumed</code> - Vertical scroll distance in pixels not consumed by target</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>type</code> - the type of input which cause this scroll event</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onNestedScroll(View,int,int,int,int,int,Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onNestedScroll</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onNestedScroll(View,int,int,int,int,int,Array)>onNestedScroll</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type, @<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;int&gt; consumed)</pre>
+                                        <div class="block"><p>React to a nested scroll in progress.</p><p>This method will be called when the ViewParent's current nested scrolling child viewdispatches a nested scroll event. To receive calls to this method the ViewParent must havepreviously returned <code>true</code> for a call to <a href=../../core/view/NestedScrollingParent2.html#onStartNestedScroll(View,View,int,int)>onStartNestedScroll</a>.</p><p>Both the consumed and unconsumed portions of the scroll distance are reported to theViewParent. An implementation may choose to use the consumed portion to match or chase scrollposition of multiple child elements, for example. The unconsumed portion may be used toallow continuous dragging of multiple scrolling or draggable elements, such as scrollinga list within a vertical drawer where the drawer begins dragging once the edge of innerscrolling content is reached.</p><p>This method is called when a nested scrolling child invokes <a href=../../core/view/NestedScrollingChild3.html#dispatchNestedScroll(int,int,int,int,Array,int,Array)>dispatchNestedScroll</a>} orone of methods it overloads.</p><p>An implementation must report how many pixels of the the x and y scroll distances wereconsumed by this nested scrolling parent by adding the consumed distances to the<code>consumed</code> parameter. If this View also implements <a href=../../core/view/NestedScrollingChild3.html>NestedScrollingChild3</a>,<code>consumed</code> should also be passed up to it's nested scrolling parent so that theparent may also add any scroll distance it consumes. Index 0 corresponds to dx and index 1corresponds to dy.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>target</code> - The descendant view controlling the nested scroll</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>dxConsumed</code> - Horizontal scroll distance in pixels already consumed by target</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>dyConsumed</code> - Vertical scroll distance in pixels already consumed by target</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>dxUnconsumed</code> - Horizontal scroll distance in pixels not consumed by target</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>dyUnconsumed</code> - Vertical scroll distance in pixels not consumed by target</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>type</code> - the type of input which cause this scroll event</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>consumed</code> - Output.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onNestedPreScroll(View,int,int,Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onNestedPreScroll</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onNestedPreScroll(View,int,int,Array)>onNestedPreScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int dx, int dy, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;int&gt; consumed)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onNestedPreScroll(View,int,int,Array,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onNestedPreScroll</h4>
+                                        <pre class="methodSignature"> void <a href=CoordinatorLayout.html#onNestedPreScroll(View,int,int,Array,int)>onNestedPreScroll</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, int dx, int dy, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;int&gt; consumed, int type)</pre>
+                                        <div class="block"><p>React to a nested scroll in progress before the target view consumes a portion of the scroll.</p><p>When working with nested scrolling often the parent view may want an opportunityto consume the scroll before the nested scrolling child does. An example of this is adrawer that contains a scrollable list. The user will want to be able to scroll the listfully into view before the list itself begins scrolling.</p><p><code>onNestedPreScroll</code> is called when a nested scrolling child invokes <a href=https://developer.android.com/reference/kotlin/android/view/View.html#dispatchnestedprescroll>dispatchNestedPreScroll</a>. The implementation shouldreport how any pixels of the scroll reported by dx, dy were consumed in the<code>consumed</code> array. Index 0 corresponds to dx and index 1 corresponds to dy.This parameter will never be null. Initial values for consumed[0] and consumed[1]will always be 0.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>target</code> - View that initiated the nested scroll</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>dx</code> - Horizontal scroll distance in pixels</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>dy</code> - Vertical scroll distance in pixels</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>consumed</code> - Output.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>type</code> - the type of input which cause this scroll event</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onNestedFling(View,float,float,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onNestedFling</h4>
+                                        <pre class="methodSignature"> boolean <a href=CoordinatorLayout.html#onNestedFling(View,float,float,boolean)>onNestedFling</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, float velocityX, float velocityY, boolean consumed)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onNestedPreFling(View,float,float)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onNestedPreFling</h4>
+                                        <pre class="methodSignature"> boolean <a href=CoordinatorLayout.html#onNestedPreFling(View,float,float)>onNestedPreFling</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> target, float velocityX, float velocityY)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getNestedScrollAxes()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getNestedScrollAxes</h4>
+                                        <pre class="methodSignature"> int <a href=CoordinatorLayout.html#getNestedScrollAxes()>getNestedScrollAxes</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="requestChildRectangleOnScreen(View,Rect,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>requestChildRectangleOnScreen</h4>
+                                        <pre class="methodSignature"> boolean <a href=CoordinatorLayout.html#requestChildRectangleOnScreen(View,Rect,boolean)>requestChildRectangleOnScreen</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> child, <a href=https://developer.android.com/reference/kotlin/android/graphics/Rect.html>Rect</a> rectangle, boolean immediate)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

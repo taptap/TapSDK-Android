@@ -1,0 +1,355 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>DiffUtil unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class DiffUtil" class="title">Class DiffUtil</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=DiffUtil.html>DiffUtil</a></span>
+
+                    </pre>
+                    <div class="block"><p>DiffUtil is a utility class that calculates the difference between two lists and outputs a list of update operations that converts the first list into the second one. </p><p>It can be used to calculate updates for a RecyclerView Adapter. See <a href=ListAdapter.html>ListAdapter</a> and <a href=AsyncListDiffer.html>AsyncListDiffer</a> which can simplify the use of DiffUtil on a background thread. </p><p>DiffUtil uses Eugene W. Myers's difference algorithm to calculate the minimal number of updates to convert one list into another. Myers's algorithm does not handle items that are moved so DiffUtil runs a second pass on the result to detect items that were moved. </p><p>Note that DiffUtil, <a href=ListAdapter.html>ListAdapter</a>, and <a href=AsyncListDiffer.html>AsyncListDiffer</a> require the list to not mutate while in use. This generally means that both the lists themselves and their elements (or at least, the properties of elements used in diffing) should not be modified directly. Instead, new lists should be provided any time content changes. It's common for lists passed to DiffUtil to share elements that have not mutated, so it is not strictly required to reload all data to use DiffUtil. </p><p>If the lists are large, this operation may take significant time so you are advised to run this on a background thread, get the <a href=DiffUtil.DiffResult.html>DiffResult</a> then apply it on the RecyclerView on the main thread. </p><p>This algorithm is optimized for space and uses O(N) space to find the minimal number of addition and removal operations between the two lists. It has O(N + D^2) expected time performance where D is the length of the edit script. </p><p>If move detection is enabled, it takes an additional O(MN) time where M is the total number of added items and N is the total number of removed items. If your lists are already sorted by the same constraint (e.g. a created timestamp for a list of posts), you can disable move detection to improve performance. </p><p>The actual runtime of the algorithm significantly depends on the number of changes in the list and the cost of your comparison methods. Below are some average run times for reference: (The test list is composed of random UUID Strings and the tests are run on Nexus 5X with M) </p><ul><li>100 items and 10 modifications: avg: 0.39 ms, median: 0.35 ms </li><li>100 items and 100 modifications: 3.82 ms, median: 3.75 ms </li><li>100 items and 100 modifications without moves: 2.09 ms, median: 2.06 ms </li><li>1000 items and 50 modifications: avg: 4.67 ms, median: 4.59 ms </li><li>1000 items and 50 modifications without moves: avg: 3.59 ms, median: 3.50 ms </li><li>1000 items and 200 modifications: 27.07 ms, median: 26.92 ms </li><li>1000 items and 200 modifications without moves: 13.54 ms, median: 13.36 ms </li></ul><p>Due to implementation constraints, the max size of the list can be 2^26.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public abstract class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="DiffUtil.Callback.html">DiffUtil.Callback</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>A Callback class used by DiffUtil while calculating the diff between two lists.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public abstract class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="DiffUtil.ItemCallback.html">DiffUtil.ItemCallback</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>Callback for calculating the diff between two non-null items in a list.</p><p><a href=tds/androidx/recyclerview/widget/DiffUtil.Callback.html>Callback</a> serves two roles - list indexing, and item diffing. ItemCallback handlesjust the second of these, which allows separation of code that indexes into an array or Listfrom the presentation-layer and content specific diffing code.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="DiffUtil.DiffResult.html">DiffUtil.DiffResult</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>This class holds the information about the result of a <a href=tds/androidx/recyclerview/widget/DiffUtil.html#calculateDiff(DiffUtil.Callback,boolean)>calculateDiff</a> call.</p><p>You can consume the updates in a DiffResult via <a href=tds/androidx/recyclerview/widget/DiffUtil.DiffResult.html#dispatchUpdatesTo(ListUpdateCallback)>dispatchUpdatesTo</a> or directly stream the results into a <a href=tds/androidx/recyclerview/widget/RecyclerView.Adapter.html>RecyclerView.Adapter</a> via <a href=tds/androidx/recyclerview/widget/DiffUtil.DiffResult.html#dispatchUpdatesTo(RecyclerView.Adapter)>dispatchUpdatesTo</a>.</p></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>static <a href=DiffUtil.DiffResult.html>DiffUtil.DiffResult</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DiffUtil.html#calculateDiff(DiffUtil.Callback)>calculateDiff</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=DiffUtil.Callback.html>DiffUtil.Callback</a> cb) </code>
+                                            </th>
+                                            <td class="colLast">Calculates the list of update operations that can covert one list into the other one.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=DiffUtil.DiffResult.html>DiffUtil.DiffResult</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=DiffUtil.html#calculateDiff(DiffUtil.Callback,boolean)>calculateDiff</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=DiffUtil.Callback.html>DiffUtil.Callback</a> cb, boolean detectMoves) </code>
+                                            </th>
+                                            <td class="colLast">Calculates the list of update operations that can covert one list into the other one.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="calculateDiff(DiffUtil.Callback)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>calculateDiff</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/NonNull.html>NonNull</a>() static <a href=DiffUtil.DiffResult.html>DiffUtil.DiffResult</a> <a href=DiffUtil.html#calculateDiff(DiffUtil.Callback)>calculateDiff</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=DiffUtil.Callback.html>DiffUtil.Callback</a> cb)</pre>
+                                        <div class="block"><p>Calculates the list of update operations that can covert one list into the other one.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cb</code> - The callback that acts as a gateway to the backing list data</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="calculateDiff(DiffUtil.Callback,boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>calculateDiff</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/NonNull.html>NonNull</a>() static <a href=DiffUtil.DiffResult.html>DiffUtil.DiffResult</a> <a href=DiffUtil.html#calculateDiff(DiffUtil.Callback,boolean)>calculateDiff</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=DiffUtil.Callback.html>DiffUtil.Callback</a> cb, boolean detectMoves)</pre>
+                                        <div class="block"><p>Calculates the list of update operations that can covert one list into the other one.</p><p>If your old and new lists are sorted by the same constraint and items never move (swappositions), you can disable move detection which takes <code>O(N^2)</code> time whereN is the number of added, moved, removed items.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>cb</code> - The callback that acts as a gateway to the backing list data</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>detectMoves</code> - True if DiffUtil should try to detect moved items, false otherwise.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

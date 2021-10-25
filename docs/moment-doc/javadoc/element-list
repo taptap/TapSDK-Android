@@ -1,0 +1,31 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.tapsdk.moment.utils/SimpleLocalBroadcastManager.BroadcastReceiver///PointingToDeclaration/com/tapsdk/moment/utils/SimpleLocalBroadcastManager.BroadcastReceiver.html
+$dokka.location:com.tapsdk.moment.view/Alert.ClickStub///PointingToDeclaration/com/tapsdk/moment/view/Alert.ClickStub.html
+$dokka.location:com.tapsdk.moment.view/Alert.OnClickListener///PointingToDeclaration/com/tapsdk/moment/view/Alert.OnClickListener.html
+$dokka.location:com.tapsdk.moment.view/BottomSheet.OnItemClickListener///PointingToDeclaration/com/tapsdk/moment/view/BottomSheet.OnItemClickListener.html
+$dokka.location:com.tapsdk.moment.view/JavaScriptBridgeWebView.JavascriptCloseWindowListener///PointingToDeclaration/com/tapsdk/moment/view/JavaScriptBridgeWebView.JavascriptCloseWindowListener.html
+$dokka.location:com.tapsdk.moment.view/JavaScriptBridgeWebView.WebViewJavascriptBridgeHandler///PointingToDeclaration/com/tapsdk/moment/view/JavaScriptBridgeWebView.WebViewJavascriptBridgeHandler.html
+$dokka.location:com.tapsdk.moment.view/JavaScriptBridgeWebView.WebViewJavascriptBridgeMethodExistCallback///PointingToDeclaration/com/tapsdk/moment/view/JavaScriptBridgeWebView.WebViewJavascriptBridgeMethodExistCallback.html
+$dokka.location:com.tapsdk.moment.view/JavaScriptBridgeWebView.WebViewJavascriptBridgeResponseCallback///PointingToDeclaration/com/tapsdk/moment/view/JavaScriptBridgeWebView.WebViewJavascriptBridgeResponseCallback.html
+$dokka.location:com.tapsdk.moment.view/NetworkErrorDialog.RefreshCallback///PointingToDeclaration/com/tapsdk/moment/view/NetworkErrorDialog.RefreshCallback.html
+$dokka.location:com.tapsdk.moment/LongClickHandler.ClickEventLifecycleCallback///PointingToDeclaration/com/tapsdk/moment/LongClickHandler.ClickEventLifecycleCallback.html
+$dokka.location:com.tapsdk.moment/NoticeHandler.NoticeListener///PointingToDeclaration/com/tapsdk/moment/NoticeHandler.NoticeListener.html
+$dokka.location:com.tapsdk.moment/TapMoment.Config///PointingToDeclaration/com/tapsdk/moment/TapMoment.Config.html
+$dokka.location:com.tapsdk.moment/TapMoment.Page///PointingToDeclaration/com/tapsdk/moment/TapMoment.Page.html
+$dokka.location:com.tapsdk.moment/TapMoment.TapMomentCallback///PointingToDeclaration/com/tapsdk/moment/TapMoment.TapMomentCallback.html
+$dokka.location:com.tapsdk.moment/TapTapMomentModel.GetTapTokenListener///PointingToDeclaration/com/tapsdk/moment/TapTapMomentModel.GetTapTokenListener.html
+$dokka.location:com.tapsdk.moment/TapTapMomentPlatform.LoginResultCallback///PointingToDeclaration/com/tapsdk/moment/TapTapMomentPlatform.LoginResultCallback.html
+$dokka.location:com.tapsdk.moment/XDSDKHelper.InvokeHandler///PointingToDeclaration/com/tapsdk/moment/XDSDKHelper.InvokeHandler.html
+com.tapsdk.moment
+com.tapsdk.moment.entities
+com.tapsdk.moment.flow
+com.tapsdk.moment.image
+com.tapsdk.moment.notch
+com.tapsdk.moment.notch.core
+com.tapsdk.moment.notch.helper
+com.tapsdk.moment.notch.phone
+com.tapsdk.moment.utils
+com.tapsdk.moment.view
+com.tapsdk.moment.wrapper
+

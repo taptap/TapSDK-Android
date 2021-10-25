@@ -1,0 +1,453 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>Base64 unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class Base64" class="title">Class Base64</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=Base64.html>Base64</a></span>
+
+                    </pre>
+                    <div class="block"><p>Encodes and decodes to and from Base64 notation.</p><p>Homepage: <a href=http://iharder.net/base64.html>http://iharder.net/base64</a>.</p><p>Example:</p><code>String encoded = Base64.encode( myByteArray );</code><code>byte[] myByteArray = Base64.decode( encoded );</code><p>The options parameter, which appears in a few places, is used to pass several pieces of information to the encoder. In the "higher level" methods such as encodeBytes( bytes, options ) the options parameter can be used to indicate such things as first gzipping the bytes before encoding them, not inserting linefeeds, and encoding using the URL-safe and Ordered dialects.</p><p>Note, according to <a href=http://www.faqs.org/rfcs/rfc3548.html>RFC3548</a>, Section 2.1, implementations should not add line feeds unless explicitly told to do so. I've got Base64 set to this behavior now, although earlier versions broke lines by default.</p><p>The constants defined in Base64 can be OR-ed together to combine options, so you might make a call like this:</p><code>String encoded = Base64.encodeBytes( mybytes, Base64.GZIP | Base64.DO_BREAK_LINES );</code><p>to compress the data before encoding it and then making the output have newline characters.</p><p>Also...</p><code>String encoded = Base64.encodeBytes( crazyString.getBytes() );</code><p>Change Log: </p><ul><li>v2.3.7 - Fixed subtle bug when base 64 input stream contained the value 01111111, which is an invalid base 64 character but should not throw an ArrayIndexOutOfBoundsException either. Led to discovery of mishandling (or potential for better handling) of other bad input characters. You should now get an IOException if you try decoding something that has bad characters in it.</li><li>v2.3.6 - Fixed bug when breaking lines and the final byte of the encoded string ended in the last column; the buffer was not properly shrunk and contained an extra (null) byte that made it into the string.</li><li>v2.3.4 - Fixed bug when working with gzipped streams whereby flushing the Base64.OutputStream closed the Base64 encoding (by padding with equals signs) too soon. Also added an option to suppress the automatic decoding of gzipped streams. Also added experimental support for specifying a class loader when using the method.</li><li>v2.3.3 - Changed default char encoding to US-ASCII which reduces the internal Java footprint with its CharEncoders and so forth. Fixed some javadocs that were inconsistent. Removed imports and specified things like java.io.IOException explicitly inline.</li><li>v2.3.2 - Reduced memory footprint! Finally refined the "guessing" of how big the final encoded data will be so that the code doesn't have to create two output arrays: an oversized initial one and then a final, exact-sized one. Big win when using the family of methods (and not using the gzip options which uses a different mechanism with streams and stuff).</li><li>v2.3.1 - Added <a href=Base64.html#encodeBytesToBytes(Array,int,int,int)>encodeBytesToBytes</a> and some similar helper methods to be more efficient with memory by not returning a String but just a byte array.</li><li>v2.3 - This is not a drop-in replacement! This is two years of comments and bug fixes queued up and finally executed. Thanks to everyone who sent me stuff, and I'm sorry I wasn't able to distribute your fixes to everyone else. Much bad coding was cleaned up including throwing exceptions where necessary instead of returning null values or something similar. Here are some changes that may affect you: <ul><li>Does not break lines, by default. This is to keep in compliance with <a href=http://www.faqs.org/rfcs/rfc3548.html>RFC3548</a>.</li><li>Throws exceptions instead of returning null values. Because some operations (especially those that may permit the GZIP option) use IO streams, there is a possibility of an java.io.IOException being thrown. After some discussion and thought, I've changed the behavior of the methods to throw java.io.IOExceptions rather than return null if ever there's an error. I think this is more appropriate, though it will require some changes to your code. Sorry, it should have been done this way to begin with.</li><li>Removed all references to System.out, System.err, and the like.Shame on me. All I can say is sorry they were ever there.</li><li>Throws IllegalArgumentExceptions as needed such as when passed arrays are null or offsets are invalid.</li><li>Cleaned up as much javadoc as I could to avoid any javadoc warnings. This was especially annoying before for people who were thorough in their own projects and then had gobs of javadoc warnings on this file.</li></ul></li><li>v2.2.1 - Fixed bug using URL_SAFE and ORDERED encodings. Fixed bug when using very small files (~&lt; 40 bytes).</li><li>v2.2 - Added some helper methods for encoding/decoding directly from one file to the next. Also added a main() method to support command line encoding/decoding from one file to the next. Also added these Base64 dialects: <ul><li>The default is RFC3548 format.</li><li>Calling Base64.setFormat(Base64.BASE64_FORMAT.URLSAFE_FORMAT) generates URL and file name friendly format as described in Section 4 of RFC3548. http://www.faqs.org/rfcs/rfc3548.html</li><li>Calling Base64.setFormat(Base64.BASE64_FORMAT.ORDERED_FORMAT) generates URL and file name friendly format that preserves lexical ordering as described in http://www.faqs.org/qa/rfcc-1940.html</li></ul>Special thanks to Jim Kellerman at <a href=http://www.powerset.com/.html>http://www.powerset.com/</a>for contributing the new Base64 dialects. </li><li>v2.1 - Cleaned up javadoc comments and unused variables and methods. Added some convenience methods for reading and writing to and from files.</li><li>v2.0.2 - Now specifies UTF-8 encoding in places where the code fails on systems with other encodings (like EBCDIC).</li><li>v2.0.1 - Fixed an error when decoding a single byte, that is, when the encoded data was a single byte.</li><li>v2.0 - I got rid of methods that used booleans to set options. Now everything is more consolidated and cleaner. The code now detects when data that's being decoded is gzip-compressed and will decompress it automatically. Generally things are cleaner. You'll probably have to change some method calls that you were making to support the new options format (ints that you "OR" together).</li><li>v1.5.1 - Fixed bug when decompressing and decoding to a byte[] using decode( String s, boolean gzipCompressed ). Added the ability to "suspend" encoding in the Output Stream so you can turn on and off the encoding if you need to embed base64 data in an otherwise "normal" stream (like an XML file).</li><li>v1.5 - Output stream pases on flush() command but doesn't do anything itself. This helps when using GZIP streams. Added the ability to GZip-compress objects before encoding them.</li><li>v1.4 - Added helper methods to read/write files.</li><li>v1.3.6 - Fixed OutputStream.flush() so that 'position' is reset.</li><li>v1.3.5 - Added flag to turn on and off line breaks. Fixed bug in input stream where last buffer being read, if not completely full, was not returned.</li><li>v1.3.4 - Fixed when "improperly padded stream" error was thrown at the wrong time.</li><li>v1.3.3 - Fixed I/O streams which were totally messed up.</li></ul><p>I am placing this code in the Public Domain. Do with it as you will. This software comes with no guarantees or warranties but with plenty of well-wishing instead! Please visit <a href=http://iharder.net/base64.html>http://iharder.net/base64</a>periodically to check for updates or to contribute improvements. </p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="Base64.OutputStream.html">Base64.OutputStream</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>A <a href=com/tds/common/websocket/util/Base64.OutputStream.html>OutputStream</a> will write data to anotherjava.io.OutputStream, given in the constructor,and encode/decode to/from Base64 notation on the fly.</p></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=Base64.html#NO_OPTIONS>NO_OPTIONS</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=Base64.html#ENCODE>ENCODE</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=Base64.html#GZIP>GZIP</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=Base64.html#DO_BREAK_LINES>DO_BREAK_LINES</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=Base64.html#URL_SAFE>URL_SAFE</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=Base64.html#ORDERED>ORDERED</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=Base64.html#encodeBytes(Array)>encodeBytes</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt; source) </code>
+                                            </th>
+                                            <td class="colLast">Encodes a byte array into Base64 notation.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>static <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=Base64.html#encodeBytes(Array,int,int,int)>encodeBytes</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt; source, int off, int len, int options) </code>
+                                            </th>
+                                            <td class="colLast">Encodes a byte array into Base64 notation.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>static <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=Base64.html#encodeBytesToBytes(Array,int,int,int)>encodeBytesToBytes</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt; source, int off, int len, int options) </code>
+                                            </th>
+                                            <td class="colLast">Similar to <a href=Base64.html#encodeBytes(Array,int,int,int)>encodeBytes</a> but returns a byte array instead ofinstantiating a String.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="encodeBytes(Array)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>encodeBytes</h4>
+                                        <pre class="methodSignature"> static <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=Base64.html#encodeBytes(Array)>encodeBytes</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt; source)</pre>
+                                        <div class="block"><p>Encodes a byte array into Base64 notation. Does not GZip-compress data.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>source</code> - The data to convert</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="encodeBytes(Array,int,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>encodeBytes</h4>
+                                        <pre class="methodSignature"> static <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=Base64.html#encodeBytes(Array,int,int,int)>encodeBytes</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt; source, int off, int len, int options)</pre>
+                                        <div class="block"><p>Encodes a byte array into Base64 notation.</p><p>Example options:</p><pre><code>  GZIP: gzip-compresses object before encoding it.
+  DO_BREAK_LINES: break lines at 76 characters
+    Note: Technically, this makes your encoding non-compliant.
+</code></pre><p>Example: <code>encodeBytes( myData, Base64.GZIP )</code> or</p><p>Example: <code>encodeBytes( myData, Base64.GZIP | Base64.DO_BREAK_LINES )</code></p><p>As of v 2.3, if there is an error with the GZIP stream,the method will throw an java.io.IOException. This is new to v2.3! In earlier versions,it just returned a null value, but in retrospect that's a pretty poor way to handle it.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>source</code> - The data to convert</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>off</code> - Offset in array where conversion should begin</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>len</code> - Length of data to convert</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>options</code> - Specified options</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="encodeBytesToBytes(Array,int,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>encodeBytesToBytes</h4>
+                                        <pre class="methodSignature"> static <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt; <a href=Base64.html#encodeBytesToBytes(Array,int,int,int)>encodeBytesToBytes</a>(<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html>Array</a>&lt;byte&gt; source, int off, int len, int options)</pre>
+                                        <div class="block"><p>Similar to <a href=Base64.html#encodeBytes(Array,int,int,int)>encodeBytes</a> but returns a byte array instead ofinstantiating a String. This is more efficient if you're working with I/O streams and havelarge data sets to encode.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>source</code> - The data to convert</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>off</code> - Offset in array where conversion should begin</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>len</code> - Length of data to convert</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>options</code> - Specified options</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

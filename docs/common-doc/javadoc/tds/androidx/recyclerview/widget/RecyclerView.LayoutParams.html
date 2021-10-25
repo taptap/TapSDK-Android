@@ -1,0 +1,573 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>LayoutParams unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class RecyclerView.LayoutParams" class="title">Class RecyclerView.LayoutParams</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=RecyclerView.LayoutParams.html>RecyclerView.LayoutParams</a></span>
+extends <a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.MarginLayoutParams.html>ViewGroup.MarginLayoutParams</a>
+                    </pre>
+                    <div class="block"><p><a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.MarginLayoutParams.html>LayoutParams</a> subclass for children of <a href=RecyclerView.html>RecyclerView</a>. Custom <a href=RecyclerView.LayoutManager.html>layout managers</a> are encouragedto create their own subclass of this <code>LayoutParams</code> classto store any additional required per-child view metadata about the layout.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#RecyclerView.LayoutParams(Context,AttributeSet)">RecyclerView.LayoutParams</a></span>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> c, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#RecyclerView.LayoutParams(int,int)">RecyclerView.LayoutParams</a></span>(int width, int height)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#RecyclerView.LayoutParams(ViewGroup.MarginLayoutParams)">RecyclerView.LayoutParams</a></span>(<a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.MarginLayoutParams.html>ViewGroup.MarginLayoutParams</a> source)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#RecyclerView.LayoutParams(ViewGroup.LayoutParams)">RecyclerView.LayoutParams</a></span>(<a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.LayoutParams.html>ViewGroup.LayoutParams</a> source)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#RecyclerView.LayoutParams(RecyclerView.LayoutParams)">RecyclerView.LayoutParams</a></span>(<a href=RecyclerView.LayoutParams.html>RecyclerView.LayoutParams</a> source)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.LayoutParams.html#viewNeedsUpdate()>viewNeedsUpdate</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns true if the view this LayoutParams is attached to needs to have its contentupdated from the corresponding adapter.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.LayoutParams.html#isViewInvalid()>isViewInvalid</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns true if the view this LayoutParams is attached to is now representingpotentially invalid data.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.LayoutParams.html#isItemRemoved()>isItemRemoved</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns true if the adapter data item corresponding to the view this LayoutParamsis attached to has been removed from the data set.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.LayoutParams.html#isItemChanged()>isItemChanged</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns true if the adapter data item corresponding to the view this LayoutParamsis attached to has been changed in the data set.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.LayoutParams.html#getViewPosition()>getViewPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.LayoutParams.html#getViewLayoutPosition()>getViewLayoutPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the adapter position that the view this LayoutParams is attached to correspondsto as of latest layout calculation.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.LayoutParams.html#getViewAdapterPosition()>getViewAdapterPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.LayoutParams.html#getAbsoluteAdapterPosition()>getAbsoluteAdapterPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the up-to-date adapter position that the view this LayoutParams is attached tocorresponds to in the <a href=RecyclerView.html>RecyclerView</a>.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.LayoutParams.html#getBindingAdapterPosition()>getBindingAdapterPosition</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the up-to-date adapter position that the view this LayoutParams is attached tocorresponds to with respect to the <a href=RecyclerView.Adapter.html>Adapter</a> that bound this View.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.android.view.ViewGroup.MarginLayoutParams">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;android.view.ViewGroup.MarginLayoutParams</h3>
+                                            <code>getLayoutDirection, getMarginEnd, getMarginStart, isMarginRelative, resolveLayoutDirection, setLayoutDirection, setMarginEnd, setMarginStart, setMargins</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="RecyclerView.LayoutParams(Context,AttributeSet)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>RecyclerView.LayoutParams</h4>
+                                        <pre>RecyclerView.LayoutParams(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> c, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="RecyclerView.LayoutParams(int,int)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>RecyclerView.LayoutParams</h4>
+                                        <pre>RecyclerView.LayoutParams(int width, int height)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="RecyclerView.LayoutParams(ViewGroup.MarginLayoutParams)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>RecyclerView.LayoutParams</h4>
+                                        <pre>RecyclerView.LayoutParams(<a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.MarginLayoutParams.html>ViewGroup.MarginLayoutParams</a> source)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="RecyclerView.LayoutParams(ViewGroup.LayoutParams)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>RecyclerView.LayoutParams</h4>
+                                        <pre>RecyclerView.LayoutParams(<a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.LayoutParams.html>ViewGroup.LayoutParams</a> source)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="RecyclerView.LayoutParams(RecyclerView.LayoutParams)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>RecyclerView.LayoutParams</h4>
+                                        <pre>RecyclerView.LayoutParams(<a href=RecyclerView.LayoutParams.html>RecyclerView.LayoutParams</a> source)</pre>
+                                        <div class="block"></div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="viewNeedsUpdate()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>viewNeedsUpdate</h4>
+                                        <pre class="methodSignature"> boolean <a href=RecyclerView.LayoutParams.html#viewNeedsUpdate()>viewNeedsUpdate</a>()</pre>
+                                        <div class="block"><p>Returns true if the view this LayoutParams is attached to needs to have its contentupdated from the corresponding adapter.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isViewInvalid()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isViewInvalid</h4>
+                                        <pre class="methodSignature"> boolean <a href=RecyclerView.LayoutParams.html#isViewInvalid()>isViewInvalid</a>()</pre>
+                                        <div class="block"><p>Returns true if the view this LayoutParams is attached to is now representingpotentially invalid data. A LayoutManager should scrap/recycle it.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isItemRemoved()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isItemRemoved</h4>
+                                        <pre class="methodSignature"> boolean <a href=RecyclerView.LayoutParams.html#isItemRemoved()>isItemRemoved</a>()</pre>
+                                        <div class="block"><p>Returns true if the adapter data item corresponding to the view this LayoutParamsis attached to has been removed from the data set. A LayoutManager may choose totreat it differently in order to animate its outgoing or disappearing state.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isItemChanged()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isItemChanged</h4>
+                                        <pre class="methodSignature"> boolean <a href=RecyclerView.LayoutParams.html#isItemChanged()>isItemChanged</a>()</pre>
+                                        <div class="block"><p>Returns true if the adapter data item corresponding to the view this LayoutParamsis attached to has been changed in the data set. A LayoutManager may choose totreat it differently in order to animate its changing state.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getViewPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getViewPosition</h4>
+                                        <pre class="methodSignature">@<a href=https://developer.android.com/reference/kotlin/java/lang/Deprecated.html>Deprecated</a>() int <a href=RecyclerView.LayoutParams.html#getViewPosition()>getViewPosition</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getViewLayoutPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getViewLayoutPosition</h4>
+                                        <pre class="methodSignature"> int <a href=RecyclerView.LayoutParams.html#getViewLayoutPosition()>getViewLayoutPosition</a>()</pre>
+                                        <div class="block"><p>Returns the adapter position that the view this LayoutParams is attached to correspondsto as of latest layout calculation.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getViewAdapterPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getViewAdapterPosition</h4>
+                                        <pre class="methodSignature">@<a href=https://developer.android.com/reference/kotlin/java/lang/Deprecated.html>Deprecated</a>() int <a href=RecyclerView.LayoutParams.html#getViewAdapterPosition()>getViewAdapterPosition</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getAbsoluteAdapterPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getAbsoluteAdapterPosition</h4>
+                                        <pre class="methodSignature"> int <a href=RecyclerView.LayoutParams.html#getAbsoluteAdapterPosition()>getAbsoluteAdapterPosition</a>()</pre>
+                                        <div class="block"><p>Returns the up-to-date adapter position that the view this LayoutParams is attached tocorresponds to in the <a href=RecyclerView.html>RecyclerView</a>. If the <a href=RecyclerView.html>RecyclerView</a> has an <a href=RecyclerView.Adapter.html>Adapter</a> that merges other adapters, this position will be with respect to theadapter that is assigned to the <a href=RecyclerView.html>RecyclerView</a>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getBindingAdapterPosition()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getBindingAdapterPosition</h4>
+                                        <pre class="methodSignature"> int <a href=RecyclerView.LayoutParams.html#getBindingAdapterPosition()>getBindingAdapterPosition</a>()</pre>
+                                        <div class="block"><p>Returns the up-to-date adapter position that the view this LayoutParams is attached tocorresponds to with respect to the <a href=RecyclerView.Adapter.html>Adapter</a> that bound this View.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

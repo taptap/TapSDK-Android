@@ -1,0 +1,1281 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>GridLayoutManager unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class GridLayoutManager" class="title">Class GridLayoutManager</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <dl>
+                        <dt>All Implemented Interfaces:</dt>
+                        <dd>
+                            
+                            <code>tds.androidx.recyclerview.widget.ItemTouchHelper.ViewDropHandler</code>
+                            
+                            ,
+                            
+                            
+                            <code>tds.androidx.recyclerview.widget.RecyclerView.SmoothScroller.ScrollVectorProvider</code>
+                            
+                            
+                        </dd>
+                    </dl>
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public class <span class="typeNameLabel"><a href=GridLayoutManager.html>GridLayoutManager</a></span>
+extends <a href=LinearLayoutManager.html>LinearLayoutManager</a>
+                    </pre>
+                    <div class="block"><p>A <a href=RecyclerView.LayoutManager.html>RecyclerView.LayoutManager</a> implementations that lays out items in a grid. </p><p>By default, each item occupies 1 span. You can change it by providing a custom <a href=GridLayoutManager.SpanSizeLookup.html>SpanSizeLookup</a> instance via <a href=GridLayoutManager.html#setSpanSizeLookup(GridLayoutManager.SpanSizeLookup)>setSpanSizeLookup</a>.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="nested.class.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Nested Class Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Class</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public abstract class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="GridLayoutManager.SpanSizeLookup.html">GridLayoutManager.SpanSizeLookup</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>A helper class to provide the number of spans each item occupies.</p><p>Default implementation sets each item to occupy exactly 1 span.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="GridLayoutManager.DefaultSpanSizeLookup.html">GridLayoutManager.DefaultSpanSizeLookup</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>Default implementation for <a href=tds/androidx/recyclerview/widget/GridLayoutManager.SpanSizeLookup.html>SpanSizeLookup</a>. Each item occupies 1 span.</p></td>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public class</code></td>
+                                            <th class="colSecond" scope="row"><code><a href="GridLayoutManager.LayoutParams.html">GridLayoutManager.LayoutParams</a></span></code>
+                                            </th>
+                                            <td class="colLast"><p>LayoutParams used by GridLayoutManager.</p><p>Note that if the orientation is <a href=tds/androidx/recyclerview/widget/LinearLayoutManager.html#VERTICAL>VERTICAL</a>, the width parameter is ignored and if theorientation is <a href=tds/androidx/recyclerview/widget/LinearLayoutManager.html#HORIZONTAL>HORIZONTAL</a> the height parameter is ignored because child view isexpected to fill all of the space given to it.</p></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="field.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Field Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Field</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr class="altColor">
+                                            <td class="colFirst"><code>public final static int</code></td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#DEFAULT_SPAN_COUNT>DEFAULT_SPAN_COUNT</a></code></th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Summary</h3>
+                                <div class="memberSummary">
+                                    <table>
+                                        <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+                                        <tbody>
+                                        <tr>
+                                            <th class="colFirst" scope="col">Constructor</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#GridLayoutManager(Context,AttributeSet,int,int)">GridLayoutManager</a></span>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs, int defStyleAttr, int defStyleRes)</code></th>
+                                                <td class="colLast">Constructor used when layout manager is set in XML by RecyclerView attribute"layoutManager".</td>
+                                            </tr>
+                                        
+                                            <tr class="rowColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#GridLayoutManager(Context,int)">GridLayoutManager</a></span>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, int spanCount)</code></th>
+                                                <td class="colLast">Creates a vertical GridLayoutManager</td>
+                                            </tr>
+                                        
+                                            <tr class="altColor">
+                                                <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
+                                                        href="#GridLayoutManager(Context,int,int,boolean)">GridLayoutManager</a></span>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, int spanCount, int orientation, boolean reverseLayout)</code></th>
+                                                <td class="colLast"></td>
+                                            </tr>
+                                        
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#setStackFromEnd(boolean)>setStackFromEnd</a>(boolean stackFromEnd) </code>
+                                            </th>
+                                            <td class="colLast">stackFromEnd is not supported by GridLayoutManager.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#getRowCountForAccessibility(RecyclerView.Recycler,RecyclerView.State)>getRowCountForAccessibility</a>(<a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Returns the number of rows for accessibility.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#getColumnCountForAccessibility(RecyclerView.Recycler,RecyclerView.State)>getColumnCountForAccessibility</a>(<a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Returns the number of columns for accessibility.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a>(<a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Lay out all relevant child views from the given adapter.The LayoutManager is in charge of the behavior of item animations.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#onLayoutCompleted(RecyclerView.State)>onLayoutCompleted</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Called after a full layout calculation is finished.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#onItemsAdded(RecyclerView,int,int)>onItemsAdded</a>(<a href=RecyclerView.html>RecyclerView</a> recyclerView, int positionStart, int itemCount) </code>
+                                            </th>
+                                            <td class="colLast">Called when items have been added to the adapter.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#onItemsChanged(RecyclerView)>onItemsChanged</a>(<a href=RecyclerView.html>RecyclerView</a> recyclerView) </code>
+                                            </th>
+                                            <td class="colLast">Called in response to a call to <a href=RecyclerView.Adapter.html#notifyDataSetChanged()>notifyDataSetChanged</a> or <a href=RecyclerView.html#swapAdapter(RecyclerView.Adapter,boolean)>swapAdapter</a> ()} and signals that the the entiredata set has changed.</td>
+                                        </tr>
+                                        
+                                        <tr id="i7" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#onItemsRemoved(RecyclerView,int,int)>onItemsRemoved</a>(<a href=RecyclerView.html>RecyclerView</a> recyclerView, int positionStart, int itemCount) </code>
+                                            </th>
+                                            <td class="colLast">Called when items have been removed from the adapter.</td>
+                                        </tr>
+                                        
+                                        <tr id="i8" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#onItemsUpdated(RecyclerView,int,int,Object)>onItemsUpdated</a>(<a href=RecyclerView.html>RecyclerView</a> recyclerView, int positionStart, int itemCount, <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> payload) </code>
+                                            </th>
+                                            <td class="colLast">Called when items have been changed in the adapter and with optional payload.</td>
+                                        </tr>
+                                        
+                                        <tr id="i9" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#onItemsMoved(RecyclerView,int,int,int)>onItemsMoved</a>(<a href=RecyclerView.html>RecyclerView</a> recyclerView, int from, int to, int itemCount) </code>
+                                            </th>
+                                            <td class="colLast">Called when an item is moved withing the adapter.</td>
+                                        </tr>
+                                        
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code><a href=RecyclerView.LayoutParams.html>RecyclerView.LayoutParams</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#generateDefaultLayoutParams()>generateDefaultLayoutParams</a>() </code>
+                                            </th>
+                                            <td class="colLast">Create a default <code>LayoutParams</code> object for a child of the RecyclerView.</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
+                                            <td class="colFirst"><code><a href=RecyclerView.LayoutParams.html>RecyclerView.LayoutParams</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#generateLayoutParams(Context,AttributeSet)>generateLayoutParams</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> c, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs) </code>
+                                            </th>
+                                            <td class="colLast">Create a LayoutParams object suitable for this LayoutManager froman inflated layout resource.</td>
+                                        </tr>
+                                        
+                                        <tr id="i12" class="altColor">
+                                            <td class="colFirst"><code><a href=RecyclerView.LayoutParams.html>RecyclerView.LayoutParams</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#generateLayoutParams(ViewGroup.LayoutParams)>generateLayoutParams</a>(<a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.LayoutParams.html>ViewGroup.LayoutParams</a> lp) </code>
+                                            </th>
+                                            <td class="colLast">Create a LayoutParams object suitable for this LayoutManager, copying relevantvalues from the supplied LayoutParams object if possible.</td>
+                                        </tr>
+                                        
+                                        <tr id="i13" class="rowColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#checkLayoutParams(RecyclerView.LayoutParams)>checkLayoutParams</a>(<a href=RecyclerView.LayoutParams.html>RecyclerView.LayoutParams</a> lp) </code>
+                                            </th>
+                                            <td class="colLast">Determines the validity of the supplied LayoutParams object.</td>
+                                        </tr>
+                                        
+                                        <tr id="i14" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#setSpanSizeLookup(GridLayoutManager.SpanSizeLookup)>setSpanSizeLookup</a>(<a href=GridLayoutManager.SpanSizeLookup.html>GridLayoutManager.SpanSizeLookup</a> spanSizeLookup) </code>
+                                            </th>
+                                            <td class="colLast">Sets the source to get the number of spans occupied by each item in the adapter.</td>
+                                        </tr>
+                                        
+                                        <tr id="i15" class="rowColor">
+                                            <td class="colFirst"><code><a href=GridLayoutManager.SpanSizeLookup.html>GridLayoutManager.SpanSizeLookup</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#getSpanSizeLookup()>getSpanSizeLookup</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the current <a href=GridLayoutManager.SpanSizeLookup.html>SpanSizeLookup</a> used by the GridLayoutManager.</td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#setMeasuredDimension(Rect,int,int)>setMeasuredDimension</a>(<a href=https://developer.android.com/reference/kotlin/android/graphics/Rect.html>Rect</a> childrenBounds, int wSpec, int hSpec) </code>
+                                            </th>
+                                            <td class="colLast">Sets the measured dimensions from the given bounding box of the children and themeasurement specs that were passed into onMeasure.</td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#scrollHorizontallyBy(int,RecyclerView.Recycler,RecyclerView.State)>scrollHorizontallyBy</a>(int dx, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Scroll horizontally by dx pixels in screen coordinates and return the distance traveled.The default implementation does nothing and returns 0.</td>
+                                        </tr>
+                                        
+                                        <tr id="i18" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#scrollVerticallyBy(int,RecyclerView.Recycler,RecyclerView.State)>scrollVerticallyBy</a>(int dy, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Scroll vertically by dy pixels in screen coordinates and return the distance traveled.The default implementation does nothing and returns 0.</td>
+                                        </tr>
+                                        
+                                        <tr id="i19" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#getSpanCount()>getSpanCount</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns the number of spans laid out by this grid.</td>
+                                        </tr>
+                                        
+                                        <tr id="i20" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#setSpanCount(int)>setSpanCount</a>(int spanCount) </code>
+                                            </th>
+                                            <td class="colLast">Sets the number of spans to be laid out.</td>
+                                        </tr>
+                                        
+                                        <tr id="i21" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#onFocusSearchFailed(View,int,RecyclerView.Recycler,RecyclerView.State)>onFocusSearchFailed</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> focused, int focusDirection, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Called when searching for a focusable view in the given direction has failedfor the current content of the RecyclerView.</td>
+                                        </tr>
+                                        
+                                        <tr id="i22" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#supportsPredictiveItemAnimations()>supportsPredictiveItemAnimations</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns whether this LayoutManager supports "predictive item animations".</td>
+                                        </tr>
+                                        
+                                        <tr id="i23" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#computeHorizontalScrollRange(RecyclerView.State)>computeHorizontalScrollRange</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Override this method if you want to support scroll bars.</td>
+                                        </tr>
+                                        
+                                        <tr id="i24" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#computeVerticalScrollRange(RecyclerView.State)>computeVerticalScrollRange</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Override this method if you want to support scroll bars.</td>
+                                        </tr>
+                                        
+                                        <tr id="i25" class="rowColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#computeHorizontalScrollOffset(RecyclerView.State)>computeHorizontalScrollOffset</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Override this method if you want to support scroll bars.</td>
+                                        </tr>
+                                        
+                                        <tr id="i26" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#computeVerticalScrollOffset(RecyclerView.State)>computeVerticalScrollOffset</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state) </code>
+                                            </th>
+                                            <td class="colLast">Override this method if you want to support scroll bars.</td>
+                                        </tr>
+                                        
+                                        <tr id="i27" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#setUsingSpansToEstimateScrollbarDimensions(boolean)>setUsingSpansToEstimateScrollbarDimensions</a>(boolean useSpansToEstimateScrollBarDimensions) </code>
+                                            </th>
+                                            <td class="colLast">When this flag is set, the scroll offset and scroll range calculations will take accountof span information.</td>
+                                        </tr>
+                                        
+                                        <tr id="i28" class="altColor">
+                                            <td class="colFirst"><code>boolean</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=GridLayoutManager.html#isUsingSpansToEstimateScrollbarDimensions()>isUsingSpansToEstimateScrollbarDimensions</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns true if the scroll offset and scroll range calculations take account of spaninformation.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.tds.androidx.recyclerview.widget.LinearLayoutManager">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;tds.androidx.recyclerview.widget.LinearLayoutManager</h3>
+                                            <code>assertNotInLayoutOrScroll, canScrollHorizontally, canScrollVertically, collectAdjacentPrefetchPositions, collectInitialPrefetchPositions, computeHorizontalScrollExtent, computeScrollVectorForPosition, computeVerticalScrollExtent, findFirstCompletelyVisibleItemPosition, findFirstVisibleItemPosition, findLastCompletelyVisibleItemPosition, findLastVisibleItemPosition, findViewByPosition, getInitialPrefetchItemCount, getOrientation, getRecycleChildrenOnDetach, getReverseLayout, getStackFromEnd, isAutoMeasureEnabled, isSmoothScrollbarEnabled, onDetachedFromWindow, onInitializeAccessibilityEvent, onRestoreInstanceState, onSaveInstanceState, prepareForDrop, scrollToPosition, scrollToPositionWithOffset, setInitialPrefetchItemCount, setOrientation, setRecycleChildrenOnDetach, setReverseLayout, setSmoothScrollbarEnabled, smoothScrollToPosition</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.tds.androidx.recyclerview.widget.RecyclerView.LayoutManager">
+                                            <!--   -->
+                                        </a>
+                                            <h3>Methods inherited from class&nbsp;tds.androidx.recyclerview.widget.RecyclerView.LayoutManager</h3>
+                                            <code>addDisappearingView, addDisappearingView, addView, addView, assertInLayoutOrScroll, attachView, attachView, attachView, calculateItemDecorationsForChild, checkLayoutParams, chooseSize, collectAdjacentPrefetchPositions, collectInitialPrefetchPositions, computeHorizontalScrollExtent, computeHorizontalScrollOffset, computeHorizontalScrollRange, computeVerticalScrollExtent, computeVerticalScrollOffset, computeVerticalScrollRange, detachAndScrapAttachedViews, detachAndScrapView, detachAndScrapViewAt, detachView, detachViewAt, endAnimation, findContainingItemView, getBaseline, getBottomDecorationHeight, getChildAt, getChildCount, getChildMeasureSpec, getChildMeasureSpec, getClipToPadding, getColumnCountForAccessibility, getDecoratedBottom, getDecoratedBoundsWithMargins, getDecoratedLeft, getDecoratedMeasuredHeight, getDecoratedMeasuredWidth, getDecoratedRight, getDecoratedTop, getFocusedChild, getHeight, getHeightMode, getItemCount, getItemViewType, getLayoutDirection, getLeftDecorationWidth, getMinimumHeight, getMinimumWidth, getPaddingBottom, getPaddingEnd, getPaddingLeft, getPaddingRight, getPaddingStart, getPaddingTop, getPosition, getProperties, getRightDecorationWidth, getRowCountForAccessibility, getTopDecorationHeight, getTransformedBoundingBox, getWidth, getWidthMode, hasFocus, ignoreView, isAttachedToWindow, isFocused, isItemPrefetchEnabled, isLayoutHierarchical, isMeasurementCacheEnabled, isSmoothScrolling, isViewPartiallyVisible, layoutDecorated, layoutDecoratedWithMargins, measureChild, measureChildWithMargins, moveView, offsetChildrenHorizontal, offsetChildrenVertical, onAdapterChanged, onAddFocusables, onAttachedToWindow, onDetachedFromWindow, onDetachedFromWindow, onFocusSearchFailed, onInitializeAccessibilityEvent, onInitializeAccessibilityEvent, onInterceptFocusSearch, onItemsAdded, onItemsChanged, onItemsMoved, onItemsRemoved, onItemsUpdated, onItemsUpdated, onLayoutChildren, onLayoutCompleted, onMeasure, onRequestChildFocus, onRequestChildFocus, onScrollStateChanged, postOnAnimation, removeAllViews, removeAndRecycleAllViews, removeAndRecycleView, removeAndRecycleViewAt, removeCallbacks, removeDetachedView, removeView, removeViewAt, requestChildRectangleOnScreen, requestChildRectangleOnScreen, requestLayout, requestSimpleAnimationsInNextLayout, scrollHorizontallyBy, scrollVerticallyBy, setAutoMeasureEnabled, setItemPrefetchEnabled, setMeasuredDimension, setMeasurementCacheEnabled, smoothScrollToPosition, startSmoothScroll, stopIgnoringView</code></li>
+                                 
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="constructor.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Constructor Detail</h3>
+                                
+                                <a name="GridLayoutManager(Context,AttributeSet,int,int)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>GridLayoutManager</h4>
+                                        <pre>GridLayoutManager(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs, int defStyleAttr, int defStyleRes)</pre>
+                                        <div class="block">Constructor used when layout manager is set in XML by RecyclerView attribute"layoutManager".</div>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="GridLayoutManager(Context,int)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>GridLayoutManager</h4>
+                                        <pre>GridLayoutManager(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, int spanCount)</pre>
+                                        <div class="block">Creates a vertical GridLayoutManager</div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>context</code> - Current context, will be used to access resources.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>spanCount</code> - The number of columns in the grid</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                                <a name="GridLayoutManager(Context,int,int,boolean)"></a>
+                                <ul class="blockList">
+                                    <li class="blockList">
+                                        <h4>GridLayoutManager</h4>
+                                        <pre>GridLayoutManager(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, int spanCount, int orientation, boolean reverseLayout)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>context</code> - Current context, will be used to access resources.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>spanCount</code> - The number of columns or rows in the grid</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>orientation</code> - Layout orientation.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>reverseLayout</code> - When set to true, layouts from end to start.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="setStackFromEnd(boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setStackFromEnd</h4>
+                                        <pre class="methodSignature"> void <a href=GridLayoutManager.html#setStackFromEnd(boolean)>setStackFromEnd</a>(boolean stackFromEnd)</pre>
+                                        <div class="block"><p>stackFromEnd is not supported by GridLayoutManager. Consider using <a href=LinearLayoutManager.html#setReverseLayout(boolean)>setReverseLayout</a>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getRowCountForAccessibility(RecyclerView.Recycler,RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getRowCountForAccessibility</h4>
+                                        <pre class="methodSignature"> int <a href=GridLayoutManager.html#getRowCountForAccessibility(RecyclerView.Recycler,RecyclerView.State)>getRowCountForAccessibility</a>(<a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Returns the number of rows for accessibility.</p><p>Default implementation returns the number of items in the adapter if LayoutManagersupports vertical scrolling or 1 if LayoutManager does not support verticalscrolling.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>recycler</code> - The Recycler that can be used to convert view positions into adapterpositions</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>state</code> - The current state of RecyclerView</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getColumnCountForAccessibility(RecyclerView.Recycler,RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getColumnCountForAccessibility</h4>
+                                        <pre class="methodSignature"> int <a href=GridLayoutManager.html#getColumnCountForAccessibility(RecyclerView.Recycler,RecyclerView.State)>getColumnCountForAccessibility</a>(<a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Returns the number of columns for accessibility.</p><p>Default implementation returns the number of items in the adapter if LayoutManagersupports horizontal scrolling or 1 if LayoutManager does not support horizontalscrolling.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>recycler</code> - The Recycler that can be used to convert view positions into adapterpositions</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>state</code> - The current state of RecyclerView</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onLayoutChildren</h4>
+                                        <pre class="methodSignature"> void <a href=GridLayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a>(<a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Lay out all relevant child views from the given adapter.The LayoutManager is in charge of the behavior of item animations. By default,RecyclerView has a non-null #getItemAnimator() ItemAnimator, and simpleitem animations are enabled. This means that add/remove operations on theadapter will result in animations to add new or appearing items, removed ordisappearing items, and moved items. If a LayoutManager returns false from #supportsPredictiveItemAnimations(), which is the default, and runs anormal layout operation during #onLayoutChildren(Recycler, State), theRecyclerView will have enough information to run those animations in a simpleway. For example, the default ItemAnimator, , willsimply fade views in and out, whether they are actually added/removed or whetherthey are moved on or off the screen due to other add/remove operations.</p><p>A LayoutManager wanting a better item animation experience, where items can beanimated onto and off of the screen according to where the items exist when theyare not on screen, then the LayoutManager should return true from #supportsPredictiveItemAnimations() and add additional logic to #onLayoutChildren(Recycler, State). Supporting predictive animationsmeans that #onLayoutChildren(Recycler, State) will be called twice;once as a "pre" layout step to determine where items would have been prior toa real layout, and again to do the "real" layout. In the pre-layout phase,items will remember their pre-layout positions to allow them to be laid outappropriately. Also, LayoutParams#isItemRemoved() removed items willbe returned from the scrap to help determine correct placement of other items.These removed items should not be added to the child list, but should be usedto help calculate correct positioning of other views, including views thatwere not previously onscreen (referred to as APPEARING views), but whosepre-layout offscreen position can be determined given the extrainformation about the pre-layout removed views.</p><p>The second layout pass is the real layout in which only non-removed viewswill be used. The only additional requirement during this pass is, if #supportsPredictiveItemAnimations() returns true, to note whichviews exist in the child list prior to layout and which are not there afterlayout (referred to as DISAPPEARING views), and to position/layout those viewsappropriately, without regard to the actual bounds of the RecyclerView. This allowsthe animation system to know the location to which to animate these disappearingviews.</p><p>The default LayoutManager implementations for RecyclerView handle all of theserequirements for animations already. Clients of RecyclerView can either use oneof these layout managers directly or look at their implementations ofonLayoutChildren() to see how they account for the APPEARING andDISAPPEARING views.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onLayoutCompleted(RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onLayoutCompleted</h4>
+                                        <pre class="methodSignature"> void <a href=GridLayoutManager.html#onLayoutCompleted(RecyclerView.State)>onLayoutCompleted</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Called after a full layout calculation is finished. The layout calculation may includemultiple <a href=RecyclerView.LayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a> calls due to animations orlayout measurement but it will include only one <a href=RecyclerView.LayoutManager.html#onLayoutCompleted(RecyclerView.State)>onLayoutCompleted</a> call.This method will be called at the end of <a href=https://developer.android.com/reference/kotlin/android/view/View.html#layout>layout</a> call.</p><p>This is a good place for the LayoutManager to do some cleanup like pending scrollposition, saved state etc.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - Transient state of RecyclerView</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onItemsAdded(RecyclerView,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onItemsAdded</h4>
+                                        <pre class="methodSignature"> void <a href=GridLayoutManager.html#onItemsAdded(RecyclerView,int,int)>onItemsAdded</a>(<a href=RecyclerView.html>RecyclerView</a> recyclerView, int positionStart, int itemCount)</pre>
+                                        <div class="block"><p>Called when items have been added to the adapter. The LayoutManager may choose torequestLayout if the inserted items would require refreshing the currently visible setof child views. (e.g. currently empty space would be filled by appended items, etc.)</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onItemsChanged(RecyclerView)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onItemsChanged</h4>
+                                        <pre class="methodSignature"> void <a href=GridLayoutManager.html#onItemsChanged(RecyclerView)>onItemsChanged</a>(<a href=RecyclerView.html>RecyclerView</a> recyclerView)</pre>
+                                        <div class="block"><p>Called in response to a call to <a href=RecyclerView.Adapter.html#notifyDataSetChanged()>notifyDataSetChanged</a> or <a href=RecyclerView.html#swapAdapter(RecyclerView.Adapter,boolean)>swapAdapter</a> ()} and signals that the the entiredata set has changed.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onItemsRemoved(RecyclerView,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onItemsRemoved</h4>
+                                        <pre class="methodSignature"> void <a href=GridLayoutManager.html#onItemsRemoved(RecyclerView,int,int)>onItemsRemoved</a>(<a href=RecyclerView.html>RecyclerView</a> recyclerView, int positionStart, int itemCount)</pre>
+                                        <div class="block"><p>Called when items have been removed from the adapter.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onItemsUpdated(RecyclerView,int,int,Object)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onItemsUpdated</h4>
+                                        <pre class="methodSignature"> void <a href=GridLayoutManager.html#onItemsUpdated(RecyclerView,int,int,Object)>onItemsUpdated</a>(<a href=RecyclerView.html>RecyclerView</a> recyclerView, int positionStart, int itemCount, <a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a> payload)</pre>
+                                        <div class="block"><p>Called when items have been changed in the adapter and with optional payload.Default implementation calls <a href=RecyclerView.LayoutManager.html#onItemsUpdated(RecyclerView,int,int)>onItemsUpdated</a>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onItemsMoved(RecyclerView,int,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onItemsMoved</h4>
+                                        <pre class="methodSignature"> void <a href=GridLayoutManager.html#onItemsMoved(RecyclerView,int,int,int)>onItemsMoved</a>(<a href=RecyclerView.html>RecyclerView</a> recyclerView, int from, int to, int itemCount)</pre>
+                                        <div class="block"><p>Called when an item is moved withing the adapter.</p><p>Note that, an item may also change position in response to another ADD/REMOVE/MOVEoperation. This callback is only called if and only if <a href=RecyclerView.Adapter.html#notifyItemMoved(int,int)>notifyItemMoved</a> is called.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="generateDefaultLayoutParams()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>generateDefaultLayoutParams</h4>
+                                        <pre class="methodSignature"> <a href=RecyclerView.LayoutParams.html>RecyclerView.LayoutParams</a> <a href=GridLayoutManager.html#generateDefaultLayoutParams()>generateDefaultLayoutParams</a>()</pre>
+                                        <div class="block"><p>Create a default <code>LayoutParams</code> object for a child of the RecyclerView.</p><p>LayoutManagers will often want to use a custom <code>LayoutParams</code> typeto store extra information specific to the layout. Client code should subclass for this purpose.</p><p>Important: if you use your own custom <code>LayoutParams</code> typeyou must also override #checkLayoutParams(LayoutParams), #generateLayoutParams(ViewGroup.LayoutParams) and #generateLayoutParams(Context, AttributeSet).</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="generateLayoutParams(Context,AttributeSet)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>generateLayoutParams</h4>
+                                        <pre class="methodSignature"> <a href=RecyclerView.LayoutParams.html>RecyclerView.LayoutParams</a> <a href=GridLayoutManager.html#generateLayoutParams(Context,AttributeSet)>generateLayoutParams</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> c, <a href=https://developer.android.com/reference/kotlin/android/util/AttributeSet.html>AttributeSet</a> attrs)</pre>
+                                        <div class="block"><p>Create a LayoutParams object suitable for this LayoutManager froman inflated layout resource.</p><p>Important: if you use your own custom <code>LayoutParams</code> typeyou must also override <a href=RecyclerView.LayoutManager.html#checkLayoutParams(RecyclerView.LayoutParams)>checkLayoutParams</a>, <a href=RecyclerView.LayoutManager.html#generateLayoutParams(ViewGroup.LayoutParams)>generateLayoutParams</a> and <a href=RecyclerView.LayoutManager.html#generateLayoutParams(Context,AttributeSet)>generateLayoutParams</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>c</code> - Context for obtaining styled attributes</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>attrs</code> - AttributeSet describing the supplied arguments</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="generateLayoutParams(ViewGroup.LayoutParams)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>generateLayoutParams</h4>
+                                        <pre class="methodSignature"> <a href=RecyclerView.LayoutParams.html>RecyclerView.LayoutParams</a> <a href=GridLayoutManager.html#generateLayoutParams(ViewGroup.LayoutParams)>generateLayoutParams</a>(<a href=https://developer.android.com/reference/kotlin/android/view/ViewGroup.LayoutParams.html>ViewGroup.LayoutParams</a> lp)</pre>
+                                        <div class="block"><p>Create a LayoutParams object suitable for this LayoutManager, copying relevantvalues from the supplied LayoutParams object if possible.</p><p>Important: if you use your own custom <code>LayoutParams</code> typeyou must also override <a href=RecyclerView.LayoutManager.html#checkLayoutParams(RecyclerView.LayoutParams)>checkLayoutParams</a>, <a href=RecyclerView.LayoutManager.html#generateLayoutParams(ViewGroup.LayoutParams)>generateLayoutParams</a> and <a href=RecyclerView.LayoutManager.html#generateLayoutParams(Context,AttributeSet)>generateLayoutParams</a>.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>lp</code> - Source LayoutParams object to copy values from</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="checkLayoutParams(RecyclerView.LayoutParams)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>checkLayoutParams</h4>
+                                        <pre class="methodSignature"> boolean <a href=GridLayoutManager.html#checkLayoutParams(RecyclerView.LayoutParams)>checkLayoutParams</a>(<a href=RecyclerView.LayoutParams.html>RecyclerView.LayoutParams</a> lp)</pre>
+                                        <div class="block"><p>Determines the validity of the supplied LayoutParams object.</p><p>This should check to make sure that the object is of the correct typeand all values are within acceptable ranges. The default implementationreturns <code>true</code> for non-null params.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>lp</code> - LayoutParams object to check</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setSpanSizeLookup(GridLayoutManager.SpanSizeLookup)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setSpanSizeLookup</h4>
+                                        <pre class="methodSignature"> void <a href=GridLayoutManager.html#setSpanSizeLookup(GridLayoutManager.SpanSizeLookup)>setSpanSizeLookup</a>(<a href=GridLayoutManager.SpanSizeLookup.html>GridLayoutManager.SpanSizeLookup</a> spanSizeLookup)</pre>
+                                        <div class="block"><p>Sets the source to get the number of spans occupied by each item in the adapter.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>spanSizeLookup</code> - <a href=GridLayoutManager.SpanSizeLookup.html>SpanSizeLookup</a> instance to be used to query number of spansoccupied by each item</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getSpanSizeLookup()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getSpanSizeLookup</h4>
+                                        <pre class="methodSignature"> <a href=GridLayoutManager.SpanSizeLookup.html>GridLayoutManager.SpanSizeLookup</a> <a href=GridLayoutManager.html#getSpanSizeLookup()>getSpanSizeLookup</a>()</pre>
+                                        <div class="block"><p>Returns the current <a href=GridLayoutManager.SpanSizeLookup.html>SpanSizeLookup</a> used by the GridLayoutManager.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setMeasuredDimension(Rect,int,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setMeasuredDimension</h4>
+                                        <pre class="methodSignature"> void <a href=GridLayoutManager.html#setMeasuredDimension(Rect,int,int)>setMeasuredDimension</a>(<a href=https://developer.android.com/reference/kotlin/android/graphics/Rect.html>Rect</a> childrenBounds, int wSpec, int hSpec)</pre>
+                                        <div class="block"><p>Sets the measured dimensions from the given bounding box of the children and themeasurement specs that were passed into onMeasure. It isonly called if a LayoutManager returns <code>true</code> from <a href=RecyclerView.LayoutManager.html#isAutoMeasureEnabled()>isAutoMeasureEnabled</a> and it is called after the RecyclerView calls <a href=RecyclerView.LayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a> in the execution of onMeasure.</p><p>This method must call <a href=RecyclerView.LayoutManager.html#setMeasuredDimension(int,int)>setMeasuredDimension</a>.</p><p>The default implementation adds the RecyclerView's padding to the given bounding boxthen caps the value to be within the given measurement specs.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>childrenBounds</code> - The bounding box of all children</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>wSpec</code> - The widthMeasureSpec that was passed into the RecyclerView.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>hSpec</code> - The heightMeasureSpec that was passed into the RecyclerView.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="scrollHorizontallyBy(int,RecyclerView.Recycler,RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>scrollHorizontallyBy</h4>
+                                        <pre class="methodSignature"> int <a href=GridLayoutManager.html#scrollHorizontallyBy(int,RecyclerView.Recycler,RecyclerView.State)>scrollHorizontallyBy</a>(int dx, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Scroll horizontally by dx pixels in screen coordinates and return the distance traveled.The default implementation does nothing and returns 0.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="scrollVerticallyBy(int,RecyclerView.Recycler,RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>scrollVerticallyBy</h4>
+                                        <pre class="methodSignature"> int <a href=GridLayoutManager.html#scrollVerticallyBy(int,RecyclerView.Recycler,RecyclerView.State)>scrollVerticallyBy</a>(int dy, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Scroll vertically by dy pixels in screen coordinates and return the distance traveled.The default implementation does nothing and returns 0.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getSpanCount()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getSpanCount</h4>
+                                        <pre class="methodSignature"> int <a href=GridLayoutManager.html#getSpanCount()>getSpanCount</a>()</pre>
+                                        <div class="block"><p>Returns the number of spans laid out by this grid.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setSpanCount(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setSpanCount</h4>
+                                        <pre class="methodSignature"> void <a href=GridLayoutManager.html#setSpanCount(int)>setSpanCount</a>(int spanCount)</pre>
+                                        <div class="block"><p>Sets the number of spans to be laid out.</p><p>If <a href=LinearLayoutManager.html#getOrientation()>getOrientation</a> is <a href=LinearLayoutManager.html#VERTICAL>VERTICAL</a>, this is the number of columns.If <a href=LinearLayoutManager.html#getOrientation()>getOrientation</a> is <a href=LinearLayoutManager.html#HORIZONTAL>HORIZONTAL</a>, this is the number of rows.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>spanCount</code> - The total number of spans in the grid</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="onFocusSearchFailed(View,int,RecyclerView.Recycler,RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>onFocusSearchFailed</h4>
+                                        <pre class="methodSignature"> <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> <a href=GridLayoutManager.html#onFocusSearchFailed(View,int,RecyclerView.Recycler,RecyclerView.State)>onFocusSearchFailed</a>(<a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> focused, int focusDirection, <a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a> recycler, <a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Called when searching for a focusable view in the given direction has failedfor the current content of the RecyclerView.</p><p>This is the LayoutManager's opportunity to populate views in the given directionto fulfill the request if it can. The LayoutManager should attach and returnthe view to be focused, if a focusable view in the given direction is found.Otherwise, if all the existing (or the newly populated views) are unfocusable, it returnsthe next unfocusable view to become visible on the screen. This unfocusable view istypically the first view that's either partially or fully out of RV's padded boundedarea in the given direction. The default implementation returns null.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>focused</code> - The currently focused view</dd>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            <dd><code>recycler</code> - The recycler to use for obtaining views for currently offscreen items</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>state</code> - Transient state of RecyclerView</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="supportsPredictiveItemAnimations()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>supportsPredictiveItemAnimations</h4>
+                                        <pre class="methodSignature"> boolean <a href=GridLayoutManager.html#supportsPredictiveItemAnimations()>supportsPredictiveItemAnimations</a>()</pre>
+                                        <div class="block"><p>Returns whether this LayoutManager supports "predictive item animations".</p><p>"Predictive item animations" are automatically created animations that showwhere items came from, and where they are going to, as items are added, removed,or moved within a layout.</p><p>A LayoutManager wishing to support predictive item animations must override thismethod to return true (the default implementation returns false) and must obey certainbehavioral contracts outlined in <a href=RecyclerView.LayoutManager.html#onLayoutChildren(RecyclerView.Recycler,RecyclerView.State)>onLayoutChildren</a>.</p><p>Whether item animations actually occur in a RecyclerView is actually determined by boththe return value from this method and the <a href=RecyclerView.html#setItemAnimator(RecyclerView.ItemAnimator)>ItemAnimator</a> set on theRecyclerView itself. If the RecyclerView has a non-null ItemAnimator but thismethod returns false, then only "simple item animations" will be enabled in theRecyclerView, in which views whose position are changing are simply faded in/out. If theRecyclerView has a non-null ItemAnimator and this method returns true, then predictiveitem animations will be enabled in the RecyclerView.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="computeHorizontalScrollRange(RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>computeHorizontalScrollRange</h4>
+                                        <pre class="methodSignature"> int <a href=GridLayoutManager.html#computeHorizontalScrollRange(RecyclerView.State)>computeHorizontalScrollRange</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Override this method if you want to support scroll bars.</p><p>Read <a href=RecyclerView.html#computeHorizontalScrollRange()>computeHorizontalScrollRange</a> for details.</p><p>Default implementation returns 0.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - Current State of RecyclerView where you can find total item count</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="computeVerticalScrollRange(RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>computeVerticalScrollRange</h4>
+                                        <pre class="methodSignature"> int <a href=GridLayoutManager.html#computeVerticalScrollRange(RecyclerView.State)>computeVerticalScrollRange</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Override this method if you want to support scroll bars.</p><p>Read <a href=RecyclerView.html#computeVerticalScrollRange()>computeVerticalScrollRange</a> for details.</p><p>Default implementation returns 0.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - Current State of RecyclerView where you can find total item count</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="computeHorizontalScrollOffset(RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>computeHorizontalScrollOffset</h4>
+                                        <pre class="methodSignature"> int <a href=GridLayoutManager.html#computeHorizontalScrollOffset(RecyclerView.State)>computeHorizontalScrollOffset</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Override this method if you want to support scroll bars.</p><p>Read <a href=RecyclerView.html#computeHorizontalScrollOffset()>computeHorizontalScrollOffset</a> for details.</p><p>Default implementation returns 0.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - Current State of RecyclerView where you can find total item count</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="computeVerticalScrollOffset(RecyclerView.State)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>computeVerticalScrollOffset</h4>
+                                        <pre class="methodSignature"> int <a href=GridLayoutManager.html#computeVerticalScrollOffset(RecyclerView.State)>computeVerticalScrollOffset</a>(<a href=RecyclerView.State.html>RecyclerView.State</a> state)</pre>
+                                        <div class="block"><p>Override this method if you want to support scroll bars.</p><p>Read <a href=RecyclerView.html#computeVerticalScrollOffset()>computeVerticalScrollOffset</a> for details.</p><p>Default implementation returns 0.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>state</code> - Current State of RecyclerView where you can find total item count</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setUsingSpansToEstimateScrollbarDimensions(boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setUsingSpansToEstimateScrollbarDimensions</h4>
+                                        <pre class="methodSignature"> void <a href=GridLayoutManager.html#setUsingSpansToEstimateScrollbarDimensions(boolean)>setUsingSpansToEstimateScrollbarDimensions</a>(boolean useSpansToEstimateScrollBarDimensions)</pre>
+                                        <div class="block"><p>When this flag is set, the scroll offset and scroll range calculations will take accountof span information.</p><p>This is will increase the accuracy of the scroll bar's size and offset but will requiremore calls to <a href=GridLayoutManager.SpanSizeLookup.html#getSpanGroupIndex(int,int)>getSpanGroupIndex</a>".</p><p>This additional accuracy may or may not be needed, depending on the characteristics ofyour layout. You will likely benefit from this accuracy when:</p><ul><li>The variation in item span sizes is large.</li><li>The size of your data set is small (if your data set is large, the scrollbar willlikely be very small anyway, and thus the increased accuracy has less impact).</li><li>Calls to <a href=GridLayoutManager.SpanSizeLookup.html#getSpanGroupIndex(int,int)>getSpanGroupIndex</a> are fast.</li></ul><p>If you decide to enable this feature, you should be sure that calls to <a href=GridLayoutManager.SpanSizeLookup.html#getSpanGroupIndex(int,int)>getSpanGroupIndex</a> are fast, that set span group indexcaching is set to true via a call to <a href=GridLayoutManager.SpanSizeLookup.html#setSpanGroupIndexCacheEnabled(boolean)> and span index caching is also enabled via a call to { }</a>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="isUsingSpansToEstimateScrollbarDimensions()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>isUsingSpansToEstimateScrollbarDimensions</h4>
+                                        <pre class="methodSignature"> boolean <a href=GridLayoutManager.html#isUsingSpansToEstimateScrollbarDimensions()>isUsingSpansToEstimateScrollbarDimensions</a>()</pre>
+                                        <div class="block"><p>Returns true if the scroll offset and scroll range calculations take account of spaninformation. See <a href=GridLayoutManager.html#setUsingSpansToEstimateScrollbarDimensions(boolean)>setUsingSpansToEstimateScrollbarDimensions</a> for moreinformation on this topic. Defaults to <code>{@code false}</code>.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<!-- NewPage -->
+<html lang="en"><head>
+    <title>Recycler unspecified API </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="dc.created" content="2020-03-25">
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../dokka-javadoc-stylesheet.css" title="Style">
+    <link rel="stylesheet" type="text/css" href="../../../../jquery/jquery-ui.css" title="Style">
+    <script type="text/javascript" src="../../../../jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-migrate-3.0.1.js"></script>
+    <script type="text/javascript" src="../../../../jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="../../../../search.js"></script>
+    <script async type="text/javascript" src="../../../../module-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../package-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../type-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../member-search-index.js"></script>
+    <script async type="text/javascript" src="../../../../tag-search-index.js"></script>
+</head><body>
+<script type="text/javascript">
+var pathtoroot = "../../../../";
+</script>
+<noscript>
+    <div>JavaScript is disabled on your browser.</div>
+</noscript><header role="banner">
+    <nav role="navigation">
+        <div class="fixedNav">
+            <!-- ========= START OF TOP NAVBAR ======= -->
+            <div class="topNav"><a id="navbar.top">
+                <!--   -->
+            </a>
+                <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a>
+                </div>
+                <a id="navbar.top.firstrow">
+                    <!--   -->
+                </a>
+                <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+            <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+
+<ul class="navListSearch">
+<li><label for="search">SEARCH:</label>
+<input type="text" id="search" value="search" class="ui-autocomplete-input" autocomplete="off" placeholder="Search">
+<input type="reset" id="reset" value="reset">
+</li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ========= END OF TOP NAVBAR ========= -->
+        </div>
+        <div class="navPadding">&nbsp;</div>
+        <script type="text/javascript"><!--
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+        //-->
+        </script>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="header">
+        <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
+        <h2 title="Class RecyclerView.Recycler" class="title">Class RecyclerView.Recycler</h2>
+    </div>
+    <div class="contentContainer">
+        <!-- <ul class="inheritance">
+            <li>java.lang.Object</li>
+            <li>
+                <ul class="inheritance">
+                    <li>adaptation.Adaptation</li>
+                </ul>
+            </li>
+        </ul> TODO inheritance tree -->
+        <div class="description">
+            <ul class="blockList">
+                <li class="blockList">
+                    
+                    <hr>
+                    <pre class="wrap-overflow">
+
+public final class <span class="typeNameLabel"><a href=RecyclerView.Recycler.html>RecyclerView.Recycler</a></span>
+
+                    </pre>
+                    <div class="block"><p>A Recycler is responsible for managing scrapped or detached item views for reuse.</p><p>A "scrapped" view is a view that is still attached to its parent RecyclerView butthat has been marked for removal or reuse.</p><p>Typical use of a Recycler by a <a href=RecyclerView.LayoutManager.html>LayoutManager</a> will be to obtain views foran adapter's data set representing the data at a given position or item ID.If the view to be reused is considered "dirty" the adapter will be asked to rebind it.If not, the view can be quickly reused by the LayoutManager with no further work.Clean views that have not <a href=https://developer.android.com/reference/kotlin/android/view/View.html#islayoutrequested>requested layout</a> may be repositioned by a LayoutManager without remeasurement.</p></div>
+                </li>
+            </ul>
+        </div>
+        <div class="summary">
+            <ul class="blockList">
+                <li class="blockList">
+                <!-- ======== NESTED CLASS SUMMARY ======== -->
+                    
+                    <!-- =========== FIELD SUMMARY =========== -->
+                    
+                    <!-- ======== CONSTRUCTOR SUMMARY ======== -->
+                    
+                    <!-- =========== ENUM CONSTANT SUMMARY =========== -->
+                    
+                    <!-- ========== METHOD SUMMARY =========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.summary">
+                                <!--   -->
+                            </a>
+                                <h3>Method Summary</h3>
+                                <div class="memberSummary">
+                                    <div role="tablist" aria-orientation="horizontal">
+                                        <button role="tab" aria-selected="true" aria-controls="memberSummary_tabpanel" tabindex="0" onkeydown="switchTab(event)" id="t0" class="activeTableTab">All Methods</button>
+                                        <!-- TODO: Instance and Concrete Methods #1118 -->
+                                    </div>
+                                    <div id="memberSummary_tabpanel" role="tabpanel">
+                                    <table aria-labelledby="t0">
+                                        <tr>
+                                            <th class="colFirst" scope="col">Modifier and Type</th>
+                                            <th class="colSecond" scope="col">Method</th>
+                                            <th class="colLast" scope="col">Description</th>
+                                        </tr>
+                                        
+                                        <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.Recycler.html#clear()>clear</a>() </code>
+                                            </th>
+                                            <td class="colLast">Clear scrap views out of this recycler.</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.Recycler.html#setViewCacheSize(int)>setViewCacheSize</a>(int viewCount) </code>
+                                            </th>
+                                            <td class="colLast">Set the maximum number of detached, valid views we should retain for later use.</td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt;</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.Recycler.html#getScrapList()>getScrapList</a>() </code>
+                                            </th>
+                                            <td class="colLast">Returns an unmodifiable list of ViewHolders that are currently in the scrap list.</td>
+                                        </tr>
+                                        
+                                        <tr id="i3" class="rowColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.Recycler.html#bindViewToPosition(View,int)>bindViewToPosition</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view, int position) </code>
+                                            </th>
+                                            <td class="colLast">Binds the given View to the position.</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>int</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.Recycler.html#convertPreLayoutPositionToPostLayout(int)>convertPreLayoutPositionToPostLayout</a>(int position) </code>
+                                            </th>
+                                            <td class="colLast">RecyclerView provides artificial position range (item count) in pre-layout state andautomatically maps these positions to <a href=RecyclerView.Adapter.html>Adapter</a> positions when <a href=RecyclerView.Recycler.html#getViewForPosition(int)>getViewForPosition</a> or <a href=RecyclerView.Recycler.html#bindViewToPosition(View,int)>bindViewToPosition</a> is called.</td>
+                                        </tr>
+                                        
+                                        <tr id="i5" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.Recycler.html#getViewForPosition(int)>getViewForPosition</a>(int position) </code>
+                                            </th>
+                                            <td class="colLast">Obtain a view initialized for the given position.</td>
+                                        </tr>
+                                        
+                                        <tr id="i6" class="altColor">
+                                            <td class="colFirst"><code>void</code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=RecyclerView.Recycler.html#recycleView(View)>recycleView</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view) </code>
+                                            </th>
+                                            <td class="colLast">Recycle a detached view.</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="blockList">
+                                
+                                    <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
+                                        <!--   -->
+                                    </a>
+                                        <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+                                        <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString,
+                                            wait, wait, wait</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <ul class="blockList">
+                <li class="blockList">
+                    <!-- ========= CONSTRUCTOR DETAIL ======== -->
+                    
+                    <!-- ============ METHOD DETAIL ========== -->
+                    
+                    <section role="region">
+                        <ul class="blockList">
+                            <li class="blockList"><a id="method.detail">
+                                <!--   -->
+                            </a>
+                                <h3>Method Detail</h3>
+                                
+                                <a id="clear()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>clear</h4>
+                                        <pre class="methodSignature"> void <a href=RecyclerView.Recycler.html#clear()>clear</a>()</pre>
+                                        <div class="block"><p>Clear scrap views out of this recycler. Detached views contained within arecycled view pool will remain.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setViewCacheSize(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setViewCacheSize</h4>
+                                        <pre class="methodSignature"> void <a href=RecyclerView.Recycler.html#setViewCacheSize(int)>setViewCacheSize</a>(int viewCount)</pre>
+                                        <div class="block"><p>Set the maximum number of detached, valid views we should retain for later use.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>viewCount</code> - Number of views to keep before sending views to the shared pool</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getScrapList()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getScrapList</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=RecyclerView.ViewHolder.html>RecyclerView.ViewHolder</a>&gt; <a href=RecyclerView.Recycler.html#getScrapList()>getScrapList</a>()</pre>
+                                        <div class="block"><p>Returns an unmodifiable list of ViewHolders that are currently in the scrap list.</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="bindViewToPosition(View,int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>bindViewToPosition</h4>
+                                        <pre class="methodSignature"> void <a href=RecyclerView.Recycler.html#bindViewToPosition(View,int)>bindViewToPosition</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view, int position)</pre>
+                                        <div class="block"><p>Binds the given View to the position. The View can be a View previously retrieved via <a href=RecyclerView.Recycler.html#getViewForPosition(int)>getViewForPosition</a> or created by <a href=RecyclerView.Adapter.html#onCreateViewHolder(ViewGroup,int)>onCreateViewHolder</a>.</p><p>Generally, a LayoutManager should acquire its views via <a href=RecyclerView.Recycler.html#getViewForPosition(int)>getViewForPosition</a> and let the RecyclerView handle caching. This is a helper method for LayoutManager whowants to handle its own recycling logic.</p><p>Note that, <a href=RecyclerView.Recycler.html#getViewForPosition(int)>getViewForPosition</a> already binds the View to the position soyou don't need to call this method unless you want to bind this View to another position.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>view</code> - The view to update.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>position</code> - The position of the item to bind to this View.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="convertPreLayoutPositionToPostLayout(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>convertPreLayoutPositionToPostLayout</h4>
+                                        <pre class="methodSignature"> int <a href=RecyclerView.Recycler.html#convertPreLayoutPositionToPostLayout(int)>convertPreLayoutPositionToPostLayout</a>(int position)</pre>
+                                        <div class="block"><p>RecyclerView provides artificial position range (item count) in pre-layout state andautomatically maps these positions to <a href=RecyclerView.Adapter.html>Adapter</a> positions when <a href=RecyclerView.Recycler.html#getViewForPosition(int)>getViewForPosition</a> or <a href=RecyclerView.Recycler.html#bindViewToPosition(View,int)>bindViewToPosition</a> is called.</p><p>Usually, LayoutManager does not need to worry about this. However, in some cases, yourLayoutManager may need to call some custom component with item positions in whichcase you need the actual adapter position instead of the pre layout position. Youcan use this method to convert a pre-layout position to adapter (post layout) position.</p><p>Note that if the provided position belongs to a deleted ViewHolder, this method willreturn -1.</p><p>Calling this method in post-layout state returns the same value back.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>position</code> - The pre-layout position to convert.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getViewForPosition(int)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getViewForPosition</h4>
+                                        <pre class="methodSignature">@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> <a href=RecyclerView.Recycler.html#getViewForPosition(int)>getViewForPosition</a>(int position)</pre>
+                                        <div class="block"><p>Obtain a view initialized for the given position.This method should be used by <a href=RecyclerView.LayoutManager.html>LayoutManager</a> implementations to obtainviews to represent data from an <a href=RecyclerView.Adapter.html>Adapter</a>.</p><p>The Recycler may reuse a scrap or detached view from a shared pool if one isavailable for the correct view type. If the adapter has not indicated that thedata at the given position has changed, the Recycler will attempt to hand backa scrap view that was previously initialized for that data without rebinding.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>position</code> - Position to obtain a view for</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="recycleView(View)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockListLast"
+                                          >
+                                    <li class="blockList">
+                                        <h4>recycleView</h4>
+                                        <pre class="methodSignature"> void <a href=RecyclerView.Recycler.html#recycleView(View)>recycleView</a>(@<a href=../../annotation/NonNull.html>NonNull</a>() <a href=https://developer.android.com/reference/kotlin/android/view/View.html>View</a> view)</pre>
+                                        <div class="block"><p>Recycle a detached view. The specified view will be added to a pool of viewsfor later rebinding and reuse.</p><p>A view must be fully detached (removed from parent) before it may be recycled. If theView is scrapped, it will be removed from scrap list.</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>view</code> - Removed view for recycling</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer role="contentinfo">
+    <nav role="navigation">
+        <!-- ======= START OF BOTTOM NAVBAR ====== -->
+        <div class="bottomNav"><a id="navbar.bottom">
+            <!--   -->
+        </a>
+            <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a>
+            </div>
+            <a id="navbar.bottom.firstrow">
+                <!--   -->
+            </a>
+            <ul class="navList" title="Navigation">
+    <li><a href="../../../../index.html">Overview</a></li>
+    
+    <li><a href="package-summary.html">Package</a></li>
+    
+    <li class="navBarCell1Rev">Class</li>
+    
+    <li><a href="package-tree.html">Tree</a></li>
+    
+    <li><a href="../../../../deprecated.html">Deprecated</a></li>
+    <li><a href="../../../../index-files/index-1.html">Index</a></li>
+    <li>Help</li>
+</ul></div>
+        <a id="skip.navbar.bottom">
+            <!--   -->
+        </a>
+        <div class="subNav">
+<ul class="navList" id="allclasses_navbar_top" style="display: block;">
+    <li><a href="../../../../allclasses.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+</div>
+<a id="skip.navbar.top">
+<!--   -->
+</a></div><!-- ======== END OF BOTTOM NAVBAR ======= -->
+    </nav>
+</footer><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+    style="display: none;"></ul>
+<span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span>
+</body>
+</html>
