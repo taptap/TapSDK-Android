@@ -297,25 +297,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .withAppContext(getApplicationContext())
                 .withRegionType(TapRegionType.CN) // TapRegionType.CN: 国内  TapRegionType.IO: 国外
                 // 自己账号 - 知恩
-                .withClientId("FwFdCIr6u71WQDQwQN")
-                .withClientToken("8zkWbrNMBXYtdg6GTyGy3FLRcIi1C5PuKjxwWAUe")
-                .withServerUrl("https://fwfdcir6.cloud.tds1.tapapis.cn")
-                // 丰老师测试账号
-//                .withClientId("0RiAlMny7jiz086FaU")
-//                .withClientToken("8V8wemqkpkxmAN7qKhvlh6v0pXc8JJzEZe3JFUnU")
-//                .withServerUrl("https://0rialmny.cloud.tds1.tapapis.cn")
-                // 防沉迷账号
-//                .withClientId("6Rap5XF2ncLQB2oIiW")
-//                .withClientToken("ETndJL7LhNdbjFW7jyMWuNO9a73iF9aQhzHfFd3c" )
-//                .withServerUrl("https://0rialmny.cloud.tds1.tapapis.cn")
-                // 海外篝火测试
-//                .withClientId("Fo1kimWq22rzkMAHb8")
-//                .withClientToken("vtXRIRYnnWZGhrPgDz3IX2hYuMiE8xNRpMRzIlkN" )
-//                .withServerUrl("https://fo1kimwq.cloud.tds1.tapapis.cn")
-                // 测试 lets encrypt 签名证书
-//                .withClientId("5p39BOxeyD2XkFzfFo")
-//                .withClientToken("Jv2xAh6s05aVG1lWgYuwH1BeWfi5wQGLrIKQNT5V")
-//                .withServerUrl("https://tds-api10.iwxnews.com")
+                .withClientId("**** Yourself ClientID From TapDC ****")
+                .withClientToken("****** Yourself ClientToken From TapDC ******")
+                /* 如果使用 单独 TapTap 授权，则不需要配置自定义域名 */
+                .withServerUrl("****** Yourself ServerUrl From TapDC ******")
                 .withTapDBConfig(tapDBConfig)
                 .build();
         TapBootstrap.init(MainActivity.this, tapConfig);
