@@ -6,6 +6,8 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+
+
     defaultConfig {
         applicationId "com.tds.demo"
         minSdkVersion 21
@@ -16,11 +18,22 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         multiDexEnabled true
+
+//        ndk{
+//            abiFilters "arm64-v8a, x86_64"
+//        }
+
+//        ndk.abiFilters("arm64-v8a, x86_64")
     }
+
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -44,14 +57,16 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.google.android.flexbox:flexbox:3.0.0'
-    implementation name: 'TapBootStrap_3.1.0', ext: 'aar'  // 必选: x.x.x 代表所下载的 SDK的版本号
-    implementation(name: 'TapCommon_3.1.0', ext: 'aar')
-    implementation(name: 'TapMoment_3.1.0', ext: 'aar')
-    implementation(name: 'TapLogin_3.1.0', ext: 'aar')
-    implementation(name: 'TapLicense_3.1.0', ext: 'aar')
-    implementation(name: 'TapAchievement_3.1.0', ext: 'aar')
-    implementation(name: 'TapDB_3.1.0', ext: 'aar')
-    implementation 'cn.leancloud:realtime-android:8.0.4'
-    implementation 'cn.leancloud:storage-android:8.0.4'
+    implementation name: 'TapBootStrap_3.5.1', ext: 'aar'  // 必选: x.x.x 代表所下载的 SDK的版本号
+    implementation(name: 'TapCommon_3.5.1', ext: 'aar')
+    implementation(name: 'TapMoment_3.5.1', ext: 'aar')
+    implementation(name: 'TapLogin_3.5.1', ext: 'aar')
+    implementation(name: 'TapLicense_3.5.1', ext: 'aar')
+    implementation(name: 'TapAchievement_3.5.1', ext: 'aar')
+    implementation(name: 'TapDB_3.5.1', ext: 'aar')
+    implementation(name: 'AntiAddiction_1.0.2', ext: 'aar')
+    implementation(name: 'AntiAddictionUI_1.0.2', ext: 'aar')
+    implementation 'cn.leancloud:realtime-android:8.1.0'
+    implementation 'cn.leancloud:storage-android:8.1.0'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 }
