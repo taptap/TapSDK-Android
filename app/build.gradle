@@ -3,21 +3,21 @@ plugins {
 }
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
 
 
 
     defaultConfig {
         applicationId "com.tds.demo"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        multiDexEnabled false
+        multiDexEnabled true
 
 //        ndk{
 //            abiFilters "arm64-v8a, x86_64"
@@ -26,16 +26,28 @@ android {
 //        ndk.abiFilters("arm64-v8a, x86_64")
     }
 
+    signingConfigs {
+        release {
+            keyAlias 'wxlogin'
+            keyPassword '111111'
+            storeFile file('../sign_password_111111.keystore')
+            storePassword '111111'
+        }
+        debug {
+            keyAlias 'wxlogin'
+            keyPassword '111111'
+            storeFile file('../sign_password_111111.keystore')
+            storePassword '111111'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
-
-//            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
             minifyEnabled true
-//            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -50,13 +62,6 @@ android {
         }
     }
 }
-
-configurations.all {
-//    exclude module: 'TapDB_3.1.0'
-//    exclude group: 'com.google.code.gson', module: 'gson'
-}
-
-
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -75,7 +80,6 @@ dependencies {
     implementation(name: 'TapDB_3.5.1', ext: 'aar')
     implementation(name: 'AntiAddiction_1.0.2', ext: 'aar')
     implementation(name: 'AntiAddictionUI_1.0.2', ext: 'aar')
-//    implementation(name: "gson-2.8.6", ext: "jar")
     implementation 'cn.leancloud:realtime-android:8.1.0'
     implementation 'cn.leancloud:storage-android:8.1.0'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
