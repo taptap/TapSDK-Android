@@ -1,4 +1,56 @@
 # Changelog
+
+## v3.5.1 Latest 2021/12/08
+### TapAchievement
+#### Optimization and fixed bugs
+- 修复读取服务器数据时已达成字段无法解析的问题
+### AntiAddiction
+#### Optimization and fixe bugs
+- 防沉迷服务端异常时增加兼容处理
+- 切换账号可隐藏
+- 更新切换账号的回调 code （1000 -> 1001）
+
+## v3.5.0 2021/11/30
+### TapRTC
+####New Feature
+- 新增 RTC（实时语音） 模块
+- TapFriends
+- Optimization and fixed bugs
+- 根据好友码查找好友
+- 根据好友码添加好友
+- 查询第三方好友列表
+- 关注 TapTap 好友
+### TapAchievement
+#### Optimization and fixed bugs
+- 修复读取本地数据已达成成就识别成未达成的问题
+### TapLogin
+#### Optimization and fixed bugs
+- 内嵌 web 登录页面支持异形刘海屏的正常展示
+### TapDB
+#### Optimization and fixed bugs
+- 上报新增 soc 相关参数
+### TapMoment
+#### Optimization and fixed bugs
+- 依赖更新
+### TapCommon
+#### Optimization and fixed bugs
+- 支持性更新
+
+## v3.3.2 2021/11/11
+### TapDB
+#### Optimization and fixed bugs
+- 更新一些内部字段
+### AntiAddiction
+#### Optimization and fixed bugs
+- Api 增加公用参数
+
+## v3.3.1 2021/10/25
+### TapFriends
+#### New Feature
+- 好友新增多语言支持
+#### Optimization and fixed bugs
+- 从分享页跳转到应用内且发送好友申请时，从提示改为回调。
+
 ## TapSDK v3.0.0 2021/07/16
 Tips: 当前版本不支持 v2.x 升级
 ### TapBootstrap
