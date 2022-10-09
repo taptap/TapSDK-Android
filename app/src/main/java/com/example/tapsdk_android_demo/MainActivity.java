@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.tapsdk.antiaddiction.AntiAddictionKit;
+import com.tapsdk.antiaddiction.Config;
 import com.tapsdk.antiaddiction.config.AntiAddictionFunctionConfig;
 import com.tapsdk.antiaddiction.constants.Constants;
 import com.tapsdk.antiaddictionui.AntiAddictionUICallback;
@@ -140,6 +141,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     LCFriendship queriedUserLCFriendship = null;
     // 云存档示例
     TapGameSave gameSave;
+
+
+    // 开发者中心后台应用配置信息
+    public static final String TDS_ClientID = "替换为您的ClientID";
+    public static final String TDS_ClientToken = "替换为您的ClientToken";
+    public static final String TDS_ServerUrl = "替换为您的ServerUrl";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -296,11 +304,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TapConfig tapConfig = new TapConfig.Builder()
                 .withAppContext(getApplicationContext())
                 .withRegionType(TapRegionType.CN) // TapRegionType.CN: 国内  TapRegionType.IO: 国外
-                // 自己账号 - 知恩
-                .withClientId("**** Yourself ClientID From TapDC ****")
-                .withClientToken("****** Yourself ClientToken From TapDC ******")
+                // 自己账号
+                .withClientId(TDS_ClientID)
+                .withClientToken(TDS_ClientToken)
                 /* 如果使用 单独 TapTap 授权，则不需要配置自定义域名 */
-                .withServerUrl("****** Yourself ServerUrl From TapDC ******")
+                .withServerUrl(TDS_ServerUrl)
                 .withTapDBConfig(tapDBConfig)
                 .build();
         TapBootstrap.init(MainActivity.this, tapConfig);
@@ -539,62 +547,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d(TAG, "玩家段年龄段是：" + String.valueOf(ageRange));
     }
 
+    // 手动认证
     private void taptapAntiAddictionManual() {
-
-        String userIdentifier = "玩家的唯一标识NNNNNNNNYHHYWWTTAABC";
-        AntiAddictionUIKit.startup(MainActivity.this, false, userIdentifier, "");
+        String userIdentifier = "XXXXXXXXXXXXXXX";
+        // 进行实名认证的初始化时将 enableTapLogin(false) 即可
+        AntiAddictionUIKit.startup(this, userIdentifier);
     }
 
+    // Tap 快速认证
     private void taptapAntiAddictionTapLogin() {
-        AccessToken accessToken = TapLoginHelper.getCurrentAccessToken();
-//        String tapTapAccessToken = accessToken.toJsonString();
-        boolean useTapLogin = true;
-        String userIdentifier = "玩家的唯一标识NNNNNNNNYHHYWWTTAABC";
-        String tapTapAccessToken = "TapTap 第三方登录的 access token";
-        AntiAddictionUIKit.startup(MainActivity.this, useTapLogin, userIdentifier, tapTapAccessToken);
+        String userIdentifier = "XXXXXXXX-XXXXX";
+        AntiAddictionUIKit.startup(this, userIdentifier);
     }
-
     private void taptapAntiAddictionInit() {
         // Android SDK 的各接口第一个参数是当前 Activity，以下不再说明
-        String gameIdentifier = "6Rap5XF2ncLQB2oIiW";
-        AntiAddictionFunctionConfig config = new AntiAddictionFunctionConfig.Builder()
-                .enablePaymentLimit(true) // 是否启用消费限制功能
-                .enableOnLineTimeLimit(true) // 是否启用时长限制功能
+        Config config = new Config.Builder()
+                .withClientId(TDS_ClientID) // TapTap 开发者中心对应 Client ID
+                .enableTapLogin(true)       // 是否启动 TapTap 快速认证, 如果使用手动验证，设置为 false 即可
+                .showSwitchAccount(false)   // 是否显示切换账号按钮
                 .build();
-        AntiAddictionUIKit.init(MainActivity.this, gameIdentifier, config,
-                new AntiAddictionUICallback() {
-                    @Override
-                    public void onCallback(int code, Map<String, Object> extras) {
-                        // 根据 code 不同提示玩家不同信息，详见下面的说明
-                        if(null != extras){
-                            Log.d(TAG, extras.toString());
-                            Log.d(TAG, String.valueOf(code));
-                        }
-                        switch (code){
-                            case Constants.ANTI_ADDICTION_CALLBACK_CODE.LOGIN_SUCCESS:
-//                                Log.d(TAG, extras.toString());
-                                Log.d(TAG, "防沉迷登陆成功");
-                                break;
-                            case Constants.ANTI_ADDICTION_CALLBACK_CODE.LOGOUT:
-//                                Log.d(TAG, extras.toString());
-                                Log.d(TAG, "防沉迷的登出");
-                                break;
-                            case Constants.ANTI_ADDICTION_CALLBACK_CODE.OPEN_ALERT_TIP:
-                                Log.d(TAG, "防沉迷未成年允许游戏弹窗");
-                                break;
-                            case Constants.ANTI_ADDICTION_CALLBACK_CODE.NIGHT_STRICT:
-                                Log.d(TAG, "防沉迷未成年玩家无法进行游戏");
-                                break;
-                            case Constants.ANTI_ADDICTION_CALLBACK_CODE.REAL_NAME_STOP:
-                                Log.d(TAG, "防沉迷实名认证过程中点击了关闭实名窗");
-                                break;
-                            case Constants.ANTI_ADDICTION_CALLBACK_CODE.SWITCH_ACCOUNT:
-                                Log.d(TAG, "防沉迷实名认证过程中点击了切换账号按钮");
-                                break;
-                        }
-                    }
-                }
-        );
+        AntiAddictionUIKit.init(this, config, (code, extras) -> {
+            switch (code){
+                case Constants.ANTI_ADDICTION_CALLBACK_CODE.LOGIN_SUCCESS:
+                    Log.d(TAG, "防沉迷登陆成功");
+                    break;
+                case Constants.ANTI_ADDICTION_CALLBACK_CODE.EXITED:
+                    Log.d(TAG, "退出账号");
+                    break;
+                case Constants.ANTI_ADDICTION_CALLBACK_CODE.DURATION_LIMIT:
+                    Log.d(TAG, "时长限制");
+                    break;
+                case Constants.ANTI_ADDICTION_CALLBACK_CODE.PERIOD_RESTRICT:
+                    Log.d(TAG, "防沉迷未成年玩家无法进行游戏");
+                    break;
+                case Constants.ANTI_ADDICTION_CALLBACK_CODE.REAL_NAME_STOP:
+                    Log.d(TAG, "防沉迷实名认证过程中点击了关闭实名窗");
+                    break;
+                case Constants.ANTI_ADDICTION_CALLBACK_CODE.SWITCH_ACCOUNT:
+                    Log.d(TAG, "防沉迷实名认证过程中点击了切换账号按钮");
+                    break;
+            }
+        });
+
     }
 
     private void taptapThirdLogin() {
@@ -652,12 +646,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         thirdPartyData.put("openid", "BANDINGpcb6jiHAjB82k8H9MjKkiQ==");
         thirdPartyData.put("access_token", "BandingHAHAHAHAHA1/e3fyiwgwBGXeor93rQGfB_qfOpsArBYvze6W7zmV73zxKH1mpJUgehCWRbj0-c-ZrTlSV3qlAAaQW1C4tjJFlZjjxlvpJhGQ0JXHX7bfZwwKxiI8DJ0zu5XXOmE2LdwRXXMjbI0Syeuua5Ym5W2uK-JNfinO2jen6Sb7p_1GeJF-j3W_6nmYZPVJSP9BQap5b61zLOZ1c0r7-5t3d1Id-TeAj8Km78tj4rZ1QkLzgUFauRSxvHKMhkPOzW3LDVpMw3dns5B2Am_hw5ybgAOT0PDdVVRNe68DWz1JySB2G5ARPwDLonYwn13-_BoPl9ldaTK_ogF9chFmfLF_V5DFKg");
         // 可选
-//        thirdPartyData.put("expires_in", 7200);
-//        thirdPartyData.put("openid", "QDNJfr2wFRRmFu8oqL2pCg==");
-//        thirdPartyData.put("access_token", "1/B2sMNYgxvmuwNPg82IEuOZIAoT30WmB-L2FkHUxprcF39RCBTlFVKbcV_fHSMvSQMp5m_9cLnC78GzimhvGll4t8R0X5Vp_KAiTVk-JrnunHKYObD310JM5HikHz6YMaex9TPVaDtZV1jCFVZo1cUfDlCrpmm3o0urx_LZYqTamvDU_JnZTyunq7lD-2YI_LVekpqP5ZznhvcfyLA-r48lrwa1FuZM3cQygH5H_xvYTHHP1pPiPOPhzhZWJu7NP9Ya6ReNKPpMtAiFXnzokVhB1QKfcaPhYr9g60ogY6a3vii2Jn-hCWV61NqLFhGl3HoiWBmw7F1BQ4FnbbVidyHQ");
         thirdPartyData.put("taptap_name", "lrj3zwhy01pr4ltbu4hiww2ba");
-//        thirdPartyData.put("refresh_token", "TapTap_REFRESH_TOKEN");
-//        thirdPartyData.put("scope", "TapTap_SCOPE");
+
         TDSUser currentUser = TDSUser.getCurrentUser();
         currentUser.associateWithAuthData(thirdPartyData, "taptap").subscribe(new Observer<LCUser>() {
             @Override

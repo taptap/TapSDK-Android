@@ -19,11 +19,15 @@ android {
 
         multiDexEnabled true
 
-//        ndk{
-//            abiFilters "arm64-v8a, x86_64"
-//        }
-
-//        ndk.abiFilters("arm64-v8a, x86_64")
+    }
+    signingConfigs {
+        release {
+            // 替换为您的签名文件
+            storeFile file('mysign.keystore')
+            storePassword 'mysign'
+            keyAlias = 'mysign'
+            keyPassword 'mysign'
+        }
     }
 
 
@@ -31,10 +35,14 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
         }
         debug {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
         }
     }
     compileOptions {
@@ -50,6 +58,8 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: [ '*.aar'])
+
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
@@ -57,16 +67,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.google.android.flexbox:flexbox:3.0.0'
-    implementation name: 'TapBootStrap_3.5.1', ext: 'aar'  // 必选: x.x.x 代表所下载的 SDK的版本号
-    implementation(name: 'TapCommon_3.5.1', ext: 'aar')
-    implementation(name: 'TapMoment_3.5.1', ext: 'aar')
-    implementation(name: 'TapLogin_3.5.1', ext: 'aar')
-    implementation(name: 'TapLicense_3.5.1', ext: 'aar')
-    implementation(name: 'TapAchievement_3.5.1', ext: 'aar')
-    implementation(name: 'TapDB_3.5.1', ext: 'aar')
-    implementation(name: 'AntiAddiction_1.0.2', ext: 'aar')
-    implementation(name: 'AntiAddictionUI_1.0.2', ext: 'aar')
-    implementation 'cn.leancloud:realtime-android:8.1.0'
-    implementation 'cn.leancloud:storage-android:8.1.0'
+
+    implementation 'cn.leancloud:realtime-android:8.2.12'
+    implementation 'cn.leancloud:storage-android:8.2.12'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 }
