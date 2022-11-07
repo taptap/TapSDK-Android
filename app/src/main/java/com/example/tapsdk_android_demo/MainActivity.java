@@ -151,12 +151,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     // 开发者中心后台应用配置信息
-//    public static final String TDS_ClientID = "替换为您的 ClientID ";
-//    public static final String TDS_ClientToken = "替换为您的 ClientToken ";
-//    public static final String TDS_ServerUrl = "替换为您的 ServerUrl ";
-    public static final String TDS_ClientID = "n0bnxy5dfvuq0opmnd";
-    public static final String TDS_ClientToken = "iSZ1HmK4nMkFtklge9jlrzTz9dxcV7In5hGI9Gsb";
-    public static final String TDS_ServerUrl = "https://n0bnxy5d.cloud.tds1.tapapis.cn";
+    public static final String TDS_ClientID = "替换为您的 ClientID ";
+    public static final String TDS_ClientToken = "替换为您的 ClientToken ";
+    public static final String TDS_ServerUrl = "替换为您的 ServerUrl ";
 
 
     @Override
