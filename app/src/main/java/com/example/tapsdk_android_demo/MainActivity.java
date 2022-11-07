@@ -22,6 +22,13 @@ import com.tapsdk.bootstrap.TapBootstrap;
 import com.tapsdk.bootstrap.account.TDSUser;
 import com.tapsdk.bootstrap.exceptions.TapError;
 import com.tapsdk.bootstrap.gamesave.TapGameSave;
+import com.tapsdk.friends.FriendStatusChangedListener;
+import com.tapsdk.friends.ListCallback;
+import com.tapsdk.friends.TDSFriends;
+import com.tapsdk.friends.entities.TDSFriendInfo;
+import com.tapsdk.friends.entities.TDSFriendshipRequest;
+import com.tapsdk.friends.entities.TDSRichPresence;
+import com.tapsdk.friends.exceptions.TDSFriendError;
 import com.tapsdk.moment.TapMoment;
 import com.taptap.pay.sdk.library.TapLicenseCallback;
 import com.taptap.pay.sdk.library.TapLicenseHelper;
@@ -128,9 +135,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-
+    // 测试用的用户 ObjectID
     public static final String LeeJiDongID = "61012c565d0493087d3bf63a";
-    public static final String LeeJiEunID = "60f2df4fd1773b17a7c43e4f";
+    public static final String LeeJiEunID = "6343df0ea39d7536a3659cba";
     String userID = "";
     String accessToken = "";
 
@@ -144,9 +151,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     // 开发者中心后台应用配置信息
-    public static final String TDS_ClientID = "替换为您的ClientID";
-    public static final String TDS_ClientToken = "替换为您的ClientToken";
-    public static final String TDS_ServerUrl = "替换为您的ServerUrl";
+    public static final String TDS_ClientID = "替换为您的 ClientID ";
+    public static final String TDS_ClientToken = "替换为您的 ClientToken ";
+    public static final String TDS_ServerUrl = "替换为您的 ServerUrl ";
 
 
     @Override
@@ -774,8 +781,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
         Map<String, Double> statistic  = new HashMap<>();
-        statistic.put("score", 3458.0);
-        statistic.put("kills", 28.0);
+        statistic.put("world", 3458.0);
         LCLeaderboard.updateStatistic(currentUser, statistic).subscribe(new Observer<LCStatisticResult>() {
             @Override
             public void onSubscribe(@NotNull Disposable disposable) {}
@@ -832,7 +838,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         Log.d(TAG, currentUser.toJSONString());
         Map<String, Double> statistic = new HashMap<>();
-        statistic.put("Uaena", 26.0);
+        statistic.put("world", 26.0);
         LCLeaderboard.updateStatistic(currentUser, statistic).subscribe(new Observer<LCStatisticResult>() {
             @Override
             public void onSubscribe(@androidx.annotation.NonNull Disposable d) {
@@ -1209,213 +1215,196 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void taptapDeleteFriend() {
-        if(null != queriedUserLCFriendship){
-            queriedUserLCFriendship.deleteInBackground().subscribe(new Observer<LCNull>() {
-                @Override
-                public void onSubscribe(@NonNull Disposable d) {}
-
-                @Override
-                public void onNext(LCNull response) {
-                    // succeed to delete friendship.
-                    Toast.makeText(MainActivity.this, "删除好友成功！", Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onError(@NonNull Throwable e) {
-                    System.out.println("failed to delete friendship cause: " + e.getMessage());
-                    Log.d(TAG,"failed to delete friendship of QueriedUser. cause: " + e.getMessage());
-                    Toast.makeText(MainActivity.this, "failed to delete friendship of QueriedUser. cause: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onComplete() {}
-            });
-        }else {
-            Toast.makeText(this, "删除好友失败，没有查找到要删除好友的关系！", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void taptapGetFriendsList() {
-        TDSUser currentUser = TDSUser.currentUser();
-        LCQuery<LCFriendship> query = currentUser.friendshipQuery();
-        query.findInBackground().subscribe(new Observer<List<LCFriendship>>() {
+        TDSFriends.deleteFriend("5b0b97cf06f4fd0abc0abe35", new com.tapsdk.friends.Callback<Void>() {
             @Override
-            public void onSubscribe(@NonNull Disposable d) {}
+            public void onSuccess(Void unused) {
+                Toast.makeText(MainActivity.this, "删除好友成功！", Toast.LENGTH_SHORT).show();
 
-            @Override
-            public void onNext(List<LCFriendship> lcFriendships) {
-                Log.d(TAG, lcFriendships.toArray().length + "");
-                if (null != lcFriendships && !lcFriendships.isEmpty()) {
-                    // lcFriendships 即为好友关系
-                    Log.d(TAG, lcFriendships.toString());
-                    queriedUserLCFriendship = lcFriendships.get(0);
-                }
             }
 
             @Override
-            public void onError(@NonNull Throwable e) {
-                Log.d(TAG, "failed to query friendship cause: " + e.getMessage());
-                Toast.makeText(MainActivity.this, "failed to query friendship cause: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
+            public void onFail(TDSFriendError tdsFriendError) {
+                Toast.makeText(MainActivity.this,  tdsFriendError.detailMessage, Toast.LENGTH_SHORT).show();
 
-            @Override
-            public void onComplete() {}
+            }
         });
     }
 
+    private void taptapGetFriendsList() {
+        int from = 0;
+        int limit = 100;
+        TDSFriends.queryFriendList(from, limit,
+                new ListCallback<TDSFriendInfo>(){
+
+                    @Override
+                    public void onSuccess(List<TDSFriendInfo> friendInfoList) {
+                        for (TDSFriendInfo info : friendInfoList) {
+                            // 玩家信息
+                            TDSUser user = info.getUser();
+                            // 富信息数据
+                            TDSRichPresence richPresence = info.getRichPresence();
+                            // 好友是否在线
+                            boolean online = info.isOnline();
+                            Toast.makeText(MainActivity.this, user.toJSONString(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFail(TDSFriendError error) {
+                        Toast.makeText(MainActivity.this, error.detailMessage, Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+
+    }
+
     private void taptapFriendshipRequestStatus() {
-        TDSUser currentUser = TDSUser.currentUser();
-        TDSUser.FriendshipNotification friendshipNotification = new TDSUser.FriendshipNotification() {
+        TDSFriends.registerFriendStatusChangedListener(new FriendStatusChangedListener() {
+            // 新增好友（触发时机同「已发送的好友申请被接受」）
             @Override
-            public void onNewRequestComing(LCFriendshipRequest request) {
-                Log.d(TAG, request.toString());
-                Toast.makeText(MainActivity.this, request.toString(), Toast.LENGTH_SHORT).show();
+            public void onFriendAdd(TDSFriendInfo friendInfo) {}
+
+            // 新增好友申请
+            @Override
+            public void onNewRequestComing(TDSFriendshipRequest request) {}
+
+            // 通过分享链接进入游戏时触发此回调
+            // 开发者可以在此回调中直接调用 handFriendInvitationLink
+            // 或通过 parseFriendInvitationLink 解析链接，获取相关参数再执行自定义的逻辑
+            @Override
+            public void onReceivedInvitationLink(String url) {}
+
+            // 已发送的好友申请被接受
+            @Override
+            public void onRequestAccepted(TDSFriendshipRequest request) {}
+
+            // 已发送的好友申请被拒绝
+            @Override
+            public void onRequestDeclined(TDSFriendshipRequest request) {}
+
+            // 好友上线
+            @Override
+            public void onFriendOnline(String userId) {}
+
+            // 好友下线
+            @Override
+            public void onFriendOffline(String userId) {}
+
+            // 好友富信息变更
+            @Override
+            public void onRichPresenceChanged(String userId, TDSRichPresence richPresence) {}
+
+            // 当前玩家成功上线（长连接建立成功）
+            @Override
+            public void onConnected() {}
+
+            // 当前玩家长连接断开，SDK 会自动重试，开发者通常无需额外处理
+            @Override
+            public void onDisconnected() {}
+
+            // 当前连接异常
+            @Override
+            public void onConnectError(int code, String msg){
+
             }
 
-            @Override
-            public void onRequestAccepted(LCFriendshipRequest request) {
-                Log.d(TAG, request.toString());
-                Toast.makeText(MainActivity.this, request.toString(), Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onRequestDeclined(LCFriendshipRequest request) {
-                Log.d(TAG, request.toString());
-                Toast.makeText(MainActivity.this, request.toString(), Toast.LENGTH_SHORT).show();
-            }
-        };
-
-        currentUser.registerFriendshipNotification(friendshipNotification, new LCCallback<LCNull>() {
-            @Override
-            protected void internalDone0(LCNull lcNull, LCException LCException) {
-
-            }
         });
     }
 
     private void taptapDeleteFriendshipRequest() {
-        TDSUser currentUser = TDSUser.currentUser();
-        LCFriendshipRequest queriedRequests = null;
-        // leeJiEun 同意了来自 leeJiDong 的好友请求
-        for(LCFriendshipRequest fr:currentUserLcFriendshipRequests ){
-            Toast.makeText(this, fr.getObjectId(), Toast.LENGTH_SHORT).show();
+        taptapGetFriendRequestList();
+        if (friendshipRequests.isEmpty()){
+            Toast.makeText(this, "暂无好友申请", Toast.LENGTH_SHORT).show();
+            return;
         }
-        if (!currentUserLcFriendshipRequests.isEmpty()){
-            queriedRequests = currentUserLcFriendshipRequests.get(0);
-        }
-
-        currentUser.deleteFriendshipRequest(queriedRequests).subscribe(new Observer<Boolean>() {
+        TDSFriends.deleteFriendRequest(friendshipRequests.get(0), new com.tapsdk.friends.Callback<Boolean>() {
             @Override
-            public void onSubscribe(@NonNull Disposable d) {}
+            public void onSuccess(Boolean aBoolean) {
+                Toast.makeText(MainActivity.this, "删除好友好友申请", Toast.LENGTH_SHORT).show();
 
-            @Override
-            public void onNext(Boolean result) {}
-
-            @Override
-            public void onError(@NonNull Throwable e) {
-                System.out.println("failed to delete friendship request cause: " + e.getMessage());
-                Toast.makeText(MainActivity.this, "failed to delete friendship request cause: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onComplete() {}
+            public void onFail(TDSFriendError tdsFriendError) {
+                Toast.makeText(MainActivity.this, tdsFriendError.detailMessage, Toast.LENGTH_SHORT).show();
+
+            }
         });
     }
 
     private void taptapAcceptFriendshipRequest() {
-        TDSUser currentUser = TDSUser.currentUser();
-        LCFriendshipRequest queriedRequests = null;
-        // leeJiEun 同意了来自 leeJiDong 的好友请求
-        for(LCFriendshipRequest fr:currentUserLcFriendshipRequests ){
-            Log.d(TAG, fr.getFriend().getObjectId());
+        taptapGetFriendRequestList();
+        if (friendshipRequests.isEmpty()){
+            Toast.makeText(this, "暂无好友申请", Toast.LENGTH_SHORT).show();
+            return;
         }
-        if (!currentUserLcFriendshipRequests.isEmpty()){
-            queriedRequests = currentUserLcFriendshipRequests.get(0);
-        }
-
-        currentUser.acceptFriendshipRequest(queriedRequests, null).subscribe(new Observer<LCFriendshipRequest>() {
+        TDSFriends.acceptFriendRequest(friendshipRequests.get(0), new com.tapsdk.friends.Callback<Void>() {
             @Override
-            public void onSubscribe(@NonNull Disposable d) {}
-
-            @Override
-            public void onNext(LCFriendshipRequest result) {
-                Log.d(TAG, result.getFriend().getObjectId());
-                Log.d(TAG, "同意好友请求！");
-                Toast.makeText(MainActivity.this, "同意好友请求！", Toast.LENGTH_SHORT).show();
+            public void onSuccess(Void result) {
+                Toast.makeText(MainActivity.this, "同意好友好友申请", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onError(@NonNull Throwable e) {
-                Log.d(TAG,"failed to accept friendship request cause: " + e.getMessage());
-                Toast.makeText(MainActivity.this, "failed to accept friendship request cause: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            public void onFail(TDSFriendError error) {
+                Toast.makeText(MainActivity.this, error.detailMessage, Toast.LENGTH_SHORT).show();
             }
-
-            @Override
-            public void onComplete() {}
         });
 
     }
 
+    private List<LCFriendshipRequest> friendshipRequests = new ArrayList<>();
+
     private void taptapDeclineFriendshipRequest() {
-        TDSUser currentUser = TDSUser.currentUser();
-        LCFriendshipRequest queriedRequests = null;
-        // leeJiEun 同意了来自 leeJiDong 的好友请求
-        for(LCFriendshipRequest fr:currentUserLcFriendshipRequests ){
 
+        taptapGetFriendRequestList();
+        if (friendshipRequests.isEmpty()){
+            Toast.makeText(this, "暂无好友申请", Toast.LENGTH_SHORT).show();
+            return;
         }
-        if (!currentUserLcFriendshipRequests.isEmpty()){
-            queriedRequests = currentUserLcFriendshipRequests.get(0);
-        }
-
-        currentUser.declineFriendshipRequest(queriedRequests).subscribe(new Observer<LCFriendshipRequest>() {
+        TDSFriends.declineFriendRequest(friendshipRequests.get(0), new com.tapsdk.friends.Callback<Void>() {
             @Override
-            public void onSubscribe(@NonNull Disposable d) {}
+            public void onSuccess(Void unused) {
+                Toast.makeText(MainActivity.this, "拒绝好友好友申请", Toast.LENGTH_SHORT).show();
 
-            @Override
-            public void onNext(LCFriendshipRequest result) {}
-
-            @Override
-            public void onError(@NonNull Throwable e) {
-                System.out.println("failed to decline friendship request cause: " + e.getMessage());
-                Toast.makeText(MainActivity.this, "failed to decline friendship request cause: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onComplete() {}
+            public void onFail(TDSFriendError tdsFriendError) {
+                Toast.makeText(MainActivity.this, tdsFriendError.detailMessage, Toast.LENGTH_SHORT).show();
+
+            }
         });
+
+
+
+
     }
 
     private void taptapGetFriendRequestList() {
-        TDSUser currentUser = TDSUser.currentUser();
-        currentUser.friendshipRequestQuery(LCFriendshipRequest.STATUS_PENDING, false, true)
-                .findInBackground()
-                .subscribe(new Observer<List<LCFriendshipRequest>>() {
-                    @Override
-                    public void onSubscribe(@NonNull Disposable d) {}
+        int from = 0;
+        int limit = 100;
+
+        TDSFriends.queryFriendRequestList(LCFriendshipRequest.STATUS_PENDING, from, limit,
+                new ListCallback<LCFriendshipRequest>(){
 
                     @Override
-                    public void onNext(List<LCFriendshipRequest> lcFriendshipRequests) {
-                        Log.d(TAG, "friendship requests number to leeJiEun is: " +lcFriendshipRequests.size());
-                        for(LCFriendshipRequest request: lcFriendshipRequests) {
-                            request.getSourceUser();
-                            request.getFriend();
-                            System.out.println(request);
-                            Log.d(TAG, request.toString());
-                            Log.d(TAG, request.getFriend().getObjectId());
-                            currentUserLcFriendshipRequests.add(request);
-                            Toast.makeText(MainActivity.this, request.getFriend().getObjectId(), Toast.LENGTH_SHORT).show();
+                    public void onSuccess(List<LCFriendshipRequest> requests) {
+                        // requests 就是处于 pending 状态中的好友申请列表
+                        if(requests.isEmpty()){
+                            Toast.makeText(MainActivity.this, "暂无好友申请", Toast.LENGTH_SHORT).show();
+                            return;
                         }
-
+                        for (int i=0; i<requests.size(); i++){
+                            Toast.makeText(MainActivity.this, requests.get(i).getObjectId(), Toast.LENGTH_SHORT).show();
+                        }
+                        friendshipRequests.addAll(requests);
                     }
 
                     @Override
-                    public void onError(@NonNull Throwable e) {
-                        Log.d(TAG, "failed to query friendship request cause: " + e.getMessage());
-                        Toast.makeText(MainActivity.this, "failed to query friendship request cause: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
+                    public void onFail(TDSFriendError error) {
+                        Toast.makeText(MainActivity.this, error.detailMessage.toString(), Toast.LENGTH_SHORT).show();
 
-                    @Override
-                    public void onComplete() {}
+                    }
                 });
     }
 
@@ -1424,39 +1413,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (null == currentUser){
             Toast.makeText(this, "请先登陆！", Toast.LENGTH_SHORT).show();
         }else {
-            TDSUser leeJiEun = null;
             Map<String, Object> attr = new HashMap<String, Object>();
             attr.put("group", "SoloQueen");
-            try {
-                // TODO 第一步更改：测试需要更改这里的 OcjectID
-                leeJiEun =  LCObject.createWithoutData(TDSUser.class, LeeJiEunID);
-
-
-                LCQuery<LCObject> query = new LCQuery<>("TDSUser");
-
-
-            } catch (LCException e) {
-                e.printStackTrace();
-            }
-            currentUser.applyFriendshipInBackground(leeJiEun, attr).subscribe(new Observer<LCFriendshipRequest>() {
+            TDSFriends.addFriend(LeeJiEunID, attr, new com.tapsdk.friends.Callback<Void>() {
                 @Override
-                public void onSubscribe(@NotNull Disposable d) {
-
+                public void onSuccess(Void unused) {
+                    Toast.makeText(MainActivity.this, "申请添加成功！", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
-                public void onNext(@NotNull LCFriendshipRequest lcFriendshipRequest) {
-                    Toast.makeText(MainActivity.this, "添加成功 ！", Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onError(@NotNull Throwable e) {
-                    System.out.println("failed to apply friend request");
-                    Toast.makeText(MainActivity.this, "添加失败：" + e.toString(), Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onComplete() {
+                public void onFail(TDSFriendError tdsFriendError) {
+                    Toast.makeText(MainActivity.this, tdsFriendError.detailMessage, Toast.LENGTH_SHORT).show();
 
                 }
             });
