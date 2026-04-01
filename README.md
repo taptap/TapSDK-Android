@@ -22,25 +22,6 @@
 **[接入文档](https://developer.taptap.cn/docs/v3/sdk/)**
 
 
-## 接入方式（AAR）
-
-### 1. 下载 AAR
-
-将下载的 `*.aar` 文件放入项目的 `libs/` 目录。
-
-### 2. 配置 Gradle
-
-在模块的 `build.gradle` 中添加：
-
-```gradle
-dependencies {
-    implementation files('libs/<artifact-name>.aar')
-}
-```
-
-如 SDK 依赖其他库，请根据文档额外添加依赖。
-
-
 ## 支持与反馈
 
 如有问题或需求，请通过以下方式联系我们：
