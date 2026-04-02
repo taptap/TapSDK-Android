@@ -1,6 +1,6 @@
 # TapSDK v3 - Android
 
-**⚠️ 注意：本仓库仅适用于已接入 TapSDK v4.0 以下版本的存量游戏。对于新游戏，建议参考 [开发者中心文档](https://developer.taptap.cn/docs/sdk/) 接入最新版 SDK**。
+**⚠️ 注意：本仓库仅适用于已接入 TapSDK 3.x 的旧版或存量游戏。对于新游戏，建议参考 [开发者中心文档](https://developer.taptap.cn/docs/sdk/) 接入最新版 TapSDK 4.x**。
 
 ## 仓库介绍
 
